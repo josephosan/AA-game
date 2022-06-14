@@ -6,4 +6,4 @@ Mahbod Ghadiri Sani,
 Duniyal Rasouli,
 Danial Azimi,
 and
-Aramn Rostami
+Arman Rostami
