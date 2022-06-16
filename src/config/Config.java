@@ -11,12 +11,12 @@ public class Config {
     static ElementManager elementManager;
 
     static final Integer 
-        timerDelay = 300,
+        timerDelay = 30,
 
         frameWidth = 400, 
         frameHeight = 600,
 
-        spinningCircleRadius = 200;
+        spinningCircleRadius = 0;
     
     static final AaSize 
         mainCircleSize = new AaSize(100, 100);

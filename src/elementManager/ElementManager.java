@@ -1,12 +1,10 @@
 package elementManager;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Collection;
 import elementManager.elements.Element;
 import javax.swing.*;
-import javax.swing.text.AbstractDocument.ElementEdit;
 
 public class ElementManager {
     Integer lastCircleCursorId = 0;

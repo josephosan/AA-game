@@ -15,14 +15,6 @@ public class AaMainCircle extends Element{
 
     @Override
     public void paintSelf(Graphics g) {
-        System.out.println(this.getSize());
-        System.out.println(this.panel.getPreferredSize());
-        System.out.println(this.position.getX() - this.size.getWidth() / 2);
-        System.out.println(this.position.getX());
-        g.drawString("|", 150, 400);
-        g.drawString("|", 250, 400);
-        g.drawString("|", 398, 400);
-        g.drawString("A", 0, 0);
 
         g.fillOval(
             this.position.getX() - this.size.getWidth() / 2,  
