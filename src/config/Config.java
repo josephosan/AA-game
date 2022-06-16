@@ -50,7 +50,7 @@ public class Config {
     }
 
     public static ElementManager getElementManager() {
-        System.out.println("returning elementManager");
+//        System.out.println("returning elementManager");
         return elementManager;
     }
 

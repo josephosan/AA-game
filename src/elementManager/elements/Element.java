@@ -3,6 +3,8 @@ package elementManager.elements;
 import config.Config;
 import java.awt.*;
 import javax.swing.*;
+
+import elementManager.coordinate.*;;
 import elementManager.coordinate.*;
 import elementManager.*;
 
@@ -18,10 +20,10 @@ public class Element {
         this.size = new AaSize();
     }
 
+
     public AaPosition getPosition() {
         return this.position;
     }
-
     public JPanel getPanel() {
         return this.panel;
     }

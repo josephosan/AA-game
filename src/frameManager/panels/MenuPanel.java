@@ -25,7 +25,7 @@ public class MenuPanel extends APanel{
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         // System.exit(0);
-        System.out.println("menu panel repaintng");
+        System.out.println("menu panel repainting");
         ArrayList<Element> elements = elementManager.getElementsByPanel(this);
         System.out.println(elements);
         for (Element element : elements) {
