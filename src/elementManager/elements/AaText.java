@@ -3,6 +3,7 @@ package elementManager.elements;
 import elementManager.elements.Element;
 import javax.swing.*;
 import java.awt.*;
+
 public class AaText extends Element{
     String text = "";
     public AaText(JPanel panel) {

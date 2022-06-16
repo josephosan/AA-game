@@ -29,7 +29,7 @@ public class Aa {
         Middleware showMenu = new ShowMenu();
         MiddlewareLocation showMenuLocation = new MiddlewareLocation();
 
-        // middlewareManager.addMiddleware(showMenu, showMenuLocation);
+         middlewareManager.addMiddleware(showMenu, showMenuLocation);
 
         AaTimer aaTimer = new AaTimer(timerTask);
         aaTimer.play();

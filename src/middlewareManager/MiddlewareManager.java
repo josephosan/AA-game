@@ -31,11 +31,11 @@ public class MiddlewareManager {
         
         if (middlewareLocation.atIndex != -1) {
             insertIndex = middlewareLocation.atIndex;
-        } else if (middlewareLocation.atStart == true) {
+        } else if (middlewareLocation.atStart) {
             insertIndex = 0;
-        } else if (middlewareLocation.atEnd == true) {
+        } else if (middlewareLocation.atEnd) {
             insertIndex = middlewares.size() - 1;
-            insertIndex = insertIndex == -1 ? 0 : insertIndex;
+            insertIndex = insertIndex == -1 ? 0 : insertIndex; // if size was 0 means no middleware found so insert index is 0;
         } else if (middlewareLocation.getAfter() != null) {
             insertIndex = findMiddlewareIndexById(middlewareLocation.getAfter());
         } else if (middlewareLocation.getBefore() != null) {
@@ -44,7 +44,7 @@ public class MiddlewareManager {
 
 
         if (insertIndex == -1) {
-            // the insert index not founded;
+            // the insert index not found;
             // maybe something should be done here;
             return;
         }
@@ -58,7 +58,7 @@ public class MiddlewareManager {
         for (int i = 0; i < middlewares.size(); i++) {
             System.out.println("from for in loop");
             Middleware middleware = middlewares.get(i);
-            if (middleware.isFirstTime() == true) {
+            if (middleware.isFirstTime()) {
                 middleware.setFirstTime(false);
                 middleware.init();
                 System.out.println("from first Time");
