@@ -7,6 +7,14 @@ public class Position {
         this.y = 0;
     }
 
+    public Integer getX() {
+        return x;
+    }
+
+    public Integer getY() {
+        return y;
+    }
+
     public Position(Integer x, Integer y) {
         this.x = x;
         this.y = y;

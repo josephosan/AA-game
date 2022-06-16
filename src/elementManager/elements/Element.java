@@ -2,7 +2,7 @@ package elementManager.elements;
 
 import java.awt.*;
 import javax.swing.*;
-import elementManager.coordinate.*;;
+import elementManager.coordinate.*;
 
 public class Element {
     JPanel panel;
