@@ -17,17 +17,26 @@ public class FrameManager extends JFrame{
 
     public FrameManager() {
         // Implement the frame;
-        setSize(new Dimension(Config.getFrameWidth(), Config.getFrameHeight()));
+        setLayout(null);
+        pack();
+        Insets insets = getInsets();
+        setSize(
+            new Dimension(
+                (insets.left + insets.right + Config.getFrameWidth()), 
+                (insets.bottom + insets.top + Config.getFrameHeight())
+            )
+        );
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
         APanel mainPanel = new MainPanel("mainPanel");
         APanel menuPanel = new MenuPanel("menuPanel");
+
         aPanels.put("main", mainPanel);
         aPanels.put("menu", menuPanel);
         // aPanels.put("game", );
         add(mainPanel);
-        add(menuPanel);
+        mainPanel.add(menuPanel);
 
         MiddlewareManager middlewareManager = Config.getMiddlewareManager();
         Middleware repaintPanelElements = new RepaintPanelElements(menuPanel);
@@ -37,7 +46,6 @@ public class FrameManager extends JFrame{
         setActivePanel("main");
         getAPanel("main").setVisible(true);
         getAPanel("menu").setVisible(true);
-
 
         setVisible(true);
     }
