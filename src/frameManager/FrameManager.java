@@ -5,6 +5,7 @@ import middlewareManager.*;
 import middlewareManager.middlewares.*;
 import java.awt.*;
 import javax.swing.*;
+import frameManager.APanel;
 import config.Config;
 
 import frameManager.panels.MainPanel;
