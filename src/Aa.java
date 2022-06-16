@@ -18,6 +18,7 @@ public class Aa {
         FrameManager frameManager = new FrameManager();
         Config.frameManagerSubscribe(frameManager);
         
+        frameManager.addMiddlewares();
 
         TimerTask timerTask = new TimerTask() {
             public void run() {
