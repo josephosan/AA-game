@@ -14,7 +14,8 @@ public class APanel extends JPanel{
         // when not declared; the width and height is frames width and height.
 //        System.out.println(Config.getFrameWidth());
         // System.exit(0);
-        setPreferredSize(new Dimension(Config.getFrameWidth(), Config.getFrameHeight()));
+        setSize(new Dimension(Config.getFrameWidth(), Config.getFrameHeight()));
+        setLayout(null);
         setLocation(0, 0);
         setOpaque(true);
         setBackground(Color.GREEN);

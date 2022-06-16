@@ -3,6 +3,7 @@ package config;
 import elementManager.ElementManager;
 import frameManager.FrameManager;
 import middlewareManager.MiddlewareManager;
+import elementManager.coordinate.*;
 
 public class Config {
     static FrameManager frameManager;
@@ -10,12 +11,15 @@ public class Config {
     static ElementManager elementManager;
 
     static final Integer 
-        timerDelay = 300,
+        timerDelay = 30,
 
         frameWidth = 400, 
-        frameHeight = 600;
-    
+        frameHeight = 600,
 
+        spinningCircleRadius = 0;
+    
+    static final AaSize 
+        mainCircleSize = new AaSize(100, 100);
 
     static final String 
         frameTitle = "AA GAME";
@@ -60,5 +64,13 @@ public class Config {
 
     public static Integer getTimerDelay() {
         return timerDelay;
+    }
+
+    public static AaSize getMainCircleSize() {
+        return mainCircleSize;
+    }
+
+    public static Integer getSpinningCircleRadius() {
+        return spinningCircleRadius;
     }
 }

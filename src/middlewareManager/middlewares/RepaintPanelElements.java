@@ -16,9 +16,6 @@ public class RepaintPanelElements extends Middleware {
 
     @Override
     public void run() {
-        AaText text = (AaText)elementManager.getElementById("menuPanelAaText");
-        text.setText("donya" +  System.currentTimeMillis());
-        System.out.println("from repaintPanelElements ");
         panel.repaint();
     }
 }

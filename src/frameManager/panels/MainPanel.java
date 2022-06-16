@@ -6,10 +6,11 @@ import java.awt.*;
 public class MainPanel extends APanel{
     public MainPanel(String id) {
         super(id);
-        setBackground(Color.GREEN);
+        setBackground(Color.RED);
+        setLocation(0, 0);
     }
 
-    @Override
-    public void paintComponent(Graphics g) {
-    }
+    // @Override
+    // public void paintComponent(Graphics g) {
+    // }
 }
