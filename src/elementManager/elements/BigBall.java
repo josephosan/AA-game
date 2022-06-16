@@ -1,7 +1,5 @@
 package elementManager.elements;
 
-import elementManager.coordinate.Position;
-
 import javax.swing.*;
 
 public class BigBall extends Element {
