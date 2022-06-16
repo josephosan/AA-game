@@ -14,4 +14,8 @@ public class SmallBall extends Element {
     public static int getYPos() {
         return 0;
     }
+
+    public Double getAngle() {
+        return 0.0;
+    }
 }
