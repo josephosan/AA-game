@@ -4,12 +4,9 @@ import config.Config;
 
 import elementManager.*;
 import elementManager.elements.*;
-import middlewareManager.MiddlewareManager;
-import middlewareManager.middlewares.*;
-
 import javax.swing.*;
-import java.awt.*;
-public class RepaintPanelElements extends Middleware{
+
+public class RepaintPanelElements extends Middleware {
     JPanel panel;
     ElementManager elementManager = Config.getElementManager();
     public RepaintPanelElements(JPanel panel) {
