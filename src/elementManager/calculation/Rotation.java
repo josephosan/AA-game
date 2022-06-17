@@ -16,7 +16,7 @@ public class Rotation{
         this.r = bigBall.getR();
     }
 
-    AaPosition rotate(SmallBall smallBall){
+    public AaPosition rotate(SmallBall smallBall){
         Angle angle = new Angle(smallBall.getAngle());
         angle.add(this.rotationSpeed);
         double a = angle.getInRadian();
