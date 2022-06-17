@@ -55,13 +55,13 @@ public class FrameManager extends JFrame{
         MiddlewareLocation middlewareLocation = new MiddlewareLocation();
         middlewareManager.addMiddleware(repaintPanelElements, middlewareLocation);
 
-        Middleware transitionPanels = new TransitionPanels("game", "menu");
-        MiddlewareLocation transitionPanelsLocation = new MiddlewareLocation();
-        middlewareManager.addMiddleware(transitionPanels, transitionPanelsLocation);
+//        Middleware transitionPanels = new TransitionPanels("game", "menu");
+//        MiddlewareLocation transitionPanelsLocation = new MiddlewareLocation();
+//        middlewareManager.addMiddleware(transitionPanels, transitionPanelsLocation);
 
-        // Middleware drawSmallBall = new DrawSmallBall(getAPanel("game"));
-        // MiddlewareLocation drawSmallBaLocation = new MiddlewareLocation();
-        // middlewareManager.addMiddleware(drawSmallBall, drawSmallBaLocation);
+//         Middleware drawSmallBall = new DrawSmallBall(getAPanel("menu"));
+//         MiddlewareLocation drawSmallBaLocation = new MiddlewareLocation();
+//         middlewareManager.addMiddleware(drawSmallBall, drawSmallBaLocation);
     }
 
     public APanel getAPanel(String id) {

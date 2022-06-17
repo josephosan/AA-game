@@ -6,7 +6,7 @@ import elementManager.coordinate.AaPosition;
 import javax.swing.*;
 import java.awt.*;
 public class BigBall extends Element{
-    public static AaPosition aaPosition;
+    public static AaPosition aaPosition = new AaPosition();
 
     public BigBall(JPanel panel) {
         super(panel);
@@ -24,9 +24,13 @@ public class BigBall extends Element{
     public void paintSelf(Graphics g) {
 
         g.fillOval(
-            this.position.getX() - this.size.getWidth() / 2,  
-            this.position.getY() - this.size.getHeight() / 2, 
+            this.position.getX() - this.size.getWidth() / 2,
+            this.position.getY() - this.size.getHeight() / 2,
             this.size.getWidth(), 
             this.size.getHeight());
+    }
+
+    public Integer getR() {
+        return 0;
     }
 }

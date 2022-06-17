@@ -17,8 +17,8 @@ public class MenuPanel extends APanel{
         // System.out.println(text);
         // elementManager.addElement("menuPanelAaText", text);
         setLocation(0, 0);
-        BigBall aaMainCircle = new BigBall(this);
-        elementManager.addElement("mainCircle", aaMainCircle);
+        BigBall bigBall = new BigBall(this);
+        elementManager.addElement("mainCircle", bigBall);
     }
 
     @Override
