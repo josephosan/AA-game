@@ -4,7 +4,6 @@ import config.Config;
 import java.awt.*;
 import javax.swing.*;
 
-import elementManager.coordinate.*;;
 import elementManager.coordinate.*;
 import elementManager.*;
 

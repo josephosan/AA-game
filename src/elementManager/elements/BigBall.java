@@ -1,20 +1,32 @@
 package elementManager.elements;
 
-import javax.swing.*;
+import config.Config;
+import elementManager.coordinate.AaPosition;
 
-public class BigBall extends Element {
-    Position position;
+import javax.swing.*;
+import java.awt.*;
+public class BigBall extends Element{
+    public static AaPosition aaPosition;
 
     public BigBall(JPanel panel) {
         super(panel);
-        this.position = new Position();
+        this.size.setSize(Config.getMainCircleSize().getWidth(), Config.getMainCircleSize().getHeight());
+        aaPosition.setX(Config.getFrameWidth()/2);
+        aaPosition.setY(this.size.getHeight() + Config.getSpinningCircleRadius() + 50);
+    }
+
+    public static AaPosition getPos() {
+        return aaPosition;
     }
 
 
-    public static int getXPos() {
-        return 0;
-    }
-    public static int getYPos() {
-        return 0;
+    @Override
+    public void paintSelf(Graphics g) {
+
+        g.fillOval(
+            this.position.getX() - this.size.getWidth() / 2,  
+            this.position.getY() - this.size.getHeight() / 2, 
+            this.size.getWidth(), 
+            this.size.getHeight());
     }
 }

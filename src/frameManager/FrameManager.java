@@ -51,6 +51,7 @@ public class FrameManager extends JFrame{
 
     public void addMiddlewares() {
         MiddlewareManager middlewareManager = Config.getMiddlewareManager();
+
         Middleware repaintPanelElements = new RepaintPanelElements(getAPanel("menu"));
         MiddlewareLocation middlewareLocation = new MiddlewareLocation();
         middlewareManager.addMiddleware(repaintPanelElements, middlewareLocation);
