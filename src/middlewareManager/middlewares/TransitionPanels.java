@@ -33,8 +33,8 @@ public class TransitionPanels extends Middleware{
             return;
         }
         Point panel2Location = panel2.getLocation();
-        panel1.setLocation((int)panel1Location.getX() - 10, (int)panel1Location.getY());
-        panel2.setLocation((int)panel2Location.getX() - 10, (int)panel2Location.getY());
+        panel1.setLocation((int)panel1Location.getX() - 20, (int)panel1Location.getY());
+        panel2.setLocation((int)panel2Location.getX() - 20, (int)panel2Location.getY());
 
     }
 }

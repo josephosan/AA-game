@@ -27,7 +27,7 @@ public class ElementManager {
     }
 
     public void joinGroup(String group, String id ) {
-        if (groups.containsKey(group) == false) {
+        if (!groups.containsKey(group)) {
             newGroup(group);
         }
         groups.get(group).add(getElementById(id));
