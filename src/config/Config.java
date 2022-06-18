@@ -21,6 +21,9 @@ public class Config {
     static final AaSize 
         mainCircleSize = new AaSize(100, 100);
 
+    static final AaSize
+        smallBallSize = new AaSize(16,16);
+
     static final String 
         frameTitle = "AA GAME";
 
@@ -72,5 +75,9 @@ public class Config {
 
     public static Integer getSpinningCircleRadius() {
         return spinningCircleRadius;
+    }
+
+    public static AaSize getSmallBallSize(){
+        return smallBallSize;
     }
 }

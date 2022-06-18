@@ -12,18 +12,25 @@ public class DrawSmallBall extends Middleware {
     APanel panel;
     ElementManager elementManager = Config.getElementManager();
     SmallBall smallBall;
-    Angle angle;
     AaPosition position = new AaPosition();
     Rotation rotation;
-   
+    private double angle = 90.0;
     public DrawSmallBall(APanel aPanel){
         super("drawSmallBall");
         this.panel = aPanel;
         
     }
 
+    public void setAngle(double ang){
+        this.angle = ang;
+    }
+
+    public double getAngle(){
+        return this.angle;
+    }
+
     public void angularMovement(){              //basically uses Rotation class in order to get the positions in angular
-        position = rotation.rotate(smallBall);  //shape so we can pass it to SmallBall element to draw
+        position = rotation.rotate(this);  //shape so we can pass it to SmallBall element to draw
     }                                           //also, we use the AaPosition class to handle the output of rotate function
 
     public void straightMovement(int x, int y){ //In case anyone would need to pass coordination's instead of angles

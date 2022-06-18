@@ -1,0 +1,20 @@
+{
+    
+    "author": "Arman",
+    "ballsConnected": "0",
+    "rotationSpeed": "5",
+    "ballsColor": "BLACK",
+    "backgroundColor": "YELLOW",
+    "numOfBallsToConnect": "3",
+
+    "middleware1":{
+        "className": "DrawSmallBall",
+        "arg0": "",
+        "arg1": "",
+        "arg2": "",
+        "arg3": "",
+        "arg4": "",
+        "arg5": ""
+    }
+
+}
