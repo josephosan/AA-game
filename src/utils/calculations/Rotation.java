@@ -4,6 +4,7 @@ import java.lang.Math;
 
 import elementManager.coordinate.AaPosition;
 import elementManager.elements.*;
+import middlewareManager.middlewares.DrawSmallBall;
 
 public class Rotation{
     private final Integer rotationSpeed; //should be in degree
@@ -16,8 +17,8 @@ public class Rotation{
         this.r = bigBall.getR();
     }
 
-    public AaPosition rotate(SmallBall smallBall){
-        Angle angle = new Angle(smallBall.getAngle());
+    public AaPosition rotate(DrawSmallBall drawSmallBall){
+        Angle angle = new Angle(drawSmallBall.getAngle());
         angle.add(this.rotationSpeed);
         double a = angle.getInRadian();
         Integer x = (int) (this.origin.getX() + (Math.cos(a) * r));

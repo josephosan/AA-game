@@ -22,6 +22,7 @@ public class SmallBall extends Element {
         this.number = number;
     }
 
+
     public String getNumber(){
         return Integer.toString(this.number);
     }
@@ -47,14 +48,14 @@ public class SmallBall extends Element {
         Graphics2D g2D = (Graphics2D)g;      //Graphics2D is more feature-rich than Graphics
         if(numberVisible){                   //checking whether we want number inside the ball
             g2D.setPaint(Color.ORANGE);             
-            g2D.fillOval(this.width, this.height, 15, 15);      //Drawing the circle with radius 15
+            g2D.fillOval(this.width - 8, this.height - 8, 16, 16);      //Drawing the circle with radius 15
             g2D.setPaint(Color.BLACK);
-            g2D.drawString(getNumber(), this.width/2, this.height/2);          //Drawing the number inside the circle. *still not sure about it
+            g2D.drawString(getNumber(), this.width - 8, this.height - 8);          //Drawing the number inside the circle. *still not sure about it
             System.out.println("print smallBall with number");
         }
         else{
             g2D.setPaint(Color.ORANGE);
-            g2D.fillOval(this.width, this.height, 15, 15);
+            g2D.fillOval(this.width - 8, this.height - 8, 16, 16);
             System.out.println("print smallBall without number");
         }
 

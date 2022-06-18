@@ -1,13 +1,52 @@
-{
-    "level": "1",
-    "author": "arman",
-    "ballsConnected": "0",
-    "theSpeedOfSmallBallConnected": "2(khodet bebin vahedesh chie)",
-    "ballsColor" "ghahveiii",
-    "middleware1": "validationMiddleware(masala)",
-    "middleware2": "someThingMiddleware"
+"level1"{
 
+    "author" = "Arman",
+    "ballsConnected" = "0",
+    "rotationSpeed" = "5",
+    "ballsColor" = "BLACK",
+    "backgroundColor" = "YELLOW",
+    "numOfBallsToConnect" = "3",
 
+    "bigBall"{
+        "className" = "DrawBigBall",
+        "startingPosBigBall" = "200, 300",
+    },
 
-    // injori masala
+    "smallBall1"{
+        "className" = "DrawSmallBall",
+        "startingPosSmallBall" = "200, 500",
+        "startingAngle" = "90.0",
+        "middlewareLocation"{
+            "arg0" = "",
+        },
+    },
+
+    "smallBall2"{
+        "className" = "DrawSmallBall",
+        "startingPosSmallBall" = "200, 535",
+        "startingAngle" = "90.0",
+        "middlewareLocation"{
+            "arg0" = "",
+        }, 
+    },
+
+    "smallBall3"{
+        "className" = "DrawSmallBall",
+        "startingPosSmallBall" = "200, 570",
+        "startingAngle" = "90.0",
+        "middlewareLocation"{
+            "arg0" = "",
+        },
+    },
+
+    "line"{
+        "className" = "DrawLine",
+        "arg0" = "",
+        "arg1" = "smallBXPos",
+        "arg2" = "SMALLBYPos",
+        "middlewareLocation"{
+            "arg0" = "",
+        },
+    },
+
 }
