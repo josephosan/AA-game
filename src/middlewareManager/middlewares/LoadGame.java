@@ -17,15 +17,17 @@ public class LoadGame extends Middleware {
         this.middlewareManager = Config.getMiddlewareManager();
     }
 
+    //THIS CLASS DOES NOT CURRENTLY SUPPORT CUSTOM CONSTRUCTOR FOR MIDDLEWARES.
+    //DO NOT MERGE WITH MASTER YET.
     @Override
     public void init(){
         System.out.println("LOAD GAME INIT");
         HashMap<String,HashMap<String,String>> data = new HashMap<String, HashMap<String,String>>();
-        
+        //Loading from file
         File file = new File("./../../data/levels/"+level+".aa");
         if(file.exists()){
             // parse file
-            //
+            // get hashmap
         }
         else{
             System.out.println("Level file not found!");
@@ -41,19 +43,30 @@ public class LoadGame extends Middleware {
         data.put("middleware0",h);
         //END OF TEST SECTION
         
-       
+        int i = 0;
         while(true){
-            int i = 0;
+        
             if(data.containsKey("middleware"+i)){
                 try{
+                    //getting class name from hashmap
                     String className = data.get("middleware"+i).get("className");
+                    // defining middleware manager arguements
                     Class[] middlewareManagerArgs = new Class[2];
                     middlewareManagerArgs[0] = Middleware.class; middlewareManagerArgs[1]= MiddlewareLocation.class;  
+                    // Using Method class to invoke the method from heap on run time.
                     Method addMiddleware = middlewareManager.getClass().getMethod("addMiddleware", middlewareManagerArgs);
+
                     if(data.get("middleware"+i).containsKey("numberOfArgs")){
+                        //Middlewares with custom constructor
+
+                        
                         int numberOfArgs = Integer.parseInt(data.get("middleware"+i).get("numberOfArgs"));
+                        //Type of middleware's costructor arguments
                         Class[] middlwareArgTypes = new Class[numberOfArgs];
+                        //Constructor arguements
                         String[] middlewareArgs = new String[numberOfArgs];
+
+                        // resolving types
                         for (int j=0 ; j<numberOfArgs ; j++){
                             String arg = data.get("middleware"+i).get("arg"+j);
                             if(this.isNumeric(arg)){
@@ -69,11 +82,12 @@ public class LoadGame extends Middleware {
                                 middlewareArgs[j] = arg;
                             }
                         }
-  
-                        addMiddleware.invoke(Class.forName(className).getConstructor(middlwareArgTypes).newInstance(middlewareArgs), new MiddlewareLocation());
+                        //invoking addMiddleware method.
+                        addMiddleware.invoke(middlewareManager,Class.forName(className).getConstructor(middlwareArgTypes).newInstance(middlewareArgs), new MiddlewareLocation());
                     }
                     else{
-                        addMiddleware.invoke(middlewareManager,new ShowMenu(), new MiddlewareLocation());
+                        //default constructor
+                        //invoking addMiddleware method.
                         addMiddleware.invoke(middlewareManager,Class.forName(className).getConstructor().newInstance(),new MiddlewareLocation());
                     }
                 }
