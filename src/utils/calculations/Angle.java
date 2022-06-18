@@ -1,4 +1,4 @@
-package elementManager.calculation;
+package utils.calculations;
 
 public class Angle {
     private double angle;
