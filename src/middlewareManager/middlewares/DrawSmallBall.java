@@ -1,10 +1,10 @@
 package middlewareManager.middlewares;
 
-import java.awt.*;
 import config.Config;
+import utils.calculations.Angle;
+import utils.calculations.Rotation;
 import elementManager.ElementManager;
 import elementManager.elements.*;
-import elementManager.calculation.*;
 import elementManager.coordinate.AaPosition;
 import frameManager.APanel;
 
