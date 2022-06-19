@@ -17,8 +17,9 @@ public class LoadGame extends Middleware {
         this.middlewareManager = Config.getMiddlewareManager();
     }
 
-    //THIS CLASS DOES NOT CURRENTLY SUPPORT CUSTOM CONSTRUCTOR FOR MIDDLEWARES.
-    //DO NOT MERGE WITH MASTER YET.
+    //THIS CLASS DOES NOT CURRENTLY SUPPORT OBJECT ARGUEMENT FOR CONSTRUCTORS!
+    //THIS CLASS STILL NEED A PARSER!
+    //DO NOT MERGE WITH MASTER YET!
     @Override
     public void init(){
         System.out.println("LOAD GAME INIT");
@@ -36,11 +37,10 @@ public class LoadGame extends Middleware {
         HashMap<String,String> h = new HashMap<String,String>();
 
         //THIS PART IS FOR TEST AND SHOULD BE REMOVED LATER
-        h.put("className","middlewareManager.middlewares.ShowMenu"); //name
-        //h.put("numberOfArgs",""); //number of args
-        //h.put("arg0","");
-
-        data.put("middleware0",h);
+        // h.put("className","middlewareManager.middlewares.ShowMenu"); //name
+        // h.put("numberOfArgs","0"); //number of args
+        // h.put("arg0","");
+        //data.put("middleware0",h);
         //END OF TEST SECTION
         
         int i = 0;
@@ -57,38 +57,56 @@ public class LoadGame extends Middleware {
                     Method addMiddleware = middlewareManager.getClass().getMethod("addMiddleware", middlewareManagerArgs);
 
                     if(data.get("middleware"+i).containsKey("numberOfArgs")){
-                        //Middlewares with custom constructor
-
                         
                         int numberOfArgs = Integer.parseInt(data.get("middleware"+i).get("numberOfArgs"));
-                        //Type of middleware's costructor arguments
-                        Class[] middlwareArgTypes = new Class[numberOfArgs];
-                        //Constructor arguements
-                        String[] middlewareArgs = new String[numberOfArgs];
 
-                        // resolving types
+                        Class[] middlwareArgTypes = new Class[numberOfArgs];
+                        String[] args = new String[numberOfArgs];
                         for (int j=0 ; j<numberOfArgs ; j++){
-                            String arg = data.get("middleware"+i).get("arg"+j);
-                            if(this.isNumeric(arg)){
-                                middlwareArgTypes [j] = double.class;
-                                middlewareArgs[j] = arg;
-                            }
-                            else if (this.isMiddleware(arg)){
-                                middlwareArgTypes[j] = Class.forName(arg).getClass();
-                                middlewareArgs[j] = arg;
-                            }
-                            else {
-                                middlwareArgTypes[j] = String.class;
-                                middlewareArgs[j] = arg;
-                            }
+                            middlwareArgTypes[j] = String.class;
+                            args[j] = data.get("middleware"+i).get("arg"+j);
                         }
-                        //invoking addMiddleware method.
-                        addMiddleware.invoke(middlewareManager,Class.forName(className).getConstructor(middlwareArgTypes).newInstance(middlewareArgs), new MiddlewareLocation());
-                    }
-                    else{
-                        //default constructor
-                        //invoking addMiddleware method.
-                        addMiddleware.invoke(middlewareManager,Class.forName(className).getConstructor().newInstance(),new MiddlewareLocation());
+
+                        switch (numberOfArgs){
+                            case 0:
+                                addMiddleware
+                                    .invoke(
+                                        middlewareManager,
+                                        Class.forName(className).getConstructor().newInstance(),
+                                        new MiddlewareLocation());
+                                break;
+                            case 1:
+                                addMiddleware
+                                    .invoke(
+                                        middlewareManager,
+                                        Class.forName(className).getConstructor(middlwareArgTypes).newInstance(args[0]),
+                                        new MiddlewareLocation());
+                                break;
+                            case 2:
+                                addMiddleware
+                                    .invoke(
+                                        middlewareManager,
+                                        Class.forName(className).getConstructor(middlwareArgTypes).newInstance(args[0],args[1]),
+                                        new MiddlewareLocation());
+                                break;
+                            case 3:
+                                addMiddleware
+                                    .invoke(
+                                        middlewareManager,
+                                        Class.forName(className).getConstructor(middlwareArgTypes).newInstance(args[0],args[1],args[2]),
+                                        new MiddlewareLocation());
+                                break;
+                            case 4:
+                                addMiddleware
+                                    .invoke(
+                                        middlewareManager,
+                                        Class.forName(className).getConstructor(middlwareArgTypes).newInstance(args[0],args[1],args[2],args[3]),
+                                        new MiddlewareLocation());
+                                break;
+                            default:
+                                //throw error 
+                        }
+                        
                     }
                 }
                 catch(Exception e){
