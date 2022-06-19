@@ -37,6 +37,10 @@ public class DrawSmallBall extends Middleware {
         position.setX(x);
         position.setY(y);
     }
+
+    public AaPosition getPos(){
+        return position;
+    }
     
     @Override
     public void run(){
