@@ -3,6 +3,7 @@ package elementManager.elements;
 import javax.swing.*;
 import java.awt.*;
 import elementManager.coordinate.AaPosition;
+import config.Config;
 
 public class SmallBall extends Element {
     int number=1;
@@ -21,6 +22,7 @@ public class SmallBall extends Element {
     public void setNumber(int number){
         this.number = number;
     }
+
 
     public String getNumber(){
         return Integer.toString(this.number);
@@ -47,14 +49,16 @@ public class SmallBall extends Element {
         Graphics2D g2D = (Graphics2D)g;      //Graphics2D is more feature-rich than Graphics
         if(numberVisible){                   //checking whether we want number inside the ball
             g2D.setPaint(Color.ORANGE);             
-            g2D.fillOval(this.width, this.height, 15, 15);      //Drawing the circle with radius 15
+            g2D.fillOval(this.width - Config.getSmallBallSize().getWidth()/2, this.height - Config.getSmallBallSize().getHeight()/2,
+                Config.getSmallBallSize().getWidth(), Config.getSmallBallSize().getHeight());      //Drawing the circle with radius 15
             g2D.setPaint(Color.BLACK);
-            g2D.drawString(getNumber(), this.width/2, this.height/2);          //Drawing the number inside the circle. *still not sure about it
+            g2D.drawString(getNumber(), this.width - Config.getSmallBallSize().getWidth()/2, this.height - Config.getSmallBallSize().getHeight()/2);          //Drawing the number inside the circle. *still not sure about it
             System.out.println("print smallBall with number");
         }
         else{
             g2D.setPaint(Color.ORANGE);
-            g2D.fillOval(this.width, this.height, 15, 15);
+            g2D.fillOval(this.width - Config.getSmallBallSize().getWidth()/2, this.height - Config.getSmallBallSize().getHeight()/2,
+                Config.getSmallBallSize().getWidth(), Config.getSmallBallSize().getHeight());
             System.out.println("print smallBall without number");
         }
 
