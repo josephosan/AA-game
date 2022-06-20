@@ -30,10 +30,4 @@ public class AParser {
         HashMap<String, String> result = gson.fromJson(jsonFile.toString(), HashMap.class);
         return result;
     }
-
-
-    public static void main(String[] args) {
-        AParser parser = new AParser();
-        System.out.println(parser.resultRetruner(parser.findAndReturnData(1)).get("middleware1"));
-    }
 }
