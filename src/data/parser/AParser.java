@@ -1,4 +1,4 @@
-package data.aParser;
+package data.parser;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
@@ -9,7 +9,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.HashMap;
-import java.util.List;
 
 public class AParser {
 
