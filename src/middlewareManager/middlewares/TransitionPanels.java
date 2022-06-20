@@ -10,6 +10,7 @@ public class TransitionPanels extends Middleware{
     APanel panel1, panel2;
     boolean rightToLeft = true;
     FrameManager frameManager = Config.getFrameManager();
+    int transitionSpeed;
 
     public TransitionPanels(String panel1Id, String panel2Id) {
         super("transitionPanels");
@@ -36,12 +37,14 @@ public class TransitionPanels extends Middleware{
             this.panel2.setLocation(-Config.getFrameWidth(), 0);
             this.panel2.setVisible(true);
         }
+        this.transitionSpeed = Config.getFrameWidth() / 14 ;
         
     }
 
 
     @Override
     public void run() {
+        System.out.println(Config.getFrameWidth());
         if(rightToLeft){
             Point panel1Location = panel1.getLocation();
             if (panel1Location.getX() <= -Config.getFrameWidth()) {
@@ -52,8 +55,8 @@ public class TransitionPanels extends Middleware{
                 return;
             }
             Point panel2Location = panel2.getLocation();
-            panel1.setLocation((int)panel1Location.getX() - 10, (int)panel1Location.getY());
-            panel2.setLocation((int)panel2Location.getX() - 10, (int)panel2Location.getY());
+            panel1.setLocation((int)panel1Location.getX() - transitionSpeed, (int)panel1Location.getY());
+            panel2.setLocation((int)panel2Location.getX() - transitionSpeed, (int)panel2Location.getY());
         }
         else {
             Point panel1Location = panel1.getLocation();
@@ -65,8 +68,12 @@ public class TransitionPanels extends Middleware{
                 return;
             }
             Point panel2Location = panel2.getLocation();
-            panel1.setLocation((int)panel1Location.getX() + 10, (int)panel1Location.getY());
-            panel2.setLocation((int)panel2Location.getX() + 10, (int)panel2Location.getY());
+            panel1.setLocation((int)panel1Location.getX() + transitionSpeed, (int)panel1Location.getY());
+            panel2.setLocation((int)panel2Location.getX() + transitionSpeed, (int)panel2Location.getY());
+        }
+
+        if(transitionSpeed>2){
+            this.transitionSpeed -= 2;
         }
     }
 }
