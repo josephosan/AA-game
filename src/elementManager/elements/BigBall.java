@@ -7,7 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 public class BigBall extends Element{
     public static AaPosition aaPosition = new AaPosition();
-
+    Color color;
     public BigBall(JPanel panel) {
         super(panel);
         this.size.setSize(Config.getMainCircleSize().getWidth(), Config.getMainCircleSize().getHeight());
@@ -19,11 +19,21 @@ public class BigBall extends Element{
         return aaPosition;
     }
 
+    public void setPos(int x, int y){
+        position.setX(x);
+        position.setY(y);
+    }
+
+    public void setColor(Color c){
+        this.color = c;
+    }
+
 
     @Override
     public void paintSelf(Graphics g) {
-
-        g.fillOval(
+        Graphics2D g2D = (Graphics2D)g;
+        g2D.setPaint(this.color);
+        g2D.fillOval(
             this.position.getX() - this.size.getWidth() / 2,
             this.position.getY() - this.size.getHeight() / 2,
             this.size.getWidth(), 

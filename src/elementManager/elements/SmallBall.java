@@ -10,6 +10,7 @@ public class SmallBall extends Element {
     int width=0;
     int height=0;
     boolean numberVisible=false;
+    Color color;
     public SmallBall(JPanel panel) {
         super(panel);
     }
@@ -23,6 +24,9 @@ public class SmallBall extends Element {
         this.number = number;
     }
 
+    public void setColor(Color c){
+        this.color = c;
+    }
 
     public String getNumber(){
         return Integer.toString(this.number);
@@ -48,7 +52,7 @@ public class SmallBall extends Element {
     public void paintSelf(Graphics g){
         Graphics2D g2D = (Graphics2D)g;      //Graphics2D is more feature-rich than Graphics
         if(numberVisible){                   //checking whether we want number inside the ball
-            g2D.setPaint(Color.ORANGE);             
+            g2D.setPaint(this.color);             
             g2D.fillOval(this.width - Config.getSmallBallSize().getWidth()/2, this.height - Config.getSmallBallSize().getHeight()/2,
                 Config.getSmallBallSize().getWidth(), Config.getSmallBallSize().getHeight());      //Drawing the circle with radius 15
             g2D.setPaint(Color.BLACK);
@@ -56,7 +60,7 @@ public class SmallBall extends Element {
             System.out.println("print smallBall with number");
         }
         else{
-            g2D.setPaint(Color.ORANGE);
+            g2D.setPaint(this.color);
             g2D.fillOval(this.width - Config.getSmallBallSize().getWidth()/2, this.height - Config.getSmallBallSize().getHeight()/2,
                 Config.getSmallBallSize().getWidth(), Config.getSmallBallSize().getHeight());
             System.out.println("print smallBall without number");
