@@ -5,23 +5,23 @@ import java.awt.*;
 import config.Config;
 import elementManager.ElementManager;
 import elementManager.elements.*;
-
+import frameManager.APanel;
 
 
 public class DrawLine extends Middleware {
-    Panel panel;
+    APanel aPanel;
     ElementManager elementManager = Config.getElementManager();
     private float smallBXPos;
     private float smallBYPos;
 
-    public DrawLine(Panel panel) {
+    public DrawLine(APanel apanel) {
         super("drawLine");
-        this.panel = panel;
+        this.aPanel = apanel;
     }
 
-    public DrawLine(Panel panel, float smallBXPos, float smallBYPos) {
+    public DrawLine(APanel apanel, float smallBXPos, float smallBYPos) {
         super("drawLine");
-        this.panel = panel;
+        this.aPanel = apanel;
         this.smallBXPos = smallBXPos;
         this.smallBYPos = smallBYPos;
     }
@@ -30,6 +30,5 @@ public class DrawLine extends Middleware {
     public void run() {
         Line line = (Line)elementManager.getElementById("drawLine");
         line.setPos(BigBall.getPos().getX(), BigBall.getPos().getY(), (int)smallBXPos, (int)smallBYPos);
-        panel.repaint();
     }
 }

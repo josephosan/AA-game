@@ -1,6 +1,5 @@
 package elementManager.elements;
 
-import elementManager.elements.Element;
 import javax.swing.*;
 import java.awt.*;
 

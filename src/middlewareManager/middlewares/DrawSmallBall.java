@@ -18,7 +18,7 @@ public class DrawSmallBall extends Middleware {
     public DrawSmallBall(APanel aPanel){
         super("drawSmallBall");
         this.panel = aPanel;
-        
+
     }
 
     public void setAngle(double ang){
@@ -41,12 +41,12 @@ public class DrawSmallBall extends Middleware {
     public AaPosition getPos(){
         return position;
     }
-    
+
     @Override
     public void run(){
         smallBall = (SmallBall)elementManager.getElementById("drawSmallBall");
         smallBall.setPos(position.getX(), position.getY());  //here we pass the coordination's to SmallBall Element
         panel.repaint();
     }
-    
+
 }
