@@ -13,7 +13,7 @@ import java.util.HashMap;
 public class AParser {
 
     public JsonObject findAndReturnData(String fileName) {
-        File file = new File("src/data/levels/level"+fileName);
+        File file = new File("src/data/levels/"+fileName);
         try {
             JsonElement fileElement = JsonParser.parseReader(new FileReader(file));
             return fileElement.getAsJsonObject();
