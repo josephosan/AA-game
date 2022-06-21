@@ -2,16 +2,58 @@ package middlewareManager;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.HashMap;
 import middlewareManager.middlewares.Middleware;
 
 public class MiddlewareManager {
+    HashMap<String, Middleware> middlewaresMap = new HashMap<>();
     ArrayList<Middleware> middlewares;
-
     Boolean removeRequestInThisTurn = false;
     ArrayList<Integer> removeMiddlewareIds = new ArrayList<Integer>();
+    HashMap<String, String> middlewareValues = new HashMap<>();
+    HashMap<String, ArrayList<Middleware>> groups = new HashMap<>();
 
     public MiddlewareManager() {
         middlewares = new ArrayList<Middleware>();
+    }
+
+    public void joinGroup(String group, Middleware middleware) {
+        if (groups.containsKey(group) == false) {
+            groups.put(group, new ArrayList<Middleware>());
+        }
+        groups.get(group).add(middleware);
+    }
+
+    public void leaveGroup(String group, String middlewareId) {
+        Middleware middleware = getMiddlewareById(middlewareId);
+        leaveGroup(group, middleware);
+    }
+
+    public void leaveGroup(String group, Middleware middleware) {
+        if (middleware == null) return;
+        int i = -1;
+        if (groups.containsKey(group)) {
+            ArrayList<Middleware> middlewares = getGroup(group);
+            for (Middleware _middleware : middlewares) {
+                i++;
+                if (_middleware == middleware) {
+                    middlewares.remove(i);
+                    return;
+                }
+            }
+        }   
+    }
+
+    public ArrayList<Middleware> getGroup(String group) {
+        return groups.get(group);
+    }
+
+    public void setMiddlewareValue(String key, String value) {
+        middlewareValues.put(key, value);
+    }
+
+    public String getMiddlewareValue(String key) {
+        return middlewareValues.get(key);
     }
 
     public Integer findMiddlewareIndexById(String id) {
@@ -49,7 +91,13 @@ public class MiddlewareManager {
             return;
         }
 
+
+        middlewaresMap.put(middleware.getId(), middleware);
         middlewares.add(insertIndex, middleware);
+    }
+
+    public Middleware getMiddlewareById(String id) {
+        return middlewaresMap.get(id);
     }
 
     // main loop for executing middlewares
@@ -77,6 +125,11 @@ public class MiddlewareManager {
 
     public void removeMiddlewares() {
         for (int i : removeMiddlewareIds) {
+            Middleware middleware = middlewares.get(i);
+            middlewaresMap.remove(middleware.getId());
+            for (String group : middleware.getGroups()) {
+                leaveGroup(group, middleware);
+            }
             middlewares.set(i, null);
         }
         ArrayList<Middleware> newMiddlewares = new ArrayList<Middleware>();
