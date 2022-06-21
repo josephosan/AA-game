@@ -11,8 +11,8 @@ import frameManager.APanel;
 public class DrawLine extends Middleware {
     APanel aPanel;
     ElementManager elementManager = Config.getElementManager();
-    private float smallBXPos;
-    private float smallBYPos;
+    private float smallBXPos = 0;
+    private float smallBYPos = 0;
 
     public DrawLine(APanel apanel) {
         super("drawLine");
@@ -30,5 +30,7 @@ public class DrawLine extends Middleware {
     public void run() {
         Line line = (Line)elementManager.getElementById("drawLine");
         line.setPos(BigBall.getPos().getX(), BigBall.getPos().getY(), (int)smallBXPos, (int)smallBYPos);
+        if (smallBYPos == 0 || smallBXPos == 0)
+            this.remove();
     }
 }
