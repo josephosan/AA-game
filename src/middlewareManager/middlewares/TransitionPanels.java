@@ -37,7 +37,7 @@ public class TransitionPanels extends Middleware{
             this.panel2.setLocation(-Config.getFrameWidth(), 0);
             this.panel2.setVisible(true);
         }
-        this.transitionSpeed = Config.getFrameWidth() / 14 ;
+        this.transitionSpeed = Config.getFrameWidth() / 25 ;
         
     }
 
@@ -71,9 +71,10 @@ public class TransitionPanels extends Middleware{
             panel1.setLocation((int)panel1Location.getX() + transitionSpeed, (int)panel1Location.getY());
             panel2.setLocation((int)panel2Location.getX() + transitionSpeed, (int)panel2Location.getY());
         }
-
-        if(transitionSpeed>2){
-            this.transitionSpeed -= 2;
+        double x = panel1.getLocation().getX();
+        System.out.println(transitionSpeed>5 &&  rightToLeft ? x > -Config.getFrameWidth()/2 : x < -Config.getFrameWidth()/2);
+        if(transitionSpeed>1 &&  (rightToLeft ? x < (-Config.getFrameWidth()/3)*2 : x > (Config.getFrameWidth()/3)*2)){
+            this.transitionSpeed -= 1;
         }
     }
 }
