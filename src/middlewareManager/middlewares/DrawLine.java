@@ -30,7 +30,5 @@ public class DrawLine extends Middleware {
     public void run() {
         Line line = (Line)elementManager.getElementById("drawLine");
         line.setPos(BigBall.getPos().getX(), BigBall.getPos().getY(), (int)smallBXPos, (int)smallBYPos);
-        if (smallBYPos == 0 || smallBXPos == 0)
-            this.remove();
     }
 }
