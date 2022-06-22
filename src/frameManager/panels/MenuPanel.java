@@ -28,6 +28,7 @@ public class MenuPanel extends APanel implements ActionListener{
     JButton levelButton;
     public MenuPanel(String id) {
         super(id);
+
         this.setBackground(new Color(0x32ff98));
        
         ImageIcon playIcon = new ImageIcon("src/Icons/play.png");

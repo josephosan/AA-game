@@ -1,97 +1,150 @@
 package middlewareManager;
 
-import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.HashMap;
 import middlewareManager.middlewares.Middleware;
+import utils.AaLinkedList;
 
 public class MiddlewareManager {
-    ArrayList<Middleware> middlewares;
-
-    Boolean removeRequestInThisTurn = false;
+    HashMap<String, AaLinkedList.LinkedElement> middlewaresMap = new HashMap<>();
+    AaLinkedList middlewares = new AaLinkedList();
+    Boolean loopIsPaused = false;
     ArrayList<Integer> removeMiddlewareIds = new ArrayList<Integer>();
+    HashMap<String, String> middlewareValues = new HashMap<>();
+    HashMap<String, ArrayList<Middleware>> groups = new HashMap<>();
 
     public MiddlewareManager() {
-        middlewares = new ArrayList<Middleware>();
     }
 
-    public Integer findMiddlewareIndexById(String id) {
-        for (int i = 0; i < middlewares.size(); i++) {
-            Middleware middleware = middlewares.get(i);
+    public void joinGroup(String group, Middleware middleware) {
+        if (groups.containsKey(group) == false) {
+            groups.put(group, new ArrayList<Middleware>());
+        }
+        groups.get(group).add(middleware);
+    }
+
+    public void leaveGroup(String group, String middlewareId) {
+        Middleware middleware = getMiddlewareById(middlewareId);
+        leaveGroup(group, middleware);
+    }
+
+    public void leaveGroup(String group, Middleware middleware) {
+        if (middleware == null) return;
+        int i = -1;
+        if (groups.containsKey(group)) {
+            ArrayList<Middleware> middlewares = getGroup(group);
+            for (Middleware _middleware : middlewares) {
+                i++;
+                if (_middleware == middleware) {
+                    middlewares.remove(i);
+                    return;
+                }
+            }
+        }   
+    }
+
+    public ArrayList<Middleware> getGroup(String group) {
+        return groups.get(group);
+    }
+
+    public void setMiddlewareValue(String key, String value) {
+        middlewareValues.put(key, value);
+    }
+
+    public String getMiddlewareValue(String key) {
+        return middlewareValues.get(key);
+    }
+
+    public AaLinkedList.LinkedElement findLinkedElementById(String id) {
+        AaLinkedList.Iterator iterator = middlewares.getIterator();
+        while(iterator.hasNext()) {
+            AaLinkedList.LinkedElement element= iterator.next();
+            Middleware middleware = element.getMiddleware();
             if (middleware.getId().equals(id)) {
-                return i;
+                return element;
             }
         }
 
-        return -1;
-    } 
-
-    public void addMiddleware(Middleware middleware, MiddlewareLocation middlewareLocation) {
-        System.out.println("adding middleware");
-        Integer insertIndex = -1;
-        
-        if (middlewareLocation.atIndex != -1) {
-            insertIndex = middlewareLocation.atIndex;
-        } else if (middlewareLocation.atStart) {
-            insertIndex = 0;
-        } else if (middlewareLocation.atEnd) {
-            insertIndex = middlewares.size() - 1;
-            insertIndex = insertIndex == -1 ? 0 : insertIndex; // if size was 0 means no middleware found so insert index is 0;
-        } else if (middlewareLocation.getAfter() != null) {
-            insertIndex = findMiddlewareIndexById(middlewareLocation.getAfter());
-        } else if (middlewareLocation.getBefore() != null) {
-            insertIndex = findMiddlewareIndexById(middlewareLocation.getBefore());
-        }
-
-
-        if (insertIndex == -1) {
-            // the insert index not found;
-            // maybe something should be done here;
-            return;
-        }
-
-        middlewares.add(insertIndex, middleware);
+        return null;
     }
 
-    // main loop for executing middlewares
+    public void addMiddleware(Middleware middleware, MiddlewareLocation middlewareLocation) {
+        Boolean done = true;
+        if (middlewareLocation.atStart) {
+            middlewares.addAtStart(middleware);
+        } else if (middlewareLocation.atEnd) {
+            middlewares.add(middleware);
+        } else if (middlewareLocation.getAfter() != null) {
+            AaLinkedList.LinkedElement element = findLinkedElementById(middlewareLocation.getAfter());
+            middlewares.addAfter(middleware, element);
+        } else if (middlewareLocation.getBefore() != null) {
+            AaLinkedList.LinkedElement element = findLinkedElementById(middlewareLocation.getAfter());
+            middlewares.addAfter(middleware, element);
+        } else if (middlewareLocation.atIndex != -1) {
+
+        } else {
+            done = false;
+        }
+
+        if (done) {
+            middlewaresMap.put(middleware.getId(), middlewares.getLastAddedLinkedElement());
+        }
+    }
+
+
+    // add middlewars in series 
+    // for example if your middlewares has order in adding to loop
+    // and it is not important where middleware is actually in the loop
+    // you can use this method.
+    public void addMiddlewareInSeries(Middleware middleware) {
+        AaLinkedList.LinkedElement lastAddedElement = middlewares.getLastAddedLinkedElement();
+        middlewares.addAfter(middleware, lastAddedElement);
+
+        middlewaresMap.put(middleware.getId(), middlewares.getLastAddedLinkedElement());
+    }
+
+    public Middleware getMiddlewareById(String id) {
+        return middlewaresMap.get(id).getMiddleware();
+    }
+
     public void loop() {
-        System.out.println("from loop");
-        for (int i = 0; i < middlewares.size(); i++) {
-            System.out.println("from for in loop");
-            Middleware middleware = middlewares.get(i);
+        if (loopIsPaused) return;
+
+        AaLinkedList.Iterator iterator = middlewares.getIterator();
+        while(iterator.hasNext()) {
+            AaLinkedList.LinkedElement element = iterator.next();
+            Middleware middleware = element.getMiddleware();
+
             if (middleware.isFirstTime()) {
+                middleware.setEnteringLoopTime(System.currentTimeMillis());
                 middleware.setFirstTime(false);
                 middleware.init();
-                System.out.println("from first Time");
             } else {
                 middleware.run();
             }
 
-            if (removeRequestInThisTurn) {
-                removeMiddlewareIds.add(i);
-                removeRequestInThisTurn = false;
+            middleware.addLoopingNumber();
+
+            if (middleware.getShouldRemove()) {
+                removeMiddleware(element);
             }
         }
-
-        removeMiddlewares();
     }
 
-    public void removeMiddlewares() {
-        for (int i : removeMiddlewareIds) {
-            middlewares.set(i, null);
+    public void removeMiddleware(AaLinkedList.LinkedElement element) {
+        middlewares.remove(element);
+        // removing from groups
+        Middleware middleware = element.getMiddleware();
+        for (String group : middleware.getGroups()) {
+            leaveGroup(group, middleware);
         }
-        ArrayList<Middleware> newMiddlewares = new ArrayList<Middleware>();
-
-        for (Middleware middleware : middlewares) {
-            if (middleware != null) {
-                newMiddlewares.add(middleware);
-            }
-        }
-
-        middlewares = newMiddlewares;
-        removeMiddlewareIds = new ArrayList<Integer>();
     }
 
-    public void removeMiddlewareByIndex() {
-        removeRequestInThisTurn = true;
+    public void setLoopPause(Boolean pause) {
+        loopIsPaused = pause;
+    }
+
+    public Boolean isLoopPaused() {
+        return loopIsPaused;
     }
 }
