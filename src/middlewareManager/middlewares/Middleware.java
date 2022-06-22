@@ -8,6 +8,9 @@ import config.Config;
 public class Middleware {
     String id;
     Boolean firstTime = true;
+    int loopingNumbers = 0;
+    long enteringLoopTime;
+    Boolean shouldRemove = false;
     FrameManager frameManager = Config.getFrameManager();
     MiddlewareManager middlewareManager = Config.getMiddlewareManager();
     ArrayList<String> groups = new ArrayList<>();
@@ -59,6 +62,26 @@ public class Middleware {
     }
 
     public void remove() {
-        this.middlewareManager.removeMiddlewareByIndex();
+        shouldRemove = true;
+    }
+
+    public Boolean getShouldRemove() {
+        return shouldRemove;
+    }
+
+    public void addLoopingNumber() {
+        loopingNumbers++;
+    }
+
+    public void setEnteringLoopTime(long time) {
+        enteringLoopTime = time;
+    }
+
+    public long getTimePassedFromEnteringLoop() {
+        return System.currentTimeMillis() - enteringLoopTime;
+    }
+
+    public int getLoopingNumbers() {
+        return loopingNumbers;
     }
 }
