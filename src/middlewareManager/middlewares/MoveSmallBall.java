@@ -15,7 +15,7 @@ public class MoveSmallBall extends Middleware  {
     @Override
     public void run() {
         this.smallBall.getPosition().setY(this.smallBall.getPosition().getY()-10);;
-        if(this.smallBall.getPosition().getY()==endY){
+        if(this.smallBall.getPosition().getY()<=endY){
             this.remove();
             return;
         }
