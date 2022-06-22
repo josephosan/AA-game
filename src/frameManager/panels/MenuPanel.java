@@ -30,8 +30,8 @@ public class MenuPanel extends APanel implements ActionListener{
         super(id);
         this.setBackground(new Color(0x32ff98));
        
-        ImageIcon playIcon = new ImageIcon("D:\\aa game\\AA-game\\src\\Icons\\play.png");
-        ImageIcon levelIcon = new ImageIcon("D:\\aa game\\AA-game\\src\\Icons\\levels.png");
+        ImageIcon playIcon = new ImageIcon("src/Icons/play.png");
+        ImageIcon levelIcon = new ImageIcon("src/Icons/levels.png");
 
         playButton = new JButton();
         levelButton = new JButton();
@@ -80,7 +80,7 @@ public class MenuPanel extends APanel implements ActionListener{
     public void actionPerformed(ActionEvent e) {   
         // TODO - call to open other panles based on which button was clicked
         if(e.getSource()==playButton){
-        Middleware transitionPanels = new TransitionPanels("menu", "game");
+        Middleware transitionPanels = new TransitionPanels("menu", "game", false);
         MiddlewareLocation transitionPanelsLocation = new MiddlewareLocation();
         middlewareManager.addMiddleware(transitionPanels, transitionPanelsLocation);
         }
