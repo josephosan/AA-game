@@ -20,7 +20,8 @@ public class DrawSmallBall extends Middleware{
 
     DrawSmallBall(String angle){
         super("AddSmallBall"+n);
-        id = n;
+        int numberOfAllBalls = 20; //TODO get numberOfAllBalls as a variable
+        id = numberOfAllBalls - n;
         n++;
         this.angle = new Angle(Double.parseDouble(angle));
     }
