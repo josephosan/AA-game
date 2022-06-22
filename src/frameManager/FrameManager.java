@@ -7,6 +7,7 @@ import java.awt.*;
 import javax.swing.*;
 import frameManager.APanel;
 import config.Config;
+import elementManager.elements.BigBall;
 import elementManager.elements.SmallBall;
 import frameManager.panels.*;
 
@@ -58,7 +59,7 @@ public class FrameManager extends JFrame{
         Middleware transitionPanels = new TransitionPanels("game", "menu");
         MiddlewareLocation transitionPanelsLocation = new MiddlewareLocation();
         middlewareManager.addMiddleware(transitionPanels, transitionPanelsLocation);
-
+        
 //         Middleware drawSmallBall = new DrawSmallBall(getAPanel("menu"));
 //         MiddlewareLocation drawSmallBaLocation = new MiddlewareLocation();
 //         middlewareManager.addMiddleware(drawSmallBall, drawSmallBaLocation);
