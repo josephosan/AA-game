@@ -15,8 +15,9 @@ public class Config {
 
         frameWidth = 400, 
         frameHeight = 600,
+        smallCircleRadios = 0,
 
-        spinningCircleRadius = 0;
+        bigCircleRadios = 16;
     
     static final AaSize 
         mainCircleSize = new AaSize(100, 100);
@@ -73,11 +74,15 @@ public class Config {
         return mainCircleSize;
     }
 
-    public static Integer getSpinningCircleRadius() {
-        return spinningCircleRadius;
+    public static Integer getBigCircleRadios() {
+        return bigCircleRadios;
     }
 
     public static AaSize getSmallBallSize(){
         return smallBallSize;
     }
+
+    public static Integer getSmallCircleRadios() { return smallCircleRadios; }
+
+    public static Integer getBigCircleRaidos() { return bigCircleRadios; }
 }
