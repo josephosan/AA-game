@@ -3,12 +3,15 @@ package middlewareManager.middlewares;
 import config.Config;
 import elementManager.ElementManager;
 import elementManager.elements.Element;
+import middlewareManager.MiddlewareLocation;
+import middlewareManager.MiddlewareManager;
 import utils.Tools;
 
 import java.util.ArrayList;
 
 public class CheckImpact extends Middleware {
     ElementManager elementManager = Config.getElementManager();
+    MiddlewareManager middleWareManager;
     ArrayList<Element> rotatingSmallBalls;
     ArrayList<Element> shootingSmallBalls;
 
@@ -32,10 +35,11 @@ public class CheckImpact extends Middleware {
 
         for (Element rotatingSB : rotatingSmallBalls)
             for (Element shootingSB : shootingSmallBalls)
-                if (checkIfClashed(rotatingSB, shootingSB))
-                    // TODO: running gameOver middleware.
-
-
-        this.remove();
+                if (checkIfClashed(rotatingSB, shootingSB)) {
+                    Middleware gameOver = new GameOver();
+                    middleWareManager = Config.getMiddlewareManager();
+                    middleWareManager.addMiddleware(gameOver, new MiddlewareLocation());
+                    this.remove();
+                }
     }
 }
