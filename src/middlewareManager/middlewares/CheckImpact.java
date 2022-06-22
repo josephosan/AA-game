@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class CheckImpact extends Middleware {
     ElementManager elementManager = Config.getElementManager();
-    MiddlewareManager middleWareManager;
+    MiddlewareManager middleWareManager  = Config.getMiddlewareManager();
     ArrayList<Element> rotatingSmallBalls;
     ArrayList<Element> shootingSmallBalls;
 
@@ -19,8 +19,8 @@ public class CheckImpact extends Middleware {
         super("checkInterSection");
     }
 
-    public boolean checkIfClashed(Element rotatingSB, Element shootingSB) {
-        int impactRange = Config.getSpinningCircleRadius()*2;
+    public boolean checkIfClashed(Element rotatingSB, Element shootingSB) { // checking if balls had impacted.
+        int impactRange = Config.getBigCircleRadios()*2; // impact range is 2*smallCircleRadios
         int distance = (int)Tools.getTwoPointDistance(
                 rotatingSB.getPosition().getX(),
                 rotatingSB.getPosition().getY(),
@@ -35,11 +35,13 @@ public class CheckImpact extends Middleware {
 
         for (Element rotatingSB : rotatingSmallBalls)
             for (Element shootingSB : shootingSmallBalls)
-                if (checkIfClashed(rotatingSB, shootingSB)) {
-                    Middleware gameOver = new GameOver();
-                    middleWareManager = Config.getMiddlewareManager();
+                if (checkIfClashed(rotatingSB, shootingSB)) { // if two balls clashed end the game
+                    Middleware gameOver = new GameOver();     // by adding the gameOver class to middlewareManager.
                     middleWareManager.addMiddleware(gameOver, new MiddlewareLocation());
                     this.remove();
+                } else { // if not add the ball to rotating balls by adding checkInterSection to middlewareManager.
+                    Middleware checkInterSection = new CheckInterSection();
+                    middleWareManager.addMiddleware(checkInterSection, new MiddlewareLocation());
                 }
     }
 }

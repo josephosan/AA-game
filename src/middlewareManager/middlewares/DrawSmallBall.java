@@ -28,8 +28,8 @@ public class DrawSmallBall extends Middleware{
 
     @Override
     public void init(){
-        //creatin SmallBall instance
-        SmallBall smallBall = new SmallBall(frameManager.getAPanel("game"),angle);
+        //creating SmallBall instance
+        SmallBall smallBall = new SmallBall(frameManager.getAPanel("game"), angle);
         smallBall.setNumber(id);
         //adding smallBall to elementManager
         elementManager.addElement("smallBall"+id, smallBall);
