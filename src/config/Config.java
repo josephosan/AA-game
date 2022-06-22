@@ -16,7 +16,7 @@ public class Config {
         frameWidth = 400, 
         frameHeight = 600,
 
-        spinningCircleRadius = 0;
+        spinningCircleRadius = 16;
     
     static final AaSize 
         mainCircleSize = new AaSize(100, 100);
