@@ -154,10 +154,6 @@ public class AaLinkedList {
             element.getNext().setPrevious(previousElement);
         }
 
-        if (element == lastAddedLinkedElement) {
-            lastAddedLinkedElement = last;
-        }
-
         size--;
     }
 
