@@ -3,45 +3,37 @@ import middlewareManager.middlewares.*;
 import elementManager.*;
 import frameManager.*;
 import java.util.TimerTask;
-
 import aaTimer.AaTimer;
 import config.Config;
 
-
-// ---------------------
-import test.AaLinkedListTest;
-// ---------------------
 public class Aa {
     public static void main(String[] args) {
-        //-------------------
-        new AaLinkedListTest();
-        return;
-        //-------------------
-        // MiddlewareManager middlewareManager = new MiddlewareManager();
-        // Config.middlewareManagerSubscribe(middlewareManager);
 
-        // ElementManager elementManager = new ElementManager();
-        // Config.elementManagerSubscribe(elementManager);
+        MiddlewareManager middlewareManager = new MiddlewareManager();
+        Config.middlewareManagerSubscribe(middlewareManager);
 
-        // FrameManager frameManager = new FrameManager();
-        // Config.frameManagerSubscribe(frameManager);
+        ElementManager elementManager = new ElementManager();
+        Config.elementManagerSubscribe(elementManager);
+
+        FrameManager frameManager = new FrameManager();
+        Config.frameManagerSubscribe(frameManager);
         
-        // frameManager.addMiddlewares();
+        frameManager.addMiddlewares();
 
-        // TimerTask timerTask = new TimerTask() {
-        //     public void run() {
-        //         System.out.println("from timer run");
-        //         middlewareManager.loop();
-        //     }
-        // };
+        TimerTask timerTask = new TimerTask() {
+            public void run() {
+                System.out.println("from timer run");
+                middlewareManager.loop();
+            }
+        };
 
-        // Middleware showMenu = new ShowMenu();
-        // MiddlewareLocation showMenuLocation = new MiddlewareLocation();
+        Middleware showMenu = new ShowMenu();
+        MiddlewareLocation showMenuLocation = new MiddlewareLocation();
 
-        //  middlewareManager.addMiddleware(showMenu, showMenuLocation);
+        middlewareManager.addMiddleware(showMenu, showMenuLocation);
 
-        // AaTimer aaTimer = new AaTimer(timerTask);
-        // aaTimer.play();
+        AaTimer aaTimer = new AaTimer(timerTask);
+        aaTimer.play();
 
 
     }
