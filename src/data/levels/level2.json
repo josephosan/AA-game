@@ -1,0 +1,11 @@
+{
+    "author": "Mahbod",
+    "ballsConnected": "3",
+    "rotationSpeed": "5",
+    "ballsColor": "BLACK",
+    "backgroundColor": "YELLOW",
+    "numOfBallsToConnect": "3",
+    "middleware0": "DrawSmallBall 2 30 menu",
+    "middleware1": "DrawSmallBall 2 60 menu",
+    "middleware2": "DrawSmallBall 2 90 menu"
+}
