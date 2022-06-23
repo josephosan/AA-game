@@ -92,6 +92,8 @@ public class AaLinkedList {
         if (lastElement != null) {
             newElement.setNext(lastElement);
             lastElement.setPrevious(newElement);
+        } else {
+            last = newElement;
         }
         
         lastAddedLinkedElement = newElement;
