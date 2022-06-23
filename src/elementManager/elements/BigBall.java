@@ -35,7 +35,7 @@ public class BigBall extends Element{
         g2D.setPaint(this.color);
         g2D.fillOval(
             this.position.getX() - this.size.getWidth() / 2,
-            this.position.getY() - this.size.getHeight() / 2,
+            this.position.getY(),
             this.size.getWidth(), 
             this.size.getHeight());
     }
