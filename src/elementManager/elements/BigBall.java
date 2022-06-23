@@ -6,7 +6,7 @@ import elementManager.coordinate.AaPosition;
 import javax.swing.*;
 import java.awt.*;
 public class BigBall extends Element{
-    public static AaPosition aaPosition = new AaPosition();
+    public AaPosition aaPosition = new AaPosition();
     Color color;
     public BigBall(JPanel panel) {
         super(panel);
@@ -15,7 +15,7 @@ public class BigBall extends Element{
         aaPosition.setY(this.size.getHeight() + Config.getBigCircleRadios() + 50);
     }
 
-    public static AaPosition getPos() {
+    public AaPosition getPosition() {
         return aaPosition;
     }
 
@@ -41,6 +41,6 @@ public class BigBall extends Element{
     }
 
     public Integer getR() {
-        return 0;
+        return Config.getBigCircleRadios();
     }
 }
