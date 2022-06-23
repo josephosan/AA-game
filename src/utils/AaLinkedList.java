@@ -92,6 +92,8 @@ public class AaLinkedList {
         if (lastElement != null) {
             newElement.setNext(lastElement);
             lastElement.setPrevious(newElement);
+        } else {
+            last = newElement;
         }
         
         lastAddedLinkedElement = newElement;
@@ -130,6 +132,8 @@ public class AaLinkedList {
     }
 
     public void remove(LinkedElement element) {
+        System.out.println(last);
+        System.out.println(element);
         if (last == element) {
             last = element.getPrevious();
             if (last != null) {
@@ -163,5 +167,17 @@ public class AaLinkedList {
 
     public Iterator getIterator() {
         return new Iterator(first);
+    }
+
+    @Override
+    public String toString() {
+        Iterator iterator = getIterator();
+        String output = "AaLinkedList with size " + size + " \n" + " first: " +( first == null ? "null" : first.getMiddleware().toString()) + " \n last: " + (last == null ? "null" : last.getMiddleware().toString()) + " \n";
+        int i = 0;
+        while(iterator.hasNext()) {
+            output += (++i) + ": " + iterator.next().getMiddleware().toString() + " \n";
+        }
+
+        return output;
     }
 }
