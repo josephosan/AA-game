@@ -78,7 +78,7 @@ gets a value from ```middlewareValues``` and returns it.
 
 #### public void addMiddleware(Middleware middleware, MiddlewareLocation middlewareLocation)
 this is very important method. it gets a middleware and a middlewareLocation and adds the middleware in the main loop.
-whenever you want to add a middleware you should use this or [addMiddlewareInSeries()](#public-void-addMiddlewareInSeries(Middleware middleware)).
+whenever you want to add a middleware you should use this or [addMiddlewareInSeries()](#public-void-addMiddlewareInSeries(Middleware-middleware)).
 
 #### public void addMiddlewareInSeries(Middleware middleware)
 this methods adds a middleware to loop but it doesn't need any MiddlewareLocation.
