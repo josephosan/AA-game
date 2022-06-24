@@ -15,6 +15,13 @@ public class FrameManager extends JFrame{
     HashMap<String, APanel> aPanels = new HashMap<String, APanel>();
     APanel activePanel;
 
+        // this method will call when all the components of app 
+    // getting accessible from the Config
+    public void onConfigSubscribe() {
+
+    }
+
+
     public FrameManager() {
         // Implement the frame;
         setLayout(null);
