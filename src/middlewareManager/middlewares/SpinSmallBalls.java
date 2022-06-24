@@ -22,6 +22,9 @@ public class SpinSmallBalls extends Middleware {
         rotator.setSpeed(3); //TODO get speed as a variable.
 
         //rotating SmallBalls
+        if(rotatingSmallBalls == null){
+            return;
+        }
         for(Element smallBall : rotatingSmallBalls){
             rotator.rotate((SmallBall)smallBall);
         }
