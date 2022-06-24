@@ -13,10 +13,10 @@ public class SmallBall extends Element {
     AaPosition position;
     Angle angle;
 
-    //TODO default color
     public SmallBall(JPanel panel) {
         super(panel);
         this.angle = new Angle();
+        this.color = Color.BLACK;
     }
 
     public SmallBall(JPanel panel, Angle angle) {
