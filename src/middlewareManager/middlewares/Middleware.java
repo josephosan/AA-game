@@ -7,6 +7,11 @@ import config.Config;
 
 public class Middleware {
     String id;
+    //---------
+    // when a middleware is paused the run method will not 
+    // onvoke in the loop but init method will be called
+    Boolean paused = false;
+    //---------
     Boolean firstTime = true;
     int loopingNumbers = 0;
     long enteringLoopTime;
@@ -83,5 +88,13 @@ public class Middleware {
 
     public int getLoopingNumbers() {
         return loopingNumbers;
+    }
+
+    public void setPaused(Boolean paused) {
+        this.paused = paused;
+    }
+
+    public Boolean isPaused() {
+        return paused;
     }
 }

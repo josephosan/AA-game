@@ -6,6 +6,8 @@ import middlewareManager.middlewares.Middleware;
 import utils.AaLinkedList;
 
 public class MiddlewareManager {
+    // when loop is runnig the var becomes true;
+    Boolean inLoop = false;
     HashMap<String, AaLinkedList.LinkedElement> middlewaresMap = new HashMap<>();
     AaLinkedList middlewares = new AaLinkedList();
     Boolean loopIsPaused = false;
@@ -138,6 +140,13 @@ public class MiddlewareManager {
         for (String group : middleware.getGroups()) {
             leaveGroup(group, middleware);
         }
+    }
+
+    // use this method to remove the middlewares in a group;
+    // becareful when using this method it can make conflicts 
+    // in loop
+    public void removeMiddlewaresByGroup(String group) {
+
     }
 
     public void setLoopPause(Boolean pause) {
