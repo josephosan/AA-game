@@ -13,6 +13,12 @@ public class ElementManager {
     public ElementManager() {
     }
 
+    // this method will call when all the components of app 
+    // getting accessible from the Config
+    public void onConfigSubscribe() {
+
+    }
+
     public String getNextCircleId() {
         return "Circle" + (lastCircleCursorId++);
     }

@@ -2,6 +2,7 @@ package config;
 
 import elementManager.ElementManager;
 import frameManager.FrameManager;
+import groovy.util.ConfigObject;
 import middlewareManager.MiddlewareManager;
 import elementManager.coordinate.*;
 
@@ -35,14 +36,29 @@ public class Config {
 
     public static void frameManagerSubscribe(FrameManager frameManager) {
         Config.frameManager = frameManager;
+        Config.emitConfigSubscribe();
     }
 
     public static void middlewareManagerSubscribe(MiddlewareManager middlewareManager) {
         Config.middlewareManager = middlewareManager;
+        Config.emitConfigSubscribe();
     }
 
     public static void elementManagerSubscribe(ElementManager elementManager) {
         Config.elementManager = elementManager;
+        Config.emitConfigSubscribe();
+    }
+
+    public static void emitConfigSubscribe() {
+        if (
+            Config.elementManager != null
+            && Config.middlewareManager != null
+            && Config.frameManager != null
+        ) {
+            Config.elementManager.onConfigSubscribe();
+            Config.middlewareManager.onConfigSubscribe();
+            Config.frameManager.onConfigSubscribe();
+        }
     }
 
     public static FrameManager getFrameManager() {

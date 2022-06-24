@@ -21,6 +21,12 @@ public class MiddlewareManager {
     public MiddlewareManager() {
     }
 
+    // this method will call when all the components of app 
+    // getting accessible from the Config
+    public void onConfigSubscribe() {
+
+    }
+
     public void joinGroup(String group, Middleware middleware) {
         if (groups.containsKey(group) == false) {
             groups.put(group, new ArrayList<Middleware>());
