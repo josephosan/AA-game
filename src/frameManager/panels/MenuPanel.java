@@ -58,9 +58,6 @@ public class MenuPanel extends APanel implements ActionListener{
         this.add(levelButton);
         this.add(playButton);
         setLocation(0, 0);
-        BigBall bigBall = new BigBall(this);
-        bigBall.setPos(200, 200);
-        elementManager.addElement("mainCircle", bigBall);
     }
 
     @Override

@@ -40,13 +40,10 @@ public class SmallBall extends Element {
         return Integer.toString(this.number);
     }
 
-    public int getXPos() {
-        return this.position.getX();
+    public AaPosition getPosition(){
+        return this.position ;
     }
 
-    public int getYPos() {
-        return this.position.getY();
-    }
 
     public Angle getAngle() {
         return this.angle;
