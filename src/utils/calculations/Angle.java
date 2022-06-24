@@ -1,7 +1,7 @@
 package utils.calculations;
 
 public class Angle {
-    private double angle;
+    public double angle;
 
     public Angle(int angle){
         this.angle = (double)angle;
