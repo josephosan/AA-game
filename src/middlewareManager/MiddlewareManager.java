@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import middlewareManager.middlewares.Middleware;
 import utils.AaLinkedList;
+import utils.AaLinkedList.LinkedElement;
 
 public class MiddlewareManager {
     // when loop is runnig the var becomes true;
     Boolean inLoop = false;
+    Middleware runningMiddlewareInLoop;
+    //------------
     HashMap<String, AaLinkedList.LinkedElement> middlewaresMap = new HashMap<>();
     AaLinkedList middlewares = new AaLinkedList();
     Boolean loopIsPaused = false;
@@ -90,6 +93,7 @@ public class MiddlewareManager {
 
         if (done) {
             middlewaresMap.put(middleware.getId(), middlewares.getLastAddedLinkedElement());
+            middleware.setLinkedElement(middlewares.getLastAddedLinkedElement());
         }
     }
 
@@ -103,6 +107,7 @@ public class MiddlewareManager {
         middlewares.addAfter(middleware, lastAddedElement);
 
         middlewaresMap.put(middleware.getId(), middlewares.getLastAddedLinkedElement());
+        middleware.setLinkedElement(middlewares.getLastAddedLinkedElement());
     }
 
     public Middleware getMiddlewareById(String id) {
@@ -111,17 +116,19 @@ public class MiddlewareManager {
 
     public void loop() {
         if (loopIsPaused) return;
+        inLoop = true;
 
         AaLinkedList.Iterator iterator = middlewares.getIterator();
         while(iterator.hasNext()) {
             AaLinkedList.LinkedElement element = iterator.next();
             Middleware middleware = element.getMiddleware();
+            runningMiddlewareInLoop = middleware;
 
             if (middleware.isFirstTime()) {
                 middleware.setEnteringLoopTime(System.currentTimeMillis());
                 middleware.setFirstTime(false);
                 middleware.init();
-            } else {
+            } else if (middleware.isPaused() == false) {
                 middleware.run();
             }
 
@@ -131,6 +138,9 @@ public class MiddlewareManager {
                 removeMiddleware(element);
             }
         }
+
+        runningMiddlewareInLoop = null;
+        inLoop = false;
     }
 
     public void removeMiddleware(AaLinkedList.LinkedElement element) {
@@ -146,7 +156,28 @@ public class MiddlewareManager {
     // becareful when using this method it can make conflicts 
     // in loop
     public void removeMiddlewaresByGroup(String group) {
+        if (!groups.containsKey(group)) return;
+        for (Middleware middleware : groups.get(group)) {
+            if (middleware == runningMiddlewareInLoop) {
+                // if current running middleware is in this group 
+                // we not removing that
+                // because the this middleware is invoking this 
+                // removing the group and may cause some problems
+                middleware.setShouldRemove(true);
+            } else {
+                middlewares.remove(middleware.getLinkedElement());
+            }
+        }
+    }
 
+    // use this method to pause middlewars in a group
+    // runningMiddleware also will be setted and not there is 
+    // no checks;
+    public void setPausedMiddlewaresByGroup(String group, Boolean paused) {
+        if (!groups.containsKey(group)) return;
+        for (Middleware middleware : groups.get(group)) {
+            middleware.setPaused(paused);
+        }
     }
 
     public void setLoopPause(Boolean pause) {
