@@ -25,11 +25,13 @@ public class ShowPanel extends Middleware{
             APanel activePanel = frameManager.getActivePanel();
             if (activePanel != null) {
                 activePanel.setVisible(false);
+                activePanel.setActive(false);
                 activePanel.onDeactivePanel();
             }
 
             panel.setLocation(0, 0);
             panel.onActivePanel();
+            panel.setActive(true);
             panel.setVisible(true);
         }
 

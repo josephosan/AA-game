@@ -46,6 +46,9 @@ public class APanel extends JPanel{
     // ----- /EVENTS -----
     
     public void setActive(Boolean active) {
+        if (active) {
+            Config.getFrameManager().setActivePanel(this.id);
+        }
         this.active = active;
     } 
 
