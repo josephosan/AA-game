@@ -7,7 +7,6 @@ import elementManager.ElementManager;
 import elementManager.coordinate.AaPosition;
 import elementManager.elements.*;
 import frameManager.APanel;
-import frameManager.FrameManager;
 
 
 public class DrawLine extends Middleware {
@@ -17,7 +16,7 @@ public class DrawLine extends Middleware {
     AaPosition bbPosition;
     public DrawLine() {
         super("drawLine");
-        panel = Config.getFrameManager().getAPanel("gamepanel");
+        panel = Config.getFrameManager().getAPanel("game");
     }
 
     public DrawLine(String panelId) {
@@ -35,6 +34,9 @@ public class DrawLine extends Middleware {
         rotatingSmallBalls = elementManager.getElementsByGroup("rotatingSmallBalls");
         //TODO remove all elements from "lines" Group.
         //rotating SmallBalls   
+        if(rotatingSmallBalls==null){
+            return;
+        }
         for(Element smallBall : rotatingSmallBalls){
             //creating a line
             Line line = new Line(panel);
