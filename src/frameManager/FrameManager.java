@@ -49,6 +49,13 @@ public class FrameManager extends JFrame{
         setVisible(true);
     }
 
+    // this method will call when all the components of app 
+    // getting accessible from the Config
+    public void onConfigSubscribe() {
+
+    }
+
+
     public void addMiddlewares() {
         MiddlewareManager middlewareManager = Config.getMiddlewareManager();
 
