@@ -17,7 +17,7 @@ public class Config {
         frameHeight = 600,
         smallCircleRadios = 0,
 
-        bigCircleRadios = 16;
+        bigCircleRadios = 100;
     
     static final AaSize 
         mainCircleSize = new AaSize(100, 100);

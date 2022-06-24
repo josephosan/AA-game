@@ -9,23 +9,15 @@ import elementManager.elements.*;
 
 public class Rotation{
     private Integer rotationSpeed; //should be in degree
-    private final AaPosition origin; //coordinates of center of the Big Ball
-    private final Integer r; // radius of the Main Circle
+    private AaPosition origin; //coordinates of center of the Big Ball
+    private Integer r; // radius of the Main Circle
 
     public Rotation(){
         this.rotationSpeed = 2;
-        ElementManager elementManager = Config.getElementManager();
-        BigBall bigBall =  (BigBall)elementManager.getElementById("bigBall");
-        this.origin = bigBall.getPosition();
-        this.r = bigBall.getR();
     }
 
     public Rotation(Integer rotationSpeed){
         this.rotationSpeed = rotationSpeed;
-        ElementManager elementManager = Config.getElementManager();
-        BigBall bigBall =  (BigBall)elementManager.getElementById("bigBall");
-        this.origin = bigBall.getPosition();
-        this.r = bigBall.getR();
     }
 
     public void setSpeed(Integer rotationSpeed){
@@ -33,11 +25,16 @@ public class Rotation{
     }
 
     public void rotate(SmallBall smallBall){
+        if(origin == null){
+            BigBall bigBall =  (BigBall)Config.getElementManager().getElementById("bigBall");
+            this.origin = bigBall.getPosition();
+            this.r = bigBall.getR();
+        }
         Angle angle = smallBall.getAngle();
         angle.add(this.rotationSpeed);
         double a = angle.getInRadian();
-        Integer x = (int) (this.origin.getX() + (Math.cos(a) * r));
-        Integer y = (int) (this.origin.getY() + (Math.sin(a) * r));
+        Integer x = (int) (this.origin.getX() + (Math.cos(a) * r) + 0) ;
+        Integer y = (int) (this.origin.getY() + (Math.sin(a) * r) - 0);
         smallBall.setAngle(angle);
         smallBall.setPos(new AaPosition(x,y));
     }

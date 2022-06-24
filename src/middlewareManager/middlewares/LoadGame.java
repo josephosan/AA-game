@@ -1,17 +1,14 @@
 package middlewareManager.middlewares;
 
 import config.Config;
-import middlewareManager.MiddlewareLocation;
 import middlewareManager.MiddlewareManager;
 import utils.parser.AParser;
-import java.io.File;
 import java.util.HashMap;
-import java.lang.reflect.*;
 
 public class LoadGame extends Middleware {
     int level;
     MiddlewareManager middlewareManager;
-
+    Middleware middleware;
     public LoadGame(int level){
         super("LoadGame");
         this.level = level;
@@ -31,60 +28,37 @@ public class LoadGame extends Middleware {
                     String[] middlwareInfo = data.get("middleware"+i).split(" ");
                     //getting class name from hashmap
                     String className = middlwareInfo[0];
-                    // defining middleware manager arguements
-                    Class[] middlewareManagerArgs = new Class[2];
-                    middlewareManagerArgs[0] = Middleware.class; middlewareManagerArgs[1]= MiddlewareLocation.class;  
-                    // Using Method class to invoke the method from heap on run time.
-                    Method addMiddleware = middlewareManager.getClass().getMethod("addMiddleware", middlewareManagerArgs);
     
                     int numberOfArgs = Integer.parseInt(middlwareInfo[1]);
-
                     Class[] middlwareArgTypes = new Class[numberOfArgs];
                     String[] args = new String[numberOfArgs];
                     for (int j=0 ; j<numberOfArgs ; j++){
                         middlwareArgTypes[j] = String.class;
                         args[j] = middlwareInfo[j+2];
                     }
-
+                    
                     switch (numberOfArgs){
                         case 0:
-                            addMiddleware
-                                .invoke(
-                                    middlewareManager,
-                                    Class.forName(className).getConstructor().newInstance(),
-                                    new MiddlewareLocation());
+                            middleware = (Middleware)Class.forName(className).getConstructor().newInstance();
                             break;
                         case 1:
-                            addMiddleware
-                                .invoke(
-                                    middlewareManager,
-                                    Class.forName(className).getConstructor(middlwareArgTypes).newInstance(args[0]),
-                                    new MiddlewareLocation());
+                            middleware = (Middleware)Class.forName(className).getConstructor(middlwareArgTypes).newInstance(args[0]);
                             break;
                         case 2:
-                            addMiddleware
-                                .invoke(
-                                    middlewareManager,
-                                    Class.forName(className).getConstructor(middlwareArgTypes).newInstance(args[0],args[1]),
-                                    new MiddlewareLocation());
+                            middleware = (Middleware)Class.forName(className).getConstructor(middlwareArgTypes).newInstance(args[0],args[1]);
                             break;
                         case 3:
-                            addMiddleware
-                                .invoke(
-                                    middlewareManager,
-                                    Class.forName(className).getConstructor(middlwareArgTypes).newInstance(args[0],args[1],args[2]),
-                                    new MiddlewareLocation());
+                            middleware = (Middleware)Class.forName(className).getConstructor(middlwareArgTypes).newInstance(args[0],args[1],args[2]);
                             break;
                         case 4:
-                            addMiddleware
-                                .invoke(
-                                    middlewareManager,
-                                    Class.forName(className).getConstructor(middlwareArgTypes).newInstance(args[0],args[1],args[2],args[3]),
-                                    new MiddlewareLocation());
+                            middleware = (Middleware)Class.forName(className).getConstructor(middlwareArgTypes).newInstance(args[0],args[1],args[2],args[3]);
                             break;
                         default:
                             //throw error 
                     }
+
+                    middlewareManager.addMiddlewareInSeries(middleware);
+                    middlewareManager.joinGroup("game", middleware);
                     
                 }
                 catch(Exception e){
