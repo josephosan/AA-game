@@ -6,6 +6,10 @@ import elementManager.elements.BigBall;
 
 
 public class BornaMaker extends Middleware {
+    // This is a special method created only for Dr.borna.
+    // Cheers!!!
+    // This method will draw a picture of Dr.borna inside the main ball, in the center.
+
     ElementManager elementManager = Config.getElementManager();
     BigBall bigBall;
 
