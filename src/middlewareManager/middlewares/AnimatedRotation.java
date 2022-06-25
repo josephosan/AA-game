@@ -5,21 +5,20 @@ import java.util.ArrayList;
 import config.Config;
 import elementManager.ElementManager;
 import elementManager.elements.Element;
-import elementManager.elements.Line;
 import elementManager.elements.SmallBall;
-import utils.calculations.Angle;
-import utils.calculations.Rotation;
+
+import javax.sound.sampled.Line;
 
 //This middleware should be added right after SpinSmallBalls middleware
 //and before DrawLine
 
-public class AnimatedRotaion extends Middleware {
+public class AnimatedRotation extends Middleware {
     ElementManager elementManager = Config.getElementManager();
 
     // Rotation rotator = new Rotation();
     ArrayList<Element> rotatingSmallBalls;
     ArrayList<Element> lines;
-    public AnimatedRotaion(){
+    public AnimatedRotation(){
         super("animatedRotation");
     }
 
@@ -30,7 +29,7 @@ public class AnimatedRotaion extends Middleware {
         
         for(Element smallBall: rotatingSmallBalls){
             SmallBall a = (SmallBall)smallBall;
-            Double ang = a.getAngle().getIndegree();
+            double ang = a.getAngle().getInDegree();
             if(ang>360)
                 ang-=360;
 
@@ -39,5 +38,5 @@ public class AnimatedRotaion extends Middleware {
         }
 
     }
-    
+
 }

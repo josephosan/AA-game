@@ -17,7 +17,7 @@ public class Angle {
         return Math.toRadians(this.angle);
     }
 
-    public double getIndegree(){
+    public double getInDegree(){
         return angle;
     }
 

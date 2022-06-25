@@ -5,10 +5,8 @@ import middlewareManager.*;
 import middlewareManager.middlewares.*;
 import java.awt.*;
 import javax.swing.*;
-import frameManager.APanel;
+
 import config.Config;
-import elementManager.elements.BigBall;
-import elementManager.elements.SmallBall;
 import frameManager.panels.*;
 
 public class FrameManager extends JFrame{
@@ -42,8 +40,9 @@ public class FrameManager extends JFrame{
         middlewareManager.addMiddleware(new DrawSmallBall("300","0x000000","menu"), new MiddlewareLocation());
         middlewareManager.addMiddleware(new DrawSmallBall("330","0x000000","menu"), new MiddlewareLocation());
         middlewareManager.addMiddleware(new SpinSmallBalls(), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new AnimatedRotaion(), new MiddlewareLocation());
+        middlewareManager.addMiddleware(new AnimatedRotation(), new MiddlewareLocation());
         middlewareManager.addMiddleware(new DrawLine("menu"), new MiddlewareLocation());
+        middlewareManager.addMiddleware(new BornaMaker(), new MiddlewareLocation());
 
         
     }
@@ -95,15 +94,7 @@ public class FrameManager extends JFrame{
         // middlewareManager.addMiddleware(transitionPanels, transitionPanelsLocation);
 
         //Following middlewares are just for test
-        //TODO remove this middlewares in production
 
-       
-
-        //middlewareManager.addMiddleware(new LoadGame(2), new MiddlewareLocation());
-        // middlewareManager.addMiddleware(new DrawSmallBall("0","menu"), new MiddlewareLocation());
-        // middlewareManager.addMiddleware(new DrawSmallBall("90","menu"), new MiddlewareLocation());
-        // middlewareManager.addMiddleware(new DrawSmallBall("270","menu"), new MiddlewareLocation());
-        //middlewareManager.addMiddleware(new DrawLine("menu"), new MiddlewareLocation());
         
 //         Middleware drawSmallBall = new DrawSmallBall(getAPanel("menu"));
 //         MiddlewareLocation drawSmallBaLocation = new MiddlewareLocation();
