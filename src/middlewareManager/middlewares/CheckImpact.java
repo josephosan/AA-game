@@ -40,8 +40,9 @@ public class CheckImpact extends Middleware {
                     middleWareManager.addMiddleware(gameOver, new MiddlewareLocation());
                     this.remove();
                 } else { // if not add the ball to rotating balls by adding checkInterSection to middlewareManager.
-                    Middleware checkInterSection = new CheckInterSection();
+                    Middleware checkInterSection = new AddShootingBallToRotatingBalls(shootingSB);
                     middleWareManager.addMiddleware(checkInterSection, new MiddlewareLocation());
+                    this.remove();
                 }
     }
 }
