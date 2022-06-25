@@ -17,6 +17,10 @@ public class Angle {
         return Math.toRadians(this.angle);
     }
 
+    public double getIndegree(){
+        return angle;
+    }
+
     public void add(double degree){
         this.angle += degree;
     }

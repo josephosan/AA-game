@@ -7,7 +7,6 @@ import elementManager.ElementManager;
 import elementManager.coordinate.AaPosition;
 import elementManager.elements.*;
 import frameManager.APanel;
-import frameManager.FrameManager;
 
 
 public class DrawLine extends Middleware {
@@ -17,7 +16,7 @@ public class DrawLine extends Middleware {
     AaPosition bbPosition;
     public DrawLine() {
         super("drawLine");
-        panel = Config.getFrameManager().getAPanel("gamepanel");
+        panel = Config.getFrameManager().getAPanel("game");
     }
 
     public DrawLine(String panelId) {
@@ -35,16 +34,22 @@ public class DrawLine extends Middleware {
         rotatingSmallBalls = elementManager.getElementsByGroup("rotatingSmallBalls");
         //TODO remove all elements from "lines" Group.
         //rotating SmallBalls   
+        if(rotatingSmallBalls==null){
+            return;
+        }
         for(Element smallBall : rotatingSmallBalls){
-            //creating a line
-            Line line = new Line(panel);
-            AaPosition sbPosition = ((SmallBall)smallBall).getPosition();
-            line.setPos(sbPosition.getX(), sbPosition.getY(), bbPosition.getX(), bbPosition.getY());
+            SmallBall SBall = (SmallBall)smallBall;
+            if(SBall.getVisible()){
+                //creating a line
+                Line line = new Line(panel);
+                AaPosition sbPosition = SBall.getPosition();
+                line.setPos(sbPosition.getX(), sbPosition.getY(), bbPosition.getX(), bbPosition.getY());
 
-            //adding line to elementManager. id will be like "line1"
-            elementManager.addElement("line"+((SmallBall)smallBall).getNumber(), line);
-            //adding line to Group "lines"
-            elementManager.joinGroup("lines", "line"+((SmallBall)smallBall).getNumber());
+                //adding line to elementManager. id will be like "line1"
+                elementManager.addElement("line"+(SBall).getNumber(), line);
+                //adding line to Group "lines"
+                elementManager.joinGroup("lines", "line"+(SBall).getNumber());
+            }
         }
     }
 }

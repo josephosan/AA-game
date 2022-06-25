@@ -4,9 +4,20 @@ import frameManager.FrameManager;
 import middlewareManager.MiddlewareManager;
 import java.util.ArrayList;
 import config.Config;
+import utils.AaLinkedList;
 
 public class Middleware {
     String id;
+    //---------
+    // when a middleware is paused the run method will not 
+    // onvoke in the loop but init method will be called
+    Boolean paused = false;
+    //---------
+
+    //---------
+    // a refrence to LinkedElement that wraps this middleware 
+    AaLinkedList.LinkedElement linkedElement;
+    //---------
     Boolean firstTime = true;
     int loopingNumbers = 0;
     long enteringLoopTime;
@@ -69,6 +80,10 @@ public class Middleware {
         return shouldRemove;
     }
 
+    public void setShouldRemove(Boolean shouldRemove) {
+        this.shouldRemove = shouldRemove;
+    }
+
     public void addLoopingNumber() {
         loopingNumbers++;
     }
@@ -83,5 +98,21 @@ public class Middleware {
 
     public int getLoopingNumbers() {
         return loopingNumbers;
+    }
+
+    public void setPaused(Boolean paused) {
+        this.paused = paused;
+    }
+
+    public Boolean isPaused() {
+        return paused;
+    }
+
+    public void setLinkedElement(AaLinkedList.LinkedElement linkedElement) {
+        this.linkedElement = linkedElement;
+    }
+
+    public AaLinkedList.LinkedElement getLinkedElement() {
+        return linkedElement;
     }
 }

@@ -28,7 +28,8 @@ public class LoadGame extends Middleware {
                     String[] middlwareInfo = data.get("middleware"+i).split(" ");
                     //getting class name from hashmap
                     String className = middlwareInfo[0];
-    
+                    //adding package name to class
+                    className = "middlewareManager.middlewares."+className;
                     int numberOfArgs = Integer.parseInt(middlwareInfo[1]);
                     Class[] middlwareArgTypes = new Class[numberOfArgs];
                     String[] args = new String[numberOfArgs];
@@ -36,7 +37,7 @@ public class LoadGame extends Middleware {
                         middlwareArgTypes[j] = String.class;
                         args[j] = middlwareInfo[j+2];
                     }
-                    
+
                     switch (numberOfArgs){
                         case 0:
                             middleware = (Middleware)Class.forName(className).getConstructor().newInstance();
