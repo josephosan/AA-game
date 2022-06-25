@@ -1,0 +1,21 @@
+{
+    "author": "Mahbod",
+    "rotationSpeed": "5",
+    "backgroundColor": "YELLOW",
+    "numOfBallsToConnect": "3",
+    "middleware0": "DrawSmallBall 3 30 #f00cec menu",
+    "middleware1": "DrawSmallBall 3 60 #0c45f0 menu",
+    "middleware2": "DrawSmallBall 3 90 #f0360c menu",
+    "middleware3": "DrawSmallBall 3 120 #f00cec menu",
+    "middleware4": "DrawSmallBall 3 150 #0c45f0 menu",
+    "middleware5": "DrawSmallBall 3 180 #f0360c menu",
+    "middleware6": "DrawSmallBall 3 210 #f00cec menu",
+    "middleware7": "DrawSmallBall 3 240 #0c45f0 menu",
+    "middleware8": "DrawSmallBall 3 270 #f0360c menu",
+    "middleware9": "DrawSmallBall 3 300 #f00cec menu",
+    "middleware10": "DrawSmallBall 3 330 #0c45f0 menu",
+    "middleware11": "DrawSmallBall 3 360 #f0360c menu"
+    
+    
+    
+}
