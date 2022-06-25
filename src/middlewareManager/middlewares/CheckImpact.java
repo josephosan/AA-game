@@ -30,19 +30,20 @@ public class CheckImpact extends Middleware {
     }
 
     public void run() {
-        rotatingSmallBalls = elementManager.getElementsByGroup("rotatingSmallBalls");
+        rotatingSmallBalls = elementManager.getElementsByGroup("rotatingSmallBalls"); // getting two groups from ElementManager.
         shootingSmallBalls = elementManager.getElementsByGroup("shootingSmallBalls");
 
         for (Element rotatingSB : rotatingSmallBalls)
             for (Element shootingSB : shootingSmallBalls)
-                if (checkIfClashed(rotatingSB, shootingSB)) { // if two balls clashed end the game
+                if (checkIfClashed(rotatingSB, shootingSB)) { // if two balls clashed: end the game
                     Middleware gameOver = new GameOver();     // by adding the gameOver class to middlewareManager.
                     middleWareManager.addMiddleware(gameOver, new MiddlewareLocation());
-                    this.remove();
+                    this.remove(); // after adding GameOver to the loop, this middleware will remove itself from loop.
                 } else { // if not add the ball to rotating balls by adding checkInterSection to middlewareManager.
                     Middleware checkInterSection = new AddShootingBallToRotatingBalls(shootingSB);
                     middleWareManager.addMiddleware(checkInterSection, new MiddlewareLocation());
-                    this.remove();
+                    this.remove(); // if the two balls had not impacted, this middleware will try to
+                                   // join the shooting ball to the rotatingSmallBalls group.
                 }
     }
 }
