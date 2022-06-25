@@ -9,7 +9,6 @@ public class Line extends Element {
     int endXPos;
     int endYPos;
 
-
     public Line(JPanel panel) {
         super(panel);
     }
