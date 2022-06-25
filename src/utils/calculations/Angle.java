@@ -1,7 +1,7 @@
 package utils.calculations;
 
 public class Angle {
-    public double angle;
+    private double angle;
 
     public Angle(int angle){
         this.angle = (double)angle;
@@ -15,6 +15,10 @@ public class Angle {
 
     public double getInRadian(){
         return Math.toRadians(this.angle);
+    }
+
+    public double getIndegree(){
+        return angle;
     }
 
     public void add(double degree){
