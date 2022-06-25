@@ -1,9 +1,0 @@
-{
-    "author": "Arman",
-    "ballsConnected": "0",
-    "rotationSpeed": "5",
-    "ballsColor": "BLACK",
-    "backgroundColor": "YELLOW",
-    "numOfBallsToConnect": "3",
-    "middleware1": "drawSmallBall 0"
-}
