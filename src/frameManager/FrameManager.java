@@ -17,7 +17,20 @@ public class FrameManager extends JFrame{
     // getting accessible from the Config
     public void onConfigSubscribe() {
         MiddlewareManager middlewareManager = Config.getMiddlewareManager();
+
+        Middleware repaintPanelElements = new RepaintPanelElements(getAPanel("menu"));
+        middlewareManager.addMiddleware(repaintPanelElements, new MiddlewareLocation());
+        repaintPanelElements.setValue("rotationSpeed", "3");
+        repaintPanelElements.setValue("numOfAllBalls", "1");
         
+        Middleware transisionPanel = new TransitionPanels("game", "menu");
+        middlewareManager.addMiddleware(transisionPanel, new MiddlewareLocation());
+
+        middlewareManager.addMiddleware(new DrawBigBall(200,200,"menu"), new MiddlewareLocation());
+        middlewareManager.addMiddleware(new DrawSmallBall("90", "0x000000", "menu"), new MiddlewareLocation());
+
+        middlewareManager.addMiddleware(new SpinSmallBalls(), new MiddlewareLocation());
+        middlewareManager.addMiddleware(new DrawLine("menu"), new MiddlewareLocation());
 
         
     }
@@ -45,7 +58,7 @@ public class FrameManager extends JFrame{
         aPanels.put("main", mainPanel);
         aPanels.put("menu", menuPanel);
         aPanels.put("game", gamePanel);
-        aPanels.put("level",levelPanel);
+        aPanels.put("levels",levelPanel);
         // aPanels.put("game", );
         add(mainPanel);
         mainPanel.add(menuPanel);
@@ -56,6 +69,7 @@ public class FrameManager extends JFrame{
         getAPanel("main").setVisible(true);
         getAPanel("menu").setVisible(false);
         getAPanel("game").setVisible(true);
+        getAPanel("levels").setVisible(false);
 
         setVisible(true);
     }
