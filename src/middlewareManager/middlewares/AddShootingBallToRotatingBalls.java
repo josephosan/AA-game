@@ -5,7 +5,7 @@ import elementManager.ElementManager;
 import elementManager.elements.Element;
 
 public class AddShootingBallToRotatingBalls extends Middleware {
-    int numberOfAllRotatingSmallBalls = 20; //TODO get numberOfAllBalls as a variable
+    int numberOfAllRotatingSmallBalls = Integer.parseInt(this.getValue("numOfAllBalls"));
     ElementManager elementManager = Config.getElementManager();
     Element shootingSB;
 

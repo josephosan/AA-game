@@ -32,7 +32,6 @@ public class DrawLine extends Middleware {
         }
         //getting rotatingSmallBalls Group (Elements are added to this Group using DrawSmallBall middleware)
         rotatingSmallBalls = elementManager.getElementsByGroup("rotatingSmallBalls");
-        //TODO remove all elements from "lines" Group.
         //rotating SmallBalls   
         if(rotatingSmallBalls==null){
             return;
