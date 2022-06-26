@@ -24,7 +24,7 @@ public class BigBall extends Element{
         super(panel);
         this.size.setSize(Config.getMainCircleSize().getWidth(), Config.getMainCircleSize().getHeight());
         aaPosition.setX(Config.getFrameWidth()/2);
-        aaPosition.setY(this.size.getHeight() + Config.getBigCircleRadios() + 50);
+        aaPosition.setY(this.size.getHeight() + Config.getLineLength() + 50);
 
         // borna stuff:
         try {
@@ -72,6 +72,6 @@ public class BigBall extends Element{
     }
 
     public Integer getR() {
-        return Config.getBigCircleRadios();
+        return Config.getLineLength();
     }
 }

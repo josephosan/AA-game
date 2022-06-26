@@ -2,7 +2,6 @@ package config;
 
 import elementManager.ElementManager;
 import frameManager.FrameManager;
-import groovy.util.ConfigObject;
 import middlewareManager.MiddlewareManager;
 import elementManager.coordinate.*;
 
@@ -18,7 +17,9 @@ public class Config {
         frameHeight = 600,
         smallCircleRadios = 0,
 
-        bigCircleRadios = 100;
+        lineLength = 100;
+
+    static final AaPosition mainCirclePosition = new AaPosition(200, 200); // mahbod
     
     static final AaSize 
         mainCircleSize = new AaSize(100, 100);
@@ -90,15 +91,14 @@ public class Config {
         return mainCircleSize;
     }
 
-    public static Integer getBigCircleRadios() {
-        return bigCircleRadios;
-    }
-
     public static AaSize getSmallBallSize(){
         return smallBallSize;
     }
 
     public static Integer getSmallCircleRadios() { return smallCircleRadios; }
 
-    public static Integer getBigCircleRaidos() { return bigCircleRadios; }
+    public static Integer getLineLength() { return lineLength; }
+
+
+    public static AaPosition getMainCirclePosition() { return mainCirclePosition; }
 }

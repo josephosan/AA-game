@@ -19,7 +19,7 @@ public class SpinSmallBalls extends Middleware {
         //getting rotatingSmallBalls Group (Elements are added to this Group using DrawSmallBall middleware)
         rotatingSmallBalls = elementManager.getElementsByGroup("rotatingSmallBalls");
         //setting speed of rotator
-        rotator.setSpeed(3); //TODO get speed as a variable.
+        rotator.setSpeed(Integer.parseInt(this.getValue("rotationSpeed")));
 
         //rotating SmallBalls
         if(rotatingSmallBalls == null){
@@ -28,8 +28,6 @@ public class SpinSmallBalls extends Middleware {
         for(Element smallBall : rotatingSmallBalls){
             rotator.rotate((SmallBall)smallBall);
         }
-
-        //TODO if game is over remove self
     }
 
 }
