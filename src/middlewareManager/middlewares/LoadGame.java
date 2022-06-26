@@ -8,11 +8,19 @@ import java.util.Map;
 
 public class LoadGame extends Middleware {
     int level;
+    String panel = "game";
     MiddlewareManager middlewareManager;
     Middleware middleware;
     public LoadGame(int level){
         super("LoadGame");
         this.level = level;
+        this.middlewareManager = Config.getMiddlewareManager();
+    }
+
+    public LoadGame(int level, String panel){
+        super("LoadGame");
+        this.level = level;
+        this.panel = panel;
         this.middlewareManager = Config.getMiddlewareManager();
     }
 
@@ -79,6 +87,11 @@ public class LoadGame extends Middleware {
                 break;
             }
             i++;
+        }
+        //creating shootingBalls
+        int ballsToConnect = Integer.parseInt(this.getValue("numOfBallsToConnect"));
+        for(int k=0;k<ballsToConnect;k++ ){
+            middlewareManager.addMiddlewareInSeries(new DrawSmallBall("90",this.getValue("smallBallsColor"),panel,false));
         }
         this.remove();
         
