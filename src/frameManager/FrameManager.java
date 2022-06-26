@@ -42,7 +42,7 @@ public class FrameManager extends JFrame{
         middlewareManager.addMiddleware(new SpinSmallBalls(), new MiddlewareLocation());
         middlewareManager.addMiddleware(new AnimatedRotation(), new MiddlewareLocation());
         middlewareManager.addMiddleware(new DrawLine("menu"), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new BornaMaker(), new MiddlewareLocation());
+        //middlewareManager.addMiddleware(new BornaMaker(), new MiddlewareLocation());
 
         
     }
@@ -65,14 +65,17 @@ public class FrameManager extends JFrame{
         APanel mainPanel = new MainPanel("mainPanel");
         APanel menuPanel = new MenuPanel("menuPanel");
         APanel gamePanel = new GamePanel("gamePanel");
+        APanel levelPanel = new LevelPanel("levelPanel");
 
         aPanels.put("main", mainPanel);
         aPanels.put("menu", menuPanel);
         aPanels.put("game", gamePanel);
+        aPanels.put("level",levelPanel);
         // aPanels.put("game", );
         add(mainPanel);
         mainPanel.add(menuPanel);
         mainPanel.add(gamePanel);
+        mainPanel.add(levelPanel);
 
         setActivePanel("main");
         getAPanel("main").setVisible(true);
