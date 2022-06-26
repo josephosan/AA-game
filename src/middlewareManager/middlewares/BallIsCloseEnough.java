@@ -9,12 +9,17 @@ import utils.Tools;
 
 public class BallIsCloseEnough extends Middleware {
     private final Element shootingBall;
-    private final Integer normalConnectionDistance = Config.getDrawnLineHeight();
+    private final Integer normalConnectionDistance = Config.getLineLength();
     private final AaPosition mainCirclePosition = Config.getMainCirclePosition();
-    private MiddlewareManager middlewareManager = Config.getMiddlewareManager();
+    private final MiddlewareManager middlewareManager = Config.getMiddlewareManager();
 
     public BallIsCloseEnough(Element shootingBall) {
         super("ballIsCloseEnough");
+        this.shootingBall = shootingBall;
+    }
+
+    public BallIsCloseEnough(Element shootingBall, String id) {
+        super(id);
         this.shootingBall = shootingBall;
     }
 

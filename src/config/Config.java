@@ -17,9 +17,7 @@ public class Config {
         frameHeight = 600,
         smallCircleRadios = 0,
 
-        drawnLineHeight = 0, // mahbod
-
-        bigCircleRadios = 100;
+        lineLength = 100;
 
     static final AaPosition mainCirclePosition = new AaPosition(200, 200); // mahbod
     
@@ -93,19 +91,14 @@ public class Config {
         return mainCircleSize;
     }
 
-    public static Integer getBigCircleRadios() {
-        return bigCircleRadios;
-    }
-
     public static AaSize getSmallBallSize(){
         return smallBallSize;
     }
 
     public static Integer getSmallCircleRadios() { return smallCircleRadios; }
 
-    public static Integer getBigCircleRaidos() { return bigCircleRadios; }
+    public static Integer getLineLength() { return lineLength; }
 
-    public static Integer getDrawnLineHeight() { return drawnLineHeight; }
 
     public static AaPosition getMainCirclePosition() { return mainCirclePosition; }
 }
