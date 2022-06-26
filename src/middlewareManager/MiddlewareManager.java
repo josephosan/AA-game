@@ -28,7 +28,7 @@ public class MiddlewareManager {
     }
 
     public void joinGroup(String group, Middleware middleware) {
-        if (groups.containsKey(group) == false) {
+        if (!groups.containsKey(group)) {
             groups.put(group, new ArrayList<Middleware>());
         }
         groups.get(group).add(middleware);

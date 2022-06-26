@@ -5,5 +5,5 @@
     "ballsColor": "BLACK",
     "backgroundColor": "YELLOW",
     "numOfBallsToConnect": "3",
-    "middleware1": "drawSmallBall 0"
+    "middleware0": "drawSmallBall 0"
 }
