@@ -17,32 +17,7 @@ public class FrameManager extends JFrame{
     // getting accessible from the Config
     public void onConfigSubscribe() {
         MiddlewareManager middlewareManager = Config.getMiddlewareManager();
-
-        Middleware repaintPanelElements = new RepaintPanelElements(getAPanel("menu"));
-        MiddlewareLocation middlewareLocation = new MiddlewareLocation();
-        middlewareManager.addMiddleware(repaintPanelElements, middlewareLocation);
-
-        Middleware transitionPanels = new TransitionPanels("game", "menu");
-        MiddlewareLocation transitionPanelsLocation = new MiddlewareLocation();
-        middlewareManager.addMiddleware(transitionPanels, transitionPanelsLocation);
         
-        middlewareManager.addMiddleware(new DrawBigBall("200","200","0x000000","menu"), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new DrawSmallBall("0","0x000000","menu"), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new DrawSmallBall("30","0x000000","menu"), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new DrawSmallBall("60","0x000000","menu"), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new DrawSmallBall("90","0x000000","menu"), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new DrawSmallBall("120","0x000000","menu"), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new DrawSmallBall("150","0x000000","menu"), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new DrawSmallBall("180","0x000000","menu"), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new DrawSmallBall("210","0x000000","menu"), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new DrawSmallBall("240","0x000000","menu"), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new DrawSmallBall("270","0x000000","menu"), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new DrawSmallBall("300","0x000000","menu"), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new DrawSmallBall("330","0x000000","menu"), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new SpinSmallBalls(), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new AnimatedRotation(), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new DrawLine("menu"), new MiddlewareLocation());
-        //middlewareManager.addMiddleware(new BornaMaker(), new MiddlewareLocation());
 
         
     }
@@ -86,22 +61,7 @@ public class FrameManager extends JFrame{
     }
 
     public void addMiddlewares() {
-        // MiddlewareManager middlewareManager = Config.getMiddlewareManager();
-
-        // Middleware repaintPanelElements = new RepaintPanelElements(getAPanel("menu"));
-        // MiddlewareLocation middlewareLocation = new MiddlewareLocation();
-        // middlewareManager.addMiddleware(repaintPanelElements, middlewareLocation);
-
-        // Middleware transitionPanels = new TransitionPanels("game", "menu");
-        // MiddlewareLocation transitionPanelsLocation = new MiddlewareLocation();
-        // middlewareManager.addMiddleware(transitionPanels, transitionPanelsLocation);
-
-        //Following middlewares are just for test
-
         
-//         Middleware drawSmallBall = new DrawSmallBall(getAPanel("menu"));
-//         MiddlewareLocation drawSmallBaLocation = new MiddlewareLocation();
-//         middlewareManager.addMiddleware(drawSmallBall, drawSmallBaLocation);
     }
 
     public APanel getAPanel(String id) {
