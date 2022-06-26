@@ -18,9 +18,9 @@ public class BallIsCloseEnough extends Middleware {
         this.shootingBall = shootingBall;
     }
 
-    public BallIsCloseEnough(Element shootingBall, String id) {
-        super(id);
-        this.shootingBall = shootingBall;
+    public BallIsCloseEnough(Element shootingBall, String shootingBallId) {
+        super("ballIsCloseEnough");
+        this.shootingBall = Config.getElementManager().getElementById(shootingBallId);
     }
 
     public boolean isBallCloseEnough(Element shootingBall) {
@@ -39,8 +39,8 @@ public class BallIsCloseEnough extends Middleware {
             Middleware addShootingBallToRotatingBalls = new AddShootingBallToRotatingBalls(shootingBall);
             middlewareManager.addMiddleware(addShootingBallToRotatingBalls, new MiddlewareLocation());
 
-            // removing moveShooting ball middleware form loop(for preventing the shooting ball from moving).
-            // TODO remove the moveShootingBall from loop.
+            // removing them moving small ball from loop.
+            middlewareManager.getMiddlewareById("moveSmallBall").remove();
 
             this.remove();
         }
