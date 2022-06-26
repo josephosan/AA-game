@@ -23,7 +23,7 @@ public class DrawSmallBall extends Middleware{
 
     public DrawSmallBall(String angle){
         super("AddSmallBall"+n);
-        int numberOfAllBalls = 20; //TODO get numberOfAllBalls as a variable
+        int numberOfAllBalls = Integer.parseInt(this.getValue("numOfAllBalls")); 
         id = numberOfAllBalls - n;
         n++;
         this.angle = new Angle(Double.parseDouble(angle));
@@ -31,7 +31,7 @@ public class DrawSmallBall extends Middleware{
 
     public DrawSmallBall(String angle, String rgb){
         super("AddSmallBall"+n);
-        int numberOfAllBalls = 20; //TODO get numberOfAllBalls as a variable
+        int numberOfAllBalls = Integer.parseInt(this.getValue("numOfAllBalls")); 
         id = numberOfAllBalls - n;
         n++;
         this.angle = new Angle(Double.parseDouble(angle));
@@ -40,7 +40,7 @@ public class DrawSmallBall extends Middleware{
 
     public DrawSmallBall(String angle, String rgb,String panelId){
         super("AddSmallBall"+n);
-        int numberOfAllBalls = 20; //TODO get numberOfAllBalls as a variable
+        int numberOfAllBalls = Integer.parseInt(this.getValue("numOfAllBalls")); 
         id = numberOfAllBalls - n;
         n++;
         this.angle = new Angle(Double.parseDouble(angle));

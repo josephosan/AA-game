@@ -4,6 +4,7 @@ import config.Config;
 import middlewareManager.MiddlewareManager;
 import utils.parser.AParser;
 import java.util.HashMap;
+import java.util.Map;
 
 public class LoadGame extends Middleware {
     int level;
@@ -20,6 +21,12 @@ public class LoadGame extends Middleware {
     public void init(){
         HashMap<String,String> data = AParser.run("level"+level+".json");
         
+        //adding options to middleware manager
+        for (Map.Entry<String, String> set : data.entrySet()) {
+            if(set.getValue().startsWith("middleware")) continue;
+            this.setValue(set.getKey(), set.getValue());
+        }
+
         int i = 0;
         while(true){
         
