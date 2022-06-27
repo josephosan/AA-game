@@ -7,7 +7,6 @@ import java.awt.*;
 import javax.swing.*;
 
 import config.Config;
-import frameManager.APanel;
 import frameManager.panels.*;
 
 public class FrameManager extends JFrame{
@@ -79,8 +78,6 @@ public class FrameManager extends JFrame{
         getAPanel("levels").setVisible(false);
 
         setVisible(true);
-        // test
-        mainPanel.setPaintOrder("dani>*>dony");
     }
 
     public void addMiddlewares() {
