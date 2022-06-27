@@ -30,7 +30,7 @@ public class FrameManager extends JFrame{
         middlewareManager.addMiddleware(new DrawBigBall("200","200","0x000000","menu"), new MiddlewareLocation());
         middlewareManager.addMiddleware(new DrawSmallBall("0","0x000000","menu"), new MiddlewareLocation());
         middlewareManager.addMiddleware(new SpinSmallBalls(), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new DrawLine("game"), new MiddlewareLocation());
+        middlewareManager.addMiddleware(new DrawLine("menu"), new MiddlewareLocation());
 
 
         

@@ -27,7 +27,7 @@ public class LoadGame extends Middleware {
     //THIS CLASS DOES NOT CURRENTLY SUPPORT OBJECT ARGUEMENT FOR CONSTRUCTORS!
     @Override
     public void init(){
-        HashMap<String,String> data = AParser.run("level"+level+".json");
+        HashMap<String,String> data = AParser.run("level"+level+".json", "levels");
         
         //adding options to middleware manager
         for (Map.Entry<String, String> set : data.entrySet()) {

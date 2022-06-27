@@ -76,14 +76,14 @@ public class MenuPanel extends APanel implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {   
-        // TODO - call to open other panles based on which button was clicked
+        // TODO - call to open other panels based on which button was clicked
         if(e.getSource()==playButton){
             Middleware transitionPanels = new TransitionPanels("menu", "game");
             MiddlewareLocation transitionPanelsLocation = new MiddlewareLocation();
             middlewareManager.addMiddleware(transitionPanels, transitionPanelsLocation);
         }
         else if(e.getSource()==levelButton){
-            Middleware transitionPanels = new TransitionPanels("menu", "login" , false);
+            Middleware transitionPanels = new TransitionPanels("menu", "levels" , false);
             MiddlewareLocation transitionPanelsLocation = new MiddlewareLocation();
             middlewareManager.addMiddleware(transitionPanels, transitionPanelsLocation);
         }
