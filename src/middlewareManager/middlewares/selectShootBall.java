@@ -5,6 +5,7 @@ import config.Config;
 import elementManager.ElementManager;
 import elementManager.elements.Element;
 import elementManager.elements.SmallBall;
+import middlewareManager.MiddlewareLocation;
 
 public class selectShootBall extends Middleware  {
 
@@ -16,23 +17,17 @@ public class selectShootBall extends Middleware  {
     }
     
     @Override
-    public void init() {
-      ArrayList<Element> ShootBallElements ;
-      Element top = null;
-      ShootBallElements  =elementManager.getElementsByGroup("selectShootBalls");
-      for(Element element:ShootBallElements){
-        if(top==null)
-          top = element;
-        else if(element.getPosition().getY()<top.getPosition().getY()){
-          top = element;
-        }
-       top.leave("selectShootBalls");
-       top.join("movingShootBalls");
-       new MoveSmallBall((SmallBall) top);
-       this.remove();
-
+    public void run() {
+      String readyToShootBall = this.getValue("readyToShootBall");
+       if( readyToShootBall!=null && readyToShootBall!="" ){
+          middlewareManager.addMiddleware(new MoveSmallBall(readyToShootBall),new MiddlewareLocation());
+          this.setValue("readyToShootBall","");
+          middlewareManager.addMiddleware(new Reload(),new MiddlewareLocation());
+       }
+       
+          
       }
 
     }
     
-}
+  

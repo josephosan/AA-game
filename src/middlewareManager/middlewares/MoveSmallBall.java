@@ -8,11 +8,11 @@ public class MoveSmallBall extends Middleware  {
     SmallBall smallBall;
     BigBall bigBall;
     int endY;
-    
-    public MoveSmallBall(SmallBall smallBall){
-    super("moveSmallBall");
-    this.smallBall = smallBall;
+    String id;
     ElementManager elementManager= Config.getElementManager();
+    public MoveSmallBall(String id){
+    super("moveSmallBall");
+    this.id=id;
     bigBall = (BigBall)elementManager.getElementById("bigBall");
     endY = bigBall.getR()+bigBall.getPosition().getY();
 
@@ -20,11 +20,9 @@ public class MoveSmallBall extends Middleware  {
 
     @Override
     public void run() {
+        smallBall= (SmallBall)this.elementManager.getElementById(id);
         this.smallBall.getPosition().setY(this.smallBall.getPosition().getY()-10);
-        if(this.smallBall.getPosition().getY()<=endY){
-            this.remove();
-            return;
-        }
+        
     
     }
 
