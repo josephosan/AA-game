@@ -25,17 +25,14 @@ public class Rotation{
     }
 
     public void rotate(SmallBall smallBall){
-        if(origin == null){
-            BigBall bigBall =  (BigBall)Config.getElementManager().getElementById("bigBall");
-            this.origin = bigBall.getPosition();
-            this.r = bigBall.getR();
-        }
+        this.origin = Config.getMainCirclePosition();
+        this.r = Config.getLineLength();
         Angle angle = smallBall.getAngle();
         angle.add(this.rotationSpeed);
         double a = angle.getInRadian();
         Integer x = (int) (this.origin.getX() + (Math.cos(a) * r) + 0) ;
         Integer y = (int) (this.origin.getY() + (Math.sin(a) * r) - 0);
         smallBall.setAngle(angle);
-        smallBall.setPos(new AaPosition(x,y));
+        smallBall.setPosition(new AaPosition(x,y));
     }
 }

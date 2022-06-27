@@ -43,8 +43,8 @@ public class MenuPanel extends APanel implements ActionListener{
         playButton.addActionListener(this);
         levelButton.addActionListener(this);
 
-        playButton.setBounds(50,500,75,50);
-        levelButton.setBounds(275,500,75,50);     
+        playButton.setBounds(275,500,75,50);
+        levelButton.setBounds(50,500,75,50);  
         
         playButton.setIcon(playIcon);
         levelButton.setIcon(levelIcon);
@@ -82,11 +82,11 @@ public class MenuPanel extends APanel implements ActionListener{
             MiddlewareLocation transitionPanelsLocation = new MiddlewareLocation();
             middlewareManager.addMiddleware(transitionPanels, transitionPanelsLocation);
         }
-
-        if(e.getSource()==levelButton){
-            Middleware transitionPanels = new TransitionPanels("menu", "login");
+        else if(e.getSource()==levelButton){
+            Middleware transitionPanels = new TransitionPanels("menu", "levels" , false);
             MiddlewareLocation transitionPanelsLocation = new MiddlewareLocation();
             middlewareManager.addMiddleware(transitionPanels, transitionPanelsLocation);
         }
+
     }
 }

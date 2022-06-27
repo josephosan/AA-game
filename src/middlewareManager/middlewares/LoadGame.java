@@ -8,11 +8,19 @@ import java.util.Map;
 
 public class LoadGame extends Middleware {
     int level;
+    String panelId = "game";
     MiddlewareManager middlewareManager;
     Middleware middleware;
     public LoadGame(int level){
         super("LoadGame");
         this.level = level;
+        this.middlewareManager = Config.getMiddlewareManager();
+    }
+
+    public LoadGame(int level, String panelId){
+        super("LoadGame");
+        this.level = level;
+        this.panelId = panelId;
         this.middlewareManager = Config.getMiddlewareManager();
     }
 
@@ -66,7 +74,9 @@ public class LoadGame extends Middleware {
                     }
 
                     middlewareManager.addMiddlewareInSeries(middleware);
-                    middlewareManager.joinGroup("game", middleware);
+                    //adding middlewares to group. the id of the group is same as id of panel
+                    //the panelId deafult is "game"
+                    middlewareManager.joinGroup(panelId, middleware);
                     
                 }
                 catch(Exception e){
@@ -79,6 +89,11 @@ public class LoadGame extends Middleware {
                 break;
             }
             i++;
+        }
+        //creating shootingBalls
+        int ballsToConnect = Integer.parseInt(this.getValue("numOfBallsToConnect"));
+        for(int k=0;k<ballsToConnect;k++ ){
+            middlewareManager.addMiddlewareInSeries(new DrawSmallBall("90",this.getValue("smallBallsColor"),panelId,false));
         }
         this.remove();
         

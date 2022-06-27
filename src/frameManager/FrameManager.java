@@ -54,44 +54,45 @@ public class FrameManager extends JFrame{
         APanel mainPanel = new MainPanel("mainPanel");
         APanel menuPanel = new MenuPanel("menuPanel");
         APanel gamePanel = new GamePanel("gamePanel");
+<<<<<<< HEAD
         APanel loginPanel = new LoginPanel("loginPanel");
+=======
+        APanel levelPanel = new LevelPanel("levelPanel");
+>>>>>>> cdbb684c568e1a8cf27fb128ed63cc92195351f1
 
         aPanels.put("main", mainPanel);
         aPanels.put("menu", menuPanel);
         aPanels.put("game", gamePanel);
+<<<<<<< HEAD
         aPanels.put("login", loginPanel);
+=======
+        aPanels.put("levels",levelPanel);
+>>>>>>> cdbb684c568e1a8cf27fb128ed63cc92195351f1
         // aPanels.put("game", );
         add(mainPanel);
         mainPanel.add(menuPanel);
         mainPanel.add(gamePanel);
+<<<<<<< HEAD
         mainPanel.add(loginPanel);
+=======
+        mainPanel.add(levelPanel);
+>>>>>>> cdbb684c568e1a8cf27fb128ed63cc92195351f1
 
         setActivePanel("menu");
         getAPanel("main").setVisible(true);
         getAPanel("menu").setVisible(false);
         getAPanel("game").setVisible(true);
+<<<<<<< HEAD
         getAPanel("login").setVisible(true);
+=======
+        getAPanel("levels").setVisible(false);
+>>>>>>> cdbb684c568e1a8cf27fb128ed63cc92195351f1
 
         setVisible(true);
     }
 
     public void addMiddlewares() {
-        // MiddlewareManager middlewareManager = Config.getMiddlewareManager();
-
-        // Middleware repaintPanelElements = new RepaintPanelElements(getAPanel("menu"));
-        // MiddlewareLocation middlewareLocation = new MiddlewareLocation();
-        // middlewareManager.addMiddleware(repaintPanelElements, middlewareLocation);
-
-        // Middleware transitionPanels = new TransitionPanels("game", "menu");
-        // MiddlewareLocation transitionPanelsLocation = new MiddlewareLocation();
-        // middlewareManager.addMiddleware(transitionPanels, transitionPanelsLocation);
-
-        //Following middlewares are just for test
-
         
-//         Middleware drawSmallBall = new DrawSmallBall(getAPanel("menu"));
-//         MiddlewareLocation drawSmallBaLocation = new MiddlewareLocation();
-//         middlewareManager.addMiddleware(drawSmallBall, drawSmallBaLocation);
     }
 
     public APanel getAPanel(String id) {
