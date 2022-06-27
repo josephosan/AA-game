@@ -12,7 +12,7 @@ public class Config {
     static ElementManager elementManager;
 
     static final Integer 
-        timerDelay = 20,
+        timerDelay = 30,
 
         frameWidth = 400, 
         frameHeight = 600,
@@ -70,7 +70,7 @@ public class Config {
     }
 
     public static ElementManager getElementManager() {
-//        System.out.println("returning elementManager");
+//        //System.out.println("returning elementManager");
         return elementManager;
     }
 

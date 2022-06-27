@@ -34,7 +34,7 @@ public class APanel extends JPanel{
     // if panel is in the final position after transition 
     // and becomes the activePanel this event will emit.
     public void onActivePanel() {
-
+        
     }
 
     // when panel becomes deactive.
