@@ -16,11 +16,9 @@ public class FrameManager extends JFrame{
         // this method will call when all the components of app 
     // getting accessible from the Config
     public void onConfigSubscribe() {
+
         MiddlewareManager middlewareManager = Config.getMiddlewareManager();
-        Middleware transitionPanels = new TransitionPanels("game", "menu");
-        middlewareManager.addMiddleware(transitionPanels, new MiddlewareLocation());
-        middlewareManager.addMiddleware(new LoadGame(2,"menu"), new MiddlewareLocation());    
-        middlewareManager.addMiddleware(new RepaintPanelElements(Config.getFrameManager().getAPanel("menu")), new MiddlewareLocation());    
+       
     }
 
 
@@ -41,28 +39,32 @@ public class FrameManager extends JFrame{
         APanel mainPanel = new MainPanel("mainPanel");
         APanel menuPanel = new MenuPanel("menuPanel");
         APanel gamePanel = new GamePanel("gamePanel");
-        APanel loginPanel = new LoginPanel("loginPanel");
+        APanel pausePanel = new PausePanel("pausePanel");
         APanel levelPanel = new LevelPanel("levelPanel");
+        APanel loginPanel = new LoginPanel("loginPanel");
 
 
         aPanels.put("main", mainPanel);
         aPanels.put("menu", menuPanel);
         aPanels.put("game", gamePanel);
         aPanels.put("levels",levelPanel);
+        aPanels.put("pause", pausePanel);
         aPanels.put("login", loginPanel);
         // aPanels.put("game", );
         add(mainPanel);
         mainPanel.add(menuPanel);
         mainPanel.add(gamePanel);
+        mainPanel.add(pausePanel);
         mainPanel.add(levelPanel);
         mainPanel.add(loginPanel);
 
         setActivePanel("menu");
         getAPanel("main").setVisible(true);
         getAPanel("menu").setVisible(false);
-        getAPanel("game").setVisible(true);
-        getAPanel("login").setVisible(false);
+        getAPanel("game").setVisible(false);
+        getAPanel("pause").setVisible(false);
         getAPanel("levels").setVisible(false);
+        getAPanel("login").setVisible(false);
 
         setVisible(true);
     }

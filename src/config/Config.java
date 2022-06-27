@@ -18,7 +18,8 @@ public class Config {
         smallCircleRadios = 0;
 
     static Integer lineLength = 100;
-
+    
+    static final int speedShootBall = 30;
     static final AaPosition mainCirclePosition = new AaPosition(200, 200); // mahbod
     
     static final AaSize 
@@ -60,6 +61,7 @@ public class Config {
             Config.middlewareManager.onConfigSubscribe();
             Config.frameManager.onConfigSubscribe();
         }
+       
     }
 
     public static FrameManager getFrameManager() {
@@ -94,7 +96,9 @@ public class Config {
     public static AaSize getSmallBallSize(){
         return smallBallSize;
     }
-
+    public static int getSpeedShootBall(){
+        return speedShootBall;
+    }
     public static Integer getSmallCircleRadios() { return smallCircleRadios; }
 
     public static Integer getLineLength() { return lineLength; }
@@ -106,3 +110,5 @@ public class Config {
         lineLength = lengthOfLines;
     }
 }
+
+
