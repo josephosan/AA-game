@@ -22,15 +22,16 @@ public class FrameManager extends JFrame{
         middlewareManager.addMiddleware(repaintPanelElements, new MiddlewareLocation());
         repaintPanelElements.setValue("rotationSpeed", "3");
         repaintPanelElements.setValue("numOfAllBalls", "1");
-        
-        Middleware transisionPanel = new TransitionPanels("game", "menu");
-        middlewareManager.addMiddleware(transisionPanel, new MiddlewareLocation());
 
-        middlewareManager.addMiddleware(new DrawBigBall(200,200,"menu"), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new DrawSmallBall("90", "0x000000", "menu"), new MiddlewareLocation());
 
+        Middleware transitionPanels = new TransitionPanels("game", "menu");
+        middlewareManager.addMiddleware(transitionPanels, new MiddlewareLocation());
+
+        middlewareManager.addMiddleware(new DrawBigBall("200","200","0x000000","menu"), new MiddlewareLocation());
+        middlewareManager.addMiddleware(new DrawSmallBall("0","0x000000","menu"), new MiddlewareLocation());
         middlewareManager.addMiddleware(new SpinSmallBalls(), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new DrawLine("menu"), new MiddlewareLocation());
+        middlewareManager.addMiddleware(new DrawLine("game"), new MiddlewareLocation());
+
 
         
     }
@@ -53,22 +54,27 @@ public class FrameManager extends JFrame{
         APanel mainPanel = new MainPanel("mainPanel");
         APanel menuPanel = new MenuPanel("menuPanel");
         APanel gamePanel = new GamePanel("gamePanel");
+        APanel loginPanel = new LoginPanel("loginPanel");
         APanel levelPanel = new LevelPanel("levelPanel");
+
 
         aPanels.put("main", mainPanel);
         aPanels.put("menu", menuPanel);
         aPanels.put("game", gamePanel);
         aPanels.put("levels",levelPanel);
+        aPanels.put("login", loginPanel);
         // aPanels.put("game", );
         add(mainPanel);
         mainPanel.add(menuPanel);
         mainPanel.add(gamePanel);
         mainPanel.add(levelPanel);
+        mainPanel.add(loginPanel);
 
-        setActivePanel("main");
+        setActivePanel("menu");
         getAPanel("main").setVisible(true);
         getAPanel("menu").setVisible(false);
         getAPanel("game").setVisible(true);
+        getAPanel("login").setVisible(false);
         getAPanel("levels").setVisible(false);
 
         setVisible(true);

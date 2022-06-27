@@ -10,8 +10,9 @@ public class Config {
     static MiddlewareManager middlewareManager;
     static ElementManager elementManager;
 
-    static final Integer 
-        timerDelay = 20,
+    static final Integer
+        timerDelay = 30,
+
         frameWidth = 400, 
         frameHeight = 600,
         smallCircleRadios = 0;

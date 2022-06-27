@@ -4,7 +4,7 @@ import frameManager.APanel;
 
 public class ShowMenu extends Middleware {
     public ShowMenu() {
-        super("showMenu");   
+        super("showMenu");
     }
 
     @Override

@@ -83,10 +83,10 @@ public class MenuPanel extends APanel implements ActionListener{
             middlewareManager.addMiddleware(transitionPanels, transitionPanelsLocation);
         }
         else if(e.getSource()==levelButton){
-            Middleware transitionPanels = new TransitionPanels("menu", "levels" , false);
+            Middleware transitionPanels = new TransitionPanels("menu", "login" , false);
             MiddlewareLocation transitionPanelsLocation = new MiddlewareLocation();
             middlewareManager.addMiddleware(transitionPanels, transitionPanelsLocation);
         }
-        
+
     }
 }
