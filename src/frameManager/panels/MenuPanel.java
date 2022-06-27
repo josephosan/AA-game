@@ -43,8 +43,8 @@ public class MenuPanel extends APanel implements ActionListener{
         playButton.addActionListener(this);
         levelButton.addActionListener(this);
 
-        playButton.setBounds(50,500,75,50);
-        levelButton.setBounds(275,500,75,50);     
+        playButton.setBounds(275,500,75,50);
+        levelButton.setBounds(50,500,75,50);  
         
         playButton.setIcon(playIcon);
         levelButton.setIcon(levelIcon);
@@ -79,6 +79,11 @@ public class MenuPanel extends APanel implements ActionListener{
         // TODO - call to open other panles based on which button was clicked
         if(e.getSource()==playButton){
             Middleware transitionPanels = new TransitionPanels("menu", "game");
+            MiddlewareLocation transitionPanelsLocation = new MiddlewareLocation();
+            middlewareManager.addMiddleware(transitionPanels, transitionPanelsLocation);
+        }
+        else if(e.getSource()==levelButton){
+            Middleware transitionPanels = new TransitionPanels("menu", "levels" , false);
             MiddlewareLocation transitionPanelsLocation = new MiddlewareLocation();
             middlewareManager.addMiddleware(transitionPanels, transitionPanelsLocation);
         }
