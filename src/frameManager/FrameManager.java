@@ -79,6 +79,8 @@ public class FrameManager extends JFrame{
         getAPanel("levels").setVisible(false);
 
         setVisible(true);
+        // test
+        mainPanel.setPaintOrder("dani>*>dony");
     }
 
     public void addMiddlewares() {
