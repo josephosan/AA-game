@@ -79,27 +79,27 @@ public class MiddlewareManager {
         return null;
     }
 
-    public void addMiddleware(String string, String string2) {
+    public void addMiddleware(Middleware middleware, MiddlewareLocation middlewareLocation) {
         Boolean done = true;
-        if (string2.atStart) {
-            middlewares.addAtStart(string);
-        } else if (string2.atEnd) {
-            middlewares.add(string);
-        } else if (string2.getAfter() != null) {
-            AaLinkedList.LinkedElement element = findLinkedElementById(string2.getAfter());
-            middlewares.addAfter(string, element);
-        } else if (string2.getBefore() != null) {
-            AaLinkedList.LinkedElement element = findLinkedElementById(string2.getAfter());
-            middlewares.addAfter(string, element);
-        } else if (string2.atIndex != -1) {
+        if (middlewareLocation.atStart) {
+            middlewares.addAtStart(middleware);
+        } else if (middlewareLocation.atEnd) {
+            middlewares.add(middleware);
+        } else if (middlewareLocation.getAfter() != null) {
+            AaLinkedList.LinkedElement element = findLinkedElementById(middlewareLocation.getAfter());
+            middlewares.addAfter(middleware, element);
+        } else if (middlewareLocation.getBefore() != null) {
+            AaLinkedList.LinkedElement element = findLinkedElementById(middlewareLocation.getAfter());
+            middlewares.addAfter(middleware, element);
+        } else if (middlewareLocation.atIndex != -1) {
 
         } else {
             done = false;
         }
 
         if (done) {
-            middlewaresMap.put(string.getId(), middlewares.getLastAddedLinkedElement());
-            string.setLinkedElement(middlewares.getLastAddedLinkedElement());
+            middlewaresMap.put(middleware.getId(), middlewares.getLastAddedLinkedElement());
+            middleware.setLinkedElement(middlewares.getLastAddedLinkedElement());
         }
     }
 
