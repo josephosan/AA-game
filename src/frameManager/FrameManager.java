@@ -7,6 +7,7 @@ import java.awt.*;
 import javax.swing.*;
 
 import config.Config;
+import frameManager.APanel;
 import frameManager.panels.*;
 
 public class FrameManager extends JFrame{
@@ -74,7 +75,7 @@ public class FrameManager extends JFrame{
         getAPanel("main").setVisible(true);
         getAPanel("menu").setVisible(false);
         getAPanel("game").setVisible(true);
-        getAPanel("login").setVisible(true);
+        getAPanel("login").setVisible(false);
         getAPanel("levels").setVisible(false);
 
         setVisible(true);
