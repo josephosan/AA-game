@@ -13,7 +13,7 @@ import elementManager.elements.Element;
 
 public class APanel extends JPanel{
     String stdOrderPattern = "*";
-    ElementManager elementManager = Config.getElementManager();
+    protected ElementManager elementManager = Config.getElementManager();
     String id;
     Boolean active = false;
     String[] paintOrder = {};
@@ -35,7 +35,7 @@ public class APanel extends JPanel{
             return;
         }
 
-        if (!Pattern.matches("^((\\#?[\\w]+\\>)|(\\*\\>))+(\\#?[\\w]+|\\*)$", pattern)) {
+        if (!Pattern.matches("^((\\#?[\\w]+\\>)|(\\*\\>))*(\\#?[\\w]+|\\*)$", pattern)) {
             System.out.println("pattern not matched");
             return;
         }
@@ -81,7 +81,9 @@ public class APanel extends JPanel{
     }
 
     public void doPaintSelf(Graphics g, ArrayList<Element> arr) {
+        System.out.println(arr);
         for (Element element : arr) {
+            System.out.println(element);
             if (!element.isPainted()) {
                 element.paintSelf(g);
                 element.setPainted(true);
@@ -108,6 +110,7 @@ public class APanel extends JPanel{
 
     @Override
     public void paintComponent(Graphics g) {
+        super.paintComponent(g);
         ArrayList<Element> elements = elementManager.getElementsByPanel(this);
 
         for (int i=0; i < paintOrder.length; i++) {
@@ -118,14 +121,17 @@ public class APanel extends JPanel{
                     ArrayList<String> elementGroups = element.getGroups();
                     if (element.isPainted()) continue;
                     Boolean shouldPaint = true;
-                    
+
                     for (int j = 0; j < paintOrder.length; j++) {
                         String jToken = paintOrder[j];
+                        if (jToken.equals("*")) continue;
+
                         if (
-                            jToken.equals("*")
-                            && jToken.charAt(0) == '#' 
-                            && element.getId().equals(token.substring(1))
-                            && elementGroups.contains(token)
+                            (
+                                jToken.charAt(0) == '#' 
+                                && element.getId().equals(token.substring(1))
+                            )
+                            || elementGroups.contains(token)
                         ) {
                             shouldPaint = false;
                             break;
