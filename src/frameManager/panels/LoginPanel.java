@@ -1,19 +1,28 @@
 package frameManager.panels;
 
+import config.Config;
 import frameManager.APanel;
+import middlewareManager.MiddlewareLocation;
+import middlewareManager.MiddlewareManager;
+import middlewareManager.middlewares.TransitionPanels;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Objects;
 
 
 public class LoginPanel extends APanel {
-    JTextField nameInput;
+    JTextField textField;
     JButton startGame;
     JLabel loginLabel;
     private int toLeft = -5;
+    private String nameInput = "";
+    MiddlewareManager middlewareManager = Config.getMiddlewareManager();
 
 
     public LoginPanel(String id) {
@@ -29,13 +38,21 @@ public class LoginPanel extends APanel {
         loginLabel.setBounds(toLeft+168, 200, 80, 40);
 
         // setting input field for entering name:
-        nameInput = new JTextField(5);
-        nameInput.setBorder(new EmptyBorder(10, 10, 10, 10));
-        nameInput.setBackground(Color.lightGray);
-        nameInput.setText("Your Name Here");
-        nameInput.setFont(new Font("serif", Font.ITALIC, 18));
-        nameInput.setBounds(toLeft+100, 270, 210, 40);
-
+        textField = new JTextField(5);
+        textField.setBorder(new EmptyBorder(10, 10, 10, 10));
+        textField.setBackground(Color.lightGray);
+        textField.setText("Your Name Here");
+        textField.setFont(new Font("serif", Font.ITALIC, 18));
+        textField.setBounds(toLeft+100, 270, 210, 40);
+        textField.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                if (textField.getText().length() > 10) {
+                    getToolkit().beep();
+                    e.consume();
+                }
+            }
+        });
 
 
         // setting up start button:
@@ -57,13 +74,17 @@ public class LoginPanel extends APanel {
             }
         });
         startGame.addActionListener(e -> {
-
+            if (!Objects.equals(textField.getText(), "Your Name Here") && textField.getText().length() != 0) {
+                middlewareManager.addMiddleware(new TransitionPanels("login", "menu"), new MiddlewareLocation());
+                nameInput = textField.getText();
+                textField.setText("");
+            }
         });
 
 
 
         add(loginLabel);
-        add(nameInput);
+        add(textField);
         add(startGame);
 
 
