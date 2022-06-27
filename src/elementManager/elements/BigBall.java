@@ -64,7 +64,7 @@ public class BigBall extends Element{
         g2D.setPaint(this.color);
         g2D.fillOval(
             this.position.getX() - this.size.getWidth() / 2,
-            this.position.getY(),
+            this.position.getY() - this.size.getHeight() / 2,
             this.size.getWidth(), 
             this.size.getHeight());
         if (bornaXPos != 0 || bornaYPos != 0)

@@ -10,14 +10,14 @@ public class Config {
     static MiddlewareManager middlewareManager;
     static ElementManager elementManager;
 
-    static final Integer 
-        timerDelay = 20,
+    static final Integer
+        timerDelay = 30,
 
         frameWidth = 400, 
         frameHeight = 600,
-        smallCircleRadios = 0,
+        smallCircleRadios = 0;
 
-        lineLength = 100;
+    static Integer lineLength = 100;
 
     static final AaPosition mainCirclePosition = new AaPosition(200, 200); // mahbod
     
@@ -101,4 +101,8 @@ public class Config {
 
 
     public static AaPosition getMainCirclePosition() { return mainCirclePosition; }
+
+    public static void setLineLength(Integer lengthOfLines){
+        lineLength = lengthOfLines;
+    }
 }
