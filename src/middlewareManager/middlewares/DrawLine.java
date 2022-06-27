@@ -27,8 +27,7 @@ public class DrawLine extends Middleware {
     @Override
     public void run() {
         if(bbPosition == null){
-            BigBall bigBall = (BigBall)elementManager.getElementById("bigBall");
-            bbPosition =  bigBall.getPosition();
+            bbPosition =  Config.getMainCirclePosition();
         }
         //getting rotatingSmallBalls Group (Elements are added to this Group using DrawSmallBall middleware)
         rotatingSmallBalls = elementManager.getElementsByGroup("rotatingSmallBalls");
