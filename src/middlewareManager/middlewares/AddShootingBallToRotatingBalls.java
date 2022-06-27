@@ -10,12 +10,13 @@ public class AddShootingBallToRotatingBalls extends Middleware {
     Element shootingSB;
 
     public AddShootingBallToRotatingBalls(Element shootingSB) {
-        super("checkInterSection");
+        super("addShootingBallsToRotatingBalls");
         this.shootingSB = shootingSB; // getting shooting small ball from CheckImpact class.
                                       // this is the ball that is shot;
     }
 
-    public void run() {
+    @Override
+    public void init() {
         shootingSB.leave("shootingSmallBalls"); // removing the shot ball form its group.
 
         shootingSB.setId("smallBall"+(numberOfAllRotatingSmallBalls -elementManager.getElementsByGroup("rotatingSmallBalls").size()));

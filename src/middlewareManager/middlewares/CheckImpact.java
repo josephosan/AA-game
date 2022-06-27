@@ -6,7 +6,6 @@ import elementManager.elements.Element;
 import middlewareManager.MiddlewareLocation;
 import middlewareManager.MiddlewareManager;
 import utils.Tools;
-
 import java.util.ArrayList;
 
 public class CheckImpact extends Middleware {
@@ -16,7 +15,7 @@ public class CheckImpact extends Middleware {
     ArrayList<Element> shootingSmallBalls;
 
     public CheckImpact() {
-        super("checkInterSection");
+        super("checkImpact");
     }
 
     public boolean checkIfClashed(Element rotatingSB, Element shootingSB) { // checking if balls had impacted.

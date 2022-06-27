@@ -12,13 +12,13 @@ public class LoadGame extends Middleware {
     MiddlewareManager middlewareManager;
     Middleware middleware;
     public LoadGame(int level){
-        super("LoadGame");
+        super("loadGame");
         this.level = level;
         this.middlewareManager = Config.getMiddlewareManager();
     }
 
     public LoadGame(int level, String panelId){
-        super("LoadGame");
+        super("loadGame");
         this.level = level;
         this.panelId = panelId;
         this.middlewareManager = Config.getMiddlewareManager();
