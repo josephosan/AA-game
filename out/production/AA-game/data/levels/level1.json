@@ -1,0 +1,13 @@
+{
+    "author": "Arman",
+    "levelName": "The Beginning",
+    "rotationSpeed": "2",
+    "backgroundColor": "#d48a98",
+    "numOfBallsToConnect": "5",
+    "smallBallsColor": "#000000",
+    "middleware0": "TransitionPanels game menu",
+    "middleware1": "DrawBigBall 200 200 menu",
+    "middleware2": "DrawSmallBall 90 true",
+    "middleware3": "SpinSmallBalls",
+    "middleware4": "DrawLine menu"
+}

@@ -49,13 +49,11 @@ public class LoginPanel extends APanel {
             @Override
             public void mouseEntered(MouseEvent e) {
                 startGame.setBackground(Color.gray);
-                repaint();
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
                 startGame.setBackground(Color.lightGray);
-                repaint();
             }
         });
         startGame.addActionListener(e -> {
