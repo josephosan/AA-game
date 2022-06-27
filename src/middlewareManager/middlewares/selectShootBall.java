@@ -23,11 +23,12 @@ public class selectShootBall extends Middleware  {
           middlewareManager.addMiddleware(new MoveSmallBall(readyToShootBall),new MiddlewareLocation());
           this.setValue("readyToShootBall","");
           middlewareManager.addMiddleware(new Reload(),new MiddlewareLocation());
+
        }
        
           
       }
-
     }
+    
     
   

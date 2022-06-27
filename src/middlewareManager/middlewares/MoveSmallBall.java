@@ -21,7 +21,7 @@ public class MoveSmallBall extends Middleware  {
     @Override
     public void run() {
         smallBall= (SmallBall)this.elementManager.getElementById(id);
-        this.smallBall.getPosition().setY(this.smallBall.getPosition().getY()-10);
+        this.smallBall.getPosition().setY(this.smallBall.getPosition().getY()-this.v);
         
     
     }
