@@ -7,7 +7,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 import frameManager.APanel;
-import frameManager.FrameManager;
 import middlewareManager.MiddlewareLocation;
 import middlewareManager.MiddlewareManager;
 import middlewareManager.middlewares.*;
@@ -21,43 +20,60 @@ import java.awt.event.*;
 
 public class MenuPanel extends APanel implements ActionListener{
     ElementManager elementManager = Config.getElementManager();
-    //FrameManager frameManager = Config.getFrameManager();
     MiddlewareManager middlewareManager = Config.getMiddlewareManager();
     APanel menuPanel ;
+
     JButton playButton;
     JButton levelButton;
+    JButton scoreButton;
+
+    private Color backgroundColor = new Color(0x32ff98);
+    private Color buttonsColor = new Color(0xd48a98);
+    private Color buttonBorderColor = new Color(0x2a6a7b);
+    ArrayList<JButton> buttons = new ArrayList<JButton>();
+
     public MenuPanel(String id) {
         super(id);
-
-        this.setBackground(new Color(0x32ff98));
-       
-        ImageIcon playIcon = new ImageIcon("src/Icons/play.png");
-        ImageIcon levelIcon = new ImageIcon("src/Icons/levels.png");
+        this.setBackground(backgroundColor);
 
         playButton = new JButton();
         levelButton = new JButton();
+        scoreButton = new JButton();
 
-        playButton.setFocusable(false);
-        levelButton.setFocusable(false);
+        //Adding to ArrayList
+        buttons.add(playButton);
+        buttons.add(levelButton);
+        buttons.add(scoreButton);
 
-        playButton.addActionListener(this);
-        levelButton.addActionListener(this);
-
+        //Set Bounds
         playButton.setBounds(275,500,75,50);
         levelButton.setBounds(50,500,75,50);  
+        scoreButton.setBounds(50,425,75,50);
         
-        playButton.setIcon(playIcon);
-        levelButton.setIcon(levelIcon);
+        playButton.setIcon(new ImageIcon("src/Icons/play.png"));
+        levelButton.setIcon(new ImageIcon("src/Icons/levels.png"));
+        scoreButton.setIcon(new ImageIcon("src/Icons/score.png"));
 
-        playButton.setBackground(new Color(0xd48a98));
-        levelButton.setBackground(new Color(0xd48a98));
-
-        playButton.setBorder(BorderFactory.createEtchedBorder(new Color(0xd48a98), new Color(0xd48a98)));
-        levelButton.setBorder(BorderFactory.createEtchedBorder(new Color(0xd48a98), new Color(0xd48a98)));
-
-        this.add(levelButton);
         this.add(playButton);
-        setLocation(0, 0);
+        for(JButton b: buttons){
+            b.setBackground(backgroundColor);
+            b.setFocusable(false);
+            b.addActionListener(this);
+            b.setBorder(BorderFactory.createEtchedBorder(buttonBorderColor, buttonBorderColor));
+            b.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    b.setBackground(buttonsColor);
+                }
+    
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    b.setBackground(backgroundColor);
+                }
+            });
+            this.add(b);
+        }
+        //setLocation(0, 0);
     }
 
     @Override
@@ -76,16 +92,14 @@ public class MenuPanel extends APanel implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {   
-        // TODO - call to open other panels based on which button was clicked
         if(e.getSource()==playButton){
-            Middleware transitionPanels = new TransitionPanels("menu", "game");
-            MiddlewareLocation transitionPanelsLocation = new MiddlewareLocation();
-            middlewareManager.addMiddleware(transitionPanels, transitionPanelsLocation);
+            middlewareManager.addMiddleware(new TransitionPanels("menu", "game"), new MiddlewareLocation());
         }
         else if(e.getSource()==levelButton){
-            Middleware transitionPanels = new TransitionPanels("menu", "levels" , false);
-            MiddlewareLocation transitionPanelsLocation = new MiddlewareLocation();
-            middlewareManager.addMiddleware(transitionPanels, transitionPanelsLocation);
+            middlewareManager.addMiddleware(new TransitionPanels("menu", "levels", false), new MiddlewareLocation());
+        }
+        else if(e.getSource()==scoreButton){
+            middlewareManager.addMiddleware(new TransitionPanels("menu", "pause",false), new MiddlewareLocation());
         }
 
     }
