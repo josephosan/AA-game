@@ -19,7 +19,8 @@ public class FrameManager extends JFrame{
         MiddlewareManager middlewareManager = Config.getMiddlewareManager();
         Middleware transitionPanels = new TransitionPanels("game", "menu");
         middlewareManager.addMiddleware(transitionPanels, new MiddlewareLocation());
-        middlewareManager.addMiddleware(new LoadGame(2,"menu"), new MiddlewareLocation());        
+        middlewareManager.addMiddleware(new LoadGame(2,"menu"), new MiddlewareLocation());    
+        middlewareManager.addMiddleware(new RepaintPanelElements(Config.getFrameManager().getAPanel("menu")), new MiddlewareLocation());    
     }
 
 
