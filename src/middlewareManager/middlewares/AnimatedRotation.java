@@ -29,6 +29,8 @@ public class AnimatedRotation extends Middleware {
 
         if (rotatingSmallBalls == null) return;
         
+        if(rotatingSmallBalls == null) return;
+
         for(Element smallBall: rotatingSmallBalls){
             SmallBall a = (SmallBall)smallBall;
             double ang = a.getAngle().getInDegree();

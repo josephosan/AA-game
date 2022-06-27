@@ -24,7 +24,7 @@ public class SmallBall extends Element {
         this.angle = angle;
     }
 
-    public void setPos(AaPosition position){
+    public void setPosition(AaPosition position){
         this.position = position;
     }
 

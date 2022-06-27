@@ -2,6 +2,7 @@ package middlewareManager.middlewares;
 
 import config.Config;
 import elementManager.ElementManager;
+import elementManager.coordinate.AaPosition;
 import elementManager.elements.SmallBall;
 import frameManager.FrameManager;
 import utils.calculations.Angle;
@@ -17,13 +18,14 @@ public class DrawSmallBall extends Middleware{
     final int id;       // to store n before n changes as a result of this middleware being called again. 
     String panelId = "game";
     String rgb;
+    boolean isRotating = true;
     Angle angle;
     ElementManager elementManager = Config.getElementManager();
     FrameManager frameManager = Config.getFrameManager();
 
     public DrawSmallBall(String angle){
         super("AddSmallBall"+n);
-        int numberOfAllBalls = 20; //TODO get numberOfAllBalls as a variable
+        int numberOfAllBalls = Integer.parseInt(this.getValue("numOfAllBalls")); 
         id = numberOfAllBalls - n;
         n++;
         this.angle = new Angle(Double.parseDouble(angle));
@@ -31,7 +33,7 @@ public class DrawSmallBall extends Middleware{
 
     public DrawSmallBall(String angle, String rgb){
         super("AddSmallBall"+n);
-        int numberOfAllBalls = 20; //TODO get numberOfAllBalls as a variable
+        int numberOfAllBalls = Integer.parseInt(this.getValue("numOfAllBalls")); 
         id = numberOfAllBalls - n;
         n++;
         this.angle = new Angle(Double.parseDouble(angle));
@@ -40,7 +42,7 @@ public class DrawSmallBall extends Middleware{
 
     public DrawSmallBall(String angle, String rgb,String panelId){
         super("AddSmallBall"+n);
-        int numberOfAllBalls = 20; //TODO get numberOfAllBalls as a variable
+        int numberOfAllBalls = Integer.parseInt(this.getValue("numOfAllBalls")); 
         id = numberOfAllBalls - n;
         n++;
         this.angle = new Angle(Double.parseDouble(angle));
@@ -48,18 +50,64 @@ public class DrawSmallBall extends Middleware{
         this.panelId = panelId;
     }
 
+
+    public DrawSmallBall(String angle, boolean isRotating){
+        super("AddSmallBall"+n);
+        int numberOfAllBalls = Integer.parseInt(this.getValue("numOfAllBalls")); 
+        id = numberOfAllBalls - n;
+        n++;
+        this.angle = new Angle(Double.parseDouble(angle));
+        this.isRotating = isRotating;
+    }
+
+    public DrawSmallBall(String angle, String rgb, boolean isRotating){
+        super("AddSmallBall"+n);
+        int numberOfAllBalls = Integer.parseInt(this.getValue("numOfAllBalls")); 
+        id = numberOfAllBalls - n;
+        n++;
+        this.angle = new Angle(Double.parseDouble(angle));
+        this.rgb = rgb;
+        this.isRotating = isRotating;
+    }
+
+    public DrawSmallBall(String angle, String rgb,String panelId, boolean isRotating){
+        super("AddSmallBall"+n);
+        int numberOfAllBalls = Integer.parseInt(this.getValue("numOfAllBalls")); 
+        id = numberOfAllBalls - n;
+        n++;
+        this.angle = new Angle(Double.parseDouble(angle));
+        this.rgb = rgb;
+        this.panelId = panelId;
+        this.isRotating = isRotating;
+    }
+
     @Override
     public void init(){
-        //creating SmallBall instance
-        SmallBall smallBall = new SmallBall(frameManager.getAPanel(panelId), angle);
-        smallBall.setNumber(id);
-        if(rgb != null){
-            smallBall.setColor(new Color(Integer.decode(rgb)));
+        // handling creation of rotatinSmallBall
+        if(isRotating){
+            //creating SmallBall instance
+            SmallBall smallBall = new SmallBall(frameManager.getAPanel(panelId), angle);
+            smallBall.setNumber(id);
+            if(rgb != null) smallBall.setColor(new Color(Integer.decode(rgb)));
+            //adding smallBall to elementManager
+            elementManager.addElement("smallBall"+id, smallBall);
+            //adding SmallBall to "rotatingSmallBalls" Group.
+            elementManager.joinGroup("rotatingSmallBalls", "smallBall"+id);
+            this.remove();
+            return;
         }
+
+        //handling creation of ShootingBalls
+        SmallBall smallBall = new SmallBall(frameManager.getAPanel(panelId),new Angle());
+        smallBall.setNumber(id);
+        if(rgb != null) smallBall.setColor(new Color(Integer.decode(rgb)));
+        //setting smallBall Position
+        AaPosition bbp = Config.getMainCirclePosition();
+        smallBall.setPosition(new AaPosition(bbp.getX(),bbp.getY()+250)); //TODO get a variable instaed of hardcoding 250
         //adding smallBall to elementManager
         elementManager.addElement("smallBall"+id, smallBall);
-        //adding SmallBall to "rotatingSmallBalls" Group.
-        elementManager.joinGroup("rotatingSmallBalls", "smallBall"+id);
+        //adding SmallBall to "selectShootBall" Group.
+        elementManager.joinGroup("selectShootBall", "smallBall"+id);
         this.remove();
     }
     

@@ -24,7 +24,7 @@ public class BigBall extends Element{
         super(panel);
         this.size.setSize(Config.getMainCircleSize().getWidth(), Config.getMainCircleSize().getHeight());
         aaPosition.setX(Config.getFrameWidth()/2);
-        aaPosition.setY(this.size.getHeight() + Config.getBigCircleRadios() + 50);
+        aaPosition.setY(this.size.getHeight() + Config.getLineLength() + 50);
 
         // borna stuff:
         try {
@@ -64,7 +64,7 @@ public class BigBall extends Element{
         g2D.setPaint(this.color);
         g2D.fillOval(
             this.position.getX() - this.size.getWidth() / 2,
-            this.position.getY(),
+            this.position.getY() - this.size.getHeight() / 2,
             this.size.getWidth(), 
             this.size.getHeight());
         if (bornaXPos != 0 || bornaYPos != 0)
@@ -72,6 +72,6 @@ public class BigBall extends Element{
     }
 
     public Integer getR() {
-        return Config.getBigCircleRadios();
+        return Config.getLineLength();
     }
 }
