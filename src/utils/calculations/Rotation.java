@@ -25,10 +25,8 @@ public class Rotation{
     }
 
     public void rotate(SmallBall smallBall){
-        if(origin == null){
-            this.origin = Config.getMainCirclePosition();
-            this.r = Config.getLineLength();
-        }
+        this.origin = Config.getMainCirclePosition();
+        this.r = Config.getLineLength();
         Angle angle = smallBall.getAngle();
         angle.add(this.rotationSpeed);
         double a = angle.getInRadian();
