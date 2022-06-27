@@ -16,6 +16,7 @@ public class FrameManager extends JFrame{
         // this method will call when all the components of app 
     // getting accessible from the Config
     public void onConfigSubscribe() {
+
         MiddlewareManager middlewareManager = Config.getMiddlewareManager();
 
         Middleware repaintPanelElements = new RepaintPanelElements(getAPanel("menu"));
@@ -25,6 +26,12 @@ public class FrameManager extends JFrame{
 
 
         Middleware transitionPanels = new TransitionPanels("game", "menu");
+<<<<<<< HEAD
+        MiddlewareLocation transitionPanelsLocation = new MiddlewareLocation();
+        middlewareManager.addMiddleware(transitionPanels, transitionPanelsLocation);
+        
+        
+=======
         middlewareManager.addMiddleware(transitionPanels, new MiddlewareLocation());
 
         middlewareManager.addMiddleware(new DrawBigBall("200","200","0x000000","menu"), new MiddlewareLocation());
@@ -32,6 +39,7 @@ public class FrameManager extends JFrame{
         middlewareManager.addMiddleware(new SpinSmallBalls(), new MiddlewareLocation());
         middlewareManager.addMiddleware(new DrawLine("game"), new MiddlewareLocation());
 
+>>>>>>> b94f5e587fbb8b60ba9a495d04f3b4fcdd96c221
 
         
     }
