@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AaWriter {
-    public AaWriter(String keyToPut, String valueToPut) {
+    public AaWriter(String userName, String keyToPut, String valueToPut) {
         try { // if file does not exist, it will be created:
-            FileWriter writer = new FileWriter("src/data/profile/profile.json");
+            FileWriter writer = new FileWriter("src/data/profile/"+userName+"Profile.json");
             Gson gson = new Gson();
 
             Map<String, String> input = new HashMap<>();
