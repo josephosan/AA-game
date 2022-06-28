@@ -6,28 +6,26 @@ import elementManager.elements.SmallBall;
 
 public class ReloadShootingBall extends Middleware {
     SmallBall smallBall;
-    int speed;
-    int acceleration;
-    int numberOfRenders = 60;
+    int speed = 30;
+    int acceleration = -1;
     int ballNumber;
-    AaPosition shootingPosition = Config.getShootingPosition();
+
+    AaPosition shootingPosition = new AaPosition(200,500); //Config.getShootingPosition();
     ReloadShootingBall(){
         super("reloadShootingBall");
         ballNumber = Integer.parseInt(this.getValue("numOfBallsToConnect"));
-        System.out.println("from reload: "+ballNumber);
     }
 
+    @Override
     public void run(){
-        if(acceleration == 0){
+        if(ballNumber<1) {this.remove(); return;}
+        if(smallBall==null){
             smallBall = (SmallBall)Config.getElementManager().getElementById("smallBall"+ballNumber);
-            speed = (smallBall.getPosition().getY()-shootingPosition.getY())/(Config.getTimerDelay()*(numberOfRenders/2));
-            acceleration = -(speed/(Config.getTimerDelay()*numberOfRenders));
         }
-        System.out.println("");
-        if(shootingPosition.getY()-smallBall.getPosition().getY()>0){
+        if(smallBall.getPosition().getY()-shootingPosition.getY()>0){
             AaPosition sbp = smallBall.getPosition();
             smallBall.setPosition(new AaPosition(sbp.getX(),sbp.getY()-speed));
-            speed += acceleration;
+            if(speed>3) speed += acceleration;
         }
         else{
             smallBall.setPosition(shootingPosition);
