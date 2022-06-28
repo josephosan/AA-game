@@ -28,9 +28,9 @@ public class MenuPanel extends APanel implements ActionListener{
     JButton levelButton;
     JButton scoreButton;
 
-    private Color backgroundColor = new Color(0x32ff98);
-    private Color buttonsColor = new Color(0xd48a98);
-    private Color buttonBorderColor = new Color(0x2a6a7b);
+    private final Color backgroundColor = new Color(0x32ff98);
+    private final Color buttonsColor = new Color(0xd48a98);
+    private final Color buttonBorderColor = new Color(0x2a6a7b);
     ArrayList<JButton> buttons = new ArrayList<JButton>();
 
     public MenuPanel(String id) {
@@ -51,14 +51,6 @@ public class MenuPanel extends APanel implements ActionListener{
         levelButton.setBounds(50,500,75,50);  
         scoreButton.setBounds(50,425,75,50);
 
-
-        // making button's nicer:
-        playButton.setBorder(new EmptyBorder(10, 10, 10, 10));
-        playButton.setBorder(null);
-
-        playButton.setBorder(new EmptyBorder(10, 10, 10, 10));
-
-        playButton.setBorder(new EmptyBorder(10, 10, 10, 10));
 
         playButton.setIcon(new ImageIcon("src/Icons/play.png"));
         levelButton.setIcon(new ImageIcon("src/Icons/levels.png"));
