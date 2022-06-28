@@ -9,6 +9,7 @@ public class SelectShootBall extends Middleware  {
   ElementManager elementManager = Config.getElementManager();
  
     public SelectShootBall() {
+
       super("selectShootBall");
     }
     
@@ -34,6 +35,7 @@ public class SelectShootBall extends Middleware  {
         this.setValue("readyToShootBall","");
         //setting "numOfBallsToConnect" value for use of other middlewares
         this.setValue("numOfBallsToConnect", String.valueOf(Integer.parseInt(this.getValue("numOfBallsToConnect"))-1));
+
         //ReloadShootingBall will put a new ball in shooting position.
         middlewareManager.addMiddleware(new ReloadShootingBall(),new MiddlewareLocation());
         //BallIsCloseEnough will check if the ball has reached the orbit.
