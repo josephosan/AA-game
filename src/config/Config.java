@@ -11,7 +11,7 @@ public class Config {
     static ElementManager elementManager;
 
     static final Integer
-        timerDelay = 30,
+        timerDelay = 23,
 
         frameWidth = 400, 
         frameHeight = 600,

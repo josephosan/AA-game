@@ -5,6 +5,7 @@ import frameManager.APanel;
 import middlewareManager.MiddlewareLocation;
 import middlewareManager.MiddlewareManager;
 import middlewareManager.middlewares.TransitionPanels;
+import utils.writer.AaWriter;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -13,6 +14,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.Writer;
 import java.util.Objects;
 
 
@@ -48,7 +50,7 @@ public class LoginPanel extends APanel {
             @Override
             public void keyTyped(KeyEvent e) {
                 if (textField.getText().length() > 10) {
-                    getToolkit().beep();
+                    getToolkit().beep(); // limiting the name to 10 characters
                     e.consume();
                 }
             }
@@ -76,8 +78,9 @@ public class LoginPanel extends APanel {
         startGame.addActionListener(e -> {
             if (!Objects.equals(textField.getText(), "Your Name Here") && textField.getText().length() != 0) {
                 middlewareManager.addMiddleware(new TransitionPanels("login", "menu"), new MiddlewareLocation());
-                nameInput = textField.getText();
+                nameInput = textField.getText(); // getting name (for writing it to the profile file)
                 textField.setText("");
+                new AaWriter("name", nameInput);
             }
         });
 
@@ -88,7 +91,6 @@ public class LoginPanel extends APanel {
         add(startGame);
 
 
-        setVisible(true);
     }
 
     @Override
@@ -97,7 +99,8 @@ public class LoginPanel extends APanel {
         Graphics2D g2d = (Graphics2D)g;
         g2d.setColor(Color.gray);
         g2d.fillRect(toLeft+100, 310, 210, 3);
-
+        // styling the button:
+        // styling the text field.
 
         g2d.setColor(Color.gray);
         g2d.drawRoundRect(toLeft+154, 399, 116, 41, 10, 10);
