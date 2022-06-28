@@ -82,12 +82,10 @@ public class MenuPanel extends APanel implements ActionListener{
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        System.out.println("menu panel repainting");
         ArrayList<Element> elements = elementManager.getElementsByPanel(this);
         System.out.println(elements);
 
         for (Element element : elements) {
-            System.out.println("from paint component");
             element.paintSelf(g);
         }
     }

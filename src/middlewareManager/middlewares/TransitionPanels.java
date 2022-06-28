@@ -44,13 +44,13 @@ public class TransitionPanels extends Middleware{
 
     @Override
     public void run() {
-        System.out.println(Config.getFrameWidth());
         if(rightToLeft){
             Point panel1Location = panel1.getLocation();
             if (panel1Location.getX() <= -Config.getFrameWidth()) {
                 panel1.setVisible(false);
                 panel1.setLocation(0, 0);
                 panel2.setLocation(0, 0);
+                panel2.requestFocus();;
                 this.remove();
                 return;
             }
@@ -64,6 +64,7 @@ public class TransitionPanels extends Middleware{
                 panel1.setVisible(false);
                 panel1.setLocation(0, 0);
                 panel2.setLocation(0, 0);
+                panel2.requestFocus();;
                 this.remove();
                 return;
             }
@@ -72,7 +73,6 @@ public class TransitionPanels extends Middleware{
             panel2.setLocation((int)panel2Location.getX() + transitionSpeed, (int)panel2Location.getY());
         }
         double x = panel1.getLocation().getX();
-        System.out.println(transitionSpeed>5 &&  rightToLeft ? x > -Config.getFrameWidth()/2 : x < -Config.getFrameWidth()/2);
         if(transitionSpeed>1 &&  (rightToLeft ? x < (-Config.getFrameWidth()/3)*2 : x > (Config.getFrameWidth()/3)*2)){
             this.transitionSpeed -= 1;
         }
