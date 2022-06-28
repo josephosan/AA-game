@@ -42,12 +42,10 @@ public class PausePanel extends APanel{
 
         //ActionListener
         resumeButton.addActionListener(e -> {
-            System.out.println("Load lvl");
             middlewareManager.addMiddleware(new TransitionPanels("pause", "game"), new MiddlewareLocation());
             });
         
         menuButton.addActionListener(e -> {
-            System.out.println("Load lvl");
             middlewareManager.addMiddleware(new TransitionPanels("pause", "menu",false), new MiddlewareLocation());
             });
 

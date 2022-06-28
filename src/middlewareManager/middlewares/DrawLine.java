@@ -1,13 +1,11 @@
 package middlewareManager.middlewares;
 
 import java.util.ArrayList;
-
 import config.Config;
 import elementManager.ElementManager;
 import elementManager.coordinate.AaPosition;
 import elementManager.elements.*;
 import frameManager.APanel;
-
 
 public class DrawLine extends Middleware {
     ElementManager elementManager = Config.getElementManager();
