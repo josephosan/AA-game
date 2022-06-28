@@ -99,7 +99,7 @@ public class MenuPanel extends APanel implements ActionListener{
             middlewareManager.addMiddleware(new TransitionPanels("menu", "levels", false), new MiddlewareLocation());
         }
         else if(e.getSource()==scoreButton){
-            middlewareManager.addMiddleware(new TransitionPanels("menu", "pause",false), new MiddlewareLocation());
+            middlewareManager.addMiddleware(new TransitionPanels("menu", "winPanel",false), new MiddlewareLocation());
         }
 
     }

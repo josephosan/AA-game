@@ -17,7 +17,7 @@ public class FrameManager extends JFrame{
     // getting accessible from the Config
     public void onConfigSubscribe() {
 
-        
+
 
 
     }
