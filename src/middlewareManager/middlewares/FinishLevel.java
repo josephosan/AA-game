@@ -6,16 +6,16 @@ import middlewareManager.MiddlewareManager;
 
 import java.awt.Color;
 
-public class finishLevel extends Middleware {
+public class FinishLevel extends Middleware {
     APanel panel = Config.getFrameManager().getActivePanel();
     MiddlewareManager middlewareManager = Config.getMiddlewareManager();
     String groupId = "game";
 
-    public finishLevel(){
+    public FinishLevel(){
         super("finishLevel");
     }
 
-    public finishLevel(String middlewaresGroupId){
+    public FinishLevel(String middlewaresGroupId){
         super("finishLevel");
         this.groupId = middlewaresGroupId;
     }
