@@ -9,21 +9,22 @@ public class ReloadShootingBall extends Middleware {
     int speed;
     int acceleration;
     int numberOfRenders = 60;
-    AaPosition shootingPosition;
+    int ballNumber;
+    AaPosition shootingPosition = Config.getShootingPosition();
     ReloadShootingBall(){
         super("reloadShootingBall");
-    }
-
-    @Override
-    public void init(){
-        int ballNumber = Integer.parseInt(this.getValue("numOfBallsToConnect"));
-        smallBall = (SmallBall)Config.getElementManager().getElementById("smallBall"+ballNumber);
-        speed = (smallBall.getPosition().getY()-shootingPosition.getY())/(Config.getTimerDelay()*(numberOfRenders/2));
-        acceleration = -(speed/(Config.getTimerDelay()*numberOfRenders));
+        ballNumber = Integer.parseInt(this.getValue("numOfBallsToConnect"));
+        System.out.println("from reload: "+ballNumber);
     }
 
     public void run(){
-        if(smallBall.getPosition().getY()-shootingPosition.getY()>0){
+        if(acceleration == 0){
+            smallBall = (SmallBall)Config.getElementManager().getElementById("smallBall"+ballNumber);
+            speed = (smallBall.getPosition().getY()-shootingPosition.getY())/(Config.getTimerDelay()*(numberOfRenders/2));
+            acceleration = -(speed/(Config.getTimerDelay()*numberOfRenders));
+        }
+        System.out.println("");
+        if(shootingPosition.getY()-smallBall.getPosition().getY()>0){
             AaPosition sbp = smallBall.getPosition();
             smallBall.setPosition(new AaPosition(sbp.getX(),sbp.getY()-speed));
             speed += acceleration;

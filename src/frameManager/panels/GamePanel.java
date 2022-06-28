@@ -2,13 +2,10 @@ package frameManager.panels;
 
 import java.awt.*;
 import java.awt.event.*;
-
 import java.util.ArrayList;
-
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-
 import config.Config;
 import elementManager.ElementManager;
 import elementManager.elements.Element;
@@ -29,7 +26,7 @@ public class GamePanel extends APanel implements ActionListener {
         super(id);
         setLocation(0, 0);
         setBackground(backgroundColor);
-
+        setFocusable(true);
         pauseButton = new JButton();
         pauseButton.setBounds(15, 15, 50, 50);
         pauseButton.setBackground(backgroundColor);
@@ -48,18 +45,15 @@ public class GamePanel extends APanel implements ActionListener {
         }
         });
         this.add(pauseButton);
+        this.addKeyListener(new myKeyListener());
     }
 
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-
-        System.out.println("game panel repainting");
         ArrayList<Element> elements = elementManager.getElementsByPanel(this);
-        System.out.println(elements);
 
         for (Element element : elements) {
-            System.out.println("from paint component");
             element.paintSelf(g);
         }
     }    
@@ -70,4 +64,30 @@ public class GamePanel extends APanel implements ActionListener {
             middlewareManager.addMiddleware(new TransitionPanels("game", "pause"), new MiddlewareLocation());
         }
     }
+    
+
+}
+//THIS IS FOR TEST
+//TODO implement a real keylistener
+class myKeyListener implements KeyListener{
+    @Override
+    public void keyPressed(KeyEvent e) {
+        System.out.println("key pressed");
+        int keyCode = e.getKeyCode();
+        if(keyCode == KeyEvent.VK_SPACE){
+            Config.getMiddlewareManager().addMiddleware(new SelectShootBall(), new MiddlewareLocation());
+        }
+    }
+
+    @Override
+    public void keyReleased (KeyEvent e){
+
+    }
+
+    @Override
+    public void keyTyped (KeyEvent e){
+
+    }
+
+    
 }

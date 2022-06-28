@@ -20,8 +20,8 @@ public class Config {
     static Integer lineLength = 100;
     
     static final int speedShootBall = 30;
-    static final AaPosition mainCirclePosition = new AaPosition(200, 200); // mahbod
-    
+    static final AaPosition mainCirclePosition = new AaPosition(200, 200), // mahbod
+                            shootingPosition = new AaPosition(200,400);
     static final AaSize 
         mainCircleSize = new AaSize(100, 100);
 
@@ -105,6 +105,8 @@ public class Config {
 
 
     public static AaPosition getMainCirclePosition() { return mainCirclePosition; }
+
+    public static AaPosition getShootingPosition() {return shootingPosition; }
 
     public static void setLineLength(Integer lengthOfLines){
         lineLength = lengthOfLines;

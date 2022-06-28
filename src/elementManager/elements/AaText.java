@@ -15,7 +15,6 @@ public class AaText extends Element{
 
     @Override
     public void paintSelf(Graphics g) {
-        System.out.println("painting self");
         g.drawString(this.text, 100, 100);
     }
 }

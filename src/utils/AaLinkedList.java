@@ -132,8 +132,6 @@ public class AaLinkedList {
     }
 
     public void remove(LinkedElement element) {
-        System.out.println(last);
-        System.out.println(element);
         if (last == element) {
             last = element.getPrevious();
             if (last != null) {

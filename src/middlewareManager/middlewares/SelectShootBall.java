@@ -4,11 +4,11 @@ import config.Config;
 import elementManager.ElementManager;
 import middlewareManager.MiddlewareLocation;
 
-public class selectShootBall extends Middleware  {
+public class SelectShootBall extends Middleware  {
 
   ElementManager elementManager = Config.getElementManager();
  
-    selectShootBall() {
+    public SelectShootBall() {
       super("selectShootBall");
     }
     
@@ -32,12 +32,12 @@ public class selectShootBall extends Middleware  {
         middlewareManager.addMiddleware(new MoveSmallBall(readyToShootBall),new MiddlewareLocation());
         //setting "readyToShootBall" value to empty string to indicate there is no ball in shooting position.
         this.setValue("readyToShootBall","");
+        //setting "numOfBallsToConnect" value for use of other middlewares
+        this.setValue("numOfBallsToConnect", String.valueOf(Integer.parseInt(this.getValue("numOfBallsToConnect"))-1));
         //ReloadShootingBall will put a new ball in shooting position.
         middlewareManager.addMiddleware(new ReloadShootingBall(),new MiddlewareLocation());
         //BallIsCloseEnough will check if the ball has reached the orbit.
         middlewareManager.addMiddleware(new BallIsCloseEnough(readyToShootBall), new MiddlewareLocation());
-        //setting "numOfBallsToConnect" value for use of other middlewares
-        this.setValue("numOfBallsToConnect", String.valueOf(Integer.parseInt(this.getValue("numOfBallsToConnect"))-1));
       }  
       // this middleware should be removed regardless of whether the ball is shot or not.
       this.remove();

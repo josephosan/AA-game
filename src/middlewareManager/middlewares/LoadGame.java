@@ -95,6 +95,11 @@ public class LoadGame extends Middleware {
         for(int k=0;k<ballsToConnect;k++ ){
             middlewareManager.addMiddlewareInSeries(new DrawSmallBall("90",this.getValue("smallBallsColor"),panelId,false));
         }
+        //moving first ball into position
+        middlewareManager.addMiddlewareInSeries(new ReloadShootingBall());
+        //adding rendering middleware
+        middlewareManager.addMiddlewareInSeries(new RepaintPanelElements(Config.getFrameManager().getAPanel(panelId)));
+        
         this.remove();
         
     }
