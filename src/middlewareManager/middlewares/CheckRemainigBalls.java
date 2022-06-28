@@ -1,7 +1,10 @@
 package middlewareManager.middlewares;
 
-import middlewareManager.MiddlewareLocation;
+import java.util.ArrayList;
 
+import config.Config;
+import middlewareManager.MiddlewareLocation;
+import elementManager.elements.Element;
 public class CheckRemainigBalls extends Middleware {
     final String groupId;
 
@@ -21,8 +24,9 @@ public class CheckRemainigBalls extends Middleware {
         //and is maniuplated by SelectShootBall
         int remainingBalls = Integer.parseInt(this.getValue("numOfBallsToConnect"));
 
-        //if there are no balls left the level is finished.
-        if(remainingBalls==0){
+        //if there are no balls left to shoot and there is no ball in the way, the level is finished.
+        ArrayList<Element> shootingSmallBalls= Config.getElementManager().getElementsByGroup("shootingSmallBalls");
+        if(remainingBalls==0 && shootingSmallBalls.size()==0){
             this.middlewareManager.addMiddleware(new FinishLevel(), new MiddlewareLocation());
             this.remove();
         }

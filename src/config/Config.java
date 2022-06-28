@@ -15,7 +15,7 @@ public class Config {
 
         frameWidth = 400, 
         frameHeight = 600,
-        smallCircleRadios = 0;
+        smallCircleRadios = 16;
 
     static Integer lineLength = 100;
     

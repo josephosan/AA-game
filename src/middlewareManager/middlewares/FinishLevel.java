@@ -7,7 +7,6 @@ import middlewareManager.MiddlewareManager;
 import java.awt.Color;
 
 public class FinishLevel extends Middleware {
-    APanel panel = Config.getFrameManager().getActivePanel();
     MiddlewareManager middlewareManager = Config.getMiddlewareManager();
     String groupId = "game";
 
@@ -22,8 +21,9 @@ public class FinishLevel extends Middleware {
 
     @Override
     public void init(){
+        APanel panel = this.frameManager.getAPanel(groupId);
         //setting green background
-        panel.setBackground(new Color(5,242,5));
+        panel.setBackground(Color.GREEN);
         //setting rotation speed to 0
         this.setValue("rotationSpeed", "0");
     }
