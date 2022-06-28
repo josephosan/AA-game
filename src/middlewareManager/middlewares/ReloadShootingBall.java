@@ -10,7 +10,7 @@ public class ReloadShootingBall extends Middleware {
     int acceleration = -1;
     int ballNumber;
 
-    AaPosition shootingPosition = new AaPosition(200,500); //Config.getShootingPosition();
+    AaPosition shootingPosition = Config.getShootingPosition();
     ReloadShootingBall(){
         super("reloadShootingBall");
         ballNumber = Integer.parseInt(this.getValue("numOfBallsToConnect"));
@@ -28,7 +28,7 @@ public class ReloadShootingBall extends Middleware {
             if(speed>3) speed += acceleration;
         }
         else{
-            smallBall.setPosition(shootingPosition);
+            smallBall.setPosition(new AaPosition(shootingPosition.getX(),shootingPosition.getY()));
             this.setValue("readyToShootBall", smallBall.getId());
             this.remove();
         }
