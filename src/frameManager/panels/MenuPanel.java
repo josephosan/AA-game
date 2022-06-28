@@ -92,7 +92,6 @@ public class MenuPanel extends APanel implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {   
-
         if(e.getSource()==playButton){
             middlewareManager.addMiddleware(new TransitionPanels("menu", "game"), new MiddlewareLocation());
         }
