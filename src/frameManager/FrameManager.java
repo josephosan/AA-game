@@ -25,14 +25,14 @@ public class FrameManager extends JFrame{
         repaintPanelElements.setValue("numOfAllBalls", "1");
 
 
-        Middleware transitionPanels = new TransitionPanels("game", "menu");
+        Middleware transitionPanels = new TransitionPanels("menu", "login");
         middlewareManager.addMiddleware(transitionPanels, new MiddlewareLocation());
 
-        middlewareManager.addMiddleware(new DrawBigBall("200", "200", "0x000000", "menu"), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new DrawSmallBall("0", "0x000000", "menu"), new MiddlewareLocation());
+        middlewareManager.addMiddleware(new DrawBigBall("200", "200", "0x000000", "game"), new MiddlewareLocation());
+        middlewareManager.addMiddleware(new DrawSmallBall("0", "0x000000", "game"), new MiddlewareLocation());
         middlewareManager.addMiddleware(new SpinSmallBalls(), new MiddlewareLocation());
-
         middlewareManager.addMiddleware(new DrawLine("game"), new MiddlewareLocation());
+
 
     }
 

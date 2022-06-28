@@ -18,7 +18,7 @@ public class BallIsCloseEnough extends Middleware {
         this.shootingBall = shootingBall;
     }
 
-    public BallIsCloseEnough(Element shootingBall, String shootingBallId) {
+    public BallIsCloseEnough(String shootingBallId) {
         super("ballIsCloseEnough");
         this.shootingBall = Config.getElementManager().getElementById(shootingBallId);
     }
