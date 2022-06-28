@@ -19,9 +19,9 @@ public class Config {
 
     static Integer lineLength = 100;
     
-    static final int speedShootBall = 30;
-    static final AaPosition mainCirclePosition = new AaPosition(200, 200), // mahbod
-                            shootingPosition = new AaPosition(200,400);
+    static final int speedShootBall = 20;
+    static final AaPosition mainCirclePosition = new AaPosition(200, 200); // mahbod
+    static final AaPosition shootingPosition = new AaPosition(200,500);
     static final AaSize 
         mainCircleSize = new AaSize(100, 100);
 

@@ -39,7 +39,7 @@ public class CheckImpact extends Middleware {
                     middleWareManager.addMiddleware(gameOver, new MiddlewareLocation());
                     this.remove(); // after adding GameOver to the loop, this middleware will remove itself from loop.
                 } else { // if not check: is the shooting ball is close enough to add to rotating balls.
-                    Middleware ballIsCloseEnough = new BallIsCloseEnough(shootingSB);
+                    Middleware ballIsCloseEnough = new BallIsCloseEnough(shootingSB.getId());
                     middlewareManager.addMiddleware(ballIsCloseEnough, new MiddlewareLocation());
                 }
     }

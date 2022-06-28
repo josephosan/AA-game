@@ -128,7 +128,6 @@ public class MiddlewareManager {
         while(iterator.hasNext()) {
             AaLinkedList.LinkedElement element = iterator.next();
             Middleware middleware = element.getMiddleware();
-            System.out.println(middleware.getId());
             runningMiddlewareInLoop = middleware;
 
             if (middleware.isFirstTime()) {

@@ -77,8 +77,6 @@ public class SmallBall extends Element {
                 g2D.drawString(getNumber(), this.position.getX() - Config.getSmallBallSize().getWidth()/2, this.position.getY() - Config.getSmallBallSize().getHeight()/2);          //Drawing the number inside the circle. *still not sure about it
             }
             else{
-                System.out.println(this.getId());
-                System.out.println(this.getPosition());
                 g2D.setPaint(this.color);
                 g2D.fillOval(this.position.getX() - Config.getSmallBallSize().getWidth()/2, this.position.getY() - Config.getSmallBallSize().getHeight()/2,
                 Config.getSmallBallSize().getWidth(), Config.getSmallBallSize().getHeight());

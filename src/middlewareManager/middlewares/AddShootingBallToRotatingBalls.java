@@ -18,10 +18,6 @@ public class AddShootingBallToRotatingBalls extends Middleware {
     @Override
     public void init() {
         shootingSB.leave("shootingSmallBalls"); // removing the shot ball form its group.
-
-        shootingSB.setId("smallBall"+(numberOfAllRotatingSmallBalls -elementManager.getElementsByGroup("rotatingSmallBalls").size()));
-        // setting the id for this shooing small ball.
-
         shootingSB.join("rotatingSmallBalls"); // joining the shooting ball using join method in Element class.
         this.remove(); // after doing so, this middleware will remove itself from loop.
     }

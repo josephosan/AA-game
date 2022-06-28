@@ -91,8 +91,7 @@ public class MenuPanel extends APanel implements ActionListener{
         super.paintComponent(g);
 
         ArrayList<Element> elements = elementManager.getElementsByPanel(this);
-        System.out.println(elements);
-
+        
         for (Element element : elements) {
             element.paintSelf(g);
         }
