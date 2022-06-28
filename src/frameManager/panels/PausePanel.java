@@ -1,6 +1,8 @@
 package frameManager.panels;
 
 import frameManager.APanel;
+import frameManager.FrameManager;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
@@ -11,6 +13,7 @@ import middlewareManager.*;
 
 public class PausePanel extends APanel{
     MiddlewareManager middlewareManager = Config.getMiddlewareManager();
+    FrameManager frameManager = Config.getFrameManager();
     ArrayList<JButton> buttons = new ArrayList<JButton>();
     private Color backgroundColor = new Color(0xd48a98);
     private Color buttonsColor = new Color(0x32ff98);
@@ -42,7 +45,8 @@ public class PausePanel extends APanel{
 
         //ActionListener
         resumeButton.addActionListener(e -> {
-            middlewareManager.addMiddleware(new TransitionPanels("pause", "game"), new MiddlewareLocation());
+            middlewareManager.setPausedMiddlewaresByGroup("game", false);
+            middlewareManager.addMiddleware(new TransitionPanels("pause", "game",false), new MiddlewareLocation());
             });
         
         menuButton.addActionListener(e -> {
@@ -50,8 +54,11 @@ public class PausePanel extends APanel{
             });
 
         retryButton.addActionListener(e -> {
-            //TODO  add retry lvl functionality
-            });
+            //TODO  add retry lvl functionalit
+            middlewareManager.removeMiddlewaresByGroup("game");
+            middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
+            middlewareManager.addMiddleware(new LoadGame(Integer.parseInt(middlewareManager.getMiddlewareValue("currentLevel"))), new MiddlewareLocation());
+        });
 
         for(JButton b: buttons){
             b.setBackground(backgroundColor);

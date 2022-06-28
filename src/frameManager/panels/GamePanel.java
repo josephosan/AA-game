@@ -33,20 +33,30 @@ public class GamePanel extends APanel implements ActionListener {
         pauseButton.setBorder(BorderFactory.createEtchedBorder(borderColor, borderColor));
         pauseButton.setFocusable(false);
         pauseButton.setIcon(new ImageIcon("src/Icons/pause.png"));
+        pauseButton.addActionListener(this);
         pauseButton.addMouseListener(new MouseAdapter() {
-        @Override
-        public void mouseEntered(MouseEvent e) {
-            pauseButton.setBackground(buttonColor);
-        }
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                pauseButton.setBackground(buttonColor);
+            }
 
-        @Override
-        public void mouseExited(MouseEvent e) {
-            pauseButton.setBackground(backgroundColor);
-        }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                pauseButton.setBackground(backgroundColor);
+            }
         });
         this.add(pauseButton);
         this.addKeyListener(new myKeyListener());
     }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource()==pauseButton){
+            middlewareManager.setPausedMiddlewaresByGroup("game", true);
+            middlewareManager.addMiddleware(new TransitionPanels("game", "pause"), new MiddlewareLocation());
+        }
+    }
+
 
     @Override
     public void paintComponent(Graphics g) {
@@ -58,12 +68,7 @@ public class GamePanel extends APanel implements ActionListener {
         }
     }    
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if(e.getSource()==pauseButton){
-            middlewareManager.addMiddleware(new TransitionPanels("game", "pause"), new MiddlewareLocation());
-        }
-    }
+   
     
 
 }
