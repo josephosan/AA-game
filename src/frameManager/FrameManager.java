@@ -28,13 +28,13 @@ public class FrameManager extends JFrame{
         Middleware transitionPanels = new TransitionPanels("game", "menu");
         middlewareManager.addMiddleware(transitionPanels, new MiddlewareLocation());
 
-        middlewareManager.addMiddleware(new DrawBigBall("200","200","0x000000","menu"), new MiddlewareLocation());
-        middlewareManager.addMiddleware(new DrawSmallBall("0","0x000000","menu"), new MiddlewareLocation());
+        middlewareManager.addMiddleware(new DrawBigBall("200", "200", "0x000000", "menu"), new MiddlewareLocation());
+        middlewareManager.addMiddleware(new DrawSmallBall("0", "0x000000", "menu"), new MiddlewareLocation());
         middlewareManager.addMiddleware(new SpinSmallBalls(), new MiddlewareLocation());
 
         middlewareManager.addMiddleware(new DrawLine("game"), new MiddlewareLocation());
 
-
+    }
 
     public FrameManager() {
         // Implement the frame;
