@@ -4,11 +4,11 @@ import config.Config;
 import elementManager.ElementManager;
 import middlewareManager.MiddlewareLocation;
 
-public class selectShootBall extends Middleware  {
+public class SelectShootBall extends Middleware  {
 
   ElementManager elementManager = Config.getElementManager();
  
-    selectShootBall() {
+    SelectShootBall() {
       super("selectShootBall");
     }
     

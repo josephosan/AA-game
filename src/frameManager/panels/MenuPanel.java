@@ -5,6 +5,7 @@ import java.util.*;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.border.EmptyBorder;
 
 import frameManager.APanel;
 import middlewareManager.MiddlewareLocation;
@@ -49,7 +50,16 @@ public class MenuPanel extends APanel implements ActionListener{
         playButton.setBounds(275,500,75,50);
         levelButton.setBounds(50,500,75,50);  
         scoreButton.setBounds(50,425,75,50);
-        
+
+
+        // making button's nicer:
+        playButton.setBorder(new EmptyBorder(10, 10, 10, 10));
+        playButton.setBorder(null);
+
+        playButton.setBorder(new EmptyBorder(10, 10, 10, 10));
+
+        playButton.setBorder(new EmptyBorder(10, 10, 10, 10));
+
         playButton.setIcon(new ImageIcon("src/Icons/play.png"));
         levelButton.setIcon(new ImageIcon("src/Icons/levels.png"));
         scoreButton.setIcon(new ImageIcon("src/Icons/score.png"));
