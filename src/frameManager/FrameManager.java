@@ -16,7 +16,7 @@ public class FrameManager extends JFrame{
         // this method will call when all the components of app 
     // getting accessible from the Config
     public void onConfigSubscribe() {
-
+       
         
 
 
