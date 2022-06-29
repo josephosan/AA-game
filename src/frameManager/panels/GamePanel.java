@@ -75,8 +75,7 @@ public class GamePanel extends APanel implements ActionListener {
             middlewareManager.addMiddleware(new TransitionPanels("game", "pause"), new MiddlewareLocation());
         }
     }
-
-
+    
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
