@@ -102,6 +102,14 @@ class myKeyListener implements KeyListener{
         int keyCode = e.getKeyCode();
         if(keyCode == KeyEvent.VK_SPACE){
             Config.getMiddlewareManager().addMiddleware(new SelectShootBall(), new MiddlewareLocation());
+            //TODO uncomment Select shoot ball (Auto shoot is jist for test)
+            Config.getMiddlewareManager().addMiddleware(new SelectShootBall(), new MiddlewareLocation());
+            //Config.getMiddlewareManager().addMiddleware(new AutoShooter(), new MiddlewareLocation());
+
+            //TODO uncomment Select shoot ball (Auto shoot is jist for test)
+            Config.getMiddlewareManager().addMiddleware(new SelectShootBall(), new MiddlewareLocation());
+            //Config.getMiddlewareManager().addMiddleware(new AutoShooter(), new MiddlewareLocation());
+
         }
     }
 
