@@ -13,7 +13,7 @@ public class LevelTimer extends Middleware {
         
     }
     public void init(){
-       
+       this.setValue("levelStartTime",String.valueOf(startTime));
     }
     public void run(){
         updateTimeLabel= ((GamePanel) Config.getFrameManager().getAPanel("game")).getTimerLevel();
