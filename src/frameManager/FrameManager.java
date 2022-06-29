@@ -5,7 +5,7 @@ import middlewareManager.*;
 import middlewareManager.middlewares.*;
 import java.awt.*;
 import javax.swing.*;
-
+import soundManager.*;
 import config.Config;
 import frameManager.panels.*;
 
@@ -16,9 +16,6 @@ public class FrameManager extends JFrame{
         // this method will call when all the components of app 
     // getting accessible from the Config
     public void onConfigSubscribe() {
-
-        
-
 
     }
 

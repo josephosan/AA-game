@@ -2,6 +2,7 @@ import middlewareManager.*;
 import middlewareManager.middlewares.*;
 import elementManager.*;
 import frameManager.*;
+import soundManager.*;
 import java.util.TimerTask;
 import aaTimer.AaTimer;
 import config.Config;
@@ -17,6 +18,9 @@ public class Aa {
 
         FrameManager frameManager = new FrameManager();
         Config.frameManagerSubscribe(frameManager);
+
+        SoundManager soundManager = new SoundManager();
+        Config.soundManagerSubscribe(soundManager);
         
         frameManager.addMiddlewares();
 
