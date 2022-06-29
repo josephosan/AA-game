@@ -24,6 +24,8 @@ public class AnimatedRotation extends Middleware {
     public void run(){
         rotatingSmallBalls = elementManager.getElementsByGroup("rotatingSmallBalls");
         lines = elementManager.getElementsByGroup("lines");
+
+        if (rotatingSmallBalls == null) return;
         
         if(rotatingSmallBalls == null) return;
 

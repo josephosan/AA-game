@@ -22,6 +22,7 @@ public class Aa {
 
         TimerTask timerTask = new TimerTask() {
             public void run() {
+                //System.out.println("from timer run");
                 middlewareManager.loop();
             }
         };
