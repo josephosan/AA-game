@@ -6,11 +6,10 @@ import config.Config;
 import frameManager.panels.GamePanel;
 
 public class LevelTimer extends Middleware {
-      JLabel updateTimeLabel;
-  long startTime=System.currentTimeMillis();
-    public LevelTimer(String id) {
+    JLabel updateTimeLabel;
+    long startTime=System.currentTimeMillis();
+    public LevelTimer() {
         super("levelTimer");
-        
     }
     public void init(){
        this.setValue("levelStartTime",String.valueOf(startTime));

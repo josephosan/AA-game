@@ -53,6 +53,7 @@ public class DrawBigBall extends Middleware {
     @Override
     public void init(){
         Config.getElementManager().addElement("bigBall", bigBall);
+        Config.getElementManager().joinGroup(panelId, bigBall.getId());
         if(rgb != null){
             bigBall.setColor(new Color(Integer.decode(rgb)));
         }
