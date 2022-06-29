@@ -9,6 +9,29 @@
 ## Document
 use this document to understand!
 
+### setValue and getValue
+you can use setValue and getValue in middleware or use setMiddlewareValue and getMiddlewareValue from MiddlewareManager to set and retrive.
+it is not necessary to set values only in the middleware you can use this from anywhere in the project
+#### keys
+
+- gameName // its aa!
+- username // current username from login page 
+- levelAuthor 
+- levelNumber
+- levelName 
+- levelBigBallRotationSpeed
+- levelNumberOfAllBalls // this key is equal to numOfAllBalls
+- levelNumberOfSpinningBalls // this key is equal to numOfBallsToConnect
+- levelSmallBallsColor
+- levelBigBallColor
+- levelSmallBallRadius
+- levelBigBallRadius
+- levelLineLength
+- levelShootBallSpeed
+- levelBigBallPosition // use comma seperated statements for matrices. x,y => 200,200
+- levelShootingBallPosition
+- levelStartTime
+
 ### Middleware
 #### public Middleware(String id)
 constructor of the Middleware gets and id. 

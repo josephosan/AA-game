@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
+
 import config.Config;
 import elementManager.ElementManager;
 import elementManager.elements.Element;
@@ -20,7 +22,10 @@ public class GamePanel extends APanel implements ActionListener {
     private Color backgroundColor = new Color(0x6ae7f8);
     private Color borderColor = new Color(0x2a6a7b);
     private Color buttonColor = new Color(0x32ff98);
+    
     JButton pauseButton;
+    JButton hintButton;
+    public JLabel timeLabel = new JLabel();
 
     public GamePanel(String id) {
         super(id);
@@ -30,10 +35,19 @@ public class GamePanel extends APanel implements ActionListener {
         pauseButton = new JButton();
         pauseButton.setBounds(15, 15, 50, 50);
         pauseButton.setBackground(backgroundColor);
-        pauseButton.setBorder(BorderFactory.createEtchedBorder(borderColor, borderColor));
+        pauseButton.setBorder(BorderFactory.createEmptyBorder());
         pauseButton.setFocusable(false);
         pauseButton.setIcon(new ImageIcon("src/Icons/pause.png"));
         pauseButton.addActionListener(this);
+        hintButton = new JButton();
+        hintButton.setBounds(162, 10,100,85);
+        hintButton.setIcon(new ImageIcon("src/Icons/hint.png"));
+        hintButton.setFocusable(false);
+        hintButton.setBackground(backgroundColor);
+        hintButton.setBorder(BorderFactory.createEmptyBorder());
+       
+        timeLabel.setBounds(15, 510, 200, 60);
+        timeLabel.setIcon(new ImageIcon("src/Icons/time.png"));
         pauseButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
@@ -46,7 +60,12 @@ public class GamePanel extends APanel implements ActionListener {
             }
         });
         this.add(pauseButton);
+        this.add(hintButton);
+        this.add(timeLabel);
         this.addKeyListener(new myKeyListener());
+    }
+    public JLabel getTimerLevel(){
+        return timeLabel;
     }
 
     @Override
@@ -92,6 +111,7 @@ class myKeyListener implements KeyListener{
     public void keyTyped (KeyEvent e){
 
     }
+   
 
     
 }
