@@ -45,7 +45,7 @@ public class GamePanel extends APanel implements ActionListener {
         hintButton.setFocusable(false);
         hintButton.setBackground(backgroundColor);
         hintButton.setBorder(BorderFactory.createEmptyBorder());
-       
+        hintButton.addActionListener(this);
         timeLabel.setBounds(15, 510, 200, 60);
         timeLabel.setIcon(new ImageIcon("src/Icons/time.png"));
         pauseButton.addMouseListener(new MouseAdapter() {
@@ -74,6 +74,9 @@ public class GamePanel extends APanel implements ActionListener {
             middlewareManager.setPausedMiddlewaresByGroup("game", true);
             middlewareManager.addMiddleware(new TransitionPanels("game", "pause"), new MiddlewareLocation());
         }
+        if(e.getSource()==hintButton){
+            middlewareManager.addMiddleware(new AutoShooter(), new MiddlewareLocation());
+        }
     }
     
     @Override
@@ -98,9 +101,7 @@ class myKeyListener implements KeyListener{
         System.out.println("key pressed");
         int keyCode = e.getKeyCode();
         if(keyCode == KeyEvent.VK_SPACE){
-            //TODO uncomment Select shoot ball (Auto shoot is jist for test)
-            //Config.getMiddlewareManager().addMiddleware(new SelectShootBall(), new MiddlewareLocation());
-            Config.getMiddlewareManager().addMiddleware(new AutoShooter(), new MiddlewareLocation());
+            Config.getMiddlewareManager().addMiddleware(new SelectShootBall(), new MiddlewareLocation());
         }
     }
 
