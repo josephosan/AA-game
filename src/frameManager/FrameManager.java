@@ -7,7 +7,6 @@ import java.awt.*;
 import javax.swing.*;
 
 import config.Config;
-import frameManager.APanel;
 import frameManager.panels.*;
 
 public class FrameManager extends JFrame{
