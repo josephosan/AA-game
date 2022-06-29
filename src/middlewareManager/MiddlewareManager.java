@@ -176,12 +176,20 @@ public class MiddlewareManager {
         }
     }
 
-    // use this method to pause middlewars in a group
-    // runningMiddleware also will be setted and not there is 
+    // use this method to pause middlewares in a group
+    // runningMiddleware also will be set and not there is
     // no checks;
     public void setPausedMiddlewaresByGroup(String group, Boolean paused) {
         if (!groups.containsKey(group)) return;
         for (Middleware middleware : groups.get(group)) {
+            middleware.setPaused(paused);
+        }
+    }
+
+    public void setPausedMiddlewareById(String id, Boolean paused) {
+        if (middlewaresMap.containsKey(id)) {
+            AaLinkedList.LinkedElement linkedElement = middlewaresMap.get(id);
+            Middleware middleware = linkedElement.getMiddleware();
             middleware.setPaused(paused);
         }
     }

@@ -6,5 +6,8 @@
   "backgroundColor": "green",
   "numOfBallsToConnect": "5",
   "reverseRotationInSecond": "10",
-  "middleware0": "DrawSmallBall 3 30 #f00cec menu"
+  "middleware0": "DrawSmallBall 3 30 #f00cec menu",
+  "middleware1": "DrawBigBall 4 200 200 #0c12ad game",
+  "middleware2": "SpinSmallBalls 0",
+  "middleware3": "DrawLine 1 game"
 }

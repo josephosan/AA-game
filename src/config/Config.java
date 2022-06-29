@@ -3,15 +3,16 @@ package config;
 import elementManager.ElementManager;
 import frameManager.FrameManager;
 import middlewareManager.MiddlewareManager;
+import soundManager.SoundManager;
 import elementManager.coordinate.*;
 
 public class Config {
     static FrameManager frameManager;
     static MiddlewareManager middlewareManager;
     static ElementManager elementManager;
-
+    static SoundManager soundManager;
     static final Integer
-        timerDelay = 10,
+        timerDelay = 20,
 
         frameWidth = 400, 
         frameHeight = 600,
@@ -41,6 +42,11 @@ public class Config {
         Config.emitConfigSubscribe();
     }
 
+    public static void soundManagerSubscribe(SoundManager soundManager) {
+        Config.soundManager = soundManager;
+        Config.emitConfigSubscribe();
+    }
+
     public static void middlewareManagerSubscribe(MiddlewareManager middlewareManager) {
         Config.middlewareManager = middlewareManager;
         Config.emitConfigSubscribe();
@@ -56,16 +62,22 @@ public class Config {
             Config.elementManager != null
             && Config.middlewareManager != null
             && Config.frameManager != null
+            && Config.soundManager != null
         ) {
             Config.elementManager.onConfigSubscribe();
             Config.middlewareManager.onConfigSubscribe();
             Config.frameManager.onConfigSubscribe();
+            Config.soundManager.onConfigSubscribe();
         }
        
     }
 
     public static FrameManager getFrameManager() {
         return frameManager;
+    }
+
+    public static SoundManager getSoundManager() {
+        return soundManager;
     }
 
     public static MiddlewareManager getMiddlewareManager() {
