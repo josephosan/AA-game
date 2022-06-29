@@ -186,6 +186,14 @@ public class MiddlewareManager {
         }
     }
 
+    public void setPausedMiddlewareById(String id, Boolean paused) {
+        if (middlewaresMap.containsKey(id)) {
+            AaLinkedList.LinkedElement linkedElement = middlewaresMap.get(id);
+            Middleware middleware = linkedElement.getMiddleware();
+            middleware.setPaused(paused);
+        }
+    }
+
     public void setLoopPause(Boolean pause) {
         loopIsPaused = pause;
     }
