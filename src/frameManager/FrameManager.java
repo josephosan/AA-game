@@ -5,7 +5,7 @@ import middlewareManager.*;
 import middlewareManager.middlewares.*;
 import java.awt.*;
 import javax.swing.*;
-import soundManager.*;
+
 import config.Config;
 import frameManager.panels.*;
 
@@ -40,8 +40,9 @@ public class FrameManager extends JFrame{
         APanel levelPanel = new LevelPanel("levelPanel");
         APanel loginPanel = new LoginPanel("loginPanel");
         APanel gameOverPanel = new GameOverPanel("gameOverPanel");
-        APanel winPanel = new WinPanel("winPanel");
 
+
+        gamePanel.setPaintOrder("lines>*");
 
         aPanels.put("main", mainPanel);
         aPanels.put("menu", menuPanel);
@@ -50,7 +51,6 @@ public class FrameManager extends JFrame{
         aPanels.put("pause", pausePanel);
         aPanels.put("login", loginPanel);
         aPanels.put("gameOver", gameOverPanel);
-        aPanels.put("win", winPanel);
         // aPanels.put("game", );
         add(mainPanel);
         mainPanel.add(menuPanel);
@@ -59,17 +59,15 @@ public class FrameManager extends JFrame{
         mainPanel.add(levelPanel);
         mainPanel.add(loginPanel);
         mainPanel.add(gameOverPanel);
-        mainPanel.add(winPanel);
 
         setActivePanel("menu");
         getAPanel("main").setVisible(true);
-        getAPanel("menu").setVisible(true);
+        getAPanel("menu").setVisible(false);
         getAPanel("game").setVisible(false);
-        getAPanel("login").setVisible(false);
+        getAPanel("pause").setVisible(false);
         getAPanel("levels").setVisible(false);
         getAPanel("login").setVisible(false);
         getAPanel("gameOver").setVisible(false);
-        getAPanel("win").setVisible(false);
 
         setVisible(true);
     }

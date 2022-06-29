@@ -74,10 +74,16 @@ public class MenuPanel extends APanel implements ActionListener{
                 }
             });
             this.add(b);
+
+            //ATTENTION ATTENTION
+            // this should change based on profile later on
+            middlewareManager.setMiddlewareValue("currentLevel", "1");
         }
         //setLocation(0, 0);
-    }
+       
 
+    }
+ 
     // @Override
     // public void paintComponent(Graphics g) {
     //     super.paintComponent(g);
@@ -95,7 +101,8 @@ public class MenuPanel extends APanel implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {   
         if(e.getSource()==playButton){
-            middlewareManager.setPausedMiddlewaresByGroup("game", false);
+            middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
+            middlewareManager.addMiddleware(new LoadGame(Integer.parseInt(middlewareManager.getMiddlewareValue("currentLevel"))), new MiddlewareLocation());
             middlewareManager.addMiddleware(new TransitionPanels("menu", "game"), new MiddlewareLocation());
         }
         else if(e.getSource()==levelButton){
