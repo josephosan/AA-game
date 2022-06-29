@@ -17,6 +17,7 @@ it is not necessary to set values only in the middleware you can use this from a
 - gameName // its aa!
 - username // current username from login page 
 - levelAuthor 
+- levelNumber
 - levelName 
 - levelBigBallRotationSpeed
 - levelNumberOfAllBalls // this key is equal to numOfAllBalls
