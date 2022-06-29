@@ -74,10 +74,7 @@ public class TransitionPanels extends Middleware{
             panel2.setLocation((int)panel2Location.getX() + transitionSpeed, (int)panel2Location.getY());
         }
         double x = panel1.getLocation().getX();
-<<<<<<< HEAD
         //System.out.println(transitionSpeed>5 &&  rightToLeft ? x > -Config.getFrameWidth()/2 : x < -Config.getFrameWidth()/2);
-=======
->>>>>>> 673f89b7d60bd045dbf801ea8cb757d786fb7de8
         if(transitionSpeed>1 &&  (rightToLeft ? x < (-Config.getFrameWidth()/3)*2 : x > (Config.getFrameWidth()/3)*2)){
             this.transitionSpeed -= 1;
         }
