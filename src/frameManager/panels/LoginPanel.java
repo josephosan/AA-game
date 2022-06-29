@@ -91,6 +91,7 @@ public class LoginPanel extends APanel {
         add(startGame);
 
 
+        setVisible(false);
     }
 
     @Override
