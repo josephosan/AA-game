@@ -30,7 +30,6 @@ public class MenuPanel extends APanel implements ActionListener{
 
     private Color backgroundColor = new Color(0x32ff98);
     private Color buttonsColor = new Color(0xd48a98);
-    private Color buttonBorderColor = new Color(0x2a6a7b);
     ArrayList<JButton> buttons = new ArrayList<JButton>();
 
     public MenuPanel(String id) {
@@ -69,7 +68,7 @@ public class MenuPanel extends APanel implements ActionListener{
             b.setBackground(backgroundColor);
             b.setFocusable(false);
             b.addActionListener(this);
-            b.setBorder(BorderFactory.createEtchedBorder(buttonBorderColor, buttonBorderColor));
+            b.setBorder(BorderFactory.createEmptyBorder());
             b.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseEntered(MouseEvent e) {
