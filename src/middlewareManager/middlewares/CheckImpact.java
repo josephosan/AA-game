@@ -3,6 +3,7 @@ package middlewareManager.middlewares;
 import config.Config;
 import elementManager.ElementManager;
 import elementManager.elements.Element;
+import elementManager.elements.SmallBall;
 import middlewareManager.MiddlewareLocation;
 import middlewareManager.MiddlewareManager;
 import utils.Tools;
@@ -20,12 +21,17 @@ public class CheckImpact extends Middleware {
 
     public boolean checkIfClashed(Element rotatingSB, Element shootingSB) { // checking if balls had impacted.
         int impactRange = Config.getSmallCircleRadios()*2; // impact range is 2*smallCircleRadios
-        int distance = (int)Tools.getTwoPointDistance(
+        double distance = Tools.getTwoPointDistance(
                 rotatingSB.getPosition().getX(),
                 rotatingSB.getPosition().getY(),
                 shootingSB.getPosition().getX(),
                 shootingSB.getPosition().getY());
-        return distance < impactRange;
+                if(distance <= impactRange){
+                    System.out.println("IMPACT");
+                    System.out.println("ratating ball: "+rotatingSB.getPosition()+" shooting ball: "+shootingSB.getPosition());
+                    System.out.println("distance: "+distance+"impact range: "+impactRange);
+                }
+        return distance <= impactRange;
     }
 
     public void run() {
