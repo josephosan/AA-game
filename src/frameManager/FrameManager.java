@@ -63,9 +63,9 @@ public class FrameManager extends JFrame{
 
         setActivePanel("menu");
         getAPanel("main").setVisible(true);
-        getAPanel("menu").setVisible(false);
+        getAPanel("menu").setVisible(true);
         getAPanel("game").setVisible(false);
-        getAPanel("pause").setVisible(false);
+        getAPanel("login").setVisible(false);
         getAPanel("levels").setVisible(false);
         getAPanel("login").setVisible(false);
         getAPanel("gameOver").setVisible(false);
