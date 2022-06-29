@@ -12,8 +12,8 @@ import java.util.HashMap;
 
 public class AParser {
 
-    public JsonObject findAndReturnData(String fileName) {
-        File file = new File("src/data/levels/"+fileName);
+    public JsonObject findAndReturnData(String path) {
+        File file = new File("src/data/"+path);
         try {
             JsonElement fileElement = JsonParser.parseReader(new FileReader(file));
             return fileElement.getAsJsonObject();
@@ -30,8 +30,8 @@ public class AParser {
         return result;
     }
 
-    public static HashMap<String, String> run(String fileName) {
+    public static HashMap<String, String> run(String path) {
         AParser parser = new AParser();
-        return parser.returnJsonFileInHashMap(parser.findAndReturnData(fileName));
+        return parser.returnJsonFileInHashMap(parser.findAndReturnData(path));
     }
 }

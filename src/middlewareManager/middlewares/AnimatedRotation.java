@@ -1,13 +1,11 @@
 package middlewareManager.middlewares;
 
 import java.util.ArrayList;
-
 import config.Config;
 import elementManager.ElementManager;
 import elementManager.elements.Element;
 import elementManager.elements.SmallBall;
 
-import javax.sound.sampled.Line;
 
 //This middleware should be added right after SpinSmallBalls middleware
 //and before DrawLine
@@ -26,6 +24,8 @@ public class AnimatedRotation extends Middleware {
     public void run(){
         rotatingSmallBalls = elementManager.getElementsByGroup("rotatingSmallBalls");
         lines = elementManager.getElementsByGroup("lines");
+
+        if (rotatingSmallBalls == null) return;
         
         if(rotatingSmallBalls == null) return;
 

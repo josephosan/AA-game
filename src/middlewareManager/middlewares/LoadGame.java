@@ -12,13 +12,13 @@ public class LoadGame extends Middleware {
     MiddlewareManager middlewareManager;
     Middleware middleware;
     public LoadGame(int level){
-        super("LoadGame");
+        super("loadGame");
         this.level = level;
         this.middlewareManager = Config.getMiddlewareManager();
     }
 
     public LoadGame(int level, String panelId){
-        super("LoadGame");
+        super("loadGame");
         this.level = level;
         this.panelId = panelId;
         this.middlewareManager = Config.getMiddlewareManager();
@@ -27,7 +27,7 @@ public class LoadGame extends Middleware {
     //THIS CLASS DOES NOT CURRENTLY SUPPORT OBJECT ARGUEMENT FOR CONSTRUCTORS!
     @Override
     public void init(){
-        HashMap<String,String> data = AParser.run("level"+level+".json");
+        HashMap<String,String> data = AParser.run("levels/level"+level+".json");
         
         //adding options to middleware manager
         for (Map.Entry<String, String> set : data.entrySet()) {
@@ -95,6 +95,17 @@ public class LoadGame extends Middleware {
         for(int k=0;k<ballsToConnect;k++ ){
             middlewareManager.addMiddlewareInSeries(new DrawSmallBall("90",this.getValue("smallBallsColor"),panelId,false));
         }
+        //moving first ball into position
+        middlewareManager.addMiddlewareInSeries(new ReloadShootingBall());
+        //checking impact
+        middlewareManager.addMiddlewareInSeries(new CheckImpact());
+        //moving shooting balls upward
+        middlewareManager.addMiddlewareInSeries(new MoveSmallBall());
+        //checking for remaining balls if there is none, the level is finished
+        middlewareManager.addMiddlewareInSeries(new CheckRemainigBalls(panelId));
+        //adding rendering middleware
+        middlewareManager.addMiddlewareInSeries(new RepaintPanelElements(Config.getFrameManager().getAPanel(panelId)));
+        
         this.remove();
         
     }
