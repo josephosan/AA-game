@@ -45,7 +45,7 @@ public class GamePanel extends APanel implements ActionListener {
         hintButton.setFocusable(false);
         hintButton.setBackground(backgroundColor);
         hintButton.setBorder(BorderFactory.createEmptyBorder());
-       
+        hintButton.addActionListener(this);
         timeLabel.setBounds(15, 510, 200, 60);
         timeLabel.setIcon(new ImageIcon("src/Icons/time.png"));
         pauseButton.addMouseListener(new MouseAdapter() {
@@ -73,6 +73,9 @@ public class GamePanel extends APanel implements ActionListener {
         if(e.getSource()==pauseButton){
             middlewareManager.setPausedMiddlewaresByGroup("game", true);
             middlewareManager.addMiddleware(new TransitionPanels("game", "pause"), new MiddlewareLocation());
+        }
+        if(e.getSource()==hintButton){
+            middlewareManager.addMiddleware(new AutoShooter(), new MiddlewareLocation());
         }
     }
     

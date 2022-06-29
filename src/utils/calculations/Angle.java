@@ -18,7 +18,7 @@ public class Angle {
     }
 
     public double getInDegree(){
-        return angle;
+        return angle%360;
     }
 
     public void add(double degree){

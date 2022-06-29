@@ -22,24 +22,30 @@ public class GameOver extends Middleware {
         //setting red background
         APanel gamePanel = this.frameManager.getAPanel(panelId);
         gamePanel.setBackground(Color.RED);
+
         //stopping rotation (keeping SpinSmallBalls middleware for animation)
         this.setValue("rotationSpeed", "0");
+        this.middlewareManager.setPausedMiddlewareById("moveSmallBall", true);
+        this.middlewareManager.setPausedMiddlewareById("reloadShootingBall", true);
     }
 
     @Override
     public void run(){
+
         //Generating an animation for when the game is over.
         if((Config.getLineLength())<(Config.getFrameHeight())) {
             Config.setLineLength(Config.getLineLength()+5);
         }
-        //pausing middlewares,showing gameOver panel and removing self.
+        //pausing middlewares,showing gameover panel and removing self.
         else{
             this.middlewareManager.setPausedMiddlewaresByGroup(panelId, true);
             this.middlewareManager.addMiddleware(new TransitionPanels("game", "gameOver"), new MiddlewareLocation());
-            //TODO add remove elements middleware
+            //TODO remove elements
             this.remove();
         }
     }
 }
+
+
 
 

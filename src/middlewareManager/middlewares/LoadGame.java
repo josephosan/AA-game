@@ -97,6 +97,10 @@ public class LoadGame extends Middleware {
         }
         //moving first ball into position
         middlewareManager.addMiddlewareInSeries(new ReloadShootingBall());
+        //rotating small balls that are in orbit
+        middlewareManager.addMiddlewareInSeries(new SpinSmallBalls());
+        //drawing lines
+        middlewareManager.addMiddlewareInSeries(new DrawLine(panelId));
         //checking impact
         middlewareManager.addMiddlewareInSeries(new CheckImpact());
         //moving shooting balls upward
