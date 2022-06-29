@@ -11,12 +11,14 @@ public class DrawBigBall extends Middleware {
 
     public DrawBigBall(int x, int y){
         super("drawBigBall");
-        bigBall = new BigBall(this.frameManager.getAPanel(panelId));
+        //System.out.println(Config.getFrameManager());
+        bigBall = new BigBall(frameManager.getAPanel(panelId));
         bigBall.setPos(x, y);
     }
 
     public DrawBigBall(int x, int y , String panelId){
         super("drawBigBall");
+        //System.out.println(Config.getFrameManager());
         this.panelId = panelId;
         bigBall = new BigBall(this.frameManager.getAPanel(panelId));
         bigBall.setPos(x, y);

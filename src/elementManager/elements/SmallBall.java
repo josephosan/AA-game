@@ -75,11 +75,13 @@ public class SmallBall extends Element {
                 Config.getSmallBallSize().getWidth(), Config.getSmallBallSize().getHeight());      //Drawing the circle with radius 15
                 g2D.setPaint(Color.BLACK);
                 g2D.drawString(getNumber(), this.position.getX() - Config.getSmallBallSize().getWidth()/2, this.position.getY() - Config.getSmallBallSize().getHeight()/2);          //Drawing the number inside the circle. *still not sure about it
+                //System.out.println("print smallBall with number");
             }
             else{
                 g2D.setPaint(this.color);
                 g2D.fillOval(this.position.getX() - Config.getSmallBallSize().getWidth()/2, this.position.getY() - Config.getSmallBallSize().getHeight()/2,
                 Config.getSmallBallSize().getWidth(), Config.getSmallBallSize().getHeight());
+                //System.out.println("print smallBall without number");
             }
         }
     }    
