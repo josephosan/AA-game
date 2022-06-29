@@ -28,8 +28,9 @@ public class MenuPanel extends APanel implements ActionListener{
     JButton levelButton;
     JButton scoreButton;
 
-    private Color backgroundColor = new Color(0x32ff98);
-    private Color buttonsColor = new Color(0xd48a98);
+    private final Color backgroundColor = new Color(0x32ff98);
+    private final Color buttonsColor = new Color(0xd48a98);
+    private final Color buttonBorderColor = new Color(0x2a6a7b);
     ArrayList<JButton> buttons = new ArrayList<JButton>();
 
     public MenuPanel(String id) {
@@ -50,14 +51,6 @@ public class MenuPanel extends APanel implements ActionListener{
         levelButton.setBounds(50,500,75,50);  
         scoreButton.setBounds(50,425,75,50);
 
-
-        // making button's nicer:
-        playButton.setBorder(new EmptyBorder(10, 10, 10, 10));
-        playButton.setBorder(null);
-
-        playButton.setBorder(new EmptyBorder(10, 10, 10, 10));
-
-        playButton.setBorder(new EmptyBorder(10, 10, 10, 10));
 
         playButton.setIcon(new ImageIcon("src/Icons/play.png"));
         levelButton.setIcon(new ImageIcon("src/Icons/levels.png"));
@@ -102,14 +95,14 @@ public class MenuPanel extends APanel implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {   
         if(e.getSource()==playButton){
-            middlewareManager.setPausedMiddlewaresByGroup("game", false); 
+            middlewareManager.setPausedMiddlewaresByGroup("game", false);
             middlewareManager.addMiddleware(new TransitionPanels("menu", "game"), new MiddlewareLocation());
         }
         else if(e.getSource()==levelButton){
             middlewareManager.addMiddleware(new TransitionPanels("menu", "levels", false), new MiddlewareLocation());
         }
         else if(e.getSource()==scoreButton){
-            middlewareManager.addMiddleware(new TransitionPanels("menu", "pause",false), new MiddlewareLocation());
+            middlewareManager.addMiddleware(new TransitionPanels("menu", "win",false), new MiddlewareLocation());
         }
 
     }

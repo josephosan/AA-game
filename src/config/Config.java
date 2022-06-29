@@ -12,7 +12,7 @@ public class Config {
     static ElementManager elementManager;
     static SoundManager soundManager;
     static final Integer
-        timerDelay = 10,
+        timerDelay = 20,
 
         frameWidth = 400, 
         frameHeight = 600,
