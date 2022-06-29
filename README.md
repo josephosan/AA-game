@@ -30,6 +30,7 @@ it is not necessary to set values only in the middleware you can use this from a
 - levelShootBallSpeed
 - levelBigBallPosition // use comma seperated statements for matrices. x,y => 200,200
 - levelShootingBallPosition
+- levelStartTime
 
 ### Middleware
 #### public Middleware(String id)

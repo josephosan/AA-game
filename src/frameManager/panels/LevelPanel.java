@@ -15,7 +15,7 @@ public class LevelPanel extends APanel {
     MiddlewareManager middlewareManager = Config.getMiddlewareManager();
     private Color backgroundColor = new Color(0xd48a98);
     private Color buttonsColor = new Color(0x32ff98);
-    private Color buttonBorderColor = new Color(0x2a6a7b);
+   
     ArrayList<JButton> buttons = new ArrayList<JButton>();
 
     public LevelPanel(String id){
@@ -136,7 +136,7 @@ public class LevelPanel extends APanel {
         //Set Values
         for(JButton b: buttons){
             b.setBackground(backgroundColor);
-            b.setBorder(BorderFactory.createEtchedBorder(buttonBorderColor,buttonBorderColor));
+            b.setBorder(BorderFactory.createEmptyBorder());
             b.setFocusable(false);
             b.addMouseListener(new MouseAdapter() {
                 @Override

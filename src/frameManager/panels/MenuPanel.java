@@ -61,7 +61,7 @@ public class MenuPanel extends APanel implements ActionListener{
             b.setBackground(backgroundColor);
             b.setFocusable(false);
             b.addActionListener(this);
-            b.setBorder(BorderFactory.createEtchedBorder(buttonBorderColor, buttonBorderColor));
+            b.setBorder(BorderFactory.createEmptyBorder());
             b.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseEntered(MouseEvent e) {
