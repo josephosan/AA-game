@@ -96,20 +96,37 @@ public class LoadGame extends Middleware {
             middlewareManager.addMiddlewareInSeries(new DrawSmallBall("90",this.getValue("smallBallsColor"),panelId,false));
         }
         //moving first ball into position
-        middlewareManager.addMiddlewareInSeries(new ReloadShootingBall());
+        Middleware reloadShootingBall = new ReloadShootingBall();
+        middlewareManager.addMiddlewareInSeries(reloadShootingBall);
+        middlewareManager.joinGroup(panelId, reloadShootingBall);
         //rotating small balls that are in orbit
-        middlewareManager.addMiddlewareInSeries(new SpinSmallBalls());
+        Middleware spinSmallBalls = new SpinSmallBalls();
+        middlewareManager.addMiddlewareInSeries(spinSmallBalls);
+        middlewareManager.joinGroup(panelId, spinSmallBalls);
         //drawing lines
-        middlewareManager.addMiddlewareInSeries(new DrawLine(panelId));
+        Middleware drawLines = new DrawLine(panelId);
+        middlewareManager.addMiddlewareInSeries(drawLines);
+        middlewareManager.joinGroup(panelId, drawLines);
         //checking impact
-        middlewareManager.addMiddlewareInSeries(new CheckImpact());
+        Middleware checkImpact = new CheckImpact();
+        middlewareManager.addMiddlewareInSeries( checkImpact);
+        middlewareManager.joinGroup(panelId, checkImpact);
         //moving shooting balls upward
-        middlewareManager.addMiddlewareInSeries(new MoveSmallBall());
+        Middleware moveSmallBalls = new MoveSmallBall();
+        middlewareManager.addMiddlewareInSeries(moveSmallBalls);
+        middlewareManager.joinGroup(panelId, moveSmallBalls);
         //checking for remaining balls if there is none, the level is finished
-        middlewareManager.addMiddlewareInSeries(new CheckRemainigBalls(panelId));
+        Middleware checkRemainingBalls = new CheckRemainigBalls(panelId);
+        middlewareManager.addMiddlewareInSeries(checkRemainingBalls);
+        middlewareManager.joinGroup(panelId, checkRemainingBalls);
+        //adding level timer
+        Middleware levelTimer = new LevelTimer();
+        middlewareManager.addMiddlewareInSeries(levelTimer);
+        middlewareManager.joinGroup(panelId,levelTimer);
         //adding rendering middleware
-        middlewareManager.addMiddlewareInSeries(new RepaintPanelElements(Config.getFrameManager().getAPanel(panelId)));
-        
+        Middleware repaintPanelElements = new RepaintPanelElements(Config.getFrameManager().getAPanel(panelId));
+        middlewareManager.addMiddlewareInSeries(repaintPanelElements);
+        middlewareManager.joinGroup(panelId,repaintPanelElements);
         this.remove();
         
     }

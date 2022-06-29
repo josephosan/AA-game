@@ -45,6 +45,7 @@ public class DrawLine extends Middleware {
                 elementManager.addElement("line"+(SBall).getNumber(), line);
                 //adding line to Group "lines"
                 elementManager.joinGroup("lines", "line"+(SBall).getNumber());
+                elementManager.joinGroup("game", "line"+(SBall).getNumber());
             }
         }
     }

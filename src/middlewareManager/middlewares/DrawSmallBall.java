@@ -9,7 +9,7 @@ import utils.calculations.Angle;
 import java.awt.Color;
 
 //This middleware create a SmallBall instance.
-//Then it will add it to "rotatingSmallBalls" Group.
+//Then it will add it to "rotatingSmallBalls" Group or "selectShooting"
 //The constructor accepts String so it can work around "LoadGame" shortcomings.
 //The us of "n" variable is to ensure that we won't use duplicate id.
 
@@ -93,6 +93,7 @@ public class DrawSmallBall extends Middleware{
             elementManager.addElement("smallBall"+id, smallBall);
             //adding SmallBall to "rotatingSmallBalls" Group.
             elementManager.joinGroup("rotatingSmallBalls", "smallBall"+id);
+            elementManager.joinGroup("game", "smallBall"+id);
             this.remove();
             return;
         }
@@ -108,6 +109,7 @@ public class DrawSmallBall extends Middleware{
         elementManager.addElement("smallBall"+id, smallBall);
         //adding SmallBall to "selectShootBall" Group.
         elementManager.joinGroup("selectShootBall", "smallBall"+id);
+        elementManager.joinGroup("game", "smallBall"+id);
         this.remove();
     }
     

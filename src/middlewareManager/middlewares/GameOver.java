@@ -38,8 +38,9 @@ public class GameOver extends Middleware {
         }
         //pausing middlewares,showing gameover panel and removing self.
         else{
-            this.middlewareManager.setPausedMiddlewaresByGroup(panelId, true);
             this.middlewareManager.addMiddleware(new TransitionPanels("game", "gameOver"), new MiddlewareLocation());
+            this.middlewareManager.removeMiddlewaresByGroup(panelId);
+            Config.getElementManager().removeElementsByGroup(panelId);
             //TODO remove elements
             this.remove();
         }
