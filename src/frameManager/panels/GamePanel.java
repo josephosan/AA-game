@@ -71,7 +71,7 @@ public class GamePanel extends APanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==pauseButton){
-            middlewareManager.setPausedMiddlewaresByGroup("game", true);
+            middlewareManager.addMiddleware(new Pause("game", true), new MiddlewareLocation());
             middlewareManager.addMiddleware(new TransitionPanels("game", "pause"), new MiddlewareLocation());
         }
         if(e.getSource()==hintButton){

@@ -45,18 +45,19 @@ public class PausePanel extends APanel{
 
         //ActionListener
         resumeButton.addActionListener(e -> {
-            middlewareManager.setPausedMiddlewaresByGroup("game", false);
+            middlewareManager.addMiddleware(new middlewareManager.middlewares.Pause("game", false), new MiddlewareLocation());
             middlewareManager.addMiddleware(new TransitionPanels("pause", "game",false), new MiddlewareLocation());
             });
         
         menuButton.addActionListener(e -> {
+
             middlewareManager.addMiddleware(new TransitionPanels("pause", "menu",false), new MiddlewareLocation());
             });
 
         retryButton.addActionListener(e -> {
             //TODO  add retry lvl functionalit
-            middlewareManager.removeMiddlewaresByGroup("game");
-            middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
+            middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
+            middlewareManager.addMiddleware(new TransitionPanels("pause", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(Integer.parseInt(middlewareManager.getMiddlewareValue("currentLevel"))), new MiddlewareLocation());
         });
 
