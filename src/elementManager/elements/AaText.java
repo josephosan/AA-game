@@ -15,7 +15,10 @@ public class AaText extends Element{
 
     @Override
     public void paintSelf(Graphics g) {
+<<<<<<< HEAD
         //System.out.println("painting self");
+=======
+>>>>>>> 673f89b7d60bd045dbf801ea8cb757d786fb7de8
         g.drawString(this.text, 100, 100);
     }
 }

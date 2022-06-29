@@ -1,32 +1,27 @@
 package middlewareManager.middlewares;
+
+import java.util.ArrayList;
+
 import config.Config;
 import elementManager.ElementManager;
-import elementManager.elements.BigBall;
 import elementManager.elements.SmallBall;
+import elementManager.elements.Element;
 
 public class MoveSmallBall extends Middleware  {
-    SmallBall smallBall;
-    BigBall bigBall;
-    int endY;
-    
-    public MoveSmallBall(SmallBall smallBall){
-    super("moveSmallBall");
-    this.smallBall = smallBall;
-    ElementManager elementManager= Config.getElementManager();
-    bigBall = (BigBall)elementManager.getElementById("bigBall");
-    endY = bigBall.getR()+bigBall.getPosition().getY();
 
+    ElementManager elementManager= Config.getElementManager();
+    public MoveSmallBall(){
+        super("moveSmallBall");
     }
 
     @Override
     public void run() {
-        this.smallBall.getPosition().setY(this.smallBall.getPosition().getY()-10);
-        if(this.smallBall.getPosition().getY()<=endY){
-            this.remove();
-            return;
+        ArrayList<Element> shootingSmallBalls= this.elementManager.getElementsByGroup("shootingSmallBalls");
+        if(shootingSmallBalls==null) return;
+        for (Element ssb : shootingSmallBalls){
+            ((SmallBall)ssb).getPosition().setY(((SmallBall)ssb).getPosition().getY()-Config.getSpeedShootBall());
         }
-    
+         
     }
-
 }
 

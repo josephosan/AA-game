@@ -1,13 +1,11 @@
 package middlewareManager.middlewares;
 
 import java.util.ArrayList;
-
 import config.Config;
 import elementManager.ElementManager;
 import elementManager.elements.Element;
 import elementManager.elements.SmallBall;
 
-import javax.sound.sampled.Line;
 
 //This middleware should be added right after SpinSmallBalls middleware
 //and before DrawLine

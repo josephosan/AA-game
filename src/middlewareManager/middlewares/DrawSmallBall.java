@@ -102,8 +102,8 @@ public class DrawSmallBall extends Middleware{
         smallBall.setNumber(id);
         if(rgb != null) smallBall.setColor(new Color(Integer.decode(rgb)));
         //setting smallBall Position
-        AaPosition bbp = Config.getMainCirclePosition();
-        smallBall.setPosition(new AaPosition(bbp.getX(),bbp.getY()+250)); //TODO get a variable instaed of hardcoding 250
+        AaPosition sp = Config.getShootingPosition();
+        smallBall.setPosition(new AaPosition(sp.getX(),sp.getY()+400)); //TODO get a variable instaed of hardcoding 400
         //adding smallBall to elementManager
         elementManager.addElement("smallBall"+id, smallBall);
         //adding SmallBall to "selectShootBall" Group.

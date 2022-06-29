@@ -6,24 +6,24 @@ import middlewareManager.MiddlewareManager;
 
 import java.awt.Color;
 
-public class finishLevel extends Middleware {
-    APanel panel = Config.getFrameManager().getActivePanel();
+public class FinishLevel extends Middleware {
     MiddlewareManager middlewareManager = Config.getMiddlewareManager();
     String groupId = "game";
 
-    public finishLevel(){
+    public FinishLevel(){
         super("finishLevel");
     }
 
-    public finishLevel(String middlewaresGroupId){
+    public FinishLevel(String middlewaresGroupId){
         super("finishLevel");
         this.groupId = middlewaresGroupId;
     }
 
     @Override
     public void init(){
+        APanel panel = this.frameManager.getAPanel(groupId);
         //setting green background
-        panel.setBackground(new Color(5,242,5));
+        panel.setBackground(Color.GREEN);
         //setting rotation speed to 0
         this.setValue("rotationSpeed", "0");
     }
