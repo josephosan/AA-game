@@ -11,17 +11,17 @@ public class Config {
     static ElementManager elementManager;
 
     static final Integer
-        timerDelay = 23,
+        timerDelay = 10,
 
         frameWidth = 400, 
         frameHeight = 600,
-        smallCircleRadios = 0;
+        smallCircleRadios = 16;
 
     static Integer lineLength = 100;
     
-    static final int speedShootBall = 30;
-    static final AaPosition mainCirclePosition = new AaPosition(200, 200), // mahbod
-                            shootingPosition = new AaPosition(200,400);
+    static final int speedShootBall = 20;
+    static final AaPosition mainCirclePosition = new AaPosition(200, 200); // mahbod
+    static final AaPosition shootingPosition = new AaPosition(200,500);
     static final AaSize 
         mainCircleSize = new AaSize(100, 100);
 
@@ -73,7 +73,7 @@ public class Config {
     }
 
     public static ElementManager getElementManager() {
-//        System.out.println("returning elementManager");
+//        //System.out.println("returning elementManager");
         return elementManager;
     }
 

@@ -79,4 +79,21 @@ public class ElementManager {
 
         return resultElements;
     }
+
+    public void removeElementsByGroup(String group) {
+        ArrayList<Element> elementsArr = getElementsByGroup("group");
+        if (elementsArr == null) return;
+
+        for (Element element : elementsArr) {
+            elements.remove(element.getId());
+            for (String elementGroup: element.getGroups()) {
+                if (groups.containsKey(elementGroup)) {
+                    ArrayList<Element> otherGroupElements = getElementsByGroup(elementGroup);
+                    otherGroupElements.remove(element);
+                }
+            }
+        }
+
+        groups.remove(group);
+    }
 }

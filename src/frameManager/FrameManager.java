@@ -42,7 +42,10 @@ public class FrameManager extends JFrame{
         APanel pausePanel = new PausePanel("pausePanel");
         APanel levelPanel = new LevelPanel("levelPanel");
         APanel loginPanel = new LoginPanel("loginPanel");
+        APanel gameOverPanel = new GameOverPanel("gameOverPanel");
 
+
+        gamePanel.setPaintOrder("lines>*");
 
         aPanels.put("main", mainPanel);
         aPanels.put("menu", menuPanel);
@@ -50,6 +53,7 @@ public class FrameManager extends JFrame{
         aPanels.put("levels",levelPanel);
         aPanels.put("pause", pausePanel);
         aPanels.put("login", loginPanel);
+        aPanels.put("gameOver", gameOverPanel);
         // aPanels.put("game", );
         add(mainPanel);
         mainPanel.add(menuPanel);
@@ -57,6 +61,7 @@ public class FrameManager extends JFrame{
         mainPanel.add(pausePanel);
         mainPanel.add(levelPanel);
         mainPanel.add(loginPanel);
+        mainPanel.add(gameOverPanel);
 
         setActivePanel("menu");
         getAPanel("main").setVisible(true);
@@ -65,6 +70,7 @@ public class FrameManager extends JFrame{
         getAPanel("pause").setVisible(false);
         getAPanel("levels").setVisible(false);
         getAPanel("login").setVisible(false);
+        getAPanel("gameOver").setVisible(false);
 
         setVisible(true);
     }

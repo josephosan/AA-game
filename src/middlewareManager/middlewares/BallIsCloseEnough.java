@@ -3,6 +3,7 @@ package middlewareManager.middlewares;
 import config.Config;
 import elementManager.coordinate.AaPosition;
 import elementManager.elements.Element;
+import elementManager.elements.SmallBall;
 import middlewareManager.MiddlewareLocation;
 import middlewareManager.MiddlewareManager;
 import utils.Tools;
@@ -29,19 +30,15 @@ public class BallIsCloseEnough extends Middleware {
                 shootingBall.getPosition().getY(),
                 mainCirclePosition.getX(),
                 mainCirclePosition.getY());
-
         return normalConnectionDistance >= sBallDistanceFromMainCircle;
     }
 
     public void run() {
         if (isBallCloseEnough(shootingBall)) {
+            //ReloadShootingBall will put a new ball in shooting position.
+            middlewareManager.addMiddleware(new ReloadShootingBall(),new MiddlewareLocation());
             // add the ball to rotating balls.
-            Middleware addShootingBallToRotatingBalls = new AddShootingBallToRotatingBalls(shootingBall);
-            middlewareManager.addMiddleware(addShootingBallToRotatingBalls, new MiddlewareLocation());
-
-            // removing them moving small ball from loop.
-            middlewareManager.getMiddlewareById("moveSmallBall").remove();
-
+            Tools.AddShootingBallToRotatingBalls((SmallBall)shootingBall);
             this.remove();
         }
     }
