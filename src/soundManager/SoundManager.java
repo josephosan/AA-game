@@ -8,7 +8,7 @@ public class SoundManager {
     HashMap<String, Clip> clips = new HashMap<>();
 
     public void onConfigSubscribe() {
-
+        addClip("levelButtonSound", "levelButtonSound.wav");
     }
 
     public SoundManager() {

@@ -3,7 +3,6 @@ package middlewareManager.middlewares;
 import config.Config;
 import elementManager.ElementManager;
 import elementManager.elements.Element;
-import elementManager.elements.SmallBall;
 import middlewareManager.MiddlewareLocation;
 import middlewareManager.MiddlewareManager;
 import utils.Tools;
@@ -28,7 +27,7 @@ public class CheckImpact extends Middleware {
                 shootingSB.getPosition().getY());
                 if(distance <= impactRange){
                     System.out.println("IMPACT");
-                    System.out.println("ratating ball: "+rotatingSB.getPosition()+" shooting ball: "+shootingSB.getPosition());
+                    System.out.println("rotating ball: "+rotatingSB.getPosition()+" shooting ball: "+shootingSB.getPosition());
                     System.out.println("distance: "+distance+"impact range: "+impactRange);
                 }
         return distance <= impactRange;
