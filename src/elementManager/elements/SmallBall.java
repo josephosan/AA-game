@@ -71,17 +71,27 @@ public class SmallBall extends Element {
             Graphics2D g2D = (Graphics2D)g;      //Graphics2D is more feature-rich than Graphics
             if(numberVisible){                   //checking whether we want number inside the ball
                 g2D.setPaint(this.color);             
-                g2D.fillOval(this.position.getX() - Config.getSmallBallSize().getWidth()/2, this.position.getY() - Config.getSmallBallSize().getHeight()/2,
-                Config.getSmallBallSize().getWidth(), Config.getSmallBallSize().getHeight());      //Drawing the circle with radius 15
+                g2D.fillOval(
+                    this.position.getX() - Config.getSmallBallSize().getWidth() / 2,
+                    this.position.getY() - Config.getSmallBallSize().getHeight() / 2,
+                    Config.getSmallBallSize().getWidth(),
+                    Config.getSmallBallSize().getHeight());      //Drawing the circle with radius 15
+
                 g2D.setPaint(Color.BLACK);
-                g2D.drawString(getNumber(), this.position.getX() - Config.getSmallBallSize().getWidth()/2, this.position.getY() - Config.getSmallBallSize().getHeight()/2);          //Drawing the number inside the circle. *still not sure about it
-                //System.out.println("print smallBall with number");
+                int stringWidth = (int)g.getFontMetrics().getStringBounds(getNumber(), g).getWidth();
+                int stringHeight = (int)g.getFontMetrics().getStringBounds(getNumber(), g).getHeight();
+                g2D.drawString(
+                    this.getNumber(), 
+                    this.position.getX() + ((Config.getSmallBallSize().getWidth() - (stringWidth))/2) - Config.getSmallCircleRadios() , 
+                    // the above formula alines the string to center horizentally
+                    this.position.getY() + ((-Config.getSmallBallSize().getHeight() + stringHeight)/2) + Config.getSmallCircleRadios() - 2
+                    //the above formula alines th string to center vertically (-2 makes it look better)
+                );      //Drawing the number inside the circle. 
             }
             else{
                 g2D.setPaint(this.color);
                 g2D.fillOval(this.position.getX() - Config.getSmallBallSize().getWidth()/2, this.position.getY() - Config.getSmallBallSize().getHeight()/2,
                 Config.getSmallBallSize().getWidth(), Config.getSmallBallSize().getHeight());
-                //System.out.println("print smallBall without number");
             }
         }
     }    
