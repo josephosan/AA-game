@@ -101,6 +101,7 @@ public class DrawSmallBall extends Middleware{
         //handling creation of ShootingBalls
         SmallBall smallBall = new SmallBall(frameManager.getAPanel(panelId),new Angle());
         smallBall.setNumber(id);
+        smallBall.setNumberVisible(true);
         if(rgb != null) smallBall.setColor(new Color(Integer.decode(rgb)));
         //setting smallBall Position
         AaPosition sp = Config.getShootingPosition();
