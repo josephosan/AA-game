@@ -9,6 +9,10 @@ public class SoundManager {
 
     public void onConfigSubscribe() {
         addClip("levelButtonSound", "levelButtonSound.wav");
+        //TODO check if here is the right place to add clips
+        this.addClip("emotionalDamage", "emotional-damage-meme.wav");
+        this.addClip("soSad", "tf_nemesis.wav");
+        this.addClip("hereWeGoAgain", "gta-san-andreas-ah-shit-here-we-go-again_BWv0Gvc.wav");
     }
 
     public SoundManager() {
