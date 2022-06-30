@@ -1,7 +1,7 @@
 {
     "author": "Arman",
     "levelName": "The Beginning",
-    "rotationSpeed": "2",
+    "rotationSpeed": "1",
     "numOfAllBalls": "7",
     "numOfBallsToConnect": "5",
     "smallBallsColor": "#000000",

@@ -8,13 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AaWriter {
-    public AaWriter(String userName, String keyToPut, String valueToPut) {
+    public static void pushValue(String userName, String key, String value) {
         try { // if file does not exist, it will be created:
-            FileWriter writer = new FileWriter("src/data/profile/"+userName+"Profile.json");
+            FileWriter writer = new FileWriter("src/data/profile/"+userName +"Profile.json");
             Gson gson = new Gson();
 
             Map<String, String> input = new HashMap<>();
-            input.put(keyToPut, valueToPut);
+            input.put(key, value);
 
             gson.toJson(input, writer);
             input.clear();

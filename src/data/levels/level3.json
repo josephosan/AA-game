@@ -1,13 +1,13 @@
 {
   "author": "Joseph",
   "levelName": "Big Bally",
-  "challengingMessage": "Passing this level, requires big balls",
-  "rotationSpeed": "6",
-  "backgroundColor": "green",
-  "numOfBallsToConnect": "5",
-  "reverseRotationInSecond": "10",
-  "middleware0": "DrawSmallBall 3 30 #f00cec menu",
-  "middleware1": "DrawBigBall 4 200 200 #0c12ad game",
-  "middleware2": "SpinSmallBalls 0",
-  "middleware3": "DrawLine 1 game"
+  "rotationSpeed": "1",
+  "numOfAllBalls": "12",
+  "numOfBallsToConnect": "10",
+  "smallBallsColor":"#11111",
+  "middleware0": "DrawSmallBall 3 90 #000000 game",
+  "middleware1": "DrawSmallBall 2 270 #000000 game",
+  "middleware2": "DrawBigBall 4 200 200 #000000 game",
+  "middleware3": "SpinSmallBalls 0",
+  "middleware4": "DrawLine 1 game"
 }
