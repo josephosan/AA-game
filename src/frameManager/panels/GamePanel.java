@@ -29,6 +29,8 @@ public class GamePanel extends APanel implements ActionListener {
 
     public GamePanel(String id) {
         super(id);
+        // if(middlewareManager.getMiddlewareValue("buttonColor").equals("1"))
+        //     this.backgroundColor = Color.RED;
         setLocation(0, 0);
         setBackground(backgroundColor);
         setFocusable(true);
@@ -64,6 +66,11 @@ public class GamePanel extends APanel implements ActionListener {
         this.add(timeLabel);
         this.addKeyListener(new myKeyListener());
     }
+
+    public void setButtonColor(Color c){
+        this.backgroundColor = c;
+    }
+
     public JLabel getTimerLevel(){
         return timeLabel;
     }

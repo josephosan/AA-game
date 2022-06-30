@@ -4,9 +4,13 @@ import config.Config;
 import elementManager.ElementManager;
 import elementManager.elements.Element;
 import elementManager.elements.SmallBall;
+import frameManager.FrameManager;
+import frameManager.panels.GamePanel;
 import middlewareManager.MiddlewareLocation;
 import middlewareManager.MiddlewareManager;
 import utils.Tools;
+
+import java.awt.Color;
 import java.util.ArrayList;
 
 public class CheckImpact extends Middleware {
@@ -14,7 +18,7 @@ public class CheckImpact extends Middleware {
     MiddlewareManager middleWareManager  = Config.getMiddlewareManager();
     ArrayList<Element> rotatingSmallBalls;
     ArrayList<Element> shootingSmallBalls;
-
+    FrameManager frameManager = Config.getFrameManager();
     public CheckImpact() {
         super("checkImpact");
     }
@@ -44,6 +48,9 @@ public class CheckImpact extends Middleware {
                 if (checkIfClashed(rotatingSB, shootingSB)) { // if two balls clashed: end the game
                     Middleware gameOver = new GameOver();     // by adding the gameOver class to middlewareManager.
                     middleWareManager.addMiddleware(gameOver, new MiddlewareLocation());
+                    middleWareManager.setMiddlewareValue("buttonColor", "1");
+                    GamePanel game = (GamePanel)frameManager.getAPanel("game");
+                    game.setButtonColor(Color.RED);
                     this.remove(); // after adding GameOver to the loop, this middleware will remove itself from loop.
                 } 
     }
