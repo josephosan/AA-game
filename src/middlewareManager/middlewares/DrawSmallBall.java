@@ -5,6 +5,7 @@ import elementManager.ElementManager;
 import elementManager.coordinate.AaPosition;
 import elementManager.elements.SmallBall;
 import frameManager.FrameManager;
+import middlewareManager.MiddlewareLocation;
 import utils.calculations.Angle;
 import java.awt.Color;
 
@@ -94,6 +95,7 @@ public class DrawSmallBall extends Middleware{
             //adding SmallBall to "rotatingSmallBalls" Group.
             elementManager.joinGroup("rotatingSmallBalls", "smallBall"+id);
             elementManager.joinGroup("game", "smallBall"+id);
+            this.middlewareManager.addMiddleware(new DrawLine(smallBall.getNumber(), panelId), new MiddlewareLocation());
             this.remove();
             return;
         }

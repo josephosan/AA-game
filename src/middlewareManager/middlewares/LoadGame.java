@@ -103,10 +103,6 @@ public class LoadGame extends Middleware {
         Middleware spinSmallBalls = new SpinSmallBalls();
         middlewareManager.addMiddlewareInSeries(spinSmallBalls);
         middlewareManager.joinGroup(panelId, spinSmallBalls);
-        //drawing lines
-        Middleware drawLines = new DrawLine(panelId);
-        middlewareManager.addMiddlewareInSeries(drawLines);
-        middlewareManager.joinGroup(panelId, drawLines);
         //checking impact
         Middleware checkImpact = new CheckImpact();
         middlewareManager.addMiddlewareInSeries( checkImpact);
