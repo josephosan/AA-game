@@ -81,7 +81,7 @@ public class ElementManager {
     }
 
     public void removeElementsByGroup(String group) {
-        ArrayList<Element> elementsArr = getElementsByGroup("group");
+        ArrayList<Element> elementsArr = getElementsByGroup(group);
         if (elementsArr == null) return;
 
         for (Element element : elementsArr) {

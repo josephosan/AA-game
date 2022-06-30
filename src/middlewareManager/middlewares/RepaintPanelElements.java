@@ -14,6 +14,11 @@ public class RepaintPanelElements extends Middleware {
         this.panel = panel;
     }
 
+    public RepaintPanelElements(String panel){
+        super("repaintPanelElements");
+        this.panel = this.frameManager.getAPanel(panel);
+    }
+
     @Override
     public void run() {
         panel.repaint();

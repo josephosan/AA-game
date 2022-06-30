@@ -70,60 +70,70 @@ public class LevelPanel extends APanel {
         //ActionListener
         //TODO Load levels through ActionListener methods
         level1.addActionListener(e -> {
+            middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.setMiddlewareValue("currentLevel", "1");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(1), new MiddlewareLocation());
             });
 
         level2.addActionListener(e ->{
+            middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.setMiddlewareValue("currentLevel", "2");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(2), new MiddlewareLocation());
             });
 
         level3.addActionListener(e ->{
+            middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.setMiddlewareValue("currentLevel", "3");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(3), new MiddlewareLocation());
             });
 
         level4.addActionListener(e ->{
+            middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.setMiddlewareValue("currentLevel", "4");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(4), new MiddlewareLocation());
             });
 
         level5.addActionListener(e ->{
+            middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.setMiddlewareValue("currentLevel", "5");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(5), new MiddlewareLocation());
             });
 
         level6.addActionListener(e ->{
+            middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.setMiddlewareValue("currentLevel", "6");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(6), new MiddlewareLocation());
             });
 
         level7.addActionListener(e ->{
+            middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.setMiddlewareValue("currentLevel", "7");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(7), new MiddlewareLocation());
             });
 
         level8.addActionListener(e ->{
+            middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.setMiddlewareValue("currentLevel", "8");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(8), new MiddlewareLocation());
             });
 
         level9.addActionListener(e ->{
+            middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.setMiddlewareValue("currentLevel", "9");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(9), new MiddlewareLocation());
             });
 
         level10.addActionListener(e ->{
+            middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.setMiddlewareValue("currentLevel", "10");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(10), new MiddlewareLocation());
