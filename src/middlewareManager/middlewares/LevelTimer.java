@@ -23,7 +23,7 @@ public class LevelTimer extends Middleware {
         updateTimeLabel.setFont(new Font(Font.SERIF, Font.PLAIN,  30));
     }
 
-    public static int getEndTime() {
+    private static int getEndTime() {
         return ((END_TIME == null) ? 0 : Integer.parseInt(END_TIME));
     }
     
