@@ -40,7 +40,7 @@ public class GamePanel extends APanel implements ActionListener {
         pauseButton.setIcon(new ImageIcon("src/Icons/pause.png"));
         pauseButton.addActionListener(this);
         hintButton = new JButton();
-        hintButton.setBounds(162, 10,100,85);
+        hintButton.setBounds(180, 10,50,50);
         hintButton.setIcon(new ImageIcon("src/Icons/hint.png"));
         hintButton.setFocusable(false);
         hintButton.setBackground(backgroundColor);
