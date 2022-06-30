@@ -23,14 +23,9 @@ public class GameOver extends Middleware {
         //setting red background
         APanel gamePanel = this.frameManager.getAPanel(panelId);
         gamePanel.setBackground(Color.RED);
-<<<<<<< HEAD
         GamePanel g = (GamePanel)gamePanel;
         g.setButtonColor(Color.RED);
-        //stopping rotation (keeping SpinSmallBalls middleware for animation)
-=======
-
         //playing game over sound //note that no sound will be played most of the times
->>>>>>> master
         this.setValue("rotationSpeed", "0");
         String[] sounds = {"emotionalDamage","soSad"};
         String sound = Tools.chooseRandomSound(sounds);
