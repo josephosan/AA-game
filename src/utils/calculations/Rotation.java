@@ -23,6 +23,16 @@ public class Rotation{
         this.rotationSpeed = rotationSpeed;
     }
 
+    public void setPosition(SmallBall smallBall){
+        this.origin = Config.getMainCirclePosition();
+        this.r = Config.getLineLength();
+        Angle angle = smallBall.getAngle();
+        double a = angle.getInRadian();
+        Integer x = (int) (this.origin.getX() + (Math.cos(a) * r) + 0) ;
+        Integer y = (int) (this.origin.getY() + (Math.sin(a) * r) - 0);
+        smallBall.setPosition(new AaPosition(x,y));
+    }
+
     public void rotate(SmallBall smallBall){
         this.origin = Config.getMainCirclePosition();
         this.r = Config.getLineLength();
