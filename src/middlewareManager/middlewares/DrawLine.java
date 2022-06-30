@@ -9,44 +9,29 @@ import frameManager.APanel;
 
 public class DrawLine extends Middleware {
     ElementManager elementManager = Config.getElementManager();
-    APanel panel;
-    ArrayList<Element> rotatingSmallBalls;
-    AaPosition bbPosition;
-    public DrawLine() {
-        super("drawLine");
+    final APanel panel;
+    final String smallBallNumber;
+    public DrawLine(String smallBallNumber) {
+        super("drawLine"+smallBallNumber);
         panel = Config.getFrameManager().getAPanel("game");
+        this.smallBallNumber = smallBallNumber;
     }
 
-    public DrawLine(String panelId) {
-        super("drawLine");
+    public DrawLine(String smallBallNumber, String panelId) {
+        super("drawLine"+smallBallNumber);
         panel = Config.getFrameManager().getAPanel(panelId);
+        this.smallBallNumber = smallBallNumber;
     }
-
     @Override
-    public void run() {
-        if(bbPosition == null){
-            bbPosition =  Config.getMainCirclePosition();
-        }
-        //getting rotatingSmallBalls Group (Elements are added to this Group using DrawSmallBall middleware)
-        rotatingSmallBalls = elementManager.getElementsByGroup("rotatingSmallBalls");
-        //rotating SmallBalls   
-        if(rotatingSmallBalls==null){
-            return;
-        }
-        for(Element smallBall : rotatingSmallBalls){
-            SmallBall SBall = (SmallBall)smallBall;
-            if(SBall.getVisible()){
-                //creating a line
-                Line line = new Line(panel);
-                AaPosition sbPosition = SBall.getPosition();
-                line.setPos(sbPosition.getX(), sbPosition.getY(), bbPosition.getX(), bbPosition.getY());
-
-                //adding line to elementManager. id will be like "line1"
-                elementManager.addElement("line"+(SBall).getNumber(), line);
-                //adding line to Group "lines"
-                elementManager.joinGroup("lines", "line"+(SBall).getNumber());
-                elementManager.joinGroup("game", "line"+(SBall).getNumber());
-            }
-        }
+    public void run(){
+        AaPosition bbPosition = Config.getMainCirclePosition();
+        Line line = new Line(panel);
+        line.setPosition(bbPosition, elementManager.getElementById("smallBall"+smallBallNumber).getPosition());
+        //adding line to elementManager. id will be like "line1"
+        elementManager.addElement("line"+smallBallNumber, line);
+        //adding line to Group "lines"
+        elementManager.joinGroup("lines", "line"+smallBallNumber);
+        elementManager.joinGroup("game", "line"+smallBallNumber);
+        this.remove();
     }
 }

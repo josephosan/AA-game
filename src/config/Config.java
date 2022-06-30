@@ -16,7 +16,7 @@ public class Config {
 
         frameWidth = 400, 
         frameHeight = 600,
-        smallCircleRadios = 16;
+        smallCircleRadios = 9;
 
     static Integer lineLength = 100;
     
@@ -27,7 +27,7 @@ public class Config {
         mainCircleSize = new AaSize(100, 100);
 
     static final AaSize
-        smallBallSize = new AaSize(16,16);
+        smallBallSize = new AaSize(2*smallCircleRadios,2*smallCircleRadios);
 
     static final String 
         frameTitle = "AA GAME";
