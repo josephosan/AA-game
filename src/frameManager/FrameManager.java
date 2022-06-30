@@ -42,7 +42,7 @@ public class FrameManager extends JFrame{
         APanel gameOverPanel = new GameOverPanel("gameOverPanel");
 
 
-        //gamePanel.setPaintOrder("lines>*");
+        gamePanel.setPaintOrder("lines>*");
 
         aPanels.put("main", mainPanel);
         aPanels.put("menu", menuPanel);
