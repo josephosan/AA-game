@@ -68,7 +68,9 @@ public class GamePanel extends APanel implements ActionListener {
     }
 
     public void setButtonColor(Color c){
-        this.backgroundColor = c;
+        //this.backgroundColor = c;
+        pauseButton.setBackground(c);
+        hintButton.setBackground(c);
     }
 
     public JLabel getTimerLevel(){
