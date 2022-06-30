@@ -35,8 +35,8 @@ public class WinPanel extends APanel {
         youWon.setForeground(Color.BLACK);
 
         // adding score label:
-        int score = LevelTimer.getEndTime();
-        yourScore = new JLabel("Your Score: " + score + "/10");
+//        int score = LevelTimer.getEndTime(); // TODO calculate score.
+        yourScore = new JLabel("Your Score: " + "" + "/10");
         yourScore.setFont(new Font("fuzzyBubbles", Font.ITALIC, 15));
         yourScore.setBounds(140, 300, 300, 30);
 
@@ -105,6 +105,6 @@ public class WinPanel extends APanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(background, 0, 0, null);
+        g.drawImage(background, 0, 0, 400, 800, null);
     }
 }
