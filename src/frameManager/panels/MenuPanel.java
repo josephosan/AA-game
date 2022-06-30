@@ -48,7 +48,7 @@ public class MenuPanel extends APanel implements ActionListener{
 
         //Set Bounds
         playButton.setBounds(275,500,75,50);
-        levelButton.setBounds(50,500,75,50);  
+        levelButton.setBounds(50,500,75,50);
         scoreButton.setBounds(50,425,75,50);
 
 
@@ -80,10 +80,10 @@ public class MenuPanel extends APanel implements ActionListener{
             middlewareManager.setMiddlewareValue("currentLevel", "1");
         }
         //setLocation(0, 0);
-       
+
 
     }
- 
+
     // @Override
     // public void paintComponent(Graphics g) {
     //     super.paintComponent(g);
@@ -99,7 +99,7 @@ public class MenuPanel extends APanel implements ActionListener{
     // }
 
     @Override
-    public void actionPerformed(ActionEvent e) {   
+    public void actionPerformed(ActionEvent e) {
         if(e.getSource()==playButton){
             middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(Integer.parseInt(middlewareManager.getMiddlewareValue("currentLevel"))), new MiddlewareLocation());
@@ -109,7 +109,7 @@ public class MenuPanel extends APanel implements ActionListener{
             middlewareManager.addMiddleware(new TransitionPanels("menu", "levels", false), new MiddlewareLocation());
         }
         else if(e.getSource()==scoreButton){
-            middlewareManager.addMiddleware(new TransitionPanels("menu", "win",false), new MiddlewareLocation());
+            middlewareManager.addMiddleware(new TransitionPanels("menu", "pause",false), new MiddlewareLocation());
         }
 
     }

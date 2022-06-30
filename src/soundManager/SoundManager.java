@@ -8,6 +8,7 @@ public class SoundManager {
     HashMap<String, Clip> clips = new HashMap<>();
 
     public void onConfigSubscribe() {
+        addClip("levelButtonSound", "levelButtonSound.wav");
         //TODO check if here is the right place to add clips
         this.addClip("emotionalDamage", "emotional-damage-meme.wav");
         this.addClip("soSad", "tf_nemesis.wav");

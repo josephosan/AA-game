@@ -2,6 +2,7 @@ package middlewareManager.middlewares;
 
 import config.Config;
 import frameManager.*;
+import middlewareManager.MiddlewareLocation;
 import middlewareManager.MiddlewareManager;
 
 import java.awt.Color;
@@ -39,6 +40,7 @@ public class FinishLevel extends Middleware {
              //pausing middlewares
             middlewareManager.setPausedMiddlewaresByGroup(groupId, true);
 
+            this.middlewareManager.addMiddleware(new TransitionPanels("game", "win", true), new MiddlewareLocation());
             //TODO add time to profile
             //TODO mark this level as finished in profile
             //TODO open a popup with 3 options: 1.replay 2.next level 3.menu 

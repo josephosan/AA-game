@@ -10,12 +10,13 @@ import config.Config;
 import frameManager.APanel;
 import middlewareManager.*;
 import middlewareManager.middlewares.*;
+import soundManager.SoundManager;
 
 public class LevelPanel extends APanel {
     MiddlewareManager middlewareManager = Config.getMiddlewareManager();
     private Color backgroundColor = new Color(0xd48a98);
     private Color buttonsColor = new Color(0x32ff98);
-   
+    SoundManager soundManager = Config.getSoundManager();
     ArrayList<JButton> buttons = new ArrayList<JButton>();
 
     public LevelPanel(String id){
@@ -74,6 +75,7 @@ public class LevelPanel extends APanel {
             middlewareManager.setMiddlewareValue("currentLevel", "1");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(1), new MiddlewareLocation());
+            soundManager.play("levelButtonSound");
             });
 
         level2.addActionListener(e ->{
@@ -81,63 +83,72 @@ public class LevelPanel extends APanel {
             middlewareManager.setMiddlewareValue("currentLevel", "2");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(2), new MiddlewareLocation());
-            });
+            soundManager.play("levelButtonSound");
+        });
 
         level3.addActionListener(e ->{
             middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.setMiddlewareValue("currentLevel", "3");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(3), new MiddlewareLocation());
-            });
+            soundManager.play("levelButtonSound");
+        });
 
         level4.addActionListener(e ->{
             middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.setMiddlewareValue("currentLevel", "4");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(4), new MiddlewareLocation());
-            });
+            soundManager.play("levelButtonSound");
+        });
 
         level5.addActionListener(e ->{
             middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.setMiddlewareValue("currentLevel", "5");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(5), new MiddlewareLocation());
-            });
+            soundManager.play("levelButtonSound");
+        });
 
         level6.addActionListener(e ->{
             middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.setMiddlewareValue("currentLevel", "6");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(6), new MiddlewareLocation());
-            });
+            soundManager.play("levelButtonSound");
+        });
 
         level7.addActionListener(e ->{
             middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.setMiddlewareValue("currentLevel", "7");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(7), new MiddlewareLocation());
-            });
+            soundManager.play("levelButtonSound");
+        });
 
         level8.addActionListener(e ->{
             middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.setMiddlewareValue("currentLevel", "8");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(8), new MiddlewareLocation());
-            });
+            soundManager.play("levelButtonSound");
+        });
 
         level9.addActionListener(e ->{
             middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.setMiddlewareValue("currentLevel", "9");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(9), new MiddlewareLocation());
-            });
+            soundManager.play("levelButtonSound");
+        });
 
         level10.addActionListener(e ->{
             middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.setMiddlewareValue("currentLevel", "10");
             middlewareManager.addMiddleware(new TransitionPanels("levels", "game"), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(10), new MiddlewareLocation());
-            });
+            soundManager.play("levelButtonSound");
+        });
 
         returnButton.addActionListener(e ->{
             middlewareManager.addMiddleware(new TransitionPanels("levels", "menu"), new MiddlewareLocation());

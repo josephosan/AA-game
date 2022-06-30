@@ -4,6 +4,7 @@ import config.Config;
 import frameManager.APanel;
 import middlewareManager.MiddlewareLocation;
 import middlewareManager.MiddlewareManager;
+import middlewareManager.middlewares.LevelTimer;
 import middlewareManager.middlewares.TransitionPanels;
 
 import javax.swing.*;
@@ -24,7 +25,6 @@ public class WinPanel extends APanel {
     ArrayList<JButton> buttons = new ArrayList<>();
     private Color backgroundColor = new Color(0xed3e44);
     private Color buttonsColor = new Color(0xe32d33);
-    private String score; // TODO getting score form danial.
 
     public WinPanel(String id) {
         super(id);
@@ -35,6 +35,7 @@ public class WinPanel extends APanel {
         youWon.setForeground(Color.BLACK);
 
         // adding score label:
+        int score = LevelTimer.getEndTime();
         yourScore = new JLabel("Your Score: " + score + "/10");
         yourScore.setFont(new Font("fuzzyBubbles", Font.ITALIC, 15));
         yourScore.setBounds(140, 300, 300, 30);
