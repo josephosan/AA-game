@@ -3,7 +3,7 @@ package middlewareManager.middlewares;
 import frameManager.APanel;
 import frameManager.panels.GamePanel;
 import middlewareManager.MiddlewareLocation;
-
+import utils.Tools;
 import java.awt.Color;
 import config.Config;
 
@@ -23,10 +23,19 @@ public class GameOver extends Middleware {
         //setting red background
         APanel gamePanel = this.frameManager.getAPanel(panelId);
         gamePanel.setBackground(Color.RED);
+<<<<<<< HEAD
         GamePanel g = (GamePanel)gamePanel;
         g.setButtonColor(Color.RED);
         //stopping rotation (keeping SpinSmallBalls middleware for animation)
+=======
+
+        //playing game over sound //note that no sound will be played most of the times
+>>>>>>> master
         this.setValue("rotationSpeed", "0");
+        String[] sounds = {"emotionalDamage","soSad"};
+        String sound = Tools.chooseRandomSound(sounds);
+        Config.getSoundManager().play(sound);
+        //stopping rotation (keeping SpinSmallBalls middleware for animation)
         this.middlewareManager.setPausedMiddlewareById("moveSmallBall", true);
         this.middlewareManager.setPausedMiddlewareById("reloadShootingBall", true);
     }

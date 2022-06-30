@@ -32,6 +32,11 @@ public class Rotation{
         Integer x = (int) (this.origin.getX() + (Math.cos(a) * r) + 0) ;
         Integer y = (int) (this.origin.getY() + (Math.sin(a) * r) - 0);
         smallBall.setAngle(angle);
-        smallBall.setPosition(new AaPosition(x,y));
+        if(smallBall.getPosition() == null){
+            smallBall.setPosition(new AaPosition(x,y));
+            return;
+        }
+        smallBall.getPosition().setX(x);
+        smallBall.getPosition().setY(y);
     }
 }

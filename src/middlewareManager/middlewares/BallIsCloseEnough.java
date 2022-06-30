@@ -37,6 +37,8 @@ public class BallIsCloseEnough extends Middleware {
         if (isBallCloseEnough(shootingBall)) {
             //ReloadShootingBall will put a new ball in shooting position.
             middlewareManager.addMiddleware(new ReloadShootingBall(),new MiddlewareLocation());
+            //drawing a line for it
+            middlewareManager.addMiddleware(new DrawLine(((SmallBall)shootingBall).getNumber()), new MiddlewareLocation());
             // add the ball to rotating balls.
             Tools.AddShootingBallToRotatingBalls((SmallBall)shootingBall);
             this.remove();
