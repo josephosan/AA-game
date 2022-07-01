@@ -80,8 +80,8 @@ public class LoginPanel extends APanel {
                 middlewareManager.addMiddleware(new TransitionPanels("login", "menu"), new MiddlewareLocation());
                 nameInput = textField.getText(); // getting name (for writing it to the profile file)
                 textField.setText("");
-                AaWriter.pushValue(nameInput, "name", nameInput);
                 Config.setEnteredUser(nameInput);
+                AaWriter.pushValue(nameInput, "name", nameInput);
                 System.out.println(Config.getEnteredUser() + " just Entered!");
             }
         });
