@@ -30,8 +30,8 @@ public class DrawLine extends Middleware {
         //adding line to elementManager. id will be like "line1"
         elementManager.addElement("line"+smallBallNumber, line);
         //adding line to Group "lines"
-        elementManager.joinGroup("lines", "line"+smallBallNumber);
-        elementManager.joinGroup("game", "line"+smallBallNumber);
+        line.join("lines");
+        line.join("game");
         this.remove();
     }
 }
