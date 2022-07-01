@@ -4,6 +4,9 @@ import java.util.Random;
 import elementManager.elements.SmallBall;
 
 public class Tools {
+    private final static int MAX_POINT = 100;
+
+
     public static double getTwoPointDistance(int x1, int y1, int x2, int y2) {
         return Math.sqrt(((y2 - y1) * (y2 - y1)) + ((x2 - x1) * (x2 - x1)));
     }
@@ -18,5 +21,9 @@ public class Tools {
             return soundsId[randomNum];
         }
         return new String("");  
+    }
+
+    public static int scoreCalculator(int time) {
+        return time / MAX_POINT;
     }
 }

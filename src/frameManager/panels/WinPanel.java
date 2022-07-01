@@ -14,6 +14,7 @@ import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 public class WinPanel extends APanel {
+    private Integer finalScore;
     MiddlewareManager middlewaremanager = Config.getMiddlewareManager();
     Image background = Toolkit.getDefaultToolkit().createImage("src/icons/WinBackground.png");
     JButton nextLevelButton;
@@ -35,8 +36,8 @@ public class WinPanel extends APanel {
         youWon.setForeground(Color.BLACK);
 
         // adding score label:
-        int score = LevelTimer.getEndTime();
-        yourScore = new JLabel("Your Score: " + score + "/10");
+        // TODO getting score from score calculator.
+        yourScore = new JLabel("Your Score: " + finalScore + "/100");
         yourScore.setFont(new Font("fuzzyBubbles", Font.ITALIC, 15));
         yourScore.setBounds(140, 300, 300, 30);
 
@@ -105,6 +106,6 @@ public class WinPanel extends APanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(background, 0, 0, null);
+        g.drawImage(background, 0, 0, 400, 600, null);
     }
 }

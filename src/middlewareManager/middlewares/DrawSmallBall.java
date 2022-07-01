@@ -7,6 +7,8 @@ import elementManager.elements.SmallBall;
 import frameManager.FrameManager;
 import middlewareManager.MiddlewareLocation;
 import utils.calculations.Angle;
+import utils.calculations.Rotation;
+
 import java.awt.Color;
 
 //This middleware create a SmallBall instance.
@@ -90,6 +92,9 @@ public class DrawSmallBall extends Middleware{
             SmallBall smallBall = new SmallBall(frameManager.getAPanel(panelId), angle);
             smallBall.setNumber(id);
             if(rgb != null) smallBall.setColor(new Color(Integer.decode(rgb)));
+            //TODO maybe use tools instead of rotation
+            Rotation rotation = new Rotation();
+            rotation.setPosition(smallBall);
             //adding smallBall to elementManager
             elementManager.addElement("smallBall"+id, smallBall);
             //adding SmallBall to "rotatingSmallBalls" Group.
