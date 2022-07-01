@@ -23,10 +23,10 @@ public class SelectShootBall extends Middleware  {
       if( readyToShootBall!=null && readyToShootBall!=""){
         //"selectShootBall" is the group of balls waiting to be shot.
         //this ball leaves the group because its being shot.
-        this.elementManager.leaveGroup("selectShootBall", readyToShootBall);
+        this.elementManager.getElementById(readyToShootBall).leave("SelectShootBall");
         //"shootingBall" is the group of balls that are moving toward bigBall.
         //currently there can only be one shooting ball.
-        this.elementManager.joinGroup("shootingSmallBalls", readyToShootBall);
+        this.elementManager.getElementById(readyToShootBall).join("shootingSmallBalls");
 
         //setting "readyToShootBall" value to empty string to indicate there is no ball in shooting position.
         this.setValue("readyToShootBall","");

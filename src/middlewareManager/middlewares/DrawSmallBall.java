@@ -98,8 +98,8 @@ public class DrawSmallBall extends Middleware{
             //adding smallBall to elementManager
             elementManager.addElement("smallBall"+id, smallBall);
             //adding SmallBall to "rotatingSmallBalls" Group.
-            elementManager.joinGroup("rotatingSmallBalls", "smallBall"+id);
-            elementManager.joinGroup("game", "smallBall"+id);
+            smallBall.join("rotatingSmallBalls");
+            smallBall.join(panelId);
             this.middlewareManager.addMiddleware(new DrawLine(smallBall.getNumber(), panelId), new MiddlewareLocation());
             this.remove();
             return;
@@ -116,8 +116,8 @@ public class DrawSmallBall extends Middleware{
         //adding smallBall to elementManager
         elementManager.addElement("smallBall"+id, smallBall);
         //adding SmallBall to "selectShootBall" Group.
-        elementManager.joinGroup("selectShootBall", "smallBall"+id);
-        elementManager.joinGroup("game", "smallBall"+id);
+        smallBall.join("selectShootBall");
+        smallBall.join(panelId);
         this.remove();
     }
     
