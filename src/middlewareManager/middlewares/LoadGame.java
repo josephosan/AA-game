@@ -103,14 +103,14 @@ public class LoadGame extends Middleware {
         Middleware spinSmallBalls = new SpinSmallBalls();
         middlewareManager.addMiddlewareInSeries(spinSmallBalls);
         middlewareManager.joinGroup(panelId, spinSmallBalls);
-        //checking impact
-        Middleware checkImpact = new CheckImpact();
-        middlewareManager.addMiddlewareInSeries( checkImpact);
-        middlewareManager.joinGroup(panelId, checkImpact);
         //moving shooting balls upward
         Middleware moveSmallBalls = new MoveSmallBall();
         middlewareManager.addMiddlewareInSeries(moveSmallBalls);
         middlewareManager.joinGroup(panelId, moveSmallBalls);
+        //checking impact
+        Middleware checkImpact = new CheckImpact();
+        middlewareManager.addMiddlewareInSeries( checkImpact);
+        middlewareManager.joinGroup(panelId, checkImpact);
         //checking for remaining balls if there is none, the level is finished
         Middleware checkRemainingBalls = new CheckRemainigBalls(panelId);
         middlewareManager.addMiddlewareInSeries(checkRemainingBalls);

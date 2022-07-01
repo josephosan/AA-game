@@ -2,7 +2,6 @@ package frameManager.panels;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.util.ArrayList;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -10,7 +9,6 @@ import javax.swing.JLabel;
 
 import config.Config;
 import elementManager.ElementManager;
-import elementManager.elements.Element;
 import frameManager.*;
 import middlewareManager.MiddlewareLocation;
 import middlewareManager.*;
@@ -77,21 +75,7 @@ public class GamePanel extends APanel implements ActionListener {
         if(e.getSource()==hintButton){
             middlewareManager.addMiddleware(new AutoShooter(), new MiddlewareLocation());
         }
-    }
-    
-    @Override
-    public void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        ArrayList<Element> elements = elementManager.getElementsByPanel(this);
-
-        for (Element element : elements) {
-            element.paintSelf(g);
-        }
     }    
-
-   
-    
-
 }
 //THIS IS FOR TEST
 //TODO implement a real keylistener
@@ -100,29 +84,17 @@ class myKeyListener implements KeyListener{
     public void keyPressed(KeyEvent e) {
         System.out.println("key pressed");
         int keyCode = e.getKeyCode();
-        if(keyCode == KeyEvent.VK_SPACE){
+        if(keyCode == KeyEvent.VK_SPACE)
             Config.getMiddlewareManager().addMiddleware(new SelectShootBall(), new MiddlewareLocation());
-            //TODO uncomment Select shoot ball (Auto shoot is jist for test)
-            Config.getMiddlewareManager().addMiddleware(new SelectShootBall(), new MiddlewareLocation());
-            //Config.getMiddlewareManager().addMiddleware(new AutoShooter(), new MiddlewareLocation());
-
-            //TODO uncomment Select shoot ball (Auto shoot is jist for test)
-            Config.getMiddlewareManager().addMiddleware(new SelectShootBall(), new MiddlewareLocation());
-            //Config.getMiddlewareManager().addMiddleware(new AutoShooter(), new MiddlewareLocation());
-
-        }
+        
     }
 
     @Override
     public void keyReleased (KeyEvent e){
-
     }
 
     @Override
     public void keyTyped (KeyEvent e){
-
     }
-   
-
     
 }
