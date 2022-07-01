@@ -41,7 +41,7 @@ public class FrameManager extends JFrame{
         APanel winPanel = new WinPanel("winPanel");
 
 
-//        gamePanel.setPaintOrder("*"); //TODO set order after bug is resolved
+        gamePanel.setPaintOrder("lines>*");
 
 
         aPanels.put("main", mainPanel);
