@@ -31,10 +31,10 @@ public class Aa {
             }
         };
 
-        Middleware showMenu = new ShowMenu();
+        Middleware showLogin = new ShowPanel("login");
         MiddlewareLocation showMenuLocation = new MiddlewareLocation();
 
-        middlewareManager.addMiddleware(showMenu, showMenuLocation);
+        middlewareManager.addMiddleware(showLogin, showMenuLocation);
        
 
         AaTimer aaTimer = new AaTimer(timerTask);

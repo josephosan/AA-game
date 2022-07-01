@@ -7,6 +7,7 @@ import soundManager.SoundManager;
 import elementManager.coordinate.*;
 
 public class Config {
+    static String enteredUser;
     static FrameManager frameManager;
     static MiddlewareManager middlewareManager;
     static ElementManager elementManager;
@@ -122,6 +123,14 @@ public class Config {
 
     public static void setLineLength(Integer lengthOfLines){
         lineLength = lengthOfLines;
+    }
+
+    public static String getEnteredUser() {
+        return enteredUser;
+    }
+
+    public static void setEnteredUser(String enteredUser) {
+        Config.enteredUser = enteredUser;
     }
 }
 
