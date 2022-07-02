@@ -2,11 +2,8 @@ package middlewareManager.middlewares;
 
 import config.Config;
 import frameManager.*;
-<<<<<<< HEAD
 import middlewareManager.MiddlewareLocation;
-=======
 import frameManager.panels.GamePanel;
->>>>>>> 4ac6826666df448e1a4a7f26e83cd3fce36700a8
 import middlewareManager.MiddlewareManager;
 import utils.writer.ProfileHandler;
 
