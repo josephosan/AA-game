@@ -6,6 +6,7 @@ import middlewareManager.MiddlewareLocation;
 import middlewareManager.MiddlewareManager;
 import middlewareManager.middlewares.LevelTimer;
 import middlewareManager.middlewares.*;
+import utils.Tools;
 
 import javax.swing.*;
 import java.awt.*;
@@ -63,6 +64,11 @@ public class WinPanel extends APanel {
 
         // action listeners:
         nextLevelButton.addActionListener(e -> {
+            middlewaremanager.setMiddlewareValue("currentLevel",
+                    (Tools.getWhichLevelWeShouldStartWith(middlewaremanager.getMiddlewareValue("userName")) == 0) ? ""+1
+                            : ""+(Tools.getWhichLevelWeShouldStartWith(middlewaremanager.getMiddlewareValue("userName"))+1));
+            middlewaremanager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
+            middlewaremanager.addMiddleware(new LoadGame(Integer.parseInt(middlewaremanager.getMiddlewareValue("currentLevel"))), new MiddlewareLocation());
             middlewaremanager.addMiddleware(new TransitionPanels("win", "game"), new MiddlewareLocation());
         });
 

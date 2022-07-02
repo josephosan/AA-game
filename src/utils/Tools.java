@@ -1,7 +1,10 @@
 package utils;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 import elementManager.elements.SmallBall;
+import utils.parser.AParser;
 
 public class Tools {
     public static double getTwoPointDistance(int x1, int y1, int x2, int y2) {
@@ -17,7 +20,17 @@ public class Tools {
         if(randomNum<soundsId.length){
             return soundsId[randomNum];
         }
-        return new String("");  
+        return new String("");
+    }
+    public static int getWhichLevelWeShouldStartWith(String userName) {
+        Map<String, String> profileInformation;
+        profileInformation = AParser.run("profile/"+userName+"Profile.json");
+        int lastLevel = 0;
+        for (int i = 0; i < 10; i++)
+            if (profileInformation.containsKey("level"+i) && i > lastLevel)
+                lastLevel = i;
+
+        return lastLevel;
     }
 
 }

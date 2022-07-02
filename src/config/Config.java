@@ -7,32 +7,31 @@ import soundManager.SoundManager;
 import elementManager.coordinate.*;
 
 public class Config {
-    static String enteredUser;
     static FrameManager frameManager;
     static MiddlewareManager middlewareManager;
     static ElementManager elementManager;
     static SoundManager soundManager;
     static final Integer
-        timerDelay = 15,
+            timerDelay = 15,
 
-        frameWidth = 400, 
-        frameHeight = 600,
-        smallCircleRadios = 9;
+    frameWidth = 400,
+            frameHeight = 600,
+            smallCircleRadios = 9;
 
-    public static Integer defaultLineLength = 100;    
+    public static Integer defaultLineLength = 100;
     static Integer lineLength = 100;
-    
+
     static final int speedShootBall = 20;
     static final AaPosition mainCirclePosition = new AaPosition(200, 200); // mahbod
     static final AaPosition shootingPosition = new AaPosition(200,500);
-    static final AaSize 
-        mainCircleSize = new AaSize(100, 100);
+    static final AaSize
+            mainCircleSize = new AaSize(100, 100);
 
     static final AaSize
-        smallBallSize = new AaSize(2*smallCircleRadios,2*smallCircleRadios);
+            smallBallSize = new AaSize(2*smallCircleRadios,2*smallCircleRadios);
 
-    static final String 
-        frameTitle = "AA GAME";
+    static final String
+            frameTitle = "AA GAME";
 
 
     public Config() {
@@ -61,17 +60,17 @@ public class Config {
 
     public static void emitConfigSubscribe() {
         if (
-            Config.elementManager != null
-            && Config.middlewareManager != null
-            && Config.frameManager != null
-            && Config.soundManager != null
+                Config.elementManager != null
+                        && Config.middlewareManager != null
+                        && Config.frameManager != null
+                        && Config.soundManager != null
         ) {
             Config.elementManager.onConfigSubscribe();
             Config.middlewareManager.onConfigSubscribe();
             Config.frameManager.onConfigSubscribe();
             Config.soundManager.onConfigSubscribe();
         }
-       
+
     }
 
     public static FrameManager getFrameManager() {
@@ -126,13 +125,6 @@ public class Config {
         lineLength = lengthOfLines;
     }
 
-    public static String getEnteredUser() {
-        return enteredUser;
-    }
-
-    public static void setEnteredUser(String enteredUser) {
-        Config.enteredUser = enteredUser;
-    }
 }
 
 

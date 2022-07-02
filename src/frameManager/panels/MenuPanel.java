@@ -15,6 +15,7 @@ import middlewareManager.middlewares.*;
 import elementManager.*;
 import elementManager.elements.*;
 import config.Config;
+import utils.Tools;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -67,7 +68,7 @@ public class MenuPanel extends APanel implements ActionListener{
                 public void mouseEntered(MouseEvent e) {
                     b.setBackground(buttonsColor);
                 }
-    
+
                 @Override
                 public void mouseExited(MouseEvent e) {
                     b.setBackground(backgroundColor);
@@ -101,6 +102,9 @@ public class MenuPanel extends APanel implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==playButton){
+            middlewareManager.setMiddlewareValue("currentLevel",
+                    (Tools.getWhichLevelWeShouldStartWith(middlewareManager.getMiddlewareValue("userName")) == 0) ? ""+1
+                            : ""+(Tools.getWhichLevelWeShouldStartWith(middlewareManager.getMiddlewareValue("userName"))+1));
             middlewareManager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
             middlewareManager.addMiddleware(new LoadGame(Integer.parseInt(middlewareManager.getMiddlewareValue("currentLevel"))), new MiddlewareLocation());
             middlewareManager.addMiddleware(new TransitionPanels("menu", "game"), new MiddlewareLocation());
