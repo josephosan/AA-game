@@ -26,26 +26,9 @@ public class DrawSmallBall extends Middleware{
     ElementManager elementManager = Config.getElementManager();
     FrameManager frameManager = Config.getFrameManager();
 
-    public DrawSmallBall(String angle){
-        super("AddSmallBall"+n);
-        int numberOfAllBalls = Integer.parseInt(this.getValue("numOfAllBalls")); 
-        id = numberOfAllBalls - n;
-        n++;
-        this.angle = new Angle(Double.parseDouble(angle));
-    }
-
-    public DrawSmallBall(String angle, String rgb){
-        super("AddSmallBall"+n);
-        int numberOfAllBalls = Integer.parseInt(this.getValue("numOfAllBalls")); 
-        id = numberOfAllBalls - n;
-        n++;
-        this.angle = new Angle(Double.parseDouble(angle));
-        this.rgb = rgb;
-    }
-
     public DrawSmallBall(String angle, String rgb,String panelId){
         super("AddSmallBall"+n);
-        int numberOfAllBalls = Integer.parseInt(this.getValue("numOfAllBalls")); 
+        int numberOfAllBalls = Integer.parseInt(this.getValue("levelNumberOfAllBalls")); 
         id = numberOfAllBalls - n;
         n++;
         this.angle = new Angle(Double.parseDouble(angle));
@@ -53,29 +36,9 @@ public class DrawSmallBall extends Middleware{
         this.panelId = panelId;
     }
 
-
-    public DrawSmallBall(String angle, boolean isRotating){
-        super("AddSmallBall"+n);
-        int numberOfAllBalls = Integer.parseInt(this.getValue("numOfAllBalls")); 
-        id = numberOfAllBalls - n;
-        n++;
-        this.angle = new Angle(Double.parseDouble(angle));
-        this.isRotating = isRotating;
-    }
-
-    public DrawSmallBall(String angle, String rgb, boolean isRotating){
-        super("AddSmallBall"+n);
-        int numberOfAllBalls = Integer.parseInt(this.getValue("numOfAllBalls")); 
-        id = numberOfAllBalls - n;
-        n++;
-        this.angle = new Angle(Double.parseDouble(angle));
-        this.rgb = rgb;
-        this.isRotating = isRotating;
-    }
-
     public DrawSmallBall(String angle, String rgb,String panelId, boolean isRotating){
         super("AddSmallBall"+n);
-        int numberOfAllBalls = Integer.parseInt(this.getValue("numOfAllBalls")); 
+        int numberOfAllBalls = Integer.parseInt(this.getValue("levelNumberOfAllBalls")); 
         id = numberOfAllBalls - n;
         n++;
         this.angle = new Angle(Double.parseDouble(angle));
