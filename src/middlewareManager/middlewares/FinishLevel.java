@@ -5,6 +5,8 @@ import frameManager.*;
 import middlewareManager.MiddlewareLocation;
 import middlewareManager.MiddlewareManager;
 import utils.writer.ProfileHandler;
+import javax.swing.JLabel;
+import frameManager.panels.GamePanel;
 
 import java.awt.Color;
 
@@ -45,6 +47,9 @@ public class FinishLevel extends Middleware {
             this.middlewareManager.addMiddleware(new TransitionPanels("game", "win", true), new MiddlewareLocation());
             ProfileHandler.putData(USER_IN, 0, 0); // TODO getting level number and endTime.
             //TODO mark this level as finished in profile
+            JLabel lastTimeGame;
+            lastTimeGame = ((GamePanel) Config.getFrameManager().getAPanel("game")).getTimerLevel();
+            this.setValue("levelRecord", lastTimeGame.getText());
             this.remove();
         }
 
