@@ -52,6 +52,11 @@ public class TransitionPanels extends Middleware{
                 panel1.setLocation(0, 0);
                 panel2.setLocation(0, 0);
                 panel2.requestFocus();;
+                APanel activePanel = frameManager.getActivePanel();
+                if (activePanel != null) {
+                    activePanel.setActive(false);
+                }
+                panel2.setActive(true);
                 this.remove();
                 return;
             }
@@ -66,6 +71,11 @@ public class TransitionPanels extends Middleware{
                 panel1.setLocation(0, 0);
                 panel2.setLocation(0, 0);
                 panel2.requestFocus();;
+                APanel activePanel = frameManager.getActivePanel();
+                if (activePanel != null) {
+                    activePanel.setActive(false);
+                }
+                panel2.setActive(true);
                 this.remove();
                 return;
             }

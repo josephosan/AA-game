@@ -42,6 +42,7 @@ public class CheckImpact extends Middleware {
             for (Element shootingSB : shootingSmallBalls)
                 if (checkIfClashed(rotatingSB, shootingSB)) { // if two balls clashed: end the game
                     Middleware gameOver = new GameOver();     // by adding the gameOver class to middlewareManager.
+                    Config.getSoundManager().play("gameOver");
                     middleWareManager.addMiddleware(gameOver, new MiddlewareLocation());
                     this.remove(); // after adding GameOver to the loop, this middleware will remove itself from loop.
                 } 
