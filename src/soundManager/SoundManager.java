@@ -27,7 +27,7 @@ public class SoundManager {
             clip.open(audioIn);
             clips.put(clipName, clip);
         } catch (Exception e) {
-            System.out.println(e);
+            //System.out.println(e);
         }
     }
 
@@ -37,7 +37,7 @@ public class SoundManager {
 
     public void play(String clipName) {
         if (clips.containsKey(clipName)) {
-            System.out.println("here");
+            //System.out.println("here");
             Clip clip = clips.get(clipName);
             clip.setFramePosition(0);
             clip.start();

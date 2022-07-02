@@ -87,6 +87,7 @@ public class ElementManager {
         for (Element element : elementsArr) {
             elements.remove(element.getId());
             for (String elementGroup: element.getGroups()) {
+                if (elementGroup.equals(group)) continue;
                 if (groups.containsKey(elementGroup)) {
                     ArrayList<Element> otherGroupElements = getElementsByGroup(elementGroup);
                     otherGroupElements.remove(element);

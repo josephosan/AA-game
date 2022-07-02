@@ -26,9 +26,9 @@ public class CheckImpact extends Middleware {
                 shootingSB.getPosition().getX(),
                 shootingSB.getPosition().getY());
                 if(distance <= impactRange){
-                    System.out.println("IMPACT");
-                    System.out.println("rotating ball: "+rotatingSB.getPosition()+" shooting ball: "+shootingSB.getPosition());
-                    System.out.println("distance: "+distance+"impact range: "+impactRange);
+                    //System.out.println("IMPACT");
+                    //System.out.println("rotating ball: "+rotatingSB.getPosition()+" shooting ball: "+shootingSB.getPosition());
+                    //System.out.println("distance: "+distance+"impact range: "+impactRange);
                 }
         return distance <= impactRange;
     }

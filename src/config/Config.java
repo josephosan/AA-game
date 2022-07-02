@@ -19,6 +19,7 @@ public class Config {
         frameHeight = 600,
         smallCircleRadios = 9;
 
+    public static Integer defaultLineLength = 100;    
     static Integer lineLength = 100;
     
     static final int speedShootBall = 20;
@@ -86,7 +87,7 @@ public class Config {
     }
 
     public static ElementManager getElementManager() {
-//        //System.out.println("returning elementManager");
+//        ////System.out.println("returning elementManager");
         return elementManager;
     }
 

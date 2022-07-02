@@ -69,7 +69,7 @@ public class MiddlewareManager {
     public AaLinkedList.LinkedElement findLinkedElementById(String id) {
         AaLinkedList.Iterator iterator = middlewares.getIterator();
         while(iterator.hasNext()) {
-            AaLinkedList.LinkedElement element= iterator.next();
+            AaLinkedList.LinkedElement element= iterator.getNext();
             Middleware middleware = element.getMiddleware();
             if (middleware.getId().equals(id)) {
                 return element;
@@ -123,10 +123,12 @@ public class MiddlewareManager {
     public void loop() {
         if (loopIsPaused) return;
         inLoop = true;
-
+        //System.out.println("loop");
+        //System.out.println(middlewares);
         AaLinkedList.Iterator iterator = middlewares.getIterator();
         while(iterator.hasNext()) {
-            AaLinkedList.LinkedElement element = iterator.next();
+            //System.out.println("in loop while");
+            AaLinkedList.LinkedElement element = iterator.getNext();
             Middleware middleware = element.getMiddleware();
             runningMiddlewareInLoop = middleware;
 

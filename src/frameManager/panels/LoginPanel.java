@@ -82,7 +82,7 @@ public class LoginPanel extends APanel {
                 textField.setText("");
                 Config.setEnteredUser(nameInput);
                 AaWriter.pushValue(nameInput, "name", nameInput);
-                System.out.println(Config.getEnteredUser() + " just Entered!");
+                //System.out.println(Config.getEnteredUser() + " just Entered!");
             }
         });
 
