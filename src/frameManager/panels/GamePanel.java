@@ -82,7 +82,7 @@ public class GamePanel extends APanel implements ActionListener {
 class myKeyListener implements KeyListener{
     @Override
     public void keyPressed(KeyEvent e) {
-        System.out.println("key pressed");
+        //System.out.println("key pressed");
         int keyCode = e.getKeyCode();
         if(keyCode == KeyEvent.VK_SPACE)
             Config.getMiddlewareManager().addMiddleware(new SelectShootBall(), new MiddlewareLocation());

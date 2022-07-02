@@ -36,7 +36,7 @@ public class APanel extends JPanel{
         }
 
         if (!Pattern.matches("^((\\#?[\\w]+\\>)|(\\*\\>))*(\\#?[\\w]+|\\*)$", pattern)) {
-            System.out.println("pattern not matched");
+            //System.out.println("pattern not matched");
             return;
         }
 
@@ -81,9 +81,9 @@ public class APanel extends JPanel{
     }
 
     public void doPaintSelf(Graphics g, ArrayList<Element> arr) {
-        System.out.println(arr);
+        //System.out.println(arr);
         for (Element element : arr) {
-            System.out.println(element);
+            //System.out.println(element);
             if (!element.isPainted()) {
                 element.paintSelf(g);
                 element.setPainted(true);

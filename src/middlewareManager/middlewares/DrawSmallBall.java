@@ -17,7 +17,7 @@ import java.awt.Color;
 //The us of "n" variable is to ensure that we won't use duplicate id.
 
 public class DrawSmallBall extends Middleware{
-    static int n = 0;   //to keep track how many times this middleware has been called.
+    public static int n = 0;   //to keep track how many times this middleware has been called.
     final int id;       // to store n before n changes as a result of this middleware being called again. 
     String panelId = "game";
     String rgb;

@@ -1,30 +1,23 @@
 package utils;
+import java.util.Arrays;
+
 import middlewareManager.middlewares.Middleware;
-
 public class AaLinkedList {
+
     public class LinkedElement {
-        Middleware middleware;
-        LinkedElement next;
-        LinkedElement previous;
+        public Middleware middleware;
+        public LinkedElement next;
 
-        public LinkedElement(Middleware _middleware) {
-            middleware = _middleware;
-        }
-
-        public void setNext(LinkedElement nextMiddleware) {
-            next = nextMiddleware;
-        }
-
-        public void setPrevious(LinkedElement previousMiddleware) {
-            previous = previousMiddleware;
+        public LinkedElement(Middleware middleware) {
+            this.middleware = middleware;
         }
 
         public LinkedElement getNext() {
             return next;
         }
 
-        public LinkedElement getPrevious() {
-            return previous;
+        public void setNext(LinkedElement linkedElement) {
+            this.next = linkedElement;
         }
 
         public Middleware getMiddleware() {
@@ -34,146 +27,232 @@ public class AaLinkedList {
 
     public class Iterator {
         LinkedElement cursor;
-        public Iterator(LinkedElement element) {
-            cursor = element;
+        public Iterator(LinkedElement head) {
+            this.cursor = head;
         }
 
         public Boolean hasNext() {
-            if (cursor != null) {
-                return true;
-            }
-
+            if (this.cursor != null) return true;
             return false;
         }
 
-        public LinkedElement next() {
-            LinkedElement nextElement =  cursor;
-            cursor = cursor.getNext();
-            return nextElement;
+        public LinkedElement getNext() {
+            LinkedElement next = cursor;
+            if (this.hasNext()) {
+                this.cursor = this.cursor.getNext();
+            } else {
+                this.cursor = null;
+            }
+
+            return next;
         }
     }
+    
 
-    Iterator iterator;
-    LinkedElement first;
-    LinkedElement last;
+    LinkedElement head;
     LinkedElement lastAddedLinkedElement;
     int size = 0;
 
-    public AaLinkedList() {
+    public void setHead(LinkedElement linkedElement) {
+        this.head = linkedElement;
+    }
 
+    public LinkedElement getHead() {
+        return head;
+    }
+
+    public LinkedElement getTail() {
+        LinkedElement cursor = getHead();
+        if (cursor == null) return null;
+        while(cursor.getNext() != null) {
+            cursor = cursor.getNext();
+        }
+
+        return cursor;
+    }
+
+    public LinkedElement[] getCoupleTail() {
+        LinkedElement[] result = new LinkedElement[2];
+        LinkedElement beforeTail;
+        LinkedElement tail;
+        beforeTail = this.getHead();
+
+        if (beforeTail == null){
+            //System.out.println("before tail is null");
+            return result;
+        }
+        tail = beforeTail.getNext();
+        if (tail == null) {
+            //System.out.println("tail is null");
+            //System.out.println(Arrays.toString(result));
+            result[1] = beforeTail;
+            return result;
+        };
+
+        while(tail.getNext() != null) {
+            beforeTail = tail;
+            tail = tail.getNext();
+        }
+
+        result[0] = beforeTail;
+        result[1] = tail;
+
+        return result;
+    }
+
+    public Iterator getIterator() {
+        return new Iterator(head);
     }
 
     public void add(Middleware middleware) {
-        LinkedElement element = new LinkedElement(middleware);
-        if (size == 0) {
-            first = element;
-            last = first;
-        } else {
-            element.setPrevious(last);
-            last.setNext(element);
-            last = element;
-        }
-
-        lastAddedLinkedElement = element;
-        size++;
+        add(new LinkedElement(middleware));
     }
 
-    public void addAfter(Middleware middleware, LinkedElement element) {
-        // if element is null we consider that the element should be add in the start of
-        // of list
-        if (element == null) {
-            addAtStart(middleware);
+    public void add(LinkedElement newElement) {
+        if (newElement == null) {
             return;
         }
-        LinkedElement newElement = new LinkedElement(middleware);
-        newElement.setPrevious(element);
-        LinkedElement lastElement = element.getNext();
-        element.setNext(newElement);
-        if (lastElement != null) {
-            newElement.setNext(lastElement);
-            lastElement.setPrevious(newElement);
+        //System.out.println(head);
+        //System.out.println(newElement);
+        LinkedElement tail = this.getTail();
+        if (tail == null) {
+            //System.out.println("here");
+            this.head = newElement;
         } else {
-            last = newElement;
+            tail.setNext(newElement);
         }
-        
-        lastAddedLinkedElement = newElement;
-        size++;
-    }
-
-    public void addBefore(Middleware middleware, LinkedElement element) {
-        // if element is null we consider that the element should be add in the start of
-        // of list
-        if (element == null) {
-            addAtStart(middleware);
-            return;
-        }
-        LinkedElement newElement = new LinkedElement(middleware);
-        newElement.setNext(element);    
-        if(element.getPrevious() != null) {
-            newElement.setPrevious(element.getPrevious());
-            element.getPrevious().setNext(newElement);
-        } else {
-            // the newElement is first
-            first = newElement;
-        }
-        element.setPrevious(newElement);
-        
-        lastAddedLinkedElement = newElement;
+        this.afterAdd(newElement);
         size++;
     }
 
     public void addAtStart(Middleware middleware) {
-        if (size == 0) {
-            add(middleware);
-        } else {
-            addBefore(middleware, first);
+        addAtStart(new LinkedElement(middleware));
+    }
+
+    public void addAtStart(LinkedElement element) {
+        if (this.getHead() != null) {
+            element.setNext(this.getHead());
         }
-            
+
+        this.setHead(element);
+        this.afterAdd(element);
+        size++;
+    }
+
+    public void addAfter(Middleware middleware, LinkedElement element) {
+        addAfter(new LinkedElement(middleware), element);
+    }
+
+    public void addAfter(LinkedElement element, LinkedElement beforeElement) {
+        int beforeElementIndex = this.findIndex(beforeElement);
+        if (beforeElementIndex == -1) return;
+        element.setNext(beforeElement.getNext());
+        beforeElement.setNext(element);
+        this.afterAdd(element);
+        size++;
+    }
+
+    public void addBefore(Middleware middleware ,LinkedElement element) {
+        addBefore(new LinkedElement(middleware), element);
+    }
+
+    public void addBefore(LinkedElement element, LinkedElement afterElement) {
+
+    }
+
+    public int findIndex(Middleware middleware) {
+        return findIndex(middleware.getLinkedElement());
+    }
+
+    public int findIndex(LinkedElement element) {
+        int i = 0;
+        Iterator iterator = this.getIterator();
+        while(iterator.hasNext()) {
+            if (iterator.getNext() == element) {
+                return i;
+            }
+            i++;
+        }
+
+        return -1;
+    }
+
+    public LinkedElement getByIndex(int index) {
+        if (index < 0) return null;
+
+        Iterator iterator = this.getIterator();
+        LinkedElement result;
+        while(iterator.hasNext()) {
+            result = iterator.getNext();
+            index--;
+            if (index == -1) {
+                //System.out.println("found by index");
+                //System.out.println(result);
+                //System.out.println("-------");
+                return result;
+            } ;
+        }
+
+        return null;
+    }
+
+    public void removeLast() {
+        LinkedElement[] coupleTail = getCoupleTail();
+        LinkedElement tail = coupleTail[1];
+        LinkedElement beforeTail = coupleTail[0];
+
+
+        if (tail != null) {
+            if (beforeTail == null) {
+                //System.out.println("beforeTail is null");
+                this.head = null;
+            } else {
+                beforeTail.setNext(null);
+            }
+
+            size--;
+        }
+
+        
     }
 
     public void remove(LinkedElement element) {
-        //System.out.println(last);
-        //System.out.println(element);
-        if (last == element) {
-            last = element.getPrevious();
-            if (last != null) {
-                last.setNext(null);
-            } else {
-                first = null;
-            }
-        } else if (first == element) {
-            first = element.getNext();
-            if (first != null) {
-                first.setPrevious(null);
-            } else {
-                last = null;
-            }
+        if (element == null) return;
+
+        int elementIndex = this.findIndex(element);
+        if (elementIndex == -1) return;
+
+        if (elementIndex == 0) {
+            this.head = element.getNext();
         } else {
-            LinkedElement previousElement = element.getPrevious();
-            previousElement.setNext((element.getNext()));
-            element.getNext().setPrevious(previousElement);
+            LinkedElement beforeElement = this.getByIndex(elementIndex - 1);
+            LinkedElement nextElement = element.getNext();
+
+            beforeElement.setNext(nextElement);
         }
 
         size--;
+    } 
+
+    public void afterAdd(LinkedElement addedElement) {
+        this.lastAddedLinkedElement = addedElement;
     }
 
     public LinkedElement getLastAddedLinkedElement() {
         return lastAddedLinkedElement;
     }
 
-    public Iterator getIterator() {
-        return new Iterator(first);
-    }
-
     @Override
-    public String toString() {
-        Iterator iterator = getIterator();
-        String output = "AaLinkedList with size " + size + " \n" + " first: " +( first == null ? "null" : first.getMiddleware().toString()) + " \n last: " + (last == null ? "null" : last.getMiddleware().toString()) + " \n";
+    public String toString() { 
+        Iterator iterator = new Iterator(this.head);
+        String output = "";
+        output += "size: " + this.size + " \n";
         int i = 0;
         while(iterator.hasNext()) {
-            output += (++i) + ": " + iterator.next().getMiddleware().toString() + " \n";
+            output += (i++) + ": " + iterator.getNext().getMiddleware().toString() + "\n";
         }
 
         return output;
+
     }
 }

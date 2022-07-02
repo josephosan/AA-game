@@ -5,7 +5,7 @@ import frameManager.APanel;
 import middlewareManager.MiddlewareLocation;
 import middlewareManager.MiddlewareManager;
 import middlewareManager.middlewares.LevelTimer;
-import middlewareManager.middlewares.TransitionPanels;
+import middlewareManager.middlewares.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -67,6 +67,8 @@ public class WinPanel extends APanel {
         });
 
         retryButton.addActionListener(e -> {
+            middlewaremanager.addMiddleware(new ClearLevel(), new MiddlewareLocation());
+            middlewaremanager.addMiddleware(new LoadGame(Integer.parseInt(middlewaremanager.getMiddlewareValue("levelNumber"))), new MiddlewareLocation());
             middlewaremanager.addMiddleware(new TransitionPanels("win", "game"), new MiddlewareLocation());
         });
 
