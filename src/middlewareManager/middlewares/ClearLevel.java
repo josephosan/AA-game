@@ -2,6 +2,7 @@ package middlewareManager.middlewares;
 
 import elementManager.ElementManager;
 import frameManager.FrameManager;
+import frameManager.panels.GamePanel;
 import middlewareManager.MiddlewareManager;
 import config.Config;
 import middlewareManager.middlewares.*;
@@ -18,9 +19,14 @@ public class ClearLevel extends Middleware{
         FrameManager frameManager = Config.getFrameManager();
         DrawSmallBall.n = 0;
         Config.setLineLength(Config.defaultLineLength);
-        frameManager.getAPanel("game").setBackground(new Color(0x6ae7f8));
+        // gamePanelBackground is set in GamePanel.java constructor
+        frameManager.getAPanel("game").setBackground(new Color(Integer.decode(middlewareManager.getMiddlewareValue("gamePanelBackground"))));
         elementManager.removeElementsByGroup("game");
         middlewareManager.removeMiddlewaresByGroup("game");
+        
+        //to reverse the color changes made to buttons in GamePanel
+        GamePanel g = (GamePanel)frameManager.getAPanel("game");
+        g.setButtonColor(new Color(Integer.decode(middlewareManager.getMiddlewareValue("gamePanelBackground"))));
 
         this.remove();
     }

@@ -31,6 +31,7 @@ public class GamePanel extends APanel implements ActionListener {
         //     this.backgroundColor = Color.RED;
         Color backgroundColor = new Color(0x6ae7f8);
         Color buttonColor = new Color(0x32ff98);
+        middlewareManager.setMiddlewareValue("gamePanelBackground", "#6ae7f8");
         setLocation(0, 0);
         setBackground(backgroundColor);
         setFocusable(true);
@@ -59,6 +60,17 @@ public class GamePanel extends APanel implements ActionListener {
             @Override
             public void mouseExited(MouseEvent e) {
                 pauseButton.setBackground(backgroundColor);
+            }
+        });
+        hintButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                hintButton.setBackground(buttonColor);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                hintButton.setBackground(backgroundColor);
             }
         });
         this.add(pauseButton);
