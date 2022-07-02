@@ -17,9 +17,9 @@ import middlewareManager.middlewares.*;
 public class GamePanel extends APanel implements ActionListener {
     ElementManager elementManager = Config.getElementManager();
     MiddlewareManager middlewareManager = Config.getMiddlewareManager();
-    private Color backgroundColor = new Color(0x6ae7f8);
+    private Color backgroundColor ;
     private Color borderColor = new Color(0x2a6a7b);
-    private Color buttonColor = new Color(0x32ff98);
+    private Color buttonColor ;
     
     JButton pauseButton;
     JButton hintButton;
@@ -27,6 +27,11 @@ public class GamePanel extends APanel implements ActionListener {
 
     public GamePanel(String id) {
         super(id);
+        // if(middlewareManager.getMiddlewareValue("buttonColor").equals("1"))
+        //     this.backgroundColor = Color.RED;
+        Color backgroundColor = new Color(0x6ae7f8);
+        Color buttonColor = new Color(0x32ff98);
+        middlewareManager.setMiddlewareValue("gamePanelBackground", "#6ae7f8");
         setLocation(0, 0);
         setBackground(backgroundColor);
         setFocusable(true);
@@ -57,11 +62,29 @@ public class GamePanel extends APanel implements ActionListener {
                 pauseButton.setBackground(backgroundColor);
             }
         });
+        hintButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                hintButton.setBackground(buttonColor);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                hintButton.setBackground(backgroundColor);
+            }
+        });
         this.add(pauseButton);
         this.add(hintButton);
         this.add(timeLabel);
         this.addKeyListener(new myKeyListener());
     }
+
+    public void setButtonColor(Color c){
+        this.backgroundColor = c;
+        pauseButton.setBackground(c);
+        hintButton.setBackground(c);
+    }
+
     public JLabel getTimerLevel(){
         return timeLabel;
     }
