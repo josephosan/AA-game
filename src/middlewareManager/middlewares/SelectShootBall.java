@@ -9,7 +9,6 @@ public class SelectShootBall extends Middleware  {
   ElementManager elementManager = Config.getElementManager();
  
     public SelectShootBall() {
-
       super("selectShootBall");
     }
     
@@ -31,7 +30,7 @@ public class SelectShootBall extends Middleware  {
         //setting "readyToShootBall" value to empty string to indicate there is no ball in shooting position.
         this.setValue("readyToShootBall","");
         //setting "numOfBallsToConnect" value for use of other middlewares
-        this.setValue("numOfBallsToConnect", String.valueOf(Integer.parseInt(this.getValue("numOfBallsToConnect"))-1));
+        this.setValue("levelNumberOfBallsToConnect", String.valueOf(Integer.parseInt(this.getValue("levelNumberOfBallsToConnect"))-1));
         //BallIsCloseEnough will check if the ball has reached the orbit.
         middlewareManager.addMiddleware(new BallIsCloseEnough(readyToShootBall), new MiddlewareLocation());
       }  

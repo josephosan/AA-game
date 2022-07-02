@@ -1,6 +1,5 @@
 package middlewareManager.middlewares;
 
-import java.util.ArrayList;
 import config.Config;
 import elementManager.ElementManager;
 import elementManager.coordinate.AaPosition;
@@ -11,6 +10,7 @@ public class DrawLine extends Middleware {
     ElementManager elementManager = Config.getElementManager();
     final APanel panel;
     final String smallBallNumber;
+    
     public DrawLine(String smallBallNumber) {
         super("drawLine"+smallBallNumber);
         panel = Config.getFrameManager().getAPanel("game");
