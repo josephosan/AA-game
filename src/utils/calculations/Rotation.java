@@ -10,7 +10,6 @@ public class Rotation{
     private double rotationSpeed; //should be in degree
     private AaPosition origin; //coordinates of center of the Big Ball
     private Integer r; // radius of the Main Circle
-
     public Rotation(){
         this.rotationSpeed = 2;
     }
@@ -20,7 +19,8 @@ public class Rotation{
     }
 
     public void setSpeed(double rotationSpeed){
-        this.rotationSpeed = rotationSpeed;
+        int direction = Integer.parseInt(Config.getMiddlewareManager().getMiddlewareValue("levelSpinningDirection"));
+        this.rotationSpeed = rotationSpeed * direction;
     }
 
     public void setPosition(SmallBall smallBall){
