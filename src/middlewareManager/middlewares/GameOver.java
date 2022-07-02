@@ -1,6 +1,7 @@
 package middlewareManager.middlewares;
 
 import frameManager.APanel;
+import frameManager.panels.GamePanel;
 import middlewareManager.MiddlewareLocation;
 import utils.Tools;
 import java.awt.Color;
@@ -22,7 +23,8 @@ public class GameOver extends Middleware {
         //setting red background
         APanel gamePanel = this.frameManager.getAPanel(panelId);
         gamePanel.setBackground(Color.RED);
-
+        GamePanel g = (GamePanel)gamePanel;
+        g.setButtonColor(Color.RED);
         //playing game over sound //note that no sound will be played most of the times
         this.setValue("rotationSpeed", "0");
         String[] sounds = {"emotionalDamage","soSad"};

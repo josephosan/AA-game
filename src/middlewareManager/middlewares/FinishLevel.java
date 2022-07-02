@@ -2,7 +2,11 @@ package middlewareManager.middlewares;
 
 import config.Config;
 import frameManager.*;
+<<<<<<< HEAD
 import middlewareManager.MiddlewareLocation;
+=======
+import frameManager.panels.GamePanel;
+>>>>>>> 4ac6826666df448e1a4a7f26e83cd3fce36700a8
 import middlewareManager.MiddlewareManager;
 import utils.writer.ProfileHandler;
 
@@ -27,6 +31,8 @@ public class FinishLevel extends Middleware {
         APanel panel = this.frameManager.getAPanel(groupId);
         //setting green background
         panel.setBackground(Color.GREEN);
+        GamePanel g = (GamePanel)panel;
+        g.setButtonColor(Color.GREEN);
         //setting rotation speed to 0
         this.setValue("rotationSpeed", "0");
     }
