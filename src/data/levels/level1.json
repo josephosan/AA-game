@@ -1,9 +1,9 @@
 {
     "author": "Arman",
     "levelName": "The Beginning",
-    "rotationSpeed": "1",
-    "numOfAllBalls": "7",
-    "numOfBallsToConnect": "5",
+    "levelBigBallRotationSpeed": "1",
+    "levelNumberOfAllBalls": "7",
+    "levelNumberOfBallsToConnect": "5",
     "smallBallsColor": "#000000",
     "levelNumber": "1",
     "middleware0": "DrawSmallBall 3 90 #000000 game",
