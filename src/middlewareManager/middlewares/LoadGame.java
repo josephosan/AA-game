@@ -28,7 +28,9 @@ public class LoadGame extends Middleware {
     @Override
     public void init(){
         HashMap<String,String> data = AParser.run("levels/level"+level+".json");
-        
+
+        this.setValue("levelSpinningDirection", "1");
+
         //adding options to middleware manager
         for (Map.Entry<String, String> set : data.entrySet()) {
             if(set.getValue().startsWith("middleware")) continue;
