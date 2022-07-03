@@ -3,11 +3,13 @@ package middlewareManager.middlewares;
 import config.Config;
 import frameManager.*;
 import frameManager.panels.GamePanel;
+import groovyjarjarantlr4.v4.runtime.atn.Transition;
 import middlewareManager.MiddlewareLocation;
 import middlewareManager.MiddlewareManager;
 import utils.writer.ProfileHandler;
 
 import java.awt.Color;
+import java.util.Objects;
 
 public class FinishLevel extends Middleware {
     MiddlewareManager middlewareManager = Config.getMiddlewareManager();
@@ -15,6 +17,7 @@ public class FinishLevel extends Middleware {
     private String USER_IN = middlewareManager.getMiddlewareValue("userName");
     private String CURRENT_LEVEL = middlewareManager.getMiddlewareValue("currentLevel");
     private String LEVEL_END_TIME = middlewareManager.getMiddlewareValue("levelEndTime");
+    private String LEVEL_NUMBER = middlewareManager.getMiddlewareValue("levelNumber");
 
     public FinishLevel(){
         super("finishLevel");
@@ -50,8 +53,13 @@ public class FinishLevel extends Middleware {
             LevelTimer.updateTimeLabel.setText("0");
             middlewareManager.setPausedMiddlewaresByGroup(groupId, true);
 
-            this.middlewareManager.addMiddleware(new TransitionPanels("game", "win", true), new MiddlewareLocation());
-            ProfileHandler.putData(USER_IN, Integer.parseInt(CURRENT_LEVEL), Integer.parseInt(LEVEL_END_TIME)); // TODO getting level number and endTime.
+            if (Objects.equals(LEVEL_NUMBER, "10")) {
+                middlewareManager.addMiddleware(new TransitionPanels("game", "menu", true), new MiddlewareLocation());
+                ProfileHandler.putData(USER_IN, Integer.parseInt(CURRENT_LEVEL), Integer.parseInt(LEVEL_END_TIME));
+            } else {
+                middlewareManager.addMiddleware(new TransitionPanels("game", "win", true), new MiddlewareLocation());
+                ProfileHandler.putData(USER_IN, Integer.parseInt(CURRENT_LEVEL), Integer.parseInt(LEVEL_END_TIME));
+            }
             this.remove();
         }
 
