@@ -8,11 +8,17 @@ public class SoundManager {
     HashMap<String, Clip> clips = new HashMap<>();
 
     public void onConfigSubscribe() {
-        addClip("levelButtonSound", "levelButtonSound.wav");
+        this.addClip("levelButtonSound", "levelButtonSound.wav");
         //TODO check if here is the right place to add clips
         this.addClip("emotionalDamage", "emotional-damage-meme.wav");
+        this.addClip("meme", "meme-de-creditos-finales.wav");
+        this.addClip("nemesis", "tf_nemesis.wav");
         this.addClip("soSad", "tf_nemesis.wav");
         this.addClip("hereWeGoAgain", "gta-san-andreas-ah-shit-here-we-go-again_BWv0Gvc.wav");
+        this.addClip("shootBall", "shootBall.wav");
+        this.addClip("gameOver", "gameOver.wav");
+        this.addClip("winGame", "winGame.wav");
+        this.addClip("johnCena", "and-his-name-is-john-cena-1_1.wav");
     }
 
     public SoundManager() {

@@ -117,7 +117,9 @@ public class MiddlewareManager {
     }
 
     public Middleware getMiddlewareById(String id) {
-        return middlewaresMap.get(id).getMiddleware();
+        AaLinkedList.LinkedElement element = middlewaresMap.get(id);
+        if (element == null) return null;
+        return element.getMiddleware();
     }
 
     public void loop() {
@@ -131,7 +133,7 @@ public class MiddlewareManager {
             AaLinkedList.LinkedElement element = iterator.getNext();
             Middleware middleware = element.getMiddleware();
             runningMiddlewareInLoop = middleware;
-
+            
             if (middleware.isFirstTime()) {
                 middleware.setEnteringLoopTime(System.currentTimeMillis());
                 middleware.setFirstTime(false);
@@ -153,6 +155,8 @@ public class MiddlewareManager {
 
     public void removeMiddleware(AaLinkedList.LinkedElement element) {
         middlewares.remove(element);
+        middlewaresMap.remove(element.getMiddleware().getId());
+
         // removing from groups
         Middleware middleware = element.getMiddleware();
         for (String group : middleware.getGroups()) {
@@ -174,6 +178,7 @@ public class MiddlewareManager {
                 middleware.setShouldRemove(true);
             } else {
                 middlewares.remove(middleware.getLinkedElement());
+                middlewaresMap.remove(middleware.getId());
             }
         }
     }

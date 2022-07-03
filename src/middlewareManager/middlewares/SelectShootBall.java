@@ -33,6 +33,8 @@ public class SelectShootBall extends Middleware  {
         this.setValue("levelNumberOfBallsToConnect", String.valueOf(Integer.parseInt(this.getValue("levelNumberOfBallsToConnect"))-1));
         //BallIsCloseEnough will check if the ball has reached the orbit.
         middlewareManager.addMiddleware(new BallIsCloseEnough(readyToShootBall), new MiddlewareLocation());
+
+        Config.getSoundManager().play("shootBall");
       }  
       // this middleware should be removed regardless of whether the ball is shot or not.
       this.remove();

@@ -2,6 +2,7 @@ package middlewareManager.middlewares;
 
 import config.Config;
 import frameManager.*;
+import frameManager.panels.GamePanel;
 import middlewareManager.MiddlewareLocation;
 import frameManager.panels.GamePanel;
 import middlewareManager.MiddlewareManager;
@@ -32,6 +33,10 @@ public class FinishLevel extends Middleware {
         g.setButtonColor(Color.GREEN);
         //setting rotation speed to 0
         this.setValue("levelBigBallRotationSpeed", "0");
+
+        GamePanel g = (GamePanel)frameManager.getAPanel("game");
+        g.setButtonColor(Color.GREEN);
+        this.setValue("rotationSpeed", "0");
     }
 
     @Override

@@ -28,6 +28,7 @@ public class CheckRemainigBalls extends Middleware {
         ArrayList<Element> shootingSmallBalls= Config.getElementManager().getElementsByGroup("shootingSmallBalls");
         if(remainingBalls==0 && shootingSmallBalls.size()==0){
             this.middlewareManager.addMiddleware(new FinishLevel(), new MiddlewareLocation());
+            Config.getSoundManager().play("winGame");
             this.remove();
         }
     }

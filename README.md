@@ -108,10 +108,12 @@ it is not necessary to set values only in the middleware you can use this from a
 - levelSmallBallRadius
 - levelBigBallRadius
 - levelLineLength
+- levelSpinningDirection
 - levelShootBallSpeed
 - levelBigBallPosition // use comma seperated statements for matrices. x,y => 200,200
 - levelShootingBallPosition
 - levelStartTime
+- gamePanelBackground  //the value is set in GamePanel.java constructor
 
 ## Implemented Middlewares
 ### **Middleware**
