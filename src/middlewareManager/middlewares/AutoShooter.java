@@ -28,6 +28,7 @@ public class AutoShooter extends Middleware {
         //calculating rotationAmount and impactRange
         double rotationAmount = ((distance/shootingSpeed))*rotationSpeed;
         double impactRange = Math.toDegrees(Math.asin(((2*(double)Config.getSmallCircleRadios())/(double)Config.getLineLength())));
+        impactRange = Math.ceil(impactRange);
         for(Element smallBall:rotatingSmallBalls){
             double sbAngle = ((SmallBall)smallBall).getAngle().getInDegree();
             //check for possible impact
