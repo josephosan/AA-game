@@ -12,7 +12,8 @@ import java.awt.Color;
 public class FinishLevel extends Middleware {
     MiddlewareManager middlewareManager = Config.getMiddlewareManager();
     String groupId = "game";
-    private String USER_IN = Config.getEnteredUser();
+    private String USER_IN = middlewareManager.getMiddlewareValue("userName");
+    private String CURRENT_LEVEL = middlewareManager.getMiddlewareValue("currentLevel");
 
     public FinishLevel(){
         super("finishLevel");
@@ -46,7 +47,7 @@ public class FinishLevel extends Middleware {
             middlewareManager.setPausedMiddlewaresByGroup(groupId, true);
 
             this.middlewareManager.addMiddleware(new TransitionPanels("game", "win", true), new MiddlewareLocation());
-            ProfileHandler.putData(USER_IN, 0, 0); // TODO getting level number and endTime.
+            ProfileHandler.putData(USER_IN, Integer.parseInt(CURRENT_LEVEL), 0); // TODO getting level number and endTime.
             //TODO mark this level as finished in profile
             this.remove();
         }
