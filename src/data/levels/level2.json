@@ -1,9 +1,9 @@
 {
     "author": "Mahbod",
     "levelName": "The RainBow",
-    "rotationSpeed": "1.5",
-    "numOfAllBalls": "19",
-    "numOfBallsToConnect": "10",
+    "levelBigBallRotationSpeed": "1.5",
+    "levelNumberOfAllBalls": "19",
+    "levelNumberOfBallsToConnect": "10",
     "levelNumber": "2",
     "smallBallsColor":"#f00cec",
     "middleware0": "DrawSmallBall 3 30 #f00cec game",

@@ -1,9 +1,9 @@
 {
     "author": "Arman",
     "levelName": "Main Menu",
-    "rotationSpeed": "2",
-    "numOfAllBalls": "2",
-    "numOfBallsToConnect": "0",
+    "levelBigBallRotationSpeed": "2",
+    "levelNumberOfAllBalls": "2",
+    "levelNumberOfBallsToConnect": "0",
     "smallBallsColor": "#000000",
     "middleware0": "DrawSmallBall 3 90 #000000 menu",
     "middleware1": "DrawSmallBall 2 270 #000000 menu",

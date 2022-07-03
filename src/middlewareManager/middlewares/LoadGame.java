@@ -93,7 +93,7 @@ public class LoadGame extends Middleware {
             i++;
         }
         //creating shootingBalls
-        int ballsToConnect = Integer.parseInt(this.getValue("numOfBallsToConnect"));
+        int ballsToConnect = Integer.parseInt(this.getValue("levelNumberOfBallsToConnect"));
         for(int k=0;k<ballsToConnect;k++ ){
             middlewareManager.addMiddlewareInSeries(new DrawSmallBall("90",this.getValue("smallBallsColor"),panelId,false));
         }

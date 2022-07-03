@@ -26,7 +26,7 @@ public class GameOver extends Middleware {
         GamePanel g = (GamePanel)frameManager.getAPanel("game");
         g.setButtonColor(Color.RED);
         //playing game over sound //note that no sound will be played most of the times
-        this.setValue("rotationSpeed", "0");
+        this.setValue("levelBigBallRotationSpeed", "0");
         String[] sounds = {"emotionalDamage","soSad"};
         String sound = Tools.chooseRandomSound(sounds);
         Config.getSoundManager().play(sound);

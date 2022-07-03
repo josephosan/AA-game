@@ -20,7 +20,7 @@ public class AutoShooter extends Middleware {
     public void run(){
         //getting rotationSpeed
         //note that rotation speed may change during runtime
-        rotationSpeed = Double.parseDouble(this.getValue("rotationSpeed"));
+        rotationSpeed = Double.parseDouble(this.getValue("levelBigBallRotationSpeed"));
         //getting small balls around the big ball.
         ArrayList<Element> rotatingSmallBalls = Config.getElementManager().getElementsByGroup("rotatingSmallBalls");
         if(rotatingSmallBalls==null) return;

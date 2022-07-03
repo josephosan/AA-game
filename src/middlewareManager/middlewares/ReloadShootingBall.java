@@ -13,7 +13,7 @@ public class ReloadShootingBall extends Middleware {
     AaPosition shootingPosition = Config.getShootingPosition();
     ReloadShootingBall(){
         super("reloadShootingBall");
-        ballNumber = Integer.parseInt(this.getValue("numOfBallsToConnect"));
+        ballNumber = Integer.parseInt(this.getValue("levelNumberOfBallsToConnect"));
     }
 
     @Override

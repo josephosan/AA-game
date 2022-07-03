@@ -1,9 +1,9 @@
 {
   "author": "Joseph",
   "levelName": "Big Bally",
-  "rotationSpeed": "1",
-  "numOfAllBalls": "12",
-  "numOfBallsToConnect": "10",
+  "levelBigBallRotationSpeed": "1",
+  "levelNumberOfAllBalls": "12",
+  "levelNumberOfBallsToConnect": "10",
   "levelNumber": "3",
   "smallBallsColor":"#11111",
   "middleware0": "DrawSmallBall 3 90 #000000 game",

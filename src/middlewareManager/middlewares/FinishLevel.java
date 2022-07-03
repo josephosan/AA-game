@@ -31,7 +31,7 @@ public class FinishLevel extends Middleware {
         //setting rotation speed to 0
         GamePanel g = (GamePanel)frameManager.getAPanel("game");
         g.setButtonColor(Color.GREEN);
-        this.setValue("rotationSpeed", "0");
+        this.setValue("levelBigBallRotationSpeed", "0");
     }
 
     @Override
