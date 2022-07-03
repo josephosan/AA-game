@@ -2,9 +2,7 @@ package frameManager.panels;
 
 import java.util.*;
 
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
+import javax.swing.*;
 
 import frameManager.APanel;
 import middlewareManager.MiddlewareLocation;
@@ -22,19 +20,21 @@ public class MenuPanel extends APanel implements ActionListener{
     ElementManager elementManager = Config.getElementManager();
     MiddlewareManager middlewareManager = Config.getMiddlewareManager();
     APanel menuPanel ;
+    JLabel POWERED_BY;
+    Image logo = Toolkit.getDefaultToolkit().createImage("src/Icons/aaLogo.png");
 
     JButton playButton;
     JButton levelButton;
     //JButton scoreButton;
 
-    private final Color backgroundColor = new Color(0x32ff98);
-    private final Color buttonsColor = new Color(0xd48a98);
+    private final Color backgroundColor = new Color(0xBFBFBF);
+    private final Color buttonsColor = new Color(0xBFBFBF);
     // private final Color buttonBorderColor = new Color(0x2a6a7b);
     ArrayList<JButton> buttons = new ArrayList<JButton>();
 
     public MenuPanel(String id) {
         super(id);
-        this.setBackground(backgroundColor);
+
 
         playButton = new JButton();
         levelButton = new JButton();
@@ -55,6 +55,13 @@ public class MenuPanel extends APanel implements ActionListener{
         levelButton.setIcon(new ImageIcon("src/Icons/levels.png"));
         //scoreButton.setIcon(new ImageIcon("src/Icons/score.png"));
 
+        POWERED_BY = new JLabel("powered by: " +
+                "dalton brothers ex borna" +
+                " OR " +
+                "arman va baghie:/");
+        POWERED_BY.setBounds(70, 190, 300, 200);
+        POWERED_BY.setFont(new Font("serif", Font.ITALIC, 10));
+
         this.add(playButton);
         for(JButton b: buttons){
             b.setBackground(backgroundColor);
@@ -73,6 +80,7 @@ public class MenuPanel extends APanel implements ActionListener{
                 }
             });
             this.add(b);
+            add(POWERED_BY);
 
             //ATTENTION ATTENTION
             // this should change based on profile later on
@@ -80,6 +88,7 @@ public class MenuPanel extends APanel implements ActionListener{
         }
         //setLocation(0, 0);
 
+        setBackground(new Color(0x969696));
 
     }
 
@@ -114,5 +123,13 @@ public class MenuPanel extends APanel implements ActionListener{
         //     middlewareManager.addMiddleware(new TransitionPanels("menu", "pause",false), new MiddlewareLocation());
         // }
 
+
+    }
+
+    @Override
+    public void paintComponent(Graphics g) {
+        g.setColor(new Color(0xBFBFBF));
+        g.fillRect(0, 0, getWidth(), getHeight());
+        g.drawImage(logo, 50, 40, 300, 300, null);
     }
 }
