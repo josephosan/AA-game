@@ -7,7 +7,9 @@ import middlewareManager.MiddlewareLocation;
 import elementManager.elements.Element;
 public class CheckRemainigBalls extends Middleware {
     final String groupId;
-
+    boolean lastLoop = false; 
+    //lastLoop is to wait one more loop before ending a level.
+    //this is to ensure that there is no impact on last shot. 
     public CheckRemainigBalls(){
         super("checkRemainingBalls");
         groupId = "game";
@@ -27,6 +29,11 @@ public class CheckRemainigBalls extends Middleware {
         //if there are no balls left to shoot and there is no ball in the way, the level is finished.
         ArrayList<Element> shootingSmallBalls= Config.getElementManager().getElementsByGroup("shootingSmallBalls");
         if(remainingBalls==0 && shootingSmallBalls.size()==0){
+            if(!lastLoop)
+            {
+                lastLoop = true;
+                return;
+            }
             this.middlewareManager.addMiddleware(new FinishLevel(), new MiddlewareLocation());
             Config.getSoundManager().play("winGame");
             this.remove();
