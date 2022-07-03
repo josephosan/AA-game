@@ -5,8 +5,11 @@ import frameManager.*;
 import frameManager.panels.GamePanel;
 import groovyjarjarantlr4.v4.runtime.atn.Transition;
 import middlewareManager.MiddlewareLocation;
+import frameManager.panels.GamePanel;
 import middlewareManager.MiddlewareManager;
 import utils.writer.ProfileHandler;
+import javax.swing.JLabel;
+import frameManager.panels.GamePanel;
 
 import java.awt.Color;
 import java.util.Objects;
@@ -33,6 +36,8 @@ public class FinishLevel extends Middleware {
         APanel panel = this.frameManager.getAPanel(groupId);
         //setting green background
         panel.setBackground(Color.GREEN);
+        GamePanel g = (GamePanel)panel;
+        g.setButtonColor(Color.GREEN);
         //setting rotation speed to 0
         GamePanel g = (GamePanel)frameManager.getAPanel("game");
         g.setButtonColor(Color.GREEN);
@@ -60,6 +65,7 @@ public class FinishLevel extends Middleware {
                 middlewareManager.addMiddleware(new TransitionPanels("game", "win", true), new MiddlewareLocation());
                 ProfileHandler.putData(USER_IN, Integer.parseInt(CURRENT_LEVEL), Integer.parseInt(LEVEL_END_TIME));
             }
+
             this.remove();
         }
 
