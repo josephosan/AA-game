@@ -77,7 +77,7 @@ public class SmallBall extends Element {
                     Config.getSmallBallSize().getWidth(),
                     Config.getSmallBallSize().getHeight());      //Drawing the circle with radius 15
 
-                g2D.setPaint(Color.BLACK);
+                g2D.setPaint(Color.YELLOW);
                 int stringWidth = (int)g.getFontMetrics().getStringBounds(getNumber(), g).getWidth();
                 int stringHeight = (int)g.getFontMetrics().getStringBounds(getNumber(), g).getHeight();
                 g2D.drawString(

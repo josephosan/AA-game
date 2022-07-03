@@ -1,10 +1,10 @@
 {
     "author": "Arman",
     "levelName": "HAHAHA",
-    "rotationSpeed": "4",
+    "rotationSpeed": "2.5",
     "numOfAllBalls": "15",
     "numOfBallsToConnect": "5",
-    "levelNumber": "7",
+    "levelNumber": "8",
     "smallBallsColor":"#000000",
     "middleware0": "DrawSmallBall 3 30 #000000 game",
     "middleware1": "DrawSmallBall 3 60 #000000 game",

@@ -5,7 +5,6 @@ import java.util.*;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.border.EmptyBorder;
 
 import frameManager.APanel;
 import middlewareManager.MiddlewareLocation;
@@ -13,7 +12,6 @@ import middlewareManager.MiddlewareManager;
 import middlewareManager.middlewares.*;
 
 import elementManager.*;
-import elementManager.elements.*;
 import config.Config;
 import utils.Tools;
 
@@ -31,7 +29,7 @@ public class MenuPanel extends APanel implements ActionListener{
 
     private final Color backgroundColor = new Color(0x32ff98);
     private final Color buttonsColor = new Color(0xd48a98);
-    private final Color buttonBorderColor = new Color(0x2a6a7b);
+    // private final Color buttonBorderColor = new Color(0x2a6a7b);
     ArrayList<JButton> buttons = new ArrayList<JButton>();
 
     public MenuPanel(String id) {
