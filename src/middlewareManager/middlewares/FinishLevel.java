@@ -14,6 +14,7 @@ public class FinishLevel extends Middleware {
     String groupId = "game";
     private String USER_IN = middlewareManager.getMiddlewareValue("userName");
     private String CURRENT_LEVEL = middlewareManager.getMiddlewareValue("currentLevel");
+    private String LEVEL_END_TIME = middlewareManager.getMiddlewareValue("levelEndTime");
 
     public FinishLevel(){
         super("finishLevel");
@@ -39,16 +40,18 @@ public class FinishLevel extends Middleware {
     public void run(){
 
         //creating an animation for when the game is finished.
-        if((Config.getLineLength())<(Config.getFrameHeight()))
+        if((Config.getLineLength())<(Config.getFrameHeight())) {
             Config.setLineLength(Config.getLineLength()+5);
+            LevelTimer.updateTimeLabel.setText("0");
+        }
         //stopping processes and showing finishLevel panel then removing self.
         else{
              //pausing middlewares
+            LevelTimer.updateTimeLabel.setText("0");
             middlewareManager.setPausedMiddlewaresByGroup(groupId, true);
 
             this.middlewareManager.addMiddleware(new TransitionPanels("game", "win", true), new MiddlewareLocation());
-            ProfileHandler.putData(USER_IN, Integer.parseInt(CURRENT_LEVEL), 0); // TODO getting level number and endTime.
-            //TODO mark this level as finished in profile
+            ProfileHandler.putData(USER_IN, Integer.parseInt(CURRENT_LEVEL), Integer.parseInt(LEVEL_END_TIME)); // TODO getting level number and endTime.
             this.remove();
         }
 

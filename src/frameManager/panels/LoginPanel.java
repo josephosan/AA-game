@@ -82,7 +82,7 @@ public class LoginPanel extends APanel {
                 textField.setText("");
                 middlewareManager.setMiddlewareValue("userName", nameInput);
                 AaWriter.pushValue(nameInput, "name", nameInput);
-                //System.out.println(Config.getEnteredUser() + " just Entered!");
+                System.out.println(middlewareManager.getMiddlewareValue("userName") + " just Entered!");
             }
         });
 
