@@ -7,7 +7,7 @@
   "levelNumber": "3",
   "smallBallsColor":"#11111",
   "middleware0": "DrawSmallBall 3 90 #000000 game",
-  "middleware1": "DrawSmallBall 2 270 #000000 game",
+  "middleware1": "DrawSmallBall 3 270 #000000 game",
   "middleware2": "DrawBigBall 4 200 200 #000000 game",
   "middleware3": "ChangeSpinningDirection 1 250"
 }
