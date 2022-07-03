@@ -33,6 +33,7 @@ public class GameOver extends Middleware {
         //stopping rotation (keeping SpinSmallBalls middleware for animation)
         this.middlewareManager.setPausedMiddlewareById("moveSmallBall", true);
         this.middlewareManager.setPausedMiddlewareById("reloadShootingBall", true);
+        this.middlewareManager.setPausedMiddlewareById("checkRemainingBalls", true);
     }
 
     @Override
