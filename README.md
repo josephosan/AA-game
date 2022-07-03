@@ -114,6 +114,7 @@ it is not necessary to set values only in the middleware you can use this from a
 - levelShootingBallPosition
 - levelStartTime
 - gamePanelBackground  //the value is set in GamePanel.java constructor
+- levelEndTime
 
 ## Implemented Middlewares
 ### **Middleware**
