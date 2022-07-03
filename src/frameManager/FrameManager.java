@@ -20,6 +20,7 @@ public class FrameManager extends JFrame{
     public FrameManager() {
         // Implement the frame;
         setLayout(null);
+        setResizable(false);
         pack();
         Insets insets = getInsets();
         setSize(
