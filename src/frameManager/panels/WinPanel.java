@@ -15,9 +15,7 @@ import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 public class WinPanel extends APanel {
-    private Integer finalScore;
     MiddlewareManager middlewaremanager = Config.getMiddlewareManager();
-    Image background = Toolkit.getDefaultToolkit().createImage("src/icons/WinBackground.png");
     JButton nextLevelButton;
     JButton retryButton;
     JButton menuButton;
@@ -25,8 +23,7 @@ public class WinPanel extends APanel {
     JLabel yourScore;
     int move = 5;
     ArrayList<JButton> buttons = new ArrayList<>();
-    private Color backgroundColor = new Color(0xed3e44);
-    private Color buttonsColor = new Color(0xe32d33);
+    private final String FINAL_TIME = middlewaremanager.getMiddlewareValue("levelEndTime");
 
     public WinPanel(String id) {
         super(id);
@@ -38,9 +35,9 @@ public class WinPanel extends APanel {
 
         // adding score label:
         // TODO getting score from score calculator.
-        yourScore = new JLabel("Your Score: " + finalScore + "/100");
+        yourScore = new JLabel("Your time: " + FINAL_TIME);
         yourScore.setFont(new Font("fuzzyBubbles", Font.ITALIC, 15));
-        yourScore.setBounds(140, 300, 300, 30);
+        yourScore.setBounds(150, 300, 300, 30);
 
         nextLevelButton = new JButton();
         retryButton = new JButton();
@@ -85,18 +82,18 @@ public class WinPanel extends APanel {
 
         // additional setting for buttons:
         for(JButton b: buttons){
-            b.setBackground(null);
-            b.setBorder(BorderFactory.createEtchedBorder(Color.black, Color.black));
+            b.setBackground(new Color(129, 163, 129, 255));
+            b.setBorder(null);
             b.setFocusable(false);
             b.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseEntered(MouseEvent e) {
-                    b.setBackground(Color.green);
+                    b.setBackground(new Color(129, 163, 129, 255));
                 }
 
                 @Override
                 public void mouseExited(MouseEvent e) {
-                    b.setBackground(null);
+                    b.setBackground(new Color(129, 163, 129, 255));
                 }
             });
             this.add(b);
@@ -108,12 +105,21 @@ public class WinPanel extends APanel {
         add(nextLevelButton);
         add(retryButton);
         add(menuButton);
+        setBackground(new Color(129, 163, 129, 255));
 
     }
-
-    @Override
-    public void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        g.drawImage(background, 0, 0, 400, 600, null);
-    }
+//    @Override
+//    public void paint(Graphics g) {
+//        super.paint(g);
+//        Graphics2D g2d = (Graphics2D)g;
+//
+//        g2d.setColor(Color.black);
+//        g2d.drawRoundRect(move+259, 399, 71, 71, 10, 10);
+//
+//        g2d.setColor(Color.black);
+//        g2d.drawRoundRect(move+159, 399, 71, 71, 10, 10);
+//
+//        g2d.setColor(Color.black);
+//        g2d.drawRoundRect(move+59, 399, 71, 71, 10, 10);
+//    }
 }

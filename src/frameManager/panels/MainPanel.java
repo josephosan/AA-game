@@ -6,7 +6,7 @@ import java.awt.*;
 public class MainPanel extends APanel{
     public MainPanel(String id) {
         super(id);
-        setBackground(Color.RED);
+        setBackground(Color.lightGray);
         setLocation(0, 0);
     }
 
