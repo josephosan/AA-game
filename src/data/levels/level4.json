@@ -1,13 +1,14 @@
 {
   "author": "Joseph",
   "levelName": "Big Bally",
-  "rotationSpeed": "1",
-  "numOfAllBalls": "12",
+  "rotationSpeed": "2",
+  "numOfAllBalls": "13",
   "numOfBallsToConnect": "10",
   "levelNumber": "4",
   "smallBallsColor":"#11111",
-  "middleware0": "DrawSmallBall 3 90 #000000 game",
-  "middleware1": "DrawSmallBall 3 270 #000000 game",
+  "middleware0": "DrawSmallBall 3 0 #000000 game",
+  "middleware1": "DrawSmallBall 3 120 #000000 game",
   "middleware2": "DrawBigBall 4 200 200 #000000 game",
-  "middleware3": "ChangeSpinningDirection 1 250"
+  "middleware3": "ChangeSpinningDirection 1 140",
+  "middleware4": "DrawSmallBall 3 240 #000000 game"
 }
