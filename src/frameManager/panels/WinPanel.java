@@ -23,7 +23,7 @@ public class WinPanel extends APanel {
     JLabel yourScore;
     int move = 5;
     ArrayList<JButton> buttons = new ArrayList<>();
-    private final String FINAL_TIME = middlewaremanager.getMiddlewareValue("levelEndTime");
+    private String FINAL_TIME = middlewaremanager.getMiddlewareValue("levelEndTime");
 
     public WinPanel(String id) {
         super(id);

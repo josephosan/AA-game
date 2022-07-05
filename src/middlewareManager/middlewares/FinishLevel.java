@@ -49,8 +49,8 @@ public class FinishLevel extends Middleware {
         }
         //stopping processes and showing finishLevel panel then removing self.
         else{
-             //pausing middlewares
             LevelTimer.updateTimeLabel.setText("0");
+            //pausing middlewares
             middlewareManager.setPausedMiddlewaresByGroup(groupId, true);
 
             if (Objects.equals(LEVEL_NUMBER, "10")) {
