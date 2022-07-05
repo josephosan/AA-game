@@ -114,8 +114,6 @@ public class WinPanel extends APanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         String currentUser = middlewaremanager.getMiddlewareValue("userName");
-        int currentLevel = Integer.parseInt(middlewaremanager.getMiddlewareValue("levelNumber"));
-        Map<String, String> profileInformation = AParser.run("profile/"+currentUser+"Profile.json");
-        g.drawString(profileInformation.get("level"+currentLevel)+" s", 230, 320);
+        g.drawString((Integer.parseInt(middlewaremanager.getMiddlewareValue("levelEndTime"))-2)+" s", 230, 320);
     }
 }
