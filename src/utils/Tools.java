@@ -33,4 +33,10 @@ public class Tools {
         return lastLevel;
     }
 
+    public static int generatRandomPositiveNegitiveValue(int max , int min) {
+        //Random rand = new Random();
+        int ii = -min + (int) (Math.random() * ((max - (-min)) + 1));
+        return ii;
+    }
+
 }
