@@ -3,7 +3,7 @@
     "levelName": "HAHAHA",
     "rotationSpeed": "2.5",
     "numOfAllBalls": "17",
-    "numOfBallsToConnect": "5",
+    "numOfBallsToConnect": "9",
     "levelNumber": "9",
     "smallBallsColor":"#000000",
     "middleware0": "DrawSmallBall 3 30 #000000 game",
