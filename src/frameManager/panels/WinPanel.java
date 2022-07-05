@@ -7,12 +7,14 @@ import middlewareManager.MiddlewareManager;
 import middlewareManager.middlewares.LevelTimer;
 import middlewareManager.middlewares.*;
 import utils.Tools;
+import utils.parser.AParser;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
+import java.util.Map;
 
 public class WinPanel extends APanel {
     MiddlewareManager middlewaremanager = Config.getMiddlewareManager();
@@ -23,7 +25,7 @@ public class WinPanel extends APanel {
     JLabel yourScore;
     int move = 5;
     ArrayList<JButton> buttons = new ArrayList<>();
-    private String FINAL_TIME = middlewaremanager.getMiddlewareValue("levelEndTime");
+
 
     public WinPanel(String id) {
         super(id);
@@ -35,8 +37,8 @@ public class WinPanel extends APanel {
 
         // adding score label:
         // TODO getting score from score calculator.
-        yourScore = new JLabel("Your time: " + FINAL_TIME);
-        yourScore.setFont(new Font("fuzzyBubbles", Font.ITALIC, 15));
+        yourScore = new JLabel("Your time: ");
+        yourScore.setFont(new Font("serif", Font.ITALIC, 15));
         yourScore.setBounds(150, 300, 300, 30);
 
         nextLevelButton = new JButton();
@@ -108,18 +110,12 @@ public class WinPanel extends APanel {
         setBackground(new Color(129, 163, 129, 255));
 
     }
-//    @Override
-//    public void paint(Graphics g) {
-//        super.paint(g);
-//        Graphics2D g2d = (Graphics2D)g;
-//
-//        g2d.setColor(Color.black);
-//        g2d.drawRoundRect(move+259, 399, 71, 71, 10, 10);
-//
-//        g2d.setColor(Color.black);
-//        g2d.drawRoundRect(move+159, 399, 71, 71, 10, 10);
-//
-//        g2d.setColor(Color.black);
-//        g2d.drawRoundRect(move+59, 399, 71, 71, 10, 10);
-//    }
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        String currentUser = middlewaremanager.getMiddlewareValue("userName");
+        int currentLevel = Integer.parseInt(middlewaremanager.getMiddlewareValue("levelNumber"));
+        Map<String, String> profileInformation = AParser.run("profile/"+currentUser+"Profile.json");
+        g.drawString(profileInformation.get("level"+currentLevel)+" s", 230, 320);
+    }
 }
