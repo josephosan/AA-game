@@ -4,7 +4,7 @@
   "rotationSpeed": "2.5",
   "numOfAllBalls": "13",
   "numOfBallsToConnect": "5",
-  "levelNumber": "7",
+  "levelNumber": "6",
   "smallBallsColor":"#000000",
   "middleware0": "DrawSmallBall 3 0 #c9b204 game",
   "middleware1": "DrawSmallBall 3 45 #edd418 game",
@@ -14,6 +14,5 @@
   "middleware5": "DrawSmallBall 3 225 #c9b204 game",
   "middleware6": "DrawSmallBall 3 270 #edd418 game",
   "middleware7": "DrawSmallBall 3 315 #c9b204 game",
-  "middleware8": "DrawBigBall 4 200 200 #bda80b game",
-  "middleware9": "ChangeSpinningDirection 1 600"
+  "middleware8": "DrawBigBall 4 200 200 #bda80b game"
 }
