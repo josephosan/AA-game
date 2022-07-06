@@ -16,7 +16,7 @@ public class Tools {
     }
     public static String chooseRandomSound(String[] soundsId){
         Random random = new Random(System.currentTimeMillis());
-        int randomNum = random.nextInt(50);
+        int randomNum = random.nextInt(5);
         if(randomNum<soundsId.length){
             return soundsId[randomNum];
         }
@@ -31,6 +31,12 @@ public class Tools {
                 lastLevel = i;
 
         return lastLevel;
+    }
+
+    public static int generatRandomPositiveNegitiveValue(int max , int min) {
+        //Random rand = new Random();
+        int ii = -min + (int) (Math.random() * ((max - (-min)) + 1));
+        return ii;
     }
 
 }

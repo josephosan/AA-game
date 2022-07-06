@@ -24,7 +24,7 @@ public class BornaMaker extends Middleware {
 
     public void run() {
         bigBall = (BigBall)elementManager.getElementById("bigBall");
-        bigBall.setBornaPosition(bigBall.getPosition().getX()+ generateNum(5, 0)-30,
+        bigBall.setOsPosition(bigBall.getPosition().getX()+ generateNum(5, 0)-30,
                 bigBall.getPosition().getY()+generateNum(5, 0)-30);
     }
 }

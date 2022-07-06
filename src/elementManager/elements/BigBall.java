@@ -14,11 +14,12 @@ import java.io.IOException;
 public class BigBall extends Element{
     public AaPosition aaPosition = new AaPosition();
     Color color;
-    int bornaXPos = 0;
-    int bornaYPos = 0;
-    int bornaXSize = 60;
-    int bornaYSize = 60;
-    private Image bornaImage;
+    int ostadXPos = 0;
+    int ostadYPos = 0;
+    int ostadXSize = 60;
+    int ostadYSize = 60;
+    private Image ostadImage;
+    private String osName;
 
     public BigBall(JPanel panel) {
         super(panel);
@@ -28,7 +29,7 @@ public class BigBall extends Element{
 
         // borna stuff:
         try {
-            bornaImage = ImageIO.read(new File("src/Icons/borna.jpg"));
+            ostadImage = ImageIO.read(new File("src/Icons/os.jpg"));
         } catch (ImagingOpException | IOException e) {
             e.printStackTrace();
         }
@@ -47,14 +48,14 @@ public class BigBall extends Element{
         this.color = c;
     }
 
-    public void setBornaPosition(int xPos, int yPos) {
-        this.bornaXPos = xPos;
-        this.bornaYPos = yPos;
+    public void setOsPosition(int xPos, int yPos) {
+        this.ostadXPos = xPos;
+        this.ostadYPos = yPos;
     }
 
-    public void setBornaSize(int xSize, int ySize) {
-        this.bornaXSize = xSize;
-        this.bornaYSize = ySize;
+    public void setOsSize(int xSize, int ySize) {
+        this.ostadXSize = xSize;
+        this.ostadYSize = ySize;
     }
 
 
@@ -67,8 +68,8 @@ public class BigBall extends Element{
             this.position.getY() - this.size.getHeight() / 2,
             this.size.getWidth(), 
             this.size.getHeight());
-        if (bornaXPos != 0 || bornaYPos != 0)
-            g2D.drawImage(bornaImage, bornaXPos, bornaYPos, bornaXSize, bornaYSize, null);
+        if (ostadXPos != 0 || ostadYPos != 0)
+            g2D.drawImage(ostadImage, ostadXPos, ostadYPos, ostadXSize, ostadYSize, null);
     }
 
     public Integer getR() {
