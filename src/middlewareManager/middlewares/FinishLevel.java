@@ -43,8 +43,9 @@ public class FinishLevel extends Middleware {
     public void run(){
 
         //creating an animation for when the game is finished.
-        if((Config.getLineLength())<(Config.getFrameHeight())) {
-            Config.setLineLength(Config.getLineLength()+5);
+        int lineLength = Integer.parseInt(this.getValue("levelLineLength"));
+        if((lineLength)<(Config.getFrameHeight())) {
+            this.setValue("levelLineLength", String.valueOf(lineLength + 5));
             LevelTimer.updateTimeLabel.setText("0");
         }
         //stopping processes and showing finishLevel panel then removing self.
