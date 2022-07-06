@@ -10,7 +10,7 @@ import utils.Tools;
 
 public class BallIsCloseEnough extends Middleware {
     private final Element shootingBall;
-    private final Integer normalConnectionDistance = Config.getLineLength();
+    private Integer normalConnectionDistance = Integer.valueOf(this.getValue("levelLineLength"));
     private final AaPosition mainCirclePosition = Config.getMainCirclePosition();
     private final MiddlewareManager middlewareManager = Config.getMiddlewareManager();
 
@@ -25,6 +25,7 @@ public class BallIsCloseEnough extends Middleware {
     }
 
     public boolean isBallCloseEnough(Element shootingBall) {
+        normalConnectionDistance = Integer.valueOf(this.getValue("levelLineLength"));
         double sBallDistanceFromMainCircle = Tools.getTwoPointDistance(
                 shootingBall.getPosition().getX(),
                 shootingBall.getPosition().getY(),
