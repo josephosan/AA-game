@@ -1,0 +1,2845 @@
+[33mcommit 82e0c61141d3b32840bea13fc9ffa79c30f284b9[m[33m ([m[1;36mHEAD -> [m[1;32mjoseph[m[33m)[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jul 6 18:12:34 2022 +0430
+
+    some changes
+
+[33mcommit ed993758f163453667bae702af25301a90f31aeb[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jul 6 13:27:12 2022 +0430
+
+    tp
+
+[33mcommit 0c7e07203b524b984b077bb979a98bb933ca4855[m
+Merge: eb370f3 84463a5
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jul 6 12:46:55 2022 +0430
+
+    Merge https://github.com/josephosan/AA-game into joseph
+
+[33mcommit 84463a5bab250165d9162237c06b47de120ae610[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: d39f55c 798b957
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Wed Jul 6 01:39:25 2022 +0430
+
+    Merge pull request #129 from duniyalr/master
+    
+    bug!
+
+[33mcommit 798b9578ad2516a579bb5ff737dfe3f0d840d5d6[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Wed Jul 6 01:38:59 2022 +0430
+
+    bug!
+
+[33mcommit d39f55c461bfefc20608be8a8580dd90810dcf25[m
+Merge: a648048 af3b48e
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Wed Jul 6 01:31:06 2022 +0430
+
+    Merge pull request #128 from duniyalr/master
+    
+    add new levels
+
+[33mcommit af3b48ec3a79adf16d362c38d584f3c776dde0bd[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Wed Jul 6 01:30:17 2022 +0430
+
+    add new levels
+
+[33mcommit eb370f31ae58a8c48099555997897b216d15d4de[m[33m ([m[1;31morigin/joseph[m[33m)[m
+Merge: 95a5610 a648048
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jul 5 23:13:05 2022 +0430
+
+    Merge https://github.com/josephosan/AA-game into joseph
+
+[33mcommit 95a56104b97dc59ee785ca942add8152159bff7d[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jul 5 23:12:39 2022 +0430
+
+    adding ossssssss
+
+[33mcommit a648048ed5ce4ab3401a70782f9e017091c8663d[m
+Merge: e0b3a77 87768bf
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Tue Jul 5 22:36:57 2022 +0430
+
+    Merge pull request #127 from josephosan/level2_6
+    
+    Fixed a typo
+
+[33mcommit e0b3a7754388fc6b315618d6d4915be4cab32ed5[m
+Merge: bc20fb3 fa1672f
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jul 5 22:35:58 2022 +0430
+
+    Merge pull request #126 from josephosan/joseph
+    
+    fixing delay in win Panel
+
+[33mcommit 87768bf525cb56bd20f64c37c4496d4fed396658[m[33m ([m[1;31morigin/level2_6[m[33m)[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Tue Jul 5 22:33:58 2022 +0430
+
+    Fixed a typo
+
+[33mcommit fa1672f27c4a8bfad3960db91e57620cd8afe230[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jul 5 22:33:55 2022 +0430
+
+    fixing delay in win Panel
+
+[33mcommit bc20fb3a4024995900cfaf6f7d279fc384f12e16[m
+Merge: e243438 9c0c09d
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jul 5 22:24:38 2022 +0430
+
+    Merge pull request #125 from josephosan/level2_6
+    
+    Level 2 and 6 done
+
+[33mcommit 9c0c09d4fa406a0a20d7f81fa32f458f75b6af52[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Tue Jul 5 22:21:16 2022 +0430
+
+    Level 2 and 6 done
+
+[33mcommit e243438c492a1c48ccf8a37cb533549e034e57af[m[33m ([m[1;32mmaster[m[33m)[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jul 5 16:45:39 2022 +0430
+
+    adding score to the win Panel
+
+[33mcommit a92728483275ec627bd30ef6731d1cbc1afb673f[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jul 5 13:30:48 2022 +0430
+
+    some changes on win panel
+
+[33mcommit 1b634efc914f8461ed94ad65bd4cd7a6029ffd54[m
+Merge: 2a9b88c 79b59fd
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jul 3 23:43:29 2022 +0430
+
+    Merge pull request #124 from josephosan/fix_autoshoot
+    
+    fixed a small problem in AutoShooter
+
+[33mcommit 2a9b88c7de4d2b8dca95de97ed723d27c3f75347[m
+Merge: 492f92d 58a6a14
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jul 3 23:43:19 2022 +0430
+
+    Merge pull request #123 from josephosan/fix_gameOver
+    
+    fixed winning and losing at the same time
+
+[33mcommit 492f92d03e5421e60f830ec66eb5fff8d7ff921a[m
+Merge: f67be4b 0a6163b
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jul 3 23:38:13 2022 +0430
+
+    Merge pull request #122 from josephosan/joseph
+    
+    Joseph
+
+[33mcommit 0a6163bbfe2815fedabc59df09cd1704720207a9[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jul 3 23:37:20 2022 +0430
+
+    desing menu panel
+
+[33mcommit 58a6a1415c0d1199f68cd9404eea037f9ae1f8d4[m[33m ([m[1;31morigin/fix_gameOver[m[33m)[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Sun Jul 3 23:36:13 2022 +0430
+
+    fixed winning and losing at the same time
+
+[33mcommit 03349508e99bc19af8fca010514bd5d04b43b0d8[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jul 3 23:35:47 2022 +0430
+
+    desining menu panel
+
+[33mcommit 8fbf57bceda95a1846bcea5b73ce35560c70417c[m
+Merge: 6f7d491 f67be4b
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jul 3 22:45:27 2022 +0430
+
+    Merge https://github.com/josephosan/AA-game into joseph
+
+[33mcommit 6f7d4912bd67cd1740a918a35594785e275837de[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jul 3 22:45:17 2022 +0430
+
+    making win panel a little bit better
+
+[33mcommit f67be4b38d99e58d69f752a0896e9f3bf974f7e8[m
+Merge: e0d79d7 d8a423a
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jul 3 22:44:30 2022 +0430
+
+    Merge pull request #120 from josephosan/test3
+    
+    add bunch of stuff to help with Animated Rotation even though it does…
+
+[33mcommit 069fb93a986d6798c18e7fe98517aa1435940c53[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jul 3 21:54:00 2022 +0430
+
+    fixing bug
+
+[33mcommit 6591f63ffbff2c83804266084f5acc66733b68de[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jul 3 21:53:13 2022 +0430
+
+    josephProfile
+
+[33mcommit d8a423ae0ec1084f24ba0a994004f9b2adeff092[m[33m ([m[1;31morigin/test3[m[33m)[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Sun Jul 3 18:03:58 2022 +0430
+
+    add bunch of stuff to help with Animated Rotation even though it doesn't work NOW. fix level 8 and 9
+
+[33mcommit 79b59fd12d31ebb28a5493215828cdcb8de0cb97[m[33m ([m[1;31morigin/fix_autoshoot[m[33m)[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Sun Jul 3 17:47:16 2022 +0430
+
+    fixed a small problem in AutoShooter
+
+[33mcommit e0d79d7ee2545ce87d7d23db06cc6ce1ad618624[m
+Merge: 28b43a5 e1376e5
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jul 3 16:52:03 2022 +0430
+
+    Merge pull request #119 from josephosan/joseph
+    
+    fixing level10 exeption
+
+[33mcommit e1376e5d73e39718f3ada170218351652eb54518[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jul 3 16:51:14 2022 +0430
+
+    fixing level10 exeption
+
+[33mcommit 28b43a52e6b867d4f5fdc3fdbf720d210af4f8cb[m
+Merge: 056a72d 05d8729
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jul 3 16:40:35 2022 +0430
+
+    Merge pull request #118 from josephosan/joseph
+    
+    fixing time and adding time to profile
+
+[33mcommit 05d8729f3caab51774e970aa0bc97eb43d33e3b0[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jul 3 16:38:18 2022 +0430
+
+    level 6 added
+    time label stops when the game finishes
+    saving time in profile
+
+[33mcommit 056a72d11a56d900cb2c348b3abd8c075a6cf5c8[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jul 3 16:25:07 2022 +0430
+
+    Update README.md
+
+[33mcommit 8751d10ac33a2e65b4529a9bb9b26e0d4849dcba[m
+Merge: 104ccc7 ed97fcb
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jul 3 16:11:03 2022 +0430
+
+    Merge https://github.com/josephosan/AA-game into joseph
+
+[33mcommit 104ccc74e1c58f8745232242ab75215dc1786ab1[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jul 3 16:10:56 2022 +0430
+
+    some changes in levels
+
+[33mcommit ed97fcb0f71e74cfe6b974ac48941211b8e9435c[m
+Merge: d77a716 f1a5cb5
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jul 3 16:09:37 2022 +0430
+
+    Merge pull request #117 from josephosan/test3
+    
+    add level7.json . fix arguments in some levels. remove scoreButton fr…
+
+[33mcommit f1a5cb5e4ba4848af2fd8613307dbeb76b01749d[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Sun Jul 3 13:22:53 2022 +0430
+
+    add level7.json . fix arguments in some levels. remove scoreButton from menu
+
+[33mcommit d77a716d332be8c0d124b824d5396e37729398e1[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jul 3 11:10:50 2022 +0430
+
+    added next button
+
+[33mcommit b373060ce8e3e27b7036db68be089fe67311d7c9[m
+Merge: b2321f0 0baeb0e
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Sun Jul 3 02:14:06 2022 +0430
+
+    Merge pull request #116 from duniyalr/master
+    
+    add ChangeSpinningDirectionOnShootBall
+
+[33mcommit 0baeb0e5874d1a23921606005bc3676393cbfc2a[m
+Merge: 103f77d b2321f0
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Sun Jul 3 02:13:39 2022 +0430
+
+    Merge branch 'josephosan:master' into master
+
+[33mcommit 103f77d1ea17e6b23fdccdc26f48ad5cac349529[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Sun Jul 3 02:13:16 2022 +0430
+
+    add ChangeSpinningDirectionOnShootBall
+
+[33mcommit b2321f0a8ff6ab98ddcd3dc36beba1c37518ded4[m
+Merge: b8d41d8 ee59fc1b
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Sun Jul 3 01:51:10 2022 +0430
+
+    Merge pull request #115 from duniyalr/master
+    
+    add levelSpinningDirection key and middleware for changing it
+
+[33mcommit ee59fc1bde2979e0399541dc710df1e00cbc0bad[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Sun Jul 3 01:49:36 2022 +0430
+
+    add levelSpinningDirection key and middleware for changing it
+
+[33mcommit b8d41d8033ed77d3af015d2503a547f131f3f173[m
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Sun Jul 3 01:35:27 2022 +0430
+
+    Update README.md
+
+[33mcommit 91a41416e55421e9620e5e26ed2df9f4421c69e1[m
+Merge: 7d234a1 4251490
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Sun Jul 3 01:22:37 2022 +0430
+
+    Merge pull request #114 from duniyalr/master
+    
+    some bug fix in transitionPanels and add sounds
+
+[33mcommit 425149019795e3b9419f8909efd6d0667aa879ed[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Sun Jul 3 01:20:52 2022 +0430
+
+    some bug fix in transitionPanels and add sounds
+
+[33mcommit 7d234a1240ca9173ea07d275c33c23b05f916ccb[m
+Merge: 53d9051 bf8209c
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jul 2 23:18:13 2022 +0430
+
+    Merge pull request #112 from josephosan/buttonColor
+    
+    fix bug in regards to the color of the buttons in GamePanel
+
+[33mcommit bf8209c3320ab3fa333a696ed037a1b99e8e2440[m[33m ([m[1;31morigin/buttonColor[m[33m)[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Sat Jul 2 23:16:34 2022 +0430
+
+    fix bug in regards to the color of the buttons in GamePanel
+
+[33mcommit 53d9051de5419f774de1e68f0433115bdecfe8bf[m[33m ([m[1;33mtag: alpha[m[33m)[m
+Merge: 247adcd c6b8dde
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Sat Jul 2 13:36:53 2022 +0430
+
+    Merge pull request #105 from duniyalr/master
+    
+    fix retry bug
+
+[33mcommit c6b8dded707aaa616c699a5efc1bcd2723af641e[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Sat Jul 2 13:33:16 2022 +0430
+
+    fix retry bug
+
+[33mcommit e2605ef5227d2dcf89472fd516fa77b95804c08f[m
+Merge: 5966252 247adcd
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Fri Jul 1 23:44:49 2022 +0430
+
+    Merge branch 'josephosan:master' into master
+
+[33mcommit 247adcd3a86560404bc639920726764c10e7c576[m
+Merge: 82a689f 701c7bf
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Fri Jul 1 23:20:28 2022 +0430
+
+    Merge pull request #104 from josephosan/elements-join-problem
+    
+    Elements join problem
+
+[33mcommit 82a689f553b6832ce3bac87ba7438895cd7e08ef[m
+Merge: e3b6cba 31fff75
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Fri Jul 1 23:20:13 2022 +0430
+
+    Merge pull request #103 from josephosan/77-wrong-impact-detection
+    
+    77 wrong impact detection
+
+[33mcommit e3b6cbaeb54e51c89dbc2e5c43b0704cffedd84f[m
+Merge: e34b5d2 d1ec7dd
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Fri Jul 1 20:46:59 2022 +0430
+
+    Merge pull request #102 from josephosan/div
+    
+    solving the problem with AaWriter
+
+[33mcommit d1ec7dd884cf3699db0288918aa8a2332d8e4f20[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Fri Jul 1 18:30:32 2022 +0430
+
+    AaWriter problem soleved and it
+    can be used for entering new User
+
+[33mcommit 085a756728939bd798e0ca5987936fa6475a1286[m
+Merge: 78782af e34b5d2
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Fri Jul 1 17:10:40 2022 +0430
+
+    Merge https://github.com/josephosan/AA-game into div
+
+[33mcommit 78782af19bed1de7528297c7d407637eba46f34d[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Fri Jul 1 17:10:29 2022 +0430
+
+    from now on after finishing level
+    some information will be written to the users Profile
+
+[33mcommit e34b5d2af9b0293e2870375d0d7e93435c6288f1[m
+Merge: cd9129c f4f5833
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Fri Jul 1 17:08:58 2022 +0430
+
+    Merge pull request #101 from MahbodGhadiri/fix-paintOrder
+    
+    Resolved paintOrder problem in game panel.
+
+[33mcommit f4f5833b3bade309e0b78cd76192e28cc1558ba3[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Fri Jul 1 16:34:29 2022 +0430
+
+    Resolved paintOrder problem in game panel.
+
+[33mcommit 701c7bf8f8203bc19a793011cc11c2a21ae7c9f6[m
+Merge: cd9129c b5516ef
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Fri Jul 1 14:59:13 2022 +0430
+
+    Merge pull request #100 from MahbodGhadiri/element_join_problem
+    
+    all elements are now joining group using ".join()"
+
+[33mcommit b5516eff00e9eae0a589d9a12afcaca3b8f5644e[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Fri Jul 1 14:56:58 2022 +0430
+
+    all elements are now joining group using ".join()"
+
+[33mcommit 31fff75adcdd591faef0e0c772835af583cca7e8[m
+Merge: cd9129c d95b930
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Fri Jul 1 14:26:10 2022 +0430
+
+    Merge pull request #99 from MahbodGhadiri/CheckImpactBug
+    
+    CheckImpact and AutoShooter bug resolved.
+
+[33mcommit d95b930d7f2ec655f4a509630845e125ea700a9a[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Fri Jul 1 14:19:34 2022 +0430
+
+    CheckImpact and AutoShooter bug resolved.
+
+[33mcommit 596625268469e54e90d229e869d80d98b67d8468[m
+Merge: b9f4f98 cd9129c
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Fri Jul 1 12:48:29 2022 +0430
+
+    Merge branch 'josephosan:master' into master
+
+[33mcommit cd9129c55935fca45f39705cc4d54970ea6e522e[m
+Merge: e39e84e 66490dd
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Fri Jul 1 11:11:46 2022 +0430
+
+    Merge pull request #98 from josephosan/div
+    
+    adding level information to the userNameProfile.json file
+
+[33mcommit 66490dd4d77a746ac4425ad300ef708c7d502029[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 30 23:35:08 2022 +0430
+
+    adding level information to the userNameProfile.json file
+
+[33mcommit e39e84e55d3afbe5c80c7e0a62606e9b02d24f90[m
+Merge: 27efe6c 4d3abfb
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 30 22:45:54 2022 +0430
+
+    Merge pull request #97 from josephosan/div
+    
+    level 1, 3 bugs resolved
+
+[33mcommit 4d3abfb1e27ac07ab5d8582386109ab2d4de1d85[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 30 22:45:12 2022 +0430
+
+    level 1, 3 bugs resolved
+
+[33mcommit 27efe6c20a040b97ffda2c67cf4df555ea1aa46a[m
+Merge: bf113b4 7291d10
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 30 22:42:05 2022 +0430
+
+    Merge pull request #96 from josephosan/div
+    
+    resolving bug
+
+[33mcommit 7291d108da91157c72531136faa4799f0eaf9155[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 30 22:40:59 2022 +0430
+
+    resolving bug
+
+[33mcommit bf113b452841b56e4e0e648c7ed21da001dfadb1[m
+Merge: 2e636f5 a39c37d
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Thu Jun 30 22:34:17 2022 +0430
+
+    Merge pull request #94 from MahbodGhadiri/master
+    
+    Solved a problem: small ball position being null
+
+[33mcommit 2e636f5e6cfc7ce77fc74fe59a66f2baad2c4ca4[m
+Merge: 93e9970 024afa9
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 30 22:32:47 2022 +0430
+
+    Merge pull request #95 from josephosan/div
+    
+    Div
+
+[33mcommit 024afa9aa39f69e28bd47f352f69c8393a1a3acc[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 30 22:32:10 2022 +0430
+
+    one rid par mond 2 ta
+
+[33mcommit a39c37d8ac60896210b197fefdc7eb1cb6765e0e[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Thu Jun 30 22:29:40 2022 +0430
+
+    Solved a problem: small ball position being null
+
+[33mcommit 0d1434b7a110a538d4b6c99aeca401a6baf57968[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 30 22:29:23 2022 +0430
+
+    ridam tosh (az duniyal)
+
+[33mcommit b9f4f989e8bf674c7dc5b9e970fe2d64fb9596f4[m
+Merge: a3b8a16 93e9970
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Thu Jun 30 22:18:59 2022 +0430
+
+    Merge pull request #5 from josephosan/master
+    
+    g
+
+[33mcommit 93e9970737d52e99f0290f0b7a0a7d2bcbc421e0[m
+Merge: f366214 f5748e0
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 30 22:15:35 2022 +0430
+
+    Merge pull request #91 from josephosan/div
+    
+    some changes and refactoring AaWriter
+
+[33mcommit f5748e0c6ce8a6352a8db2dd5fecf486f0aa5260[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 30 22:15:02 2022 +0430
+
+    resolving mahbod reviews
+
+[33mcommit 50eefe22914d7d5eba4f57b0b8dd19d510c18211[m
+Merge: 4547ecf f366214
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 30 22:03:58 2022 +0430
+
+    resolving conflict
+
+[33mcommit 4547ecf6328f177e2bd41d5d3daa354d8935ce08[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 30 22:02:16 2022 +0430
+
+    adding sound to level Buttons (not complited)
+
+[33mcommit a3b8a16acf38af188397024bd29912b8c2c5688b[m
+Merge: 932b337 f366214
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Thu Jun 30 21:47:21 2022 +0430
+
+    Merge pull request #4 from josephosan/master
+    
+    from josheph
+
+[33mcommit f366214b447a30068ce535a18a2fff584d09fad6[m
+Merge: e1051d8 a2bf21e
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Thu Jun 30 17:35:52 2022 +0430
+
+    Merge pull request #93 from MahbodGhadiri/master
+    
+    Improvments to SmallBalls, lines and GameOver.
+
+[33mcommit a2bf21eab7188b01bc93b3d34dc4e7740cc9c57b[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Thu Jun 30 15:36:55 2022 +0430
+
+    Better handling of lines + sound for GameOver
+
+[33mcommit 67babddcec2b265602b0e26413610e03e81ca367[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Thu Jun 30 12:46:58 2022 +0430
+
+    small balls with number
+
+[33mcommit 2b705d21fd7b80cc026809dfeb8f02ae728c6b14[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 30 11:59:26 2022 +0430
+
+    some changes and refactoring AaWriter
+
+[33mcommit 932b3376faa20aaff7415d2a313f6c939c80bf98[m
+Merge: 182f64c e1051d8
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Thu Jun 30 11:52:22 2022 +0430
+
+    Merge pull request #3 from josephosan/master
+    
+    Merge pull request #82 from duniyalr/master
+
+[33mcommit e1051d839ba37406f54715d4f446da0ec5c3357f[m
+Merge: 2f22985 d235ca1
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 29 21:02:38 2022 +0430
+
+    Merge pull request #89 from josephosan/test1
+    
+    Test1
+
+[33mcommit d235ca1f25a58359fb09d254003ab7095a0759a4[m
+Merge: 4206de7 49c98ce
+Author: Arman <rostamborne@gmail.com>
+Date:   Wed Jun 29 20:52:35 2022 +0430
+
+    Merge branch 'test1' of https://github.com/josephosan/AA-game into test1
+
+[33mcommit 4206de7fe7488413c002fd7b5bd378f3628bc11f[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Wed Jun 29 20:51:03 2022 +0430
+
+    delete a test code in aa.java
+
+[33mcommit 49c98ce0001bea5679436233df157f3f8ce0d32c[m
+Merge: e88ae40 f2cc184
+Author: Arman <rostamborne@gmail.com>
+Date:   Wed Jun 29 20:36:00 2022 +0430
+
+    conflict fix
+
+[33mcommit e88ae40cb3d6bbd513eeb1125d7d2995a20006bb[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Wed Jun 29 20:30:15 2022 +0430
+
+    add Pause middleware. add level0 for main menu. fix some bugs and issues about panels and loading levels. add new constructor to RepaintPanelElements.java to accept String argument
+
+[33mcommit 2f22985647aa6167ebb32f730768ccbb12081dc7[m
+Merge: 9477c4e c7b9880
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Wed Jun 29 19:34:29 2022 +0430
+
+    Merge pull request #87 from MahbodGhadiri/master
+    
+    groups for elements and middlewares (panel name)
+
+[33mcommit c7b98801f71d258e71c83532f8857e6bff0450d8[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Wed Jun 29 18:35:09 2022 +0430
+
+    groups for elements and middlewares (panel name)
+
+[33mcommit 9477c4ec395e7cb16e34563ff1c1ea14a831cf8d[m
+Merge: 4421e3e c1f3be6
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Wed Jun 29 16:59:44 2022 +0430
+
+    Merge pull request #86 from MahbodGhadiri/master
+    
+    Minor improvements on middlewares and addition of AutoShooter
+
+[33mcommit c1f3be60827f38c8aee92fb1bf6976043c0036ce[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Wed Jun 29 16:57:02 2022 +0430
+
+    Update to README
+
+[33mcommit 8db5b60e853020c4803be13ee061b9b99ff14148[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Wed Jun 29 16:46:41 2022 +0430
+
+    Minor improvments to rotation and GameOver.
+
+[33mcommit 7c3f78050137a095eaf3400c983536b971b8cddc[m
+Merge: 8121e0f 8466f78
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Wed Jun 29 16:10:21 2022 +0430
+
+    Merge pull request #1 from josephosan/solve_conflict
+    
+    Sync
+
+[33mcommit 8466f7819bd24f214c38101c5ccbf8fb7391a7ec[m[33m ([m[1;31morigin/solve_conflict[m[33m)[m
+Merge: 4421e3e 8121e0f
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Wed Jun 29 16:10:09 2022 +0430
+
+    Merge branch 'master' into solve_conflict
+
+[33mcommit 4421e3eef85b0f718cc059b89b579edcb475ba83[m
+Merge: 052fe66 9841925
+Author: danial azimi <93203936+danilazm@users.noreply.github.com>
+Date:   Wed Jun 29 15:52:04 2022 +0430
+
+    Merge pull request #85 from danilazm/master
+    
+    convert to wav
+
+[33mcommit 984192585e268ff24d92bca12a99b626a4ebd501[m
+Merge: 3781461 052fe66
+Author: danial <danmy7799@gmail.com>
+Date:   Wed Jun 29 15:50:20 2022 +0430
+
+    Merge branch 'master' of https://github.com/danilazm/AA-game
+
+[33mcommit 3781461cf32dd0e690640699803bef7904bf89b0[m
+Author: danial <danmy7799@gmail.com>
+Date:   Wed Jun 29 15:49:51 2022 +0430
+
+    convert to wav
+
+[33mcommit 052fe6614e83c301c28e8ba4c8ad7166341d88fb[m
+Merge: 46d5c63 c91a96d
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 29 15:47:25 2022 +0430
+
+    Merge pull request #80 from josephosan/div
+    
+    added win panel
+
+[33mcommit c91a96d15d1d8011002c174e0ebd7c7285585681[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 29 15:47:01 2022 +0430
+
+    testing some issues and reverting back changers
+
+[33mcommit 950a05a39166aac7b2f52695a552eac777ff415d[m
+Merge: d2b37ec 46d5c63
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 29 15:36:55 2022 +0430
+
+    resolving conflict
+
+[33mcommit d2b37eceb5e17ee77cd498254dc478873e2053b1[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 29 15:35:17 2022 +0430
+
+    testing shooting balls
+
+[33mcommit 46d5c634b7a686d707b75d2e36b60b8fa2d1ef48[m
+Merge: bce6a01 84e8adc
+Author: danial azimi <93203936+danilazm@users.noreply.github.com>
+Date:   Wed Jun 29 15:32:30 2022 +0430
+
+    Merge pull request #84 from danilazm/master
+    
+    add some sound
+
+[33mcommit 84e8adc5149893d3c3f2b81e121fab4f0c8b6213[m
+Author: danial <danmy7799@gmail.com>
+Date:   Wed Jun 29 15:30:57 2022 +0430
+
+    add some sound
+
+[33mcommit bce6a018ea522cb49b0669f08a65328e913d8430[m
+Merge: 7cdecf8 182f64c
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Wed Jun 29 15:26:33 2022 +0430
+
+    Merge pull request #83 from duniyalr/master
+    
+    add setPausedMiddlewareById
+
+[33mcommit 182f64ca063819ac44cf3a006943887a14c9be73[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Wed Jun 29 15:26:05 2022 +0430
+
+    add setPausedMiddlewareById
+
+[33mcommit 7cdecf812ed30a40fa4eb7bc6c0fa524865ad578[m
+Merge: 29d6f63 9ed3890
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Wed Jun 29 15:19:34 2022 +0430
+
+    Merge pull request #82 from duniyalr/master
+    
+    add soundManager
+
+[33mcommit 9ed38902446151e9dd073880c28204dfdcefd55e[m
+Merge: f85b8ff 29d6f63
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Wed Jun 29 15:19:26 2022 +0430
+
+    Merge branch 'master' into master
+
+[33mcommit 29d6f63cd050786402608efb285635ae9826c0c1[m
+Merge: f6ee10c 26a16f7
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Wed Jun 29 15:13:14 2022 +0430
+
+    Merge pull request #81 from danilazm/master
+    
+    'add LevelTimer and timer to GamePanel'
+
+[33mcommit f6ee10cb9d67c75046354a97c7214e891ce97457[m
+Author: danial azimi <93203936+danilazm@users.noreply.github.com>
+Date:   Wed Jun 29 15:11:06 2022 +0430
+
+    Update README.md
+
+[33mcommit f85b8ffa94cedb64d48b75e9a71fe0773b5e1d42[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Wed Jun 29 15:10:29 2022 +0430
+
+    add soundManager
+
+[33mcommit 26a16f7bab28c19792b82533eb76d1f46f436e36[m
+Author: danial <danmy7799@gmail.com>
+Date:   Wed Jun 29 15:09:41 2022 +0430
+
+    set value in levelTimer init
+
+[33mcommit 369a20c21e57625092d66e48332e43891b3196f3[m
+Author: danial <danmy7799@gmail.com>
+Date:   Wed Jun 29 15:02:15 2022 +0430
+
+    add LevelTimer and timer to GamePanel
+
+[33mcommit f2cc1840a4b09f735eb8b009ed748fac6007cbda[m
+Merge: 827e97b 9fd76d1
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Wed Jun 29 14:45:22 2022 +0430
+
+    Merge pull request #79 from MahbodGhadiri/bug0
+    
+    setPaintOrder bug
+
+[33mcommit b08bf1a512c849b6a6c7c19b752a21fe69cc80e7[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 29 14:45:09 2022 +0430
+
+    added win panel
+
+[33mcommit 9fd76d192d4052619ca23340895edd7d4a21b3ac[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Wed Jun 29 14:40:09 2022 +0430
+
+    setPaintOrderBug
+
+[33mcommit bfe4590bff3072653a6e322db153e8daa35a0509[m
+Merge: fa58575 967fbb2
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 29 13:29:57 2022 +0430
+
+    conflict
+
+[33mcommit fa58575ffb52553a8468510bbcf7ad7dff5536ba[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 29 13:03:23 2022 +0430
+
+    small changes on MenuPanle
+
+[33mcommit 9f706ad2e80646f483670d2f42ea92a629198576[m
+Merge: 8cb04d4 967fbb2
+Author: danial <danmy7799@gmail.com>
+Date:   Wed Jun 29 12:11:24 2022 +0430
+
+    Merge branch 'master' of https://github.com/danilazm/AA-game
+
+[33mcommit 967fbb24ab324b2511283f3a786febe0945424aa[m
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Wed Jun 29 12:05:21 2022 +0430
+
+    Update README.md
+    
+    add levelNumber to keys
+
+[33mcommit 8121e0f85bee0180ed5faef5ed8a16f31cd63176[m
+Merge: 31b7c82 f21827b
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Wed Jun 29 12:04:52 2022 +0430
+
+    Merge branch 'josephosan:master' into master
+
+[33mcommit 31b7c82aeec9cac3d1196b46d9e186a694914501[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Wed Jun 29 12:04:18 2022 +0430
+
+    added AutoShooter
+
+[33mcommit f21827bb059a441e38898c5f897762fdc75c1c54[m
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Wed Jun 29 12:03:21 2022 +0430
+
+    Update README.md
+    
+    add setMiddlewareValues keys
+
+[33mcommit d4f6c99ebecf27bff9551f4cd4015862b9f1cd58[m
+Merge: 480484c 3c15bcf
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Wed Jun 29 11:41:55 2022 +0430
+
+    Merge pull request #75 from duniyalr/master
+    
+    add clearLevelMiddleware
+
+[33mcommit 3c15bcf64acb1ddf4220c0f86536eb4ac4d6e60b[m
+Merge: 47dc90b 480484c
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Wed Jun 29 11:41:26 2022 +0430
+
+    Merge branch 'josephosan:master' into master
+
+[33mcommit 47dc90b4d76203a24717e0226d6572893dc9ce05[m
+Merge: 7c62f39 9ddb7ea
+Author: duniyal <duniyalr@gmail.com>
+Date:   Wed Jun 29 11:40:44 2022 +0430
+
+    Merge branch 'master' of github.com:duniyalr/AA-game
+
+[33mcommit 7c62f399cbabeb0d26c08c26ad64372008ebbd1b[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Wed Jun 29 11:40:20 2022 +0430
+
+    add clearLevel middleware
+
+[33mcommit 480484cb6826465ab1abd8e98b83d26859dda5a6[m
+Merge: d47dbb6 9ddb7ea
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Wed Jun 29 11:02:19 2022 +0430
+
+    Merge pull request #74 from duniyalr/master
+    
+    add elementsPaintOrder and removeElementsByGroup
+
+[33mcommit 9ddb7eac22f5f57f03e38676b01d6e5cb270c0ac[m
+Merge: c212065 d47dbb6
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Wed Jun 29 11:01:39 2022 +0430
+
+    Merge branch 'josephosan:master' into master
+
+[33mcommit c2120654c84fdb10148f52b6598c53c99d9bb000[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Wed Jun 29 11:01:14 2022 +0430
+
+    add removeElementsByGroup
+
+[33mcommit d47dbb62233e39e6f2b19512af3ae03abffc5419[m
+Merge: 673f89b 2d9faea
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 29 10:48:28 2022 +0430
+
+    Merge pull request #73 from MahbodGhadiri/master
+    
+    GameOver panel added.
+
+[33mcommit 2d06d00e38c664a6a0cbdca493a8dec0cbb928b2[m
+Merge: cd89935 dba9f2e
+Author: duniyal <duniyalr@gmail.com>
+Date:   Wed Jun 29 10:46:56 2022 +0430
+
+    resolve conflicts
+
+[33mcommit 8cb04d45ea5c8d1e4fe6c336de7996cb199a128b[m
+Author: danial <danmy7799@gmail.com>
+Date:   Wed Jun 29 10:44:40 2022 +0430
+
+    add hintButton
+
+[33mcommit cd89935a2f75b9c720c166cc47f7b0532fe0b026[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Wed Jun 29 10:42:03 2022 +0430
+
+    resolve conflicts
+
+[33mcommit 14c60a8ff2b9a5cc4a3b24b96271e5772e3786c8[m
+Merge: 653dee8 673f89b
+Author: duniyal <duniyalr@gmail.com>
+Date:   Wed Jun 29 10:41:07 2022 +0430
+
+    resolve confilcts
+
+[33mcommit 2d9faea7673af0daea36e094d0eb43702a033f20[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Wed Jun 29 09:17:03 2022 +0430
+
+    GameOver panel added.
+
+[33mcommit 673f89b7d60bd045dbf801ea8cb757d786fb7de8[m
+Merge: c328221 817829d
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Tue Jun 28 19:17:05 2022 +0430
+
+    Merge pull request #72 from MahbodGhadiri/master
+    
+    Minor Bug fixes
+
+[33mcommit 817829dd086cdcf9b15370b1955d2c38b091e26d[m
+Merge: 2c0bb87 c328221
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Tue Jun 28 17:46:25 2022 +0430
+
+    Merge branch 'josephosan:master' into master
+
+[33mcommit 2c0bb87bf6916a0f1167b4859407af35495226b0[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Tue Jun 28 17:45:15 2022 +0430
+
+    Minor Bug fixes.
+
+[33mcommit c328221dcd0326273fe7214b1025dddd34398382[m
+Merge: f1248cb 0eab133
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 28 16:39:54 2022 +0430
+
+    Merge pull request #71 from MahbodGhadiri/master
+    
+    fixed some minor bugs in middlewares.
+
+[33mcommit 0eab1339e00d51f6b1cc31f9c1d66f36a2a1eecd[m
+Merge: de0ae02 f1248cb
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Tue Jun 28 13:58:30 2022 +0430
+
+    Merge branch 'master' of github.com:MahbodGhadiri/AA-game
+
+[33mcommit de0ae029e368d7183eb200994e684b8a75d66d8f[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Tue Jun 28 13:56:47 2022 +0430
+
+    Fixed ReloadshootingBall and other minor bugs.
+
+[33mcommit 2ad7f290b9694943580b7182288172f1ef450dac[m
+Merge: 9b8c662 f1248cb
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 28 13:07:51 2022 +0430
+
+    Merge https://github.com/josephosan/AA-game into div
+
+[33mcommit 9b8c662fbba0d78ef543114af5302e4cbeb59fee[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 28 13:07:38 2022 +0430
+
+    some small changes
+
+[33mcommit f1248cb2a1819ef22494e824b4a6fcc0931d541d[m
+Merge: fd1161d 827e97b
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 28 13:04:42 2022 +0430
+
+    Merge pull request #70 from josephosan/test1
+    
+    fix level1.json  fix gamePanel.java button . add LoadGame based on le…
+
+[33mcommit 827e97b1ed87a9abda8b464dd6574869e0f8492a[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Tue Jun 28 13:02:15 2022 +0430
+
+    fix level1.json  fix gamePanel.java button . add LoadGame based on level to LevelPanel. add  setValue  currentLevel
+
+[33mcommit 1a4da11469126e015461360ebf6549be26b8edc4[m
+Merge: 3c03cab fd1161d
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 28 11:00:43 2022 +0430
+
+    Merge https://github.com/josephosan/AA-game into div
+
+[33mcommit 3c03cab698b31274baf2a73c1c6fa8b4bf7d202a[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 28 10:58:53 2022 +0430
+
+    adding win panel
+
+[33mcommit fd1161d57454139e5312b06137e6cf6c43bc7d29[m
+Merge: 5d6d795 9a531d0
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 28 10:57:59 2022 +0430
+
+    Merge pull request #69 from MahbodGhadiri/master
+    
+    Fixed repaint problem
+
+[33mcommit 9a531d03b1b15d879514662c36dbff1958fadb77[m
+Merge: 013e983 5d6d795
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 28 10:57:16 2022 +0430
+
+    Merge branch 'master' into master
+
+[33mcommit 013e983ad590ca18d0cad4949c9d5e8ede2e8a6e[m
+Merge: 7d70aea c272ae2
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Tue Jun 28 10:45:29 2022 +0430
+
+    Merge branch 'master' of github.com:MahbodGhadiri/AA-game
+
+[33mcommit 5d6d7954411a80bf6bfd7b957c1a837996796845[m
+Merge: d67abe9 a310ea0
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Tue Jun 28 10:45:06 2022 +0430
+
+    Merge pull request #68 from josephosan/div
+    
+    resolving conflict and modifying parser
+
+[33mcommit 7d70aea49690247a608ae7501625504602b671ef[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Tue Jun 28 10:44:48 2022 +0430
+
+    Lot of changes
+
+[33mcommit a310ea03056dcf6ec795b13b8de71fc5116267bf[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 28 10:30:34 2022 +0430
+
+    prventing conflict
+
+[33mcommit 1fafe0bc656a04deeae3d437d950a8431367f422[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 28 10:09:40 2022 +0430
+
+    adding file name to writer:
+    this will make your lives easier;
+    with every login, the name of user will be written to
+    a new file(if not exists
+
+[33mcommit 291911cf52876008377390d6839e75eb65ecf305[m
+Merge: a7a53ab d67abe9
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 28 09:54:49 2022 +0430
+
+    resolving conflict and modifying parser
+
+[33mcommit a7a53ab8c60918bf2d36ca19c549b37671de02f3[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 28 09:36:01 2022 +0430
+
+    resolving conflict
+
+[33mcommit 3e0d8842e7aea872716d17ea746e678587d2ac4b[m
+Merge: ffe6c68 7bc37a2
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 28 09:29:37 2022 +0430
+
+    conflict
+
+[33mcommit ffe6c6889a775f72acc183e5f8cf974c340b8a17[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 28 09:24:30 2022 +0430
+
+    some more changes on writer.java
+
+[33mcommit d67abe9dbe00e3da48dd91450c0b52f21b11a4bb[m
+Merge: 432b62f c272ae2
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 28 09:20:58 2022 +0430
+
+    Merge pull request #67 from MahbodGhadiri/master
+    
+    some finishing touches to middlewares. :slightly_smiling_face:
+
+[33mcommit 432b62f51341b1b54cd70f8fff48102311d28900[m
+Merge: 8ace394 7bc37a2
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 28 09:20:25 2022 +0430
+
+    Merge pull request #61 from josephosan/div
+    
+    parser
+
+[33mcommit 7bc37a2c8e2a88936495b8df0e02bf47108b4608[m
+Merge: 417d16b 8ace394
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 28 09:20:09 2022 +0430
+
+    Merge branch 'master' into div
+
+[33mcommit c272ae2e143ef8491c092b74dde81da99d71634e[m
+Merge: 2266a95 8ace394
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Tue Jun 28 00:34:56 2022 +0430
+
+    Merge branch 'josephosan:master' into master
+
+[33mcommit 2266a9560f39ad09bd0f64934b7b3bec5fb93015[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Tue Jun 28 00:34:13 2022 +0430
+
+    Fixed some typos, improved some middlewares
+
+[33mcommit 7756ab2687d43057e95f782f7baf0e952e1b9b32[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Tue Jun 28 00:20:55 2022 +0430
+
+    Added CheckRemainigBalls
+
+[33mcommit 2b453c76b9a25468ab184aab7faf7e55b72d81f9[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Tue Jun 28 00:20:29 2022 +0430
+
+    Added ReloadShootingBall
+
+[33mcommit 8ace394ed338626fd1ef43e59ce190d918e881f0[m
+Merge: 913b648 130a271
+Author: Rostamborn <63729645+Rostamborne@users.noreply.github.com>
+Date:   Mon Jun 27 22:42:29 2022 +0430
+
+    Merge pull request #66 from MahbodGhadiri/master
+    
+    Level 2 update
+
+[33mcommit 130a2716393adacd0c4ea5f65dd826eee1c8c95d[m
+Merge: 8eda835 913b648
+Author: Rostamborn <63729645+Rostamborne@users.noreply.github.com>
+Date:   Mon Jun 27 22:38:11 2022 +0430
+
+    Merge branch 'master' into master
+
+[33mcommit 417d16b6a37727bf70f3138c3fb99911388e4185[m
+Merge: e7f7bf0 913b648
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 27 21:49:54 2022 +0430
+
+    Merge branch 'master' into div
+
+[33mcommit 8eda835e9b54554d19d15dee035c94f879e7fe1b[m
+Merge: c055bc3 7e58a5f
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Mon Jun 27 21:46:26 2022 +0430
+
+    Merge branch 'master' of github.com:MahbodGhadiri/AA-game
+
+[33mcommit c055bc327ba64f97e3dc7cbd6882a8941a27cab0[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Mon Jun 27 21:46:17 2022 +0430
+
+    a runable level 2
+
+[33mcommit 913b64877fe5f1c5c325cf9b502fc3da556df2c8[m
+Merge: ece37c0 76c98cd
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 27 21:43:24 2022 +0430
+
+    Merge pull request #65 from josephosan/test1
+    
+    Test1
+
+[33mcommit dba9f2e0485bbf4025c98b2682e31b53cc71bde0[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Mon Jun 27 21:12:41 2022 +0430
+
+    restore frameManager after riding
+
+[33mcommit 76c98cd3c6f0d8875e4c737401d034df2c1d5223[m
+Merge: 1ca898e ece37c0
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 27 21:08:53 2022 +0430
+
+    Merge branch 'master' into test1
+
+[33mcommit ece37c017fb7e63c38e8f286ba6dab0a29be168e[m
+Merge: 832dbd6 29db2bb
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 27 21:04:40 2022 +0430
+
+    Merge pull request #64 from danilazm/master
+    
+    fix MoveSmallBall and add selectSmallBall
+
+[33mcommit 1ca898e39f383418b9356453bc37babf2ca8120c[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Mon Jun 27 21:02:08 2022 +0430
+
+    remove stuff in onConfigSubscribe
+
+[33mcommit a77b6837427bd79a307904a62f9a1691f49d3352[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Mon Jun 27 20:45:43 2022 +0430
+
+    add PausePanel.java . change icons on some buttons. add button and paint to GamePanel. add change stuff in LevelPanel.java
+
+[33mcommit e76929b92027015ae64696af01a0e82e2b4cce64[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Mon Jun 27 20:43:29 2022 +0430
+
+    add some tests
+
+[33mcommit 7e58a5f98c8a724555c103ffde9929ea873ce9ee[m
+Merge: bb658b1 832dbd6
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Mon Jun 27 20:09:36 2022 +0430
+
+    Merge branch 'josephosan:master' into master
+
+[33mcommit 29db2bbc1e2a9affe6497273f06578a23f7133ee[m
+Author: danial <danmy7799@gmail.com>
+Date:   Mon Jun 27 19:55:52 2022 +0430
+
+    fix another problems
+
+[33mcommit 2fc4caefe807775f46ae000d1f6d1b45eaba5fdb[m
+Author: danial <danmy7799@gmail.com>
+Date:   Mon Jun 27 19:36:13 2022 +0430
+
+    add speedShootBall field to Config and getspeedShootBall method
+
+[33mcommit f20721d8f27a9a0de64244489406a803dbb51da0[m
+Author: danial <danmy7799@gmail.com>
+Date:   Mon Jun 27 19:10:08 2022 +0430
+
+    fix MoveSmallBall and add SelectShootBall
+
+[33mcommit 7939c2ade594bbcf73ba33dc9e152782b92f7157[m
+Merge: 30c9b01 b94f5e5
+Author: danial <danmy7799@gmail.com>
+Date:   Mon Jun 27 19:00:14 2022 +0430
+
+    fix MoveSmallBall and add selectSmallBall
+
+[33mcommit 30c9b016b7f876f58f63212356b41a9ba9e741a9[m
+Author: danial <danmy7799@gmail.com>
+Date:   Mon Jun 27 18:53:06 2022 +0430
+
+    fix MoveSmallBall and add SelectMoveSmall
+
+[33mcommit bb658b1b5c7dcc3b329ae7e6ea4b507671e35aee[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Mon Jun 27 18:25:02 2022 +0430
+
+    started Working on a bug
+
+[33mcommit b94f5e587fbb8b60ba9a495d04f3b4fcdd96c221[m
+Merge: c24518f 832dbd6
+Author: danial azimi <93203936+danilazm@users.noreply.github.com>
+Date:   Mon Jun 27 18:03:52 2022 +0430
+
+    Merge branch 'josephosan:master' into master
+
+[33mcommit 832dbd685421feaebc05f42f92419ef8b730da3d[m
+Merge: 818df30 f2d59c2
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 27 16:59:17 2022 +0430
+
+    Merge pull request #60 from MahbodGhadiri/master
+    
+    added GameOver
+
+[33mcommit e7f7bf01c19006db75c6a9fc45be55d8dddc393e[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 27 16:54:47 2022 +0430
+
+    parser
+    modified : from now on its usable for
+    parseing both levels and profile
+
+[33mcommit f2d59c28017ee5c71eb95bb35f2a3549f2a7f1a4[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Mon Jun 27 16:46:37 2022 +0430
+
+    added GameOver
+
+[33mcommit 818df30f055bf6f8d68275e5a110fe4d40a5edfb[m
+Merge: cdbb684 8a83118
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 27 16:37:48 2022 +0430
+
+    Merge pull request #59 from josephosan/div
+    
+    added basics of login panel
+
+[33mcommit addb8c12ead2857aa11c2f547a9bb915c6835fcd[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Mon Jun 27 12:05:43 2022 +0430
+
+    add orderPatterns and needed methods to APanel
+
+[33mcommit 8a831187fdd37cc2966fcecd69146621104f9c65[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 27 10:42:38 2022 +0430
+
+    some small changes
+
+[33mcommit 653dee8eddcc98935c328cf5447ef1dfe4d2a384[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Mon Jun 27 10:41:45 2022 +0430
+
+    true visiblity to false for login panel
+
+[33mcommit ae490ac0b716acf0ab8a4cd4d4758b267f15f67e[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 27 10:37:44 2022 +0430
+
+    bug fixed and login panel updated
+
+[33mcommit e0028508139a7e4b0ca43b1b6446d4b80a0f8918[m
+Merge: c265426 3dd5486
+Author: duniyal <duniyalr@gmail.com>
+Date:   Mon Jun 27 10:21:05 2022 +0430
+
+    rid point
+
+[33mcommit c2654263bde4e073b46a0a98df8d79bc937a8864[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Mon Jun 27 10:17:50 2022 +0430
+
+    backup point
+
+[33mcommit 3dd5486eccddd99f331b46a2c910938039d880a2[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 27 10:08:31 2022 +0430
+
+    rid
+
+[33mcommit 267cb798bd18a87ff3a3d2210823f77dda610ab3[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 27 10:08:01 2022 +0430
+
+    rid
+
+[33mcommit b8a253ccb50449c9ff59f3b6f09c22cf99c4c8cf[m
+Merge: 5f07af1 cdbb684
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 27 09:52:01 2022 +0430
+
+    conflict
+
+[33mcommit cdbb684c568e1a8cf27fb128ed63cc92195351f1[m
+Merge: b19542a 70c745f
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 27 09:49:57 2022 +0430
+
+    Merge pull request #58 from MahbodGhadiri/master
+    
+    finishLevel(incomplete)
+
+[33mcommit b19542a59de3ffd5622b98662221cc4fe618d4a9[m
+Merge: 0e066a1 bc5d303
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 27 09:49:31 2022 +0430
+
+    Merge pull request #57 from josephosan/test1
+    
+    Test1
+
+[33mcommit 5f07af1a8cef63ae555254b4606a133e45ec0b8f[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 27 09:48:24 2022 +0430
+
+    added basics of login panel
+
+[33mcommit 70c745fe91cc38dc7f40d980dd511b070e456aee[m
+Merge: 2839f1f 0e066a1
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Mon Jun 27 08:28:41 2022 +0430
+
+    Merge branch 'josephosan:master' into master
+
+[33mcommit 2839f1f2b318a491956495cb9da965856af1c3fe[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Mon Jun 27 08:21:47 2022 +0430
+
+    finishLevel(incomplete pending a panel)
+
+[33mcommit bc5d30390ffe8d872fa9d0fe6160d15c0535a133[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Mon Jun 27 00:04:22 2022 +0430
+
+    change level id to levels. reverse the positions of the two button in menuPanel. add buttons to levelPanel
+
+[33mcommit f33b1af3674d1e29c610dfd20e61510c80673b09[m
+Merge: 1b7e165 0e066a1
+Author: Arman <rostamborne@gmail.com>
+Date:   Sun Jun 26 20:43:38 2022 +0430
+
+    Merge branch 'master' into test1
+
+[33mcommit 0e066a11c09d86451320dd129fe7e54519c72640[m
+Merge: 6d3986c e5c2147
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jun 26 20:41:45 2022 +0430
+
+    Merge pull request #56 from MahbodGhadiri/master
+    
+    Handling creation of shootingBalls.
+
+[33mcommit 1b7e1655e1ecfce8a0ec74f15eb0c88c4bf92530[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Sun Jun 26 20:38:07 2022 +0430
+
+    minor changes in AnimatedRotaion.java
+
+[33mcommit e5c21472487a964c66ae23c842852e2128d173bc[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Sun Jun 26 20:11:33 2022 +0430
+
+    Handling creation of shootingBalls.
+
+[33mcommit 359334e1edc488eff20bf922e39eb9f4c8b3cf2c[m
+Merge: b966b54 6d3986c
+Author: Arman <rostamborne@gmail.com>
+Date:   Sun Jun 26 19:23:04 2022 +0430
+
+    Merge branch 'master' into test1
+
+[33mcommit b966b54f535128c1f0f8af7cf6971428bb3019c8[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Sun Jun 26 19:22:35 2022 +0430
+
+    add LevelPanel.java and add its id in framemanager
+
+[33mcommit c24518febc7ebcfd8a452114ce71f882627f11f6[m
+Merge: 8bf675a 6d3986c
+Author: danial azimi <93203936+danilazm@users.noreply.github.com>
+Date:   Sun Jun 26 18:30:13 2022 +0430
+
+    Merge branch 'josephosan:master' into master
+
+[33mcommit 6d3986c1af0aa3654454dde24b3ddafaff7ae461[m
+Merge: f3b1c32 9f3d07f
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jun 26 13:43:54 2022 +0430
+
+    Merge pull request #55 from josephosan/div
+    
+    config modified and BallsCloseEnough middleware added
+
+[33mcommit 9f3d07f844325296b4f4aefcdc3fd8c4406bfda7[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jun 26 13:43:32 2022 +0430
+
+    removing moveSmallBall middleware from loop
+
+[33mcommit fd440d3b661a0290ad66cd3b409a16fa1260ab47[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jun 26 12:14:28 2022 +0430
+
+    lineLength and
+    BallIsCloseEnough's constructor Overloaded
+
+[33mcommit 880aa42c8789140aa865285ff82d6b9d8cf4d5bf[m
+Merge: e94a0d9 f3b1c32
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jun 26 11:31:45 2022 +0430
+
+    Merge https://github.com/josephosan/AA-game into div
+
+[33mcommit e94a0d9d2271c24b1bad9a82ae9027724dcf8309[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jun 26 11:31:23 2022 +0430
+
+    config modified and BallsCloseEnough middleware added
+    some conditions changed in CheckImpact middleware
+
+[33mcommit f3b1c32cd21b7ff52ddd68c1bb627a777391c970[m
+Merge: 8c74ed3 6a7b30c
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jun 26 11:27:19 2022 +0430
+
+    Merge pull request #54 from MahbodGhadiri/master
+    
+    LoadGame now loads options to MiddlewareManager.
+
+[33mcommit 6a7b30cc9e9d6fda2c00647f8cd141d141a3bfe5[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Sun Jun 26 11:16:28 2022 +0430
+
+    LoadGame now loads options to MiddlewareManager.
+
+[33mcommit 8c74ed3ade6b7db1655801dd805d777ee805f9ad[m
+Merge: 947af8f acfc6ba
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 25 23:35:05 2022 +0430
+
+    Merge pull request #53 from MahbodGhadiri/master
+    
+    AddSmallBallInEqualAngle
+
+[33mcommit acfc6ba056c72f551339c857f112e742c9da75d4[m
+Merge: 60da886 947af8f
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Sat Jun 25 22:47:46 2022 +0430
+
+    Merge branch 'josephosan:master' into master
+
+[33mcommit 60da886a45f2f63616e2c7bb85ed39837b2f9329[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Sat Jun 25 22:47:18 2022 +0430
+
+    Created "AddSmallBallInEqualAngle"
+
+[33mcommit 947af8f49859b47d4ee1bc542766de3a80a50d0d[m
+Merge: 741ed53 9d306e5
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 25 22:39:10 2022 +0430
+
+    Merge pull request #51 from josephosan/div
+    
+    added comments for BornaMaker & CheckImpact & AddShootingBallToRotati…
+
+[33mcommit 8bf675ab87c4d4d274d830cf5efdeb9038751715[m
+Merge: 0ba0c91 741ed53
+Author: danial <danmy7799@gmail.com>
+Date:   Sat Jun 25 20:29:36 2022 +0430
+
+    fix some conflict
+
+[33mcommit 0ba0c9188b63fc301163bfcf665083d27694c342[m
+Author: danial <danmy7799@gmail.com>
+Date:   Sat Jun 25 20:25:56 2022 +0430
+
+    fix shootingBall and delete something
+
+[33mcommit db744b6db24c678a4d9a8e38ba1c4a363a484b4b[m
+Author: danial <danmy7799@gmail.com>
+Date:   Sat Jun 25 20:23:33 2022 +0430
+
+    change to selectSootBall and fix it
+
+[33mcommit 9d306e5206c20ed6ac16c54ad24f88af16e693a5[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 25 20:01:10 2022 +0430
+
+    added comments for BornaMaker & CheckImpact & AddShootingBallToRotatingBalls
+
+[33mcommit 741ed53f6bac18c797cab9e7c1beb11b383eba37[m
+Merge: 4be7af7 28274d5
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 25 19:03:41 2022 +0430
+
+    Merge pull request #50 from josephosan/div
+    
+    some small chenges on BigBall
+
+[33mcommit 28274d5eb3558ca1071f9e56c4cbe012e7f20a3a[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 25 19:03:15 2022 +0430
+
+    some small chenges on BigBall
+
+[33mcommit 4be7af7aafa7a84ccc1c864b3d944416466eef38[m
+Merge: cabb2c9 93656ca
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 25 18:55:06 2022 +0430
+
+    Merge pull request #49 from josephosan/div
+    
+    CheckImpact and AddShootingBallToRotatingSmallBalls added
+
+[33mcommit 93656ca48e5356e616ba78d9d7e031d77b110cf8[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 25 18:53:05 2022 +0430
+
+    bornaMaker added
+
+[33mcommit 1631030ca8e9e68c6934ce6d22ed25ecf83a46b8[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 25 18:52:42 2022 +0430
+
+    bornaMake added
+
+[33mcommit 3853f63343e7077f35d6b745092d583c71b9a825[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 25 18:49:43 2022 +0430
+
+    borna Maker added
+
+[33mcommit c8c39a568d0a3bcdeee315030137f1792a343354[m
+Author: danial <danmy7799@gmail.com>
+Date:   Sat Jun 25 17:43:53 2022 +0430
+
+    add shootingShootBalls
+
+[33mcommit 981cc2e011b5f631ba6846ab4954f6db9468dad2[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 25 17:04:41 2022 +0430
+
+    some problems solved
+
+[33mcommit 80da966b07610e892ef4ae4671070fdd428f4cde[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 25 17:04:10 2022 +0430
+
+    checkImpact and addShootingBallToRotatingSmallBalls added
+
+[33mcommit 499dc18aca6dc984436f249be36953f7b4fdfe06[m
+Merge: 3bd9df2 cabb2c9
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 25 17:01:04 2022 +0430
+
+    conflict
+
+[33mcommit 3bd9df289d338b91d0919558edd22fd09beba288[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 25 16:57:06 2022 +0430
+
+    checkImpact and addShootingBallToRotatingSmallBalls added and deleted out folder
+
+[33mcommit 03b694c38a3db33d5f1a2a8eb036724b4bc52e8b[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 25 16:56:16 2022 +0430
+
+    checkImpact and addShootingBallToRotatingSmallBalls added
+
+[33mcommit cabb2c95ac07d5819cb6ee416ebaa583d8b26081[m
+Merge: 01cd430 6a2e73d
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 25 16:39:29 2022 +0430
+
+    Merge pull request #48 from josephosan/test1
+    
+    Test1
+
+[33mcommit 6a2e73d7913969f09255f758a086b187a87a4057[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Sat Jun 25 14:08:19 2022 +0430
+
+    fix line bug in AnimatedRotaion.java by adding if statement in DrawLine.java . add getter method to angle to get Double angle
+
+[33mcommit 5e3b9e04f2833deee3df61382adb5d7e05e3d990[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Fri Jun 24 23:53:40 2022 +0430
+
+    add AnimatedRotation.java. add visible boolean variable to smallball.java. make angle field public in Angle.java
+
+[33mcommit a1c237c2aaf0b40a0297abdcca8d7ee6e1fbb7a8[m
+Merge: 0b1b104 01cd430
+Author: Arman <rostamborne@gmail.com>
+Date:   Fri Jun 24 20:15:57 2022 +0430
+
+    Merge branch 'master' into test1
+
+[33mcommit 01cd430566b7039803f3c0cac911f0e357a2d6d8[m
+Merge: 9691f2c 9e28310
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Fri Jun 24 20:10:44 2022 +0430
+
+    Merge pull request #47 from duniyalr/master
+    
+    add onConfigSubscribe to FrameManager
+
+[33mcommit 9e283105080c35d981dee5c34835e7cc60249f30[m
+Merge: 294681d 9691f2c
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Fri Jun 24 20:10:10 2022 +0430
+
+    Merge branch 'josephosan:master' into master
+
+[33mcommit 294681dfa1b654d07301dab4dc144829df28a22a[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Fri Jun 24 20:09:10 2022 +0430
+
+    add onConfigSubscribe to frameManager
+
+[33mcommit f46523d97beeea30423a037bf1d642a674697e97[m
+Merge: ff5b083 0684494
+Author: duniyal <duniyalr@gmail.com>
+Date:   Fri Jun 24 20:06:07 2022 +0430
+
+    Merge branch 'master' of github.com:duniyalr/AA-game
+
+[33mcommit ff5b083003ddd1e6d5c4544b63e5e09d94bfa2ef[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Fri Jun 24 20:05:51 2022 +0430
+
+    add onConfigSubscribe to frameManager
+
+[33mcommit 0b1b104f1f0d3b4f119da248d04baaca77b339c6[m
+Merge: d6143b3 9691f2c
+Author: Arman <rostamborne@gmail.com>
+Date:   Fri Jun 24 20:00:41 2022 +0430
+
+    Merge branch 'master' into test1
+
+[33mcommit 9691f2cc7d7437e02f66217c79df04387e763413[m
+Merge: 931f1a3 0684494
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Fri Jun 24 19:56:53 2022 +0430
+
+    Merge pull request #46 from duniyalr/master
+    
+    add new features to MiddlewareManager and FrameManager
+
+[33mcommit 068449436c73dd78d2117831cfd31bdb050d0de6[m
+Merge: 33ceaf3 931f1a3
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Fri Jun 24 19:55:47 2022 +0430
+
+    Merge branch 'josephosan:master' into master
+
+[33mcommit 33ceaf3a14392ce1d4f8cc9b8dd54aedea1b36ea[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Fri Jun 24 19:53:49 2022 +0430
+
+    add onConfigSubscribe method
+
+[33mcommit 8dc679a752f18f4bfe92a22eeeaa53d6e27d166f[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Fri Jun 24 19:46:22 2022 +0430
+
+    some bug fixes in APanel
+
+[33mcommit 931f1a35b2b973e8ff21df0877c8b745d86aa239[m
+Merge: e9838d3 793aae9
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Fri Jun 24 19:35:07 2022 +0430
+
+    Merge pull request #45 from MahbodGhadiri/master
+    
+    Improvments to DrawSmallBall and Loadgame
+
+[33mcommit 40cb6d9da8107e0bbb93145323563172caea34cf[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Fri Jun 24 19:20:04 2022 +0430
+
+    add showPanel middleware
+
+[33mcommit b6951e8ea173f8808acd9599fe6c1af5fd225ef1[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Fri Jun 24 19:03:56 2022 +0430
+
+    add events to APanel
+
+[33mcommit d6143b38157936c2967b12fe7f60883b081abcd9[m
+Merge: dac6d58 e9838d3
+Author: Arman <rostamborne@gmail.com>
+Date:   Fri Jun 24 18:55:47 2022 +0430
+
+    Merge branch 'master' into test1
+
+[33mcommit dac6d5895b9f8ae00878f4a3a4050d241d08f5e4[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Fri Jun 24 18:55:23 2022 +0430
+
+    add default color to smallball and minor changes to menupanel
+
+[33mcommit c90e40e78f6076918b990b94bc2a7e5c1b55440d[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Fri Jun 24 18:50:51 2022 +0430
+
+    add removeMiddlewaresByGroup method and needed properties
+
+[33mcommit 7778b4d841d001d3ca7613e8518a98712acb070a[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Fri Jun 24 18:23:49 2022 +0430
+
+    middlewares now can be paused during loop iteration
+
+[33mcommit 793aae95501ad0740d065ad2e9101f0e5b405d6f[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Fri Jun 24 11:57:49 2022 +0430
+
+    even more smallballs ;)
+
+[33mcommit 9a4f34eea3f04fc033d8737560b36eaf15fabc7d[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Fri Jun 24 11:17:26 2022 +0430
+
+    DrawSmallBalls now support custom hex colors.
+
+[33mcommit 8190836f64807d3ab4229a95ffe2222365b835d1[m
+Merge: e9838d3 4e9e67b
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Fri Jun 24 10:14:36 2022 +0430
+
+    Loading with "LoadGame"
+
+[33mcommit e9838d3815dafff35fbf4c942c9431fcfa3a8909[m
+Merge: 5fc150b 3769cf2
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Fri Jun 24 09:07:47 2022 +0430
+
+    Minor bug fixes and improvements to some middleware.
+    
+    Minor bug fixes and improvements to some middleware.
+
+[33mcommit 5fc150bce03979381d01d43d3983cad785b91352[m
+Merge: 6ccfb8c f40ac2e
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Fri Jun 24 02:47:03 2022 +0430
+
+    Merge pull request #44 from duniyalr/master
+    
+    fixed LinkedList bug
+
+[33mcommit f40ac2ed9068b8f0711779a627adc115aa9e1851[m
+Merge: bf64641 6ccfb8c
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Fri Jun 24 02:46:12 2022 +0430
+
+    Merge branch 'josephosan:master' into master
+
+[33mcommit bf64641d80f73db53987299e5f3cbfcd8192474f[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Fri Jun 24 02:44:46 2022 +0430
+
+    undo changes to aa
+
+[33mcommit 7e2dafc8748530877e9622139cb0d080a160e57c[m
+Merge: 46cdfc3 f470a66
+Author: duniyal <duniyalr@gmail.com>
+Date:   Fri Jun 24 02:43:10 2022 +0430
+
+    Merge branch 'LinkedListBug'
+
+[33mcommit f470a66889dd7bbf8183f7036a3dce6bbb62da7f[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Fri Jun 24 02:41:43 2022 +0430
+
+    fix bug
+
+[33mcommit 46cdfc30ad016c018874512d645552623bf62c9c[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Fri Jun 24 02:32:15 2022 +0430
+
+    Revert "fixed lastAddedLinedElement bug"
+    
+    This reverts commit ae19ce633b6d86c4d852db9111182889ad14634a.
+
+[33mcommit ec42993e17a3df712c608d25f0af759377f1960c[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Fri Jun 24 02:09:08 2022 +0430
+
+    return this commit
+
+[33mcommit 4e9e67b523abe37b96bfaec275cba03054419b7d[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Fri Jun 24 00:08:53 2022 +0430
+
+    trying to load levels using LoadGame.
+
+[33mcommit 3769cf272cb4896b67a45a9684978a0104e55e8b[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Thu Jun 23 23:04:26 2022 +0430
+
+    Fixed BigBall being misplaced
+
+[33mcommit fb4b3c4f89ae9c2a2b74d8db848e6390d5f3067a[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Thu Jun 23 22:00:35 2022 +0430
+
+    Bug Fixes
+
+[33mcommit 6ccfb8c4309b9e5eebddd2979ead409a9183e537[m
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Thu Jun 23 20:02:25 2022 +0430
+
+    Update README.md
+    
+    fix link
+
+[33mcommit 7bca14e41268c7f01c0b353d8ac79316834c5b99[m
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Thu Jun 23 19:54:19 2022 +0430
+
+    Update README.md
+    
+    add documents for Middleaware and MiddlewareManager
+
+[33mcommit d4eede969d076c200d66adf2552d5e3f6f59b8d5[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Thu Jun 23 11:11:25 2022 +0430
+
+    update to "LoadGame"
+
+[33mcommit ae19ce633b6d86c4d852db9111182889ad14634a[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Thu Jun 23 01:07:21 2022 +0430
+
+    fixed lastAddedLinedElement bug
+
+[33mcommit 9716dcd750fd56654bbd5e812f09778c0cf20448[m
+Merge: 3b96619 691dad2
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Thu Jun 23 00:01:28 2022 +0430
+
+    Merge pull request #41 from duniyalr/master
+    
+    rideh boodam toosh
+
+[33mcommit 691dad205e839c493a54b71824f64991aae6c96a[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Thu Jun 23 00:00:09 2022 +0430
+
+    rideh boodam toosh
+
+[33mcommit 3b96619a26cb58cece047f53c7a51b0bcd6010a1[m
+Merge: c4a192f 4181670
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Wed Jun 22 23:51:45 2022 +0430
+
+    Merge pull request #40 from josephosan/newMiddlewareManager
+    
+    New middleware manager
+
+[33mcommit 4181670751372cdf0ae8eda05493eefbfd737c45[m
+Merge: c4a192f c155138
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Wed Jun 22 23:50:34 2022 +0430
+
+    Merge pull request #39 from duniyalr/middlewaresConnection
+    
+    new middlewareManger
+
+[33mcommit c155138c580d783563aee3562ec2df669c6f2a06[m
+Merge: d067cf0 c4a192f
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Wed Jun 22 23:49:29 2022 +0430
+
+    Merge branch 'newMiddlewareManager' into middlewaresConnection
+
+[33mcommit d067cf006ef65860c56ca3c654f22e962b87b523[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Wed Jun 22 23:43:11 2022 +0430
+
+    change loop from list to array and add getMiddlewareById method to middlewareManager
+
+[33mcommit c4a192f6dc5540e24018230ed6d36981c80086fc[m
+Merge: 3b6bb62 f1f452a
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 22 23:16:59 2022 +0430
+
+    Merge pull request #38 from josephosan/div
+    
+    adding else condition in checkImpact and adding CheckInterSection
+
+[33mcommit f1f452a15ff75aa345a7f066c9940db88ea40a42[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 22 23:16:08 2022 +0430
+
+    adding else condition in checkImpact and adding CheckInterSection
+
+[33mcommit 3b6bb629a1eb56a3e21c9696e6be40f4b181a542[m
+Merge: 290ba54 0241db7
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 22 22:25:44 2022 +0430
+
+    CheckImpact added
+    
+    path corrected and transition is left to write
+
+[33mcommit 0241db7f1dad56ce5cb775d0b23ea20ec71c5d21[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 22 22:24:40 2022 +0430
+
+    checkImpact completed
+
+[33mcommit 9aa4834dd670b0ab68efe4fc3997eccd2cc1a232[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 22 21:42:54 2022 +0430
+
+    path corrected
+
+[33mcommit 6975208b7a5f57c947ec91e2cf2f647b4971b4fd[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 22 21:42:29 2022 +0430
+
+    path corrected
+
+[33mcommit 21310c12cdcaf64bfbe5a02c04a1949c46aeb351[m
+Merge: 08f6bd3 290ba54
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 22 21:29:49 2022 +0430
+
+    Merge https://github.com/josephosan/AA-game into div
+
+[33mcommit 08f6bd359af1b1149a62221e36736238bb73ea36[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 22 21:29:31 2022 +0430
+
+    added CheckImpact method
+
+[33mcommit f4f551718d69d8727a9369b93143d5713c7f886d[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 22 21:29:00 2022 +0430
+
+    added CheckImpact
+
+[33mcommit 290ba5463ab7398233b0e38b0003c6b25902da6a[m
+Merge: 10d438e 49f7a80
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 22 21:25:24 2022 +0430
+
+    Merge pull request #36 from josephosan/test1
+    
+    add ShowGame. add play and level button to menupanel. add transition …
+
+[33mcommit 49f7a80eb26fd512605f6c3cafc1c900818aaf2f[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Wed Jun 22 21:17:54 2022 +0430
+
+    add ShowGame. add play and level button to menupanel. add transition to game panel in menupanel
+
+[33mcommit 0adf9a5ca3dbf3e41e7e4f067bcfeeba7f51f253[m
+Merge: ab2d1ea 10d438e
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 22 17:13:03 2022 +0430
+
+    conflict
+
+[33mcommit ab2d1ea72451887a4e21a43f54ab9c4a27830f2a[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 22 17:11:49 2022 +0430
+
+    j
+
+[33mcommit 10d438ec4a21f4d8b128236a4c02e0427f931777[m
+Merge: 9680a0e 2930c60
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 22 17:03:10 2022 +0430
+
+    finish MoveSmallBall
+    
+    Danial
+
+[33mcommit 9680a0e9a3cb52d821cfedfea5ae38d3768aecbc[m
+Merge: a745550 e5fc7ed
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 22 17:01:55 2022 +0430
+
+    Merge pull request #33 from MahbodGhadiri/master
+    
+    Further changes to SmallBall behaviour.
+
+[33mcommit e5fc7edef2a657f2548c8e08fed342bc55e7a332[m
+Merge: 77951f5 a745550
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 22 17:01:44 2022 +0430
+
+    Merge branch 'master' into master
+
+[33mcommit 2930c60b5fc1f454236240a6fcaa9c50aa021981[m
+Author: danial <danmy7799@gmail.com>
+Date:   Wed Jun 22 15:50:59 2022 +0430
+
+    finish MoveSmallBall
+
+[33mcommit 2907f1d86c4620685d68a68ae4203a5bf0ce91c4[m
+Author: danial <danmy7799@gmail.com>
+Date:   Wed Jun 22 14:33:43 2022 +0430
+
+    fix if bug
+
+[33mcommit 77951f5b1b3aba82d1f302fe473c6c859818faf8[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Wed Jun 22 12:11:36 2022 +0430
+
+    Change to mechanism of counting SmallBalls.
+
+[33mcommit 3429b8503734f5bee00b97e90b75611b6f1ffd84[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Wed Jun 22 11:30:47 2022 +0430
+
+    Further changes to SmallBall behaviour.
+
+[33mcommit a74555048c7982c1cf9e3e0e868d4ae1763f4bf9[m
+Merge: f399ef5 93c955f
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 22 09:36:33 2022 +0430
+
+    Merge pull request #30 from MahbodGhadiri/master
+    
+    Fixed "DrawSmallBall" and "SmallBall"
+
+[33mcommit fa2d734d26e784a8d2d09b6a846f03b8a41636ad[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Tue Jun 21 21:38:21 2022 +0430
+
+    add groups to middle ware and add middlewareValues
+
+[33mcommit f399ef551e6ea01ab4625df8de2c42cd6d3cd515[m
+Merge: 6d26699 ae9f512
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 21 21:15:55 2022 +0430
+
+    Merge pull request #32 from josephosan/div
+    
+    Gson library added to lib folder
+
+[33mcommit ae9f5122a486ca41b3622f82a36265b28391bea5[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 21 21:14:35 2022 +0430
+
+    Gson library added to lib folder
+
+[33mcommit 6d26699de1c04c7c5e1e0edbd750200fcbfb2bdf[m
+Merge: 7e2e072 5f5fdc1
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 21 20:51:46 2022 +0430
+
+    Merge pull request #31 from josephosan/div
+    
+    removing drawLine method in some specific conditions
+
+[33mcommit 5f5fdc1aae49280c41eb995fd20e34a083d8fa10[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 21 20:50:56 2022 +0430
+
+    removing drawline method in some specific conditions
+
+[33mcommit 7e2e072113950cacfeaed2124b6394ea1d80c639[m
+Merge: be2654f 7c09ccf
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 21 20:19:58 2022 +0430
+
+    Merge pull request #29 from josephosan/LoadGame
+    
+    "LoadGame" now uses "AParser" for loading json.
+
+[33mcommit 93c955f1ffed0b670a4198eab8e52be862cfea43[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Tue Jun 21 20:03:41 2022 +0430
+
+    Created "AddSmallBall" middleware.
+
+[33mcommit 623e2369de24b79bb192203f077cfaffc7aa8574[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Tue Jun 21 19:09:19 2022 +0430
+
+    Fixed "DrawSmallBall" and "SmallBall"
+
+[33mcommit 7c09ccf766c2508ab60b443921bb1b830c97d97f[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Tue Jun 21 11:43:21 2022 +0430
+
+    "LoadGame" now uses "AParser" for loading json.
+
+[33mcommit be2654f5a61675a5a700f22ee2f2af950641cba0[m
+Merge: c1382c4 a6eaa2e
+Author: Mahbod Ghadiri Sani <90981905+MahbodGhadiri@users.noreply.github.com>
+Date:   Tue Jun 21 11:35:28 2022 +0430
+
+    Merge pull request #28 from josephosan/div
+    
+    Parser ready for use.
+
+[33mcommit a6eaa2e1bf9e63ed6943a77fea574ee2a7f65c25[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 21 11:30:22 2022 +0430
+
+    file name had problem :)
+
+[33mcommit 911386d80e05a856660eaa63bb2adb90844a284f[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 21 11:15:50 2022 +0430
+
+    added run method
+
+[33mcommit 01332e61b169b16866651026b1e8ddeb90f67531[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 21 11:15:22 2022 +0430
+
+    adding run method
+
+[33mcommit c1382c43f2fc51ed16d9c655a21c7b0cea81aa8d[m
+Merge: 41d2559 7804eda
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 21 11:09:31 2022 +0430
+
+    Merge pull request #26 from josephosan/TransitionPanels
+    
+    Transition panels
+
+[33mcommit 41d25597df260f93c846fad4d4c34e089bf0de9d[m
+Merge: 7ba88a4 d04ce8e
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 21 10:48:30 2022 +0430
+
+    Merge pull request #24 from josephosan/div
+    
+    parser added to project and Gson libraries added and data file modified
+
+[33mcommit 7804edaf605101be2e8aad4eb12ebb6854538d3f[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Tue Jun 21 10:48:14 2022 +0430
+
+    Improved Acceleration animation
+
+[33mcommit d04ce8ed17288a1ba0e66d59973b504d632c415b[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 21 10:47:46 2022 +0430
+
+    deleting folder
+
+[33mcommit e166943069f6bc5c44e3cd995857ead43d3d3f36[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 21 10:46:22 2022 +0430
+
+    deleting out folder
+
+[33mcommit 9fdebed903e23cfc7fafd294810df28245cd4828[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 21 10:44:42 2022 +0430
+
+    deleting out folder
+
+[33mcommit 7ba88a4360856076d4ab9b2fb7d9f83808f7f474[m
+Merge: 73f89d1 fda475b
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Tue Jun 21 08:28:04 2022 +0430
+
+    Merge pull request #25 from josephosan/test1
+    
+    add setColor method to SmallBall and BigBall. add setPos method to Bi…
+
+[33mcommit fda475b783835844e680048d2dd022cc7cedaf55[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Mon Jun 20 23:45:27 2022 +0430
+
+    add setColor method to SmallBall and BigBall. add setPos method to BigBall
+
+[33mcommit 9cb851ad14ff620f6a6116e44fcdd9e92258e5d7[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 20 22:30:19 2022 +0430
+
+    Gson libraries added to project source
+
+[33mcommit c9b9bef85b1adcccf247ef6a3439928413103cdf[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 20 22:25:49 2022 +0430
+
+    parser done
+
+[33mcommit 4adc0ae3c604b525e6570cd053c7ee84384828c7[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 20 22:17:24 2022 +0430
+
+    added parser
+
+[33mcommit b3596d3224713a82c383e1143d4668590f9483e7[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Mon Jun 20 22:12:00 2022 +0430
+
+    Added accelaration for transitions.
+
+[33mcommit a1698c6f851964b381928714ac3aed74b3b45f29[m
+Merge: 089c5da 73f89d1
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 20 18:30:40 2022 +0430
+
+    conflict problem
+
+[33mcommit 089c5da4244cf56d44c336612b51e99c23833f68[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 20 18:27:37 2022 +0430
+
+    tstt
+
+[33mcommit 73f89d198d5e42084b390de7795fa180327e956b[m
+Merge: 6f9009f e243c60
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 20 18:22:31 2022 +0430
+
+    Merge pull request #22 from josephosan/TransitionPanels
+    
+    "TransitionPanels":Added left-to-right transition
+
+[33mcommit 6f9009fc907a79ce301eb42afad7d74a10d07cba[m
+Merge: e180a24 897812f
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 20 18:17:59 2022 +0430
+
+    Merge pull request #20 from josephosan/LoadGame
+    
+    Load game
+
+[33mcommit e243c601bcc11666005cb43972392f5f327d1fb5[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Mon Jun 20 17:47:06 2022 +0430
+
+    "TransitionPanels":Added left-to-right transition
+
+[33mcommit 12ac6c8f546265b38ceb639e444dee56370b223d[m
+Author: danial <danmy7799@gmail.com>
+Date:   Mon Jun 20 17:25:48 2022 +0430
+
+    add smallball middleware
+
+[33mcommit 897812f1a6ef9707ecf8c1509ac0d855342353f0[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Mon Jun 20 16:51:20 2022 +0430
+
+    "Load Game" Done
+
+[33mcommit e180a24d7d3b76ff7f207a19e73c1cfefb6234af[m
+Merge: 03a21c8 550bcbb
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sun Jun 19 12:29:30 2022 +0430
+
+    Merge pull request #19 from josephosan/test1
+    
+    add numberOfArgs to level1.json
+
+[33mcommit 550bcbbeca7031ead45bed2fecbb8b5257af51f4[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Sun Jun 19 12:21:14 2022 +0430
+
+    add getter to DrawSmallBall.java
+
+[33mcommit d1cbc49096e71a420d94c333ed4582fcf3a24d24[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Sun Jun 19 11:41:37 2022 +0430
+
+    "LoadGame" now supports multiple arguements.
+
+[33mcommit b351e3920c09e19ad6be59064b0bfadebdec5a54[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Sat Jun 18 23:04:02 2022 +0430
+
+    add numberOfArgs to level1.json
+
+[33mcommit 03938ebd944f76691af4b8b60d4a81d6dcc55141[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Sat Jun 18 17:28:19 2022 +0430
+
+    Added Comments for "LoadGame" Middleware
+
+[33mcommit 8a1b89dac25ad3cb3b7874b6c680954e2edb44f3[m
+Author: danial azimi <93203936+danilazm@users.noreply.github.com>
+Date:   Sat Jun 18 17:27:46 2022 +0430
+
+    make movesmallball middleware
+
+[33mcommit 38dd8a5917f5e675467fed008c261eff54883fcb[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Sat Jun 18 16:51:26 2022 +0430
+
+    Middleware "LoadGame" added.
+
+[33mcommit 03a21c86831648f8c3ab6c60382d0e77f193fee3[m
+Merge: a238683 5046b5d
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 18 16:19:55 2022 +0430
+
+    Merge pull request #18 from josephosan/test1
+    
+    add level1.ag and changed the way angle is handled in Rotaion and add…
+
+[33mcommit 5046b5dd78ee23d1c6d436c62b60f107f16bbfe0[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Sat Jun 18 15:56:23 2022 +0430
+
+    add level1.json and also change smallball to use config for dimensions
+
+[33mcommit 14543f5139dac7dd21a8f195400a17d30b09988a[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Sat Jun 18 13:09:58 2022 +0430
+
+    add level1.ag and changed the way angle is handled in Rotaion and added setter and getter in DrawSmallBall
+
+[33mcommit a2386833298e3230eb60a1735568859710314717[m
+Merge: 2064028 0b894c3
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 18 10:16:39 2022 +0430
+
+    Merge pull request #17 from josephosan/div
+    
+    level structure added
+
+[33mcommit 0b894c3ed5e3c35ab66a9d73ffa04127910fe32a[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 18 10:15:32 2022 +0430
+
+    level structure added
+
+[33mcommit 206402858ba418976affec0d368673937bad5126[m
+Merge: 4da4aad 010adb2
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 18 09:49:38 2022 +0430
+
+    Merge pull request #16 from josephosan/div
+    
+    changes in structure
+
+[33mcommit 010adb2e82062be42d61f1deed791d2dba962412[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Sat Jun 18 09:49:13 2022 +0430
+
+    changes in structure
+
+[33mcommit 4da4aadb079e048efac6019f63c4284d2b4d62ad[m
+Merge: 205e7a7 48c5330
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Fri Jun 17 19:06:39 2022 +0430
+
+    Merge pull request #15 from josephosan/div
+    
+    small Ball problem solved
+
+[33mcommit 48c5330e5107788e2f09e47de6b62f7406acd125[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Fri Jun 17 19:04:28 2022 +0430
+
+    smallBall problem solved
+
+[33mcommit 205e7a7c0b1354d95d1798bb25d8d0a6b4eff176[m
+Merge: 1b12ea2 76d2752
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Fri Jun 17 18:15:54 2022 +0430
+
+    Merge pull request #14 from josephosan/test1
+    
+    Test1
+
+[33mcommit 76d2752e0326f7a71599806c9e16730b5e87120c[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Fri Jun 17 18:04:07 2022 +0430
+
+    add SmallBall element and DrawSmallBall middleware, also made rotate in rotation public, added some commented lines in FrameManager about DrawSmallBall middleware
+
+[33mcommit 1b12ea206780c0249cbc963e00e37a1bea06b455[m
+Merge: b5e49f7 da90836
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Fri Jun 17 10:07:10 2022 +0430
+
+    Merge pull request #13 from josephosan/div
+    
+    line updated for all small balls usage
+
+[33mcommit da90836001a847ebb0466497ab4e2c1a872674e1[m
+Merge: 7c5a4d5 b732c0d
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Fri Jun 17 10:04:53 2022 +0430
+
+    Merge branch 'master' into div
+
+[33mcommit b732c0dcada337c90d42797128d7852595b0dd92[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Fri Jun 17 10:03:54 2022 +0430
+
+    line modified
+
+[33mcommit 003d8a8b480a0b70433026164cab167feea14a9f[m
+Merge: 384b9c6 b5e49f7
+Author: Arman <rostamborne@gmail.com>
+Date:   Thu Jun 16 22:47:15 2022 +0430
+
+    Merge branch 'master' of https://github.com/josephosan/AA-game
+
+[33mcommit b5e49f766cf77c0ab1c5a503c4c9d19bc93f566f[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 16 22:36:54 2022 +0430
+
+    ; added :/
+
+[33mcommit 384b9c6c3bea6943fe951aac2b0f0ad67b6abd32[m
+Merge: 07e85aa 531c73e
+Author: Arman <rostamborne@gmail.com>
+Date:   Thu Jun 16 22:33:10 2022 +0430
+
+    Merge branch 'master' of https://github.com/josephosan/AA-game
+
+[33mcommit 531c73e02bf78cbbc19620a094efc4464762935f[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 16 22:31:13 2022 +0430
+
+    some problems solved
+
+[33mcommit 07e85aa74da4521b5422701d5b08b7eef4316207[m
+Merge: 95f821d 0014b77
+Author: Arman <rostamborne@gmail.com>
+Date:   Thu Jun 16 22:00:38 2022 +0430
+
+    Merge branch 'master' of https://github.com/josephosan/AA-game
+
+[33mcommit 0014b77d8489284853194b115507a25e84466735[m
+Merge: eb8c5d6 f397330
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 16 19:57:42 2022 +0430
+
+    Merge pull request #12 from josephosan/rotation
+    
+    Added "Rotation" and "Angle" Classes.
+
+[33mcommit 7c5a4d5d55784426a1abf4a8bb747219ae9d02b8[m
+Merge: 6d486d6 eb8c5d6
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 16 19:46:07 2022 +0430
+
+    Merge pull request #11 from josephosan/master
+    
+    solving confilict
+
+[33mcommit eb8c5d635f1f4a9d0bc6e5aae4600136ce4a8e14[m
+Merge: 139820e ac3939e
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 16 19:35:19 2022 +0430
+
+    Merge pull request #5 from duniyalr/div
+    
+    adding group methods to elementManager
+
+[33mcommit ac3939ea9794268bb86ac9987f478e2de2b55e4d[m
+Merge: 6c7f658 139820e
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 16 19:34:41 2022 +0430
+
+    Merge branch 'master' into div
+
+[33mcommit 139820e5eb524256cf4811ca03f8db3ca6b64dfc[m
+Merge: f82924c 6d486d6
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 16 19:22:30 2022 +0430
+
+    Merge pull request #10 from josephosan/div
+    
+    solving
+
+[33mcommit 6d486d6228599bf5875096573d6dbcde870004e5[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 16 19:20:29 2022 +0430
+
+    solving
+
+[33mcommit f82924ce151db361131eaf94ccc1003698534a8b[m
+Merge: a75b63f 65ce073
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 16 19:14:21 2022 +0430
+
+    Merge pull request #9 from josephosan/div
+    
+    resolving edited position
+
+[33mcommit 65ce073eaa7db77b64429f9069c53fc710a72c1f[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 16 19:13:27 2022 +0430
+
+    resolving edited position
+
+[33mcommit f39733030e713cb99fb9e1bec6e6451270036f85[m
+Author: mahbod <m.ghadirisani2013@gmail.com>
+Date:   Thu Jun 16 18:58:31 2022 +0430
+
+    Added "Rotation" and "Angle" Classes.
+
+[33mcommit a75b63f743100dde2075c984b15465421d4b9824[m
+Merge: 5b7511e ff864cb
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 16 18:47:51 2022 +0430
+
+    Merge pull request #8 from josephosan/div
+    
+    .
+
+[33mcommit ff864cbbbb084dec3982b16d90e21711c251ecfe[m
+Author: joseph.o <josephosan1381@gmail.com>
+Date:   Thu Jun 16 18:47:10 2022 +0430
+
+    .
+
+[33mcommit 5b7511e632a28651dee76d81410e34e8d6f9e2a1[m
+Merge: d505f7f 7433d1b
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 16 18:40:23 2022 +0430
+
+    Merge pull request #7 from josephosan/div
+    
+    fixing
+
+[33mcommit 7433d1b1784539323714ee8a68b62ab1d7006c13[m
+Author: joseph.o <josephosan1381@gmail.com>
+Date:   Thu Jun 16 18:39:39 2022 +0430
+
+    fixing
+
+[33mcommit d505f7fb19cf3c8f7dc044c2301534b33fb2748f[m
+Merge: d688f35 f737dd7
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 16 18:38:00 2022 +0430
+
+    Merge pull request #6 from josephosan/div
+    
+    fixing confliect
+
+[33mcommit f737dd761328e84c4feb3dae9631d2a88a9100fe[m
+Author: joseph.o <josephosan1381@gmail.com>
+Date:   Thu Jun 16 18:36:24 2022 +0430
+
+    fixing confliect
+
+[33mcommit d688f355dfa44f01b8fcb7fd4030abe1c0fc53f7[m
+Merge: 4b76b4d 9354507
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 16 18:18:13 2022 +0430
+
+    Merge pull request #4 from josephosan/div
+    
+    line is done
+
+[33mcommit 6c7f658a45b85aa03e486bfdd4016bb1c2e2b948[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Thu Jun 16 18:15:06 2022 +0430
+
+    add transition panels middleware
+
+[33mcommit 93545073df5d750cf5a4a9a3ec08913328036ee7[m
+Author: joseph.o <josephosan1381@gmail.com>
+Date:   Thu Jun 16 16:49:08 2022 +0430
+
+    line is done
+
+[33mcommit 9cf0ce1596c46050199ef430e06cbd226f0bb8d1[m
+Merge: ce8efe5 7b526c2
+Author: duniyal <duniyalr@gmail.com>
+Date:   Thu Jun 16 15:39:00 2022 +0430
+
+    Merge branch 'div' of github.com:duniyalr/AA-game into div
+
+[33mcommit ce8efe5ad1bd11d3e3ac927e56264adfa24d7037[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Thu Jun 16 15:38:20 2022 +0430
+
+    add groups to elementManager
+
+[33mcommit 7b526c22974e8ca43e41b26c5e65ec731632ac4a[m
+Merge: 7cf576d a631e98
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Thu Jun 16 15:37:10 2022 +0430
+
+    Merge pull request #1 from josephosan/div
+    
+    Merge pull request #2 from duniyalr/div
+
+[33mcommit 95f821dffca29ffa642022e9287a33750af1d28b[m
+Merge: 9044143 4b76b4d
+Author: Arman <rostamborne@gmail.com>
+Date:   Thu Jun 16 10:32:23 2022 +0430
+
+    Merge branch 'master' of https://github.com/josephosan/AA-game
+
+[33mcommit 4b76b4de6276b11791b028506010f15ca57889d4[m
+Author: joseph.o <josephosan1381@gmail.com>
+Date:   Thu Jun 16 09:33:22 2022 +0430
+
+    some small changes add
+
+[33mcommit 359c48e4e9b29c4daa55f0aa59bd427b4e7991ce[m
+Merge: 5edb262 a631e98
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Thu Jun 16 08:25:50 2022 +0430
+
+    Merge pull request #3 from josephosan/div
+    
+    Div
+
+[33mcommit 5edb26277010a7369e94f02f185a7baeb0e64b31[m
+Author: joseph.o <josephosan1381@gmail.com>
+Date:   Thu Jun 16 08:22:33 2022 +0430
+
+    deleted some
+
+[33mcommit a631e985aa19539b2979d1cd8eeef73a0056511a[m
+Merge: 08850bb 7cf576d
+Author: duniyal <72468517+duniyalr@users.noreply.github.com>
+Date:   Wed Jun 15 22:07:13 2022 +0430
+
+    Merge pull request #2 from duniyalr/div
+    
+    Implementing the base template for project
+
+[33mcommit 7cf576dfe73029ba21ddc3b3350e833a999cb3c7[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Wed Jun 15 22:04:55 2022 +0430
+
+    delete engine
+
+[33mcommit e84a730b5d7bbc3d6be7da241fe2cd2ac427cf36[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Wed Jun 15 22:03:55 2022 +0430
+
+    delete engine folder
+
+[33mcommit 1fe4465bda3d17e1e9e6dd5b6d4d4faca6f222ff[m
+Author: duniyal <duniyalr@gmail.com>
+Date:   Wed Jun 15 22:02:46 2022 +0430
+
+    Implementing the project template
+
+[33mcommit 604bf2994ae057a9a180421247d8dc63b74eeb3f[m
+Merge: 36115d5 08850bb
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Wed Jun 15 05:26:16 2022 -0400
+
+    Merge pull request #1 from josephosan/div
+    
+    bases added
+
+[33mcommit 08850bb76cdd1504beb89f8dd02886b096b64978[m
+Author: joseph.o <josephosan1381@gmail.com>
+Date:   Wed Jun 15 13:43:54 2022 +0430
+
+    bases added
+
+[33mcommit 90441437a2f2fd4eefde110d91c6e74a0ddbf897[m
+Author: Arman <rostamborne@gmail.com>
+Date:   Tue Jun 14 21:44:37 2022 +0430
+
+    fix Arman in README
+
+[33mcommit 36115d56ce16449ac076ae2d95d28aedcf34a83a[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 13 19:05:00 2022 +0430
+
+    Update README.md
+
+[33mcommit baefecc55536abffa4c31dc323016881f7685631[m
+Author: joseph <95222288+josephosan@users.noreply.github.com>
+Date:   Mon Jun 13 19:04:28 2022 +0430
+
+    Create README.md
+
+[33mcommit 42c2fd7c8be3c8c60b69a26c40eb6614f13ed6b6[m
+Author: joseph.o <josephosan1381@gmail.com>
+Date:   Mon Jun 13 18:54:37 2022 +0430
+
+    starting AA geme
